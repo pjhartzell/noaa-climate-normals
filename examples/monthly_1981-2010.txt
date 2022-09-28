@@ -1,0 +1,4 @@
+https://noaanormals.blob.core.windows.net/climate-normals/normals-monthly/1981-2010/access/AQC00914000.csv
+https://noaanormals.blob.core.windows.net/climate-normals/normals-monthly/1981-2010/access/AQW00061705.csv
+https://noaanormals.blob.core.windows.net/climate-normals/normals-monthly/1981-2010/access/CAW00064757.csv
+https://noaanormals.blob.core.windows.net/climate-normals/normals-monthly/1981-2010/access/CQC00914080.csv

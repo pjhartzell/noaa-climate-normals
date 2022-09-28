@@ -1,0 +1,801 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "monthly_1981-2010",
+  "properties": {
+    "noaa-climate-normals:frequency": "monthly",
+    "noaa-climate-normals:period": "1981-2010",
+    "start_datetime": "1981-01-01T00:00:00Z",
+    "end_datetime": "2010-12-31T23:59:59Z",
+    "created": "2022-09-27T21:52:02.826579Z",
+    "title": "Monthly NOAA US Climate Normals for Period 1981-2010",
+    "proj:epsg": 4269,
+    "datetime": null
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -170.71361,
+          -14.33056,
+          3.7
+        ],
+        [
+          -170.76667,
+          -14.31667,
+          408.4
+        ],
+        [
+          -79.781,
+          44.2326,
+          246.0
+        ],
+        [
+          145.74972,
+          15.21361,
+          252.1
+        ],
+        [
+          -170.71361,
+          -14.33056,
+          3.7
+        ]
+      ]
+    ]
+  },
+  "links": [],
+  "assets": {
+    "parquet": {
+      "href": "./monthly_1981-2010.parquet",
+      "type": "application/x-parquet",
+      "title": "GeoParquet for all stations",
+      "table:primary_geometry": "geometry",
+      "table:columns": [
+        {
+          "name": "STATION",
+          "type": "string",
+          "description": "Station identification code"
+        },
+        {
+          "name": "DATE",
+          "type": "int64",
+          "description": "Month of year",
+          "unit": "integer month [1, 12]"
+        },
+        {
+          "name": "LATITUDE",
+          "type": "float64",
+          "description": "Station latitude",
+          "unit": "degree"
+        },
+        {
+          "name": "LONGITUDE",
+          "type": "float64",
+          "description": "Station longitude",
+          "unit": "degree"
+        },
+        {
+          "name": "ELEVATION",
+          "type": "float64",
+          "description": "Station elevation in meters",
+          "unit": "meter"
+        },
+        {
+          "name": "NAME",
+          "type": "string",
+          "description": "Station name"
+        },
+        {
+          "name": "MLY-PRCP-25PCTL",
+          "type": "int64",
+          "description": "First quartile of monthly nonzero precipitation totals"
+        },
+        {
+          "name": "MLY-PRCP-25PCTL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-PRCP-50PCTL",
+          "type": "int64",
+          "description": "Second quartile of monthly nonzero precipitation totals"
+        },
+        {
+          "name": "MLY-PRCP-50PCTL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-PRCP-75PCTL",
+          "type": "int64",
+          "description": "Third quartile of monthly nonzero precipitation totals"
+        },
+        {
+          "name": "MLY-PRCP-75PCTL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-PRCP-AVGNDS-GE001HI",
+          "type": "int64",
+          "description": "Monthly number of days with precipitation >= 0.01 inches"
+        },
+        {
+          "name": "MLY-PRCP-AVGNDS-GE001HI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-PRCP-AVGNDS-GE010HI",
+          "type": "int64",
+          "description": "Monthly number of days with precipitation >= 0.10 inches"
+        },
+        {
+          "name": "MLY-PRCP-AVGNDS-GE010HI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-PRCP-AVGNDS-GE050HI",
+          "type": "int64",
+          "description": "Monthly number of days with precipitation >= 0.50 inches"
+        },
+        {
+          "name": "MLY-PRCP-AVGNDS-GE050HI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-PRCP-AVGNDS-GE100HI",
+          "type": "int64",
+          "description": "Monthly number of days with precipitation >= 1.00 inches"
+        },
+        {
+          "name": "MLY-PRCP-AVGNDS-GE100HI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-PRCP-NORMAL",
+          "type": "int64",
+          "description": "Long-term averages of monthly precipitation total"
+        },
+        {
+          "name": "MLY-PRCP-NORMAL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNOW-25PCTL",
+          "type": "int64",
+          "description": "First quartile of monthly nonzero snowfall totals"
+        },
+        {
+          "name": "MLY-SNOW-25PCTL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNOW-50PCTL",
+          "type": "int64",
+          "description": "Second quartile of monthly nonzero snowfall totals"
+        },
+        {
+          "name": "MLY-SNOW-50PCTL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNOW-75PCTL",
+          "type": "int64",
+          "description": "Third quartile of monthly nonzero snowfall totals"
+        },
+        {
+          "name": "MLY-SNOW-75PCTL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE001TI",
+          "type": "int64",
+          "description": "Monthly number of days with snowfall >= 0.1 inch"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE001TI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE010TI",
+          "type": "int64",
+          "description": "Monthly number of days with snowfall >= 1.0 inch"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE010TI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE030TI",
+          "type": "int64",
+          "description": "Monthly number of days with snowfall >= 3.0 inches"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE030TI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE050TI",
+          "type": "int64",
+          "description": "Monthly number of days with snowfall >= 5.0 inches"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE050TI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE100TI",
+          "type": "int64",
+          "description": "Monthly number of days with snowfall >= 10 inches"
+        },
+        {
+          "name": "MLY-SNOW-AVGNDS-GE100TI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNOW-NORMAL",
+          "type": "int64",
+          "description": "Long-term averages of monthly snowfall total"
+        },
+        {
+          "name": "MLY-SNOW-NORMAL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNWD-AVGNDS-GE001WI",
+          "type": "int64",
+          "description": "Monthly number of days with snow depth >= 1 inch"
+        },
+        {
+          "name": "MLY-SNWD-AVGNDS-GE001WI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNWD-AVGNDS-GE003WI",
+          "type": "int64",
+          "description": "Monthly number of days with snow depth >= 3 inches"
+        },
+        {
+          "name": "MLY-SNWD-AVGNDS-GE003WI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNWD-AVGNDS-GE005WI",
+          "type": "int64",
+          "description": "Monthly number of days with snow depth >= 5 inches"
+        },
+        {
+          "name": "MLY-SNWD-AVGNDS-GE005WI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-SNWD-AVGNDS-GE010WI",
+          "type": "int64",
+          "description": "Monthly number of days with snow depth >= 10 inches"
+        },
+        {
+          "name": "MLY-SNWD-AVGNDS-GE010WI_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-CLDD-BASE45",
+          "type": "int64",
+          "description": "Long-term averages of monthly cooling degree days with base 45F"
+        },
+        {
+          "name": "MLY-CLDD-BASE50",
+          "type": "int64",
+          "description": "Long-term averages of monthly cooling degree days with base 50F"
+        },
+        {
+          "name": "MLY-CLDD-BASE55",
+          "type": "int64",
+          "description": "Long-term averages of monthly cooling degree days with base 55F"
+        },
+        {
+          "name": "MLY-CLDD-BASE57",
+          "type": "int64",
+          "description": "Long-term averages of monthly cooling degree days with base 57F"
+        },
+        {
+          "name": "MLY-CLDD-BASE57_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-CLDD-BASE60",
+          "type": "int64",
+          "description": "Long-term averages of monthly cooling degree days with base 60F"
+        },
+        {
+          "name": "MLY-CLDD-BASE60_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-CLDD-BASE70",
+          "type": "int64",
+          "description": "Long-term averages of monthly cooling degree days with base 70F"
+        },
+        {
+          "name": "MLY-CLDD-BASE70_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-CLDD-BASE72",
+          "type": "int64",
+          "description": "Long-term averages of monthly cooling degree days with base 72F"
+        },
+        {
+          "name": "MLY-CLDD-BASE72_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-CLDD-NORMAL",
+          "type": "int64",
+          "description": "Long-term averages of monthly cooling degree days with base 65F"
+        },
+        {
+          "name": "MLY-CLDD-NORMAL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-DUTR-NORMAL",
+          "type": "int64",
+          "description": "Long-term monthly mean of daily temperature range",
+          "unit": "tenths of degree Fahrenheit"
+        },
+        {
+          "name": "MLY-DUTR-NORMAL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-DUTR-STDDEV",
+          "type": "int64",
+          "description": "Long-term monthly standard deviations of daily temperature range",
+          "unit": "tenths of degree Fahrenheit"
+        },
+        {
+          "name": "MLY-DUTR-STDDEV_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-BASE40",
+          "type": "int64",
+          "description": "Long-term averages of monthly growing degree days with base 40F"
+        },
+        {
+          "name": "MLY-GRDD-BASE40_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-BASE45",
+          "type": "int64",
+          "description": "Long-term averages of monthly growing degree days with base 45F"
+        },
+        {
+          "name": "MLY-GRDD-BASE45_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-BASE50",
+          "type": "int64",
+          "description": "Long-term averages of monthly growing degree days with base 50F"
+        },
+        {
+          "name": "MLY-GRDD-BASE50_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-BASE55",
+          "type": "int64",
+          "description": "Long-term averages of monthly growing degree days with base 55F"
+        },
+        {
+          "name": "MLY-GRDD-BASE55_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-BASE57",
+          "type": "int64",
+          "description": "Long-term averages of monthly growing degree days with base 57F"
+        },
+        {
+          "name": "MLY-GRDD-BASE57_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-BASE60",
+          "type": "int64",
+          "description": "Long-term averages of monthly growing degree days with base 60F"
+        },
+        {
+          "name": "MLY-GRDD-BASE60_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-BASE65",
+          "type": "int64",
+          "description": "Long-term averages of monthly growing degree days with base 65F"
+        },
+        {
+          "name": "MLY-GRDD-BASE65_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-BASE70",
+          "type": "int64",
+          "description": "Long-term averages of monthly growing degree days with base 70F"
+        },
+        {
+          "name": "MLY-GRDD-BASE70_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-BASE72",
+          "type": "int64",
+          "description": "Long-term averages of monthly growing degree days with base 72F"
+        },
+        {
+          "name": "MLY-GRDD-BASE72_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-TB4886",
+          "type": "int64",
+          "description": "Long-term avgs of monthly growing degree days with base 48F limit 86F"
+        },
+        {
+          "name": "MLY-GRDD-TB4886_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-GRDD-TB5086",
+          "type": "int64",
+          "description": "Long-term avgs of monthly growing degree days with base 50F limit 86F"
+        },
+        {
+          "name": "MLY-GRDD-TB5086_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-HTDD-BASE40",
+          "type": "int64",
+          "description": "Long-term averages of monthly heating degree days with base 40F"
+        },
+        {
+          "name": "MLY-HTDD-BASE40_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-HTDD-BASE45",
+          "type": "int64",
+          "description": "Long-term averages of monthly heating degree days with base 45F"
+        },
+        {
+          "name": "MLY-HTDD-BASE45_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-HTDD-BASE50",
+          "type": "int64",
+          "description": "Long-term averages of monthly heating degree days with base 50F"
+        },
+        {
+          "name": "MLY-HTDD-BASE50_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-HTDD-BASE55",
+          "type": "int64",
+          "description": "Long-term averages of monthly heating degree days with base 55F"
+        },
+        {
+          "name": "MLY-HTDD-BASE55_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-HTDD-BASE57",
+          "type": "int64",
+          "description": "Long-term averages of monthly heating degree days with base 57F"
+        },
+        {
+          "name": "MLY-HTDD-BASE57_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-HTDD-BASE60",
+          "type": "int64",
+          "description": "Long-term averages of monthly heating degree days with base 60F"
+        },
+        {
+          "name": "MLY-HTDD-BASE60_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-HTDD-NORMAL",
+          "type": "int64",
+          "description": "Long-term averages of monthly heating degree days with base 65F"
+        },
+        {
+          "name": "MLY-HTDD-NORMAL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TAVG-NORMAL",
+          "type": "int64",
+          "description": "Long-term averages of monthly average temperature",
+          "unit": "tenths of degree Fahrenheit"
+        },
+        {
+          "name": "MLY-TAVG-NORMAL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TAVG-STDDEV",
+          "type": "int64",
+          "description": "Long-term standard deviations of monthly average temperature",
+          "unit": "tenths of degree Fahrenheit"
+        },
+        {
+          "name": "MLY-TAVG-STDDEV_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH040",
+          "type": "int64",
+          "description": "Monthly number of days with maximum temperature >= 40F"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH040_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH050",
+          "type": "int64",
+          "description": "Monthly number of days with maximum temperature >= 50F"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH050_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH060",
+          "type": "int64",
+          "description": "Monthly number of days with maximum temperature >= 60F"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH060_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH070",
+          "type": "int64",
+          "description": "Monthly number of days with maximum temperature >= 70F"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH070_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH080",
+          "type": "int64",
+          "description": "Monthly number of days with maximum temperature >= 80F"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH080_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH090",
+          "type": "int64",
+          "description": "Monthly number of days with maximum temperature >= 90F"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH090_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH100",
+          "type": "int64",
+          "description": "Monthly number of days with maximum temperature >= 100F"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-GRTH100_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-LSTH032",
+          "type": "int64",
+          "description": "Monthly number of days with maximum temperature <= 32F"
+        },
+        {
+          "name": "MLY-TMAX-AVGNDS-LSTH032_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-NORMAL",
+          "type": "int64",
+          "description": "Long-term averages of monthly maximum temperature",
+          "unit": "tenths of degree Fahrenheit"
+        },
+        {
+          "name": "MLY-TMAX-NORMAL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMAX-STDDEV",
+          "type": "int64",
+          "description": "Long-term standard deviations of monthly maximum temperature",
+          "unit": "tenths of degree Fahrenheit"
+        },
+        {
+          "name": "MLY-TMAX-STDDEV_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH000",
+          "type": "int64",
+          "description": "Monthly number of days with minimum temperature <= 0F"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH000_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH010",
+          "type": "int64",
+          "description": "Monthly number of days with minimum temperature <= 10F"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH010_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH020",
+          "type": "int64",
+          "description": "Monthly number of days with minimum temperature <= 20F"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH020_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH032",
+          "type": "int64",
+          "description": "Monthly number of days with minimum temperature <= 32F"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH032_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH040",
+          "type": "int64",
+          "description": "Monthly number of days with minimum temperature <= 40F"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH040_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH050",
+          "type": "int64",
+          "description": "Monthly number of days with minimum temperature <= 50F"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH050_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH060",
+          "type": "int64",
+          "description": "Monthly number of days with minimum temperature <= 60F"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH060_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH070",
+          "type": "int64",
+          "description": "Monthly number of days with minimum temperature <= 70F"
+        },
+        {
+          "name": "MLY-TMIN-AVGNDS-LSTH070_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-NORMAL",
+          "type": "int64",
+          "description": "Long-term averages of monthly minimum temperature",
+          "unit": "tenths of degree Fahrenheit"
+        },
+        {
+          "name": "MLY-TMIN-NORMAL_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH016",
+          "type": "int64",
+          "description": "Probability of minimum temperature at least once monthly <= 16F"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH016_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH020",
+          "type": "int64",
+          "description": "Probability of minimum temperature at least once monthly <= 20F"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH020_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH024",
+          "type": "int64",
+          "description": "Probability of minimum temperature at least once monthly <= 24F"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH024_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH028",
+          "type": "int64",
+          "description": "Probability of minimum temperature at least once monthly <= 28F"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH028_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH032",
+          "type": "int64",
+          "description": "Probability of minimum temperature at least once monthly <= 32F"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH032_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH036",
+          "type": "int64",
+          "description": "Probability of minimum temperature at least once monthly <= 36F"
+        },
+        {
+          "name": "MLY-TMIN-PRBOCC-LSTH036_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "MLY-TMIN-STDDEV",
+          "type": "int64",
+          "description": "Long-term standard deviations of monthly minimum temperature",
+          "unit": "tenths of degree Fahrenheit"
+        },
+        {
+          "name": "MLY-TMIN-STDDEV_ATTRIBUTES",
+          "type": "string"
+        },
+        {
+          "name": "geometry",
+          "type": "geometry",
+          "description": "Station 3D location"
+        }
+      ],
+      "table:row_count": 48,
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    }
+  },
+  "bbox": [
+    -170.76667,
+    -14.33056,
+    145.74972,
+    44.2326
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ]
+}

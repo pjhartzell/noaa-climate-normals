@@ -1,9 +1,9 @@
 import stactools.core
 from stactools.cli.registry import Registry
 
-from stactools.noaa_climate_normals.stac import create_collection, create_item
+from stactools.noaa_climate_normals.stac import create_tabular_item
 
-__all__ = ["create_collection", "create_item"]
+__all__ = ["create_tabular_item"]
 
 stactools.core.use_fsspec()
 
