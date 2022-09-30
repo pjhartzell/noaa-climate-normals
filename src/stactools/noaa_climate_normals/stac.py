@@ -16,23 +16,20 @@ logger = logging.getLogger(__name__)
 
 def create_tabular_item(
     csv_hrefs: List[str],
-    _frequency: constants.Frequency,
-    _period: constants.Period,
+    frequency: constants.Frequency,
+    period: constants.Period,
     parquet_dir: str,
 ) -> Item:
 
-    frequency = constants.Frequency(_frequency)
-    period = constants.Period(_period)
     start_year = int(period.value[0:4])
     end_year = int(period.value[5:])
-
     id = f"{frequency}_{period}"
     title = (
         f"{frequency.capitalize()} NOAA US Climate Normals for Period {period.value}"
     )
 
     parquet_dict = create_parquet(
-        csv_hrefs, frequency, os.path.join(parquet_dir, f"{id}.parquet")
+        csv_hrefs, frequency, period, os.path.join(parquet_dir, f"{id}.parquet")
     )
     geometry = parquet_dict.pop("geometry")
     bbox = parquet_dict.pop("bbox")

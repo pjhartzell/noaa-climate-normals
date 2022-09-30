@@ -4,7 +4,7 @@ import os
 import click
 from click import Command, Group
 
-from stactools.noaa_climate_normals import stac, constants
+from stactools.noaa_climate_normals import constants, stac
 
 logger = logging.getLogger(__name__)
 
@@ -42,11 +42,13 @@ def create_noaaclimatenormals_command(cli: Group) -> Command:
         "create-tabular-item", short_help="Create a STAC Item for tabular data"
     )
     @click.argument("file-list")
-    @click.argument("frequency", type=click.Choice([f.value for f in constants.Frequency]))
+    @click.argument(
+        "frequency", type=click.Choice([f.value for f in constants.Frequency])
+    )
     @click.argument("period", type=click.Choice([p.value for p in constants.Period]))
     @click.argument("parquet-dir")
     @click.argument("item-dir")
-    def create_item_command(
+    def create_tabular_item_command(
         file_list: str,
         frequency: constants.Frequency,
         period: constants.Period,

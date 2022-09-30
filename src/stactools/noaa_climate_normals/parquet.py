@@ -9,9 +9,14 @@ from shapely.geometry import mapping
 from stactools.noaa_climate_normals import constants
 
 
-def create_parquet(csv_hrefs: List[str], frequency: str, parquet_path: str) -> Dict[str, Any]:
+def create_parquet(
+    csv_hrefs: List[str],
+    frequency: constants.Frequency,
+    period: constants.Period,
+    parquet_path: str,
+) -> Dict[str, Any]:
     geodataframe = csv_to_geodataframe(csv_hrefs)
-    columns = geodataframe_columns(geodataframe, frequency)
+    columns = geodataframe_columns(geodataframe, frequency, period)
     geodataframe_dict = {
         "geometry": mapping(geodataframe.unary_union.convex_hull),
         "bbox": list(geodataframe.total_bounds),
@@ -29,7 +34,7 @@ def create_parquet(csv_hrefs: List[str], frequency: str, parquet_path: str) -> D
     return geodataframe_dict
 
 
-def csv_to_geodataframe(csv_hrefs) -> gpd.GeoDataFrame:
+def csv_to_geodataframe(csv_hrefs: List[str]) -> gpd.GeoDataFrame:
     dataframes = (pd.read_csv(href) for href in csv_hrefs)
     dataframe = pd.concat(dataframes, ignore_index=True).copy()
     return gpd.GeoDataFrame(
@@ -44,9 +49,11 @@ def csv_to_geodataframe(csv_hrefs) -> gpd.GeoDataFrame:
 
 
 def geodataframe_columns(
-    geodataframe: gpd.GeoDataFrame, frequency: str
+    geodataframe: gpd.GeoDataFrame,
+    frequency: constants.Frequency,
+    period: constants.Period,
 ) -> List[Dict[str, Any]]:
-    column_metadata = load_column_metadata(frequency)
+    column_metadata = load_column_metadata(frequency, period)
     columns = []
     for column, dtype in zip(geodataframe.columns, geodataframe.dtypes):
         temp = {
@@ -63,10 +70,13 @@ def geodataframe_columns(
     return columns
 
 
-def load_column_metadata(frequency: str) -> Dict[str, Any]:
+def load_column_metadata(
+    frequency: constants.Frequency, period: constants.Period
+) -> Dict[str, Any]:
     try:
         with pkg_resources.resource_stream(
-            "stactools.noaa_climate_normals.parquet", f"column_metadata/{frequency}.json"
+            "stactools.noaa_climate_normals.parquet",
+            f"column_metadata/{frequency}_{period}.json",
         ) as stream:
             return json.load(stream)
     except FileNotFoundError as e:

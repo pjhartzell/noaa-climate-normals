@@ -5,7 +5,7 @@
     },
     "date": {
         "description": "Month of year",
-        "unit": "integer month [1, 12]"
+        "unit": null
     },
     "latitude": {
         "description": "Station latitude",
@@ -16,7 +16,7 @@
         "unit": "degree"
     },
     "elevation": {
-        "description": "Station elevation in meters",
+        "description": "Station elevation",
         "unit": "meter"
     },
     "name": {
@@ -24,411 +24,411 @@
         "unit": null
     },
     "geometry": {
-        "description": "Station 3D location",
+        "description": "Station 3D point location",
         "unit": null
     },
     "mly-tavg-normal": {
         "description": "Long-term averages of monthly average temperature",
-        "unit": "tenths of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit"
     },
     "mly-tavg-stddev": {
         "description": "Long-term standard deviations of monthly average temperature",
-        "unit": "tenths of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit"
     },
     "mly-tmax-normal": {
         "description": "Long-term averages of monthly maximum temperature",
-        "unit": "tenths of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit"
     },
     "mly-tmax-stddev": {
         "description": "Long-term standard deviations of monthly maximum temperature",
-        "unit": "tenths of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit"
     },
     "mly-tmin-normal": {
         "description": "Long-term averages of monthly minimum temperature",
-        "unit": "tenths of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit"
     },
     "mly-tmin-stddev": {
         "description": "Long-term standard deviations of monthly minimum temperature",
-        "unit": "tenths of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit"
     },
     "mly-dutr-normal": {
         "description": "Long-term monthly mean of daily temperature range",
-        "unit": "tenths of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit"
     },
     "mly-dutr-stddev": {
         "description": "Long-term monthly standard deviations of daily temperature range",
-        "unit": "tenths of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit"
     },
     "mly-cldd-base40": {
         "description": "Long-term averages of monthly cooling degree days with base 40F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-cldd-base45": {
         "description": "Long-term averages of monthly cooling degree days with base 45F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-cldd-base50": {
         "description": "Long-term averages of monthly cooling degree days with base 50F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-cldd-base55": {
         "description": "Long-term averages of monthly cooling degree days with base 55F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-cldd-base57": {
         "description": "Long-term averages of monthly cooling degree days with base 57F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-cldd-base60": {
         "description": "Long-term averages of monthly cooling degree days with base 60F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-cldd-base70": {
         "description": "Long-term averages of monthly cooling degree days with base 70F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-cldd-base72": {
         "description": "Long-term averages of monthly cooling degree days with base 72F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-cldd-normal": {
         "description": "Long-term averages of monthly cooling degree days with base 65F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-base40": {
         "description": "Long-term averages of monthly growing degree days with base 40F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-base45": {
         "description": "Long-term averages of monthly growing degree days with base 45F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-base50": {
         "description": "Long-term averages of monthly growing degree days with base 50F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-base55": {
         "description": "Long-term averages of monthly growing degree days with base 55F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-base57": {
         "description": "Long-term averages of monthly growing degree days with base 57F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-base60": {
         "description": "Long-term averages of monthly growing degree days with base 60F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-base65": {
         "description": "Long-term averages of monthly growing degree days with base 65F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-base70": {
         "description": "Long-term averages of monthly growing degree days with base 70F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-base72": {
         "description": "Long-term averages of monthly growing degree days with base 72F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-tb4886": {
         "description": "Long-term avgs of monthly growing degree days with base 48F limit 86F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-grdd-tb5086": {
         "description": "Long-term avgs of monthly growing degree days with base 50F limit 86F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-htdd-base40": {
         "description": "Long-term averages of monthly heating degree days with base 40F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-htdd-base45": {
         "description": "Long-term averages of monthly heating degree days with base 45F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-htdd-base50": {
         "description": "Long-term averages of monthly heating degree days with base 50F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-htdd-base55": {
         "description": "Long-term averages of monthly heating degree days with base 55F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-htdd-base57": {
         "description": "Long-term averages of monthly heating degree days with base 57F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-htdd-base60": {
         "description": "Long-term averages of monthly heating degree days with base 60F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-htdd-normal": {
         "description": "Long-term averages of monthly heating degree days with base 65F",
-        "unit": null
+        "unit": "degree Fahrenheit"
     },
     "mly-prcp-normal": {
         "description": "Long-term averages of monthly precipitation total",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-25pctl": {
         "description": "First quartile of monthly nonzero precipitation totals",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-50pctl": {
         "description": "Second quartile of monthly nonzero precipitation totals",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-75pctl": {
         "description": "Third quartile of monthly nonzero precipitation totals",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-20pctl": {
         "description": "First quintile of monthly nonzero precipitation totals",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-40pctl": {
         "description": "Second quintile of monthly nonzero precipitation totals",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-60pctl": {
         "description": "Third quintile of monthly nonzero precipitation totals",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-80pctl": {
         "description": "Fourth quintile of monthly nonzero precipitation totals",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-33pctl": {
         "description": "First tercile of monthly nonzero precipitation totals",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-67pctl": {
         "description": "Second tercile of monthly nonzero precipitation totals",
-        "unit": null
+        "unit": "hundredth of inch"
     },
     "mly-prcp-avgnds-ge001hi": {
         "description": "Monthly number of days with precipitation >= 0.01 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-prcp-avgnds-ge010hi": {
         "description": "Monthly number of days with precipitation >= 0.10 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-prcp-avgnds-ge025hi": {
         "description": "Monthly number of days with precipitation >= 0.25 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-prcp-avgnds-ge050hi": {
         "description": "Monthly number of days with precipitation >= 0.50 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-prcp-avgnds-ge100hi": {
         "description": "Monthly number of days with precipitation >= 1.00 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-prcp-avgnds-ge200hi": {
         "description": "Monthly number of days with precipitation >= 2.00 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-prcp-avgnds-ge400hi": {
         "description": "Monthly number of days with precipitation >= 4.00 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-prcp-avgnds-ge600hi": {
         "description": "Monthly number of days with precipitation >= 6.00 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snow-normal": {
         "description": "Long-term averages of monthly snowfall total",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-25pctl": {
         "description": "First quartile of monthly nonzero snowfall totals",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-50pctl": {
         "description": "Second quartile of monthly nonzero snowfall totals",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-75pctl": {
         "description": "Third quartile of monthly nonzero snowfall totals",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-20pctl": {
         "description": "First quintile of monthly nonzero snowfall totals",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-40pctl": {
         "description": "Second quintile of monthly nonzero snowfall totals",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-60pctl": {
         "description": "Third quintile of monthly nonzero snowfall totals",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-80pctl": {
         "description": "Fourth quintile of monthly nonzero snowfall totals",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-33pctl": {
         "description": "First tercile of monthly nonzero snowfall totals",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-67pctl": {
         "description": "Second tercile of monthly nonzero snowfall totals",
-        "unit": null
+        "unit": "tenth of inch"
     },
     "mly-snow-avgnds-ge001ti": {
         "description": "Monthly number of days with snowfall >= 0.1 inch",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snow-avgnds-ge010ti": {
         "description": "Monthly number of days with snowfall >= 1.0 inch",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snow-avgnds-ge020ti": {
         "description": "Monthly number of days with snowfall >= 2.0 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snow-avgnds-ge030ti": {
         "description": "Monthly number of days with snowfall >= 3.0 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snow-avgnds-ge040ti": {
         "description": "Monthly number of days with snowfall >= 4.0 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snow-avgnds-ge050ti": {
         "description": "Monthly number of days with snowfall >= 5.0 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snow-avgnds-ge100ti": {
         "description": "Monthly number of days with snowfall >= 10 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snow-avgnds-ge200ti": {
         "description": "Monthly number of days with snowfall >= 20 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snwd-avgnds-ge001wi": {
         "description": "Monthly number of days with snow depth >= 1 inch",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snwd-avgndsge002wi": {
         "description": "Monthly number of days with snow depth >= 2 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snwd-avgnds-ge003wi": {
         "description": "Monthly number of days with snow depth >= 3 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snwd-avgnds-ge004wi": {
         "description": "Monthly number of days with snow depth >= 4 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snwd-avgnds-ge005wi": {
         "description": "Monthly number of days with snow depth >= 5 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snwd-avgnds-ge010wi": {
         "description": "Monthly number of days with snow depth >= 10 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-snwd-avgnds-ge020wi": {
         "description": "Monthly number of days with snow depth >= 20 inches",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmin-avgnds-lsth000": {
         "description": "Monthly number of days with minimum temperature <= 0F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmin-avgnds-lsth010": {
         "description": "Monthly number of days with minimum temperature <= 10F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmin-avgnds-lsth020": {
         "description": "Monthly number of days with minimum temperature <= 20F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmin-avgnds-lsth032": {
         "description": "Monthly number of days with minimum temperature <= 32F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmin-avgnds-lsth040": {
         "description": "Monthly number of days with minimum temperature <= 40F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmin-avgnds-lsth050": {
         "description": "Monthly number of days with minimum temperature <= 50F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmin-avgnds-lsth060": {
         "description": "Monthly number of days with minimum temperature <= 60F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmin-avgnds-lsth070": {
         "description": "Monthly number of days with minimum temperature <= 70F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmax-avgnds-grth032": {
         "description": "Monthly number of days with maximum temperature >= 32F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmax-avgnds-grth040": {
         "description": "Monthly number of days with maximum temperature >= 40F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmax-avgnds-grth050": {
         "description": "Monthly number of days with maximum temperature >= 50F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmax-avgnds-grth060": {
         "description": "Monthly number of days with maximum temperature >= 60F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmax-avgnds-grth070": {
         "description": "Monthly number of days with maximum temperature >= 70F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmax-avgnds-grth080": {
         "description": "Monthly number of days with maximum temperature >= 80F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmax-avgnds-grth090": {
         "description": "Monthly number of days with maximum temperature >= 90F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmax-avgnds-grth100": {
         "description": "Monthly number of days with maximum temperature >= 100F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmax-avgnds-lsth032": {
         "description": "Monthly number of days with maximum temperature <= 32F",
-        "unit": null
+        "unit": "tenth of day"
     },
     "mly-tmin-prbocc-lsth016": {
         "description": "Probability of minimum temperature at least once monthly <= 16F",
-        "unit": null
+        "unit": "tenth of percent"
     },
     "mly-tmin-prbocc-lsth020": {
         "description": "Probability of minimum temperature at least once monthly <= 20F",
-        "unit": null
+        "unit": "tenth of percent"
     },
     "mly-tmin-prbocc-lsth024": {
         "description": "Probability of minimum temperature at least once monthly <= 24F",
-        "unit": null
+        "unit": "tenth of percent"
     },
     "mly-tmin-prbocc-lsth028": {
         "description": "Probability of minimum temperature at least once monthly <= 28F",
-        "unit": null
+        "unit": "tenth of percent"
     },
     "mly-tmin-prbocc-lsth032": {
         "description": "Probability of minimum temperature at least once monthly <= 32F",
-        "unit": null
+        "unit": "tenth of percent"
     },
     "mly-tmin-prbocc-lsth036": {
         "description": "Probability of minimum temperature at least once monthly <= 36F",
-        "unit": null
+        "unit": "tenth of percent"
     }
 }
