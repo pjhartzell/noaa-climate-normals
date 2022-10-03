@@ -41,9 +41,9 @@ def csv_to_geodataframe(csv_hrefs: List[str]) -> gpd.GeoDataFrame:
     return gpd.GeoDataFrame(
         data=dataframe,
         geometry=gpd.points_from_xy(
-            x=dataframe.LONGITUDE,
-            y=dataframe.LATITUDE,
-            z=dataframe.ELEVATION,
+            x=dataframe.longitude,
+            y=dataframe.latitude,
+            z=dataframe.elevation,
             crs=constants.CRS,
         ),
     ).convert_dtypes()
