@@ -60,13 +60,19 @@ def geodataframe_columns(
             "name": column,
             "type": dtype.name.lower(),
         }
+
         description = column_metadata.get(column.lower(), {}).get("description")
         if description:
             temp["description"] = description
+        if "_ATTRIBUTES" in column:
+            temp["description"] = "Data record completeness flag"
+
         unit = column_metadata.get(column.lower(), {}).get("unit")
         if unit:
             temp["unit"] = unit
+
         columns.append(temp)
+
     return columns
 
 

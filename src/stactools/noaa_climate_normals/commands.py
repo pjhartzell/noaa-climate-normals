@@ -64,7 +64,7 @@ def create_noaaclimatenormals_command(cli: Group) -> Command:
             file_list (str): Path to a text file containing HREFs to CSV files,
                 one HREF per line.
             frequency (constants.Frequency): Choice of 'hourly', 'daily',
-                'monthly', or 'seasonalannual'.
+                'monthly', or 'annual/seasonal'.
             period (constants.Period): Choice of '1981-2010', '1991-2020', or
                 '2006-2020'.
             output_dir (str): Directory for GeoParquet file and STAC Item.

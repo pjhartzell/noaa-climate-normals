@@ -7,9 +7,11 @@
     "noaa-climate-normals:period": "1981-2010",
     "start_datetime": "1981-01-01T00:00:00Z",
     "end_datetime": "2010-12-31T23:59:59Z",
-    "created": "2022-10-03T13:12:47.133050Z",
+    "created": "2022-10-03T16:09:58.389297Z",
     "title": "Monthly NOAA US Climate Normals for Period 1981-2010",
     "proj:epsg": 4269,
+    "sci:doi": "10.7289/V5PN93JP",
+    "sci:citation": "Anthony Arguez, Imke Durre, Scott Applequist, Mike Squires, Russell Vose, Xungang Yin, and Rocky Bilotta (2010). NOAA's U.S. Climate Normals (1981-2010). Monthly. NOAA National Centers for Environmental Information. DOI:10.7289/V5PN93JP.",
     "datetime": null
   },
   "geometry": {
@@ -44,7 +46,24 @@
       ]
     ]
   },
-  "links": [],
+  "links": [
+    {
+      "rel": "about",
+      "href": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00822",
+      "type": "text/html",
+      "title": "U.S. Monthly Climate Normals (1981-2010) Landing Page"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://www.ncei.noaa.gov/data/normals-monthly/1981-2010/doc/NORMAL_MLY_documentation.pdf",
+      "type": "application/pdf",
+      "title": "U.S. Monthly Climate Normals (1981-2010) Documentation"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.7289/V5PN93JP"
+    }
+  ],
   "assets": {
     "parquet": {
       "href": "./monthly_1981-2010.parquet",
@@ -93,7 +112,8 @@
         },
         {
           "name": "MLY-PRCP-25PCTL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-PRCP-50PCTL",
@@ -103,7 +123,8 @@
         },
         {
           "name": "MLY-PRCP-50PCTL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-PRCP-75PCTL",
@@ -113,7 +134,8 @@
         },
         {
           "name": "MLY-PRCP-75PCTL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-PRCP-AVGNDS-GE001HI",
@@ -123,7 +145,8 @@
         },
         {
           "name": "MLY-PRCP-AVGNDS-GE001HI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-PRCP-AVGNDS-GE010HI",
@@ -133,7 +156,8 @@
         },
         {
           "name": "MLY-PRCP-AVGNDS-GE010HI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-PRCP-AVGNDS-GE050HI",
@@ -143,7 +167,8 @@
         },
         {
           "name": "MLY-PRCP-AVGNDS-GE050HI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-PRCP-AVGNDS-GE100HI",
@@ -153,7 +178,8 @@
         },
         {
           "name": "MLY-PRCP-AVGNDS-GE100HI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-PRCP-NORMAL",
@@ -163,7 +189,8 @@
         },
         {
           "name": "MLY-PRCP-NORMAL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNOW-25PCTL",
@@ -173,7 +200,8 @@
         },
         {
           "name": "MLY-SNOW-25PCTL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNOW-50PCTL",
@@ -183,7 +211,8 @@
         },
         {
           "name": "MLY-SNOW-50PCTL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNOW-75PCTL",
@@ -193,7 +222,8 @@
         },
         {
           "name": "MLY-SNOW-75PCTL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE001TI",
@@ -203,7 +233,8 @@
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE001TI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE010TI",
@@ -213,7 +244,8 @@
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE010TI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE030TI",
@@ -223,7 +255,8 @@
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE030TI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE050TI",
@@ -233,7 +266,8 @@
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE050TI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE100TI",
@@ -243,7 +277,8 @@
         },
         {
           "name": "MLY-SNOW-AVGNDS-GE100TI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNOW-NORMAL",
@@ -253,7 +288,8 @@
         },
         {
           "name": "MLY-SNOW-NORMAL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNWD-AVGNDS-GE001WI",
@@ -263,7 +299,8 @@
         },
         {
           "name": "MLY-SNWD-AVGNDS-GE001WI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNWD-AVGNDS-GE003WI",
@@ -273,7 +310,8 @@
         },
         {
           "name": "MLY-SNWD-AVGNDS-GE003WI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNWD-AVGNDS-GE005WI",
@@ -283,7 +321,8 @@
         },
         {
           "name": "MLY-SNWD-AVGNDS-GE005WI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-SNWD-AVGNDS-GE010WI",
@@ -293,7 +332,8 @@
         },
         {
           "name": "MLY-SNWD-AVGNDS-GE010WI_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-CLDD-BASE45",
@@ -321,7 +361,8 @@
         },
         {
           "name": "MLY-CLDD-BASE57_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-CLDD-BASE60",
@@ -331,7 +372,8 @@
         },
         {
           "name": "MLY-CLDD-BASE60_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-CLDD-BASE70",
@@ -341,7 +383,8 @@
         },
         {
           "name": "MLY-CLDD-BASE70_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-CLDD-BASE72",
@@ -351,7 +394,8 @@
         },
         {
           "name": "MLY-CLDD-BASE72_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-CLDD-NORMAL",
@@ -361,7 +405,8 @@
         },
         {
           "name": "MLY-CLDD-NORMAL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-DUTR-NORMAL",
@@ -371,7 +416,8 @@
         },
         {
           "name": "MLY-DUTR-NORMAL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-DUTR-STDDEV",
@@ -381,7 +427,8 @@
         },
         {
           "name": "MLY-DUTR-STDDEV_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-BASE40",
@@ -391,7 +438,8 @@
         },
         {
           "name": "MLY-GRDD-BASE40_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-BASE45",
@@ -401,7 +449,8 @@
         },
         {
           "name": "MLY-GRDD-BASE45_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-BASE50",
@@ -411,7 +460,8 @@
         },
         {
           "name": "MLY-GRDD-BASE50_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-BASE55",
@@ -421,7 +471,8 @@
         },
         {
           "name": "MLY-GRDD-BASE55_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-BASE57",
@@ -431,7 +482,8 @@
         },
         {
           "name": "MLY-GRDD-BASE57_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-BASE60",
@@ -441,7 +493,8 @@
         },
         {
           "name": "MLY-GRDD-BASE60_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-BASE65",
@@ -451,7 +504,8 @@
         },
         {
           "name": "MLY-GRDD-BASE65_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-BASE70",
@@ -461,7 +515,8 @@
         },
         {
           "name": "MLY-GRDD-BASE70_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-BASE72",
@@ -471,7 +526,8 @@
         },
         {
           "name": "MLY-GRDD-BASE72_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-TB4886",
@@ -481,7 +537,8 @@
         },
         {
           "name": "MLY-GRDD-TB4886_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-GRDD-TB5086",
@@ -491,7 +548,8 @@
         },
         {
           "name": "MLY-GRDD-TB5086_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-HTDD-BASE40",
@@ -501,7 +559,8 @@
         },
         {
           "name": "MLY-HTDD-BASE40_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-HTDD-BASE45",
@@ -511,7 +570,8 @@
         },
         {
           "name": "MLY-HTDD-BASE45_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-HTDD-BASE50",
@@ -521,7 +581,8 @@
         },
         {
           "name": "MLY-HTDD-BASE50_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-HTDD-BASE55",
@@ -531,7 +592,8 @@
         },
         {
           "name": "MLY-HTDD-BASE55_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-HTDD-BASE57",
@@ -541,7 +603,8 @@
         },
         {
           "name": "MLY-HTDD-BASE57_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-HTDD-BASE60",
@@ -551,7 +614,8 @@
         },
         {
           "name": "MLY-HTDD-BASE60_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-HTDD-NORMAL",
@@ -561,7 +625,8 @@
         },
         {
           "name": "MLY-HTDD-NORMAL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TAVG-NORMAL",
@@ -571,7 +636,8 @@
         },
         {
           "name": "MLY-TAVG-NORMAL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TAVG-STDDEV",
@@ -581,7 +647,8 @@
         },
         {
           "name": "MLY-TAVG-STDDEV_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH040",
@@ -591,7 +658,8 @@
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH040_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH050",
@@ -601,7 +669,8 @@
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH050_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH060",
@@ -611,7 +680,8 @@
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH060_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH070",
@@ -621,7 +691,8 @@
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH070_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH080",
@@ -631,7 +702,8 @@
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH080_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH090",
@@ -641,7 +713,8 @@
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH090_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH100",
@@ -651,7 +724,8 @@
         },
         {
           "name": "MLY-TMAX-AVGNDS-GRTH100_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-AVGNDS-LSTH032",
@@ -661,7 +735,8 @@
         },
         {
           "name": "MLY-TMAX-AVGNDS-LSTH032_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-NORMAL",
@@ -671,7 +746,8 @@
         },
         {
           "name": "MLY-TMAX-NORMAL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMAX-STDDEV",
@@ -681,7 +757,8 @@
         },
         {
           "name": "MLY-TMAX-STDDEV_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH000",
@@ -691,7 +768,8 @@
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH000_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH010",
@@ -701,7 +779,8 @@
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH010_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH020",
@@ -711,7 +790,8 @@
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH020_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH032",
@@ -721,7 +801,8 @@
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH032_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH040",
@@ -731,7 +812,8 @@
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH040_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH050",
@@ -741,7 +823,8 @@
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH050_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH060",
@@ -751,7 +834,8 @@
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH060_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH070",
@@ -761,7 +845,8 @@
         },
         {
           "name": "MLY-TMIN-AVGNDS-LSTH070_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-NORMAL",
@@ -771,7 +856,8 @@
         },
         {
           "name": "MLY-TMIN-NORMAL_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH016",
@@ -781,7 +867,8 @@
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH016_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH020",
@@ -791,7 +878,8 @@
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH020_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH024",
@@ -801,7 +889,8 @@
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH024_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH028",
@@ -811,7 +900,8 @@
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH028_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH032",
@@ -821,7 +911,8 @@
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH032_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH036",
@@ -831,7 +922,8 @@
         },
         {
           "name": "MLY-TMIN-PRBOCC-LSTH036_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "MLY-TMIN-STDDEV",
@@ -841,7 +933,8 @@
         },
         {
           "name": "MLY-TMIN-STDDEV_ATTRIBUTES",
-          "type": "string"
+          "type": "string",
+          "description": "Data record completeness flag"
         },
         {
           "name": "geometry",
@@ -864,6 +957,7 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json"
   ]
 }
