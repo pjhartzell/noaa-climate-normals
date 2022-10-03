@@ -1,1 +1,0 @@
-/Users/pjh/dev/noaa-climate-normals/pjh/LebAirport/USW00094765-LebanonNhAirport-1981-2010-monthly.csv

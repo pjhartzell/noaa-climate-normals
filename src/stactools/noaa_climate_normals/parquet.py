@@ -72,7 +72,7 @@ def geodataframe_columns(
 
 def load_column_metadata(
     frequency: constants.Frequency, period: constants.Period
-) -> Dict[str, Any]:
+) -> Any:
     try:
         with pkg_resources.resource_stream(
             "stactools.noaa_climate_normals.parquet",

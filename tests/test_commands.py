@@ -1,57 +1,39 @@
-# import os.path
-# from tempfile import TemporaryDirectory
-# from typing import Callable, List
+import os.path
+from tempfile import TemporaryDirectory
+from typing import Callable, List
 
-# import pystac
-# from click import Command, Group
-# from stactools.testing.cli_test import CliTestCase
+import pystac
+from click import Command, Group
+from stactools.testing.cli_test import CliTestCase
 
-# from stactools.noaa_climate_normals.commands import create_noaaclimatenormals_command
+from stactools.noaa_climate_normals.commands import create_noaaclimatenormals_command
+from tests import test_data
 
 
-# class CommandsTest(CliTestCase):
-#     def create_subcommand_functions(self) -> List[Callable[[Group], Command]]:
-#         return [create_noaaclimatenormals_command]
+class CommandsTest(CliTestCase):
+    def create_subcommand_functions(self) -> List[Callable[[Group], Command]]:
+        return [create_noaaclimatenormals_command]
 
-#     def test_create_collection(self) -> None:
-#         with TemporaryDirectory() as tmp_dir:
-#             # Run your custom create-collection command and validate
+    def test_create_tabular_item(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            file_list_path = f"{tmp_dir}/test_monthly_1981-2010.txt"
+            with open(file_list_path, "w") as f:
+                f.write(
+                    test_data.get_path("data-files/monthly/1981-2010/USW00013740.csv\n")
+                )
+                f.write(
+                    test_data.get_path("data-files/monthly/1981-2010/USW00094765.csv")
+                )
 
-#             # Example:
-#             destination = os.path.join(tmp_dir, "collection.json")
+            result = self.run_command(
+                f"noaa-climate-normals create-tabular-item {file_list_path} "
+                f"monthly 1981-2010 {tmp_dir}"
+            )
+            assert result.exit_code == 0, "\n{}".format(result.output)
 
-#             result = self.run_command(
-#                 f"noaaclimatenormals create-collection {destination}"
-#             )
+            jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
+            assert len(jsons) == 1
+            item = pystac.read_file(os.path.join(tmp_dir, "monthly_1981-2010.json"))
+            assert os.path.isfile(os.path.join(tmp_dir, f"{item.id}.parquet"))
 
-#             assert result.exit_code == 0, "\n{}".format(result.output)
-
-#             jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
-#             assert len(jsons) == 1
-
-#             collection = pystac.read_file(destination)
-#             assert collection.id == "my-collection-id"
-#             # assert collection.other_attr...
-
-#             collection.validate()
-
-#     def test_create_item(self) -> None:
-#         with TemporaryDirectory() as tmp_dir:
-#             # Run your custom create-item command and validate
-
-#             # Example:
-#             infile = "/path/to/asset.tif"
-#             destination = os.path.join(tmp_dir, "item.json")
-#             result = self.run_command(
-#                 f"noaaclimatenormals create-item {infile} {destination}"
-#             )
-#             assert result.exit_code == 0, "\n{}".format(result.output)
-
-#             jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
-#             assert len(jsons) == 1
-
-#             item = pystac.read_file(destination)
-#             assert item.id == "my-item-id"
-#             # assert item.other_attr...
-
-#             item.validate()
+            item.validate()

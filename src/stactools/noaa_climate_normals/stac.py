@@ -21,6 +21,9 @@ def create_tabular_item(
     parquet_dir: str,
 ) -> Item:
 
+    # Address the attributes columns...
+    # Add documentation links
+
     start_year = int(period.value[0:4])
     end_year = int(period.value[5:])
     id = f"{frequency}_{period}"
