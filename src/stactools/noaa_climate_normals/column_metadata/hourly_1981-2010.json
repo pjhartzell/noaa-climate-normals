@@ -1,4 +1,32 @@
 {
+    "station": {
+        "description": "Station identification code",
+        "unit": null
+    },
+    "date": {
+        "description": "Month, day, and hour in MM-DDTHH:00:00 format",
+        "unit": null
+    },
+    "latitude": {
+        "description": "Station latitude",
+        "unit": "degree"
+    },
+    "longitude": {
+        "description": "Station longitude",
+        "unit": "degree"
+    },
+    "elevation": {
+        "description": "Station elevation",
+        "unit": "meter"
+    },
+    "name": {
+        "description": "Station name",
+        "unit": null
+    },
+    "geometry": {
+        "description": "Station 3D point location",
+        "unit": null
+    },
     "hly-cldh-normal": {
         "description": "Cooling degree hours",
         "unit": "tenth of degree hour"

@@ -1,4 +1,32 @@
 {
+    "station": {
+        "description": "Station identification code",
+        "unit": null
+    },
+    "date": {
+        "description": "Month and day in MM-DD format",
+        "unit": null
+    },
+    "latitude": {
+        "description": "Station latitude",
+        "unit": "degree"
+    },
+    "longitude": {
+        "description": "Station longitude",
+        "unit": "degree"
+    },
+    "elevation": {
+        "description": "Station elevation",
+        "unit": "meter"
+    },
+    "name": {
+        "description": "Station name",
+        "unit": null
+    },
+    "geometry": {
+        "description": "Station 3D point location",
+        "unit": null
+    },
     "dly-tavg-normal": {
         "description": "Long-term averages of daily average temperature",
         "unit": "tenth of degree Fahrenheit"
