@@ -77,7 +77,15 @@ DOCUMENTATION = {
             media_type="application/pdf",
             title="U.S. Annual/Seasonal Climate Normals (1981-2010) Documentation",
         ),
-    }
+    },
+    "1991-2020": {
+        "hourly": pystac.Link(
+            rel="describedby",
+            target="https://www.ncei.noaa.gov/data/normals-hourly/1991-2020/doc/Normals_HLY_Documentation_1991-2020.pdf",  # noqa
+            media_type="application/pdf",
+            title="U.S. Hourly Climate Normals (1991-2020) Documentation",
+        ),
+    },
 }
 
 CITE_AS = {

@@ -37,6 +37,7 @@ def create_parquet(
 def csv_to_geodataframe(csv_hrefs: List[str]) -> gpd.GeoDataFrame:
     dataframes = (pd.read_csv(href) for href in csv_hrefs)
     dataframe = pd.concat(dataframes, ignore_index=True).copy()
+    dataframe.columns = dataframe.columns.str.lower()
     return gpd.GeoDataFrame(
         data=dataframe,
         geometry=gpd.points_from_xy(
@@ -61,13 +62,13 @@ def geodataframe_columns(
             "type": dtype.name.lower(),
         }
 
-        description = column_metadata.get(column.lower(), {}).get("description")
+        description = column_metadata.get(column, {}).get("description")
         if description:
             temp["description"] = description
         if "_ATTRIBUTES" in column:
             temp["description"] = "Data record completeness flag"
 
-        unit = column_metadata.get(column.lower(), {}).get("unit")
+        unit = column_metadata.get(column, {}).get("unit")
         if unit:
             temp["unit"] = unit
 
