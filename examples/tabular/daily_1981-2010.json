@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "1981-2010",
     "start_datetime": "1981-01-01T00:00:00Z",
     "end_datetime": "2010-12-31T23:59:59Z",
-    "created": "2022-10-05T13:48:10.505761Z",
+    "created": "2022-10-05T15:55:50.154504Z",
     "title": "Daily NOAA US Climate Normals for Period 1981-2010",
     "proj:epsg": 4269,
     "sci:doi": "10.7289/V5PN93JP",
@@ -268,7 +268,9 @@
         },
         {
           "name": "dly-grdd-base65",
-          "type": "int64"
+          "type": "int64",
+          "description": "Long-term averages of daily growing degree days with base 65F",
+          "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base65_attributes",

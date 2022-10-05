@@ -1,4 +1,5 @@
 import json
+import logging
 from typing import Any, Dict, List
 
 import geopandas as gpd
@@ -7,6 +8,8 @@ import pkg_resources
 from shapely.geometry import mapping
 
 from stactools.noaa_climate_normals import constants
+
+logger = logging.getLogger(__name__)
 
 
 def create_parquet(
@@ -70,6 +73,10 @@ def geodataframe_columns(
                 temp["description"] = "Data record completeness flag"
             elif "meas_flag" in column:
                 temp["description"] = "Data record measurement flag"
+            elif "years_" in column:
+                temp["description"] = "Number of years used"
+            else:
+                logger.warning(f"{frequency}_{period}: column '{column}' is missing")
 
         unit = column_metadata.get(column, {}).get("unit")
         if unit:

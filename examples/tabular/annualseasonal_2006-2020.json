@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "2006-2020",
     "start_datetime": "2006-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-10-05T13:48:10.429652Z",
+    "created": "2022-10-05T15:55:50.077179Z",
     "title": "Annual/Seasonal NOAA US Climate Normals for Period 2006-2020",
     "proj:epsg": 4269,
     "sci:publications": [
@@ -112,7 +112,8 @@
         },
         {
           "name": "years_mam-tavg-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmin-normal",
@@ -132,7 +133,8 @@
         },
         {
           "name": "years_mam-tmin-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmax-normal",
@@ -152,7 +154,8 @@
         },
         {
           "name": "years_mam-tmax-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-dutr-normal",
@@ -172,7 +175,8 @@
         },
         {
           "name": "years_mam-dutr-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmin-avgnds-lsth000",
@@ -192,7 +196,8 @@
         },
         {
           "name": "years_mam-tmin-avgnds-lsth000",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmin-avgnds-lsth010",
@@ -212,7 +217,8 @@
         },
         {
           "name": "years_mam-tmin-avgnds-lsth010",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmin-avgnds-lsth020",
@@ -232,7 +238,8 @@
         },
         {
           "name": "years_mam-tmin-avgnds-lsth020",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmin-avgnds-lsth032",
@@ -252,7 +259,8 @@
         },
         {
           "name": "years_mam-tmin-avgnds-lsth032",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmin-avgnds-lsth040",
@@ -272,7 +280,8 @@
         },
         {
           "name": "years_mam-tmin-avgnds-lsth040",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmin-avgnds-lsth050",
@@ -292,7 +301,8 @@
         },
         {
           "name": "years_mam-tmin-avgnds-lsth050",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmin-avgnds-lsth060",
@@ -312,7 +322,8 @@
         },
         {
           "name": "years_mam-tmin-avgnds-lsth060",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-tmin-avgnds-lsth070",
@@ -332,7 +343,8 @@
         },
         {
           "name": "years_mam-tmin-avgnds-lsth070",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-htdd-normal",
@@ -352,7 +364,8 @@
         },
         {
           "name": "years_mam-htdd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-htdd-base40",
@@ -372,7 +385,8 @@
         },
         {
           "name": "years_mam-htdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-htdd-base45",
@@ -392,7 +406,8 @@
         },
         {
           "name": "years_mam-htdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-htdd-base50",
@@ -412,7 +427,8 @@
         },
         {
           "name": "years_mam-htdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-htdd-base55",
@@ -432,7 +448,8 @@
         },
         {
           "name": "years_mam-htdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-htdd-base57",
@@ -452,7 +469,8 @@
         },
         {
           "name": "years_mam-htdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-htdd-base60",
@@ -472,7 +490,8 @@
         },
         {
           "name": "years_mam-htdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-cldd-normal",
@@ -492,7 +511,8 @@
         },
         {
           "name": "years_mam-cldd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-cldd-base40",
@@ -512,7 +532,8 @@
         },
         {
           "name": "years_mam-cldd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-cldd-base45",
@@ -532,7 +553,8 @@
         },
         {
           "name": "years_mam-cldd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-cldd-base50",
@@ -552,7 +574,8 @@
         },
         {
           "name": "years_mam-cldd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-cldd-base55",
@@ -572,7 +595,8 @@
         },
         {
           "name": "years_mam-cldd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-cldd-base57",
@@ -592,7 +616,8 @@
         },
         {
           "name": "years_mam-cldd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-cldd-base60",
@@ -612,7 +637,8 @@
         },
         {
           "name": "years_mam-cldd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-cldd-base70",
@@ -632,7 +658,8 @@
         },
         {
           "name": "years_mam-cldd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-cldd-base72",
@@ -652,7 +679,8 @@
         },
         {
           "name": "years_mam-cldd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-base65",
@@ -672,7 +700,8 @@
         },
         {
           "name": "years_mam-grdd-base65",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-base40",
@@ -692,7 +721,8 @@
         },
         {
           "name": "years_mam-grdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-base45",
@@ -712,7 +742,8 @@
         },
         {
           "name": "years_mam-grdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-base50",
@@ -732,7 +763,8 @@
         },
         {
           "name": "years_mam-grdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-base55",
@@ -752,7 +784,8 @@
         },
         {
           "name": "years_mam-grdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-base57",
@@ -772,7 +805,8 @@
         },
         {
           "name": "years_mam-grdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-base60",
@@ -792,7 +826,8 @@
         },
         {
           "name": "years_mam-grdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-base70",
@@ -812,7 +847,8 @@
         },
         {
           "name": "years_mam-grdd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-base72",
@@ -832,7 +868,8 @@
         },
         {
           "name": "years_mam-grdd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-tb4886",
@@ -852,7 +889,8 @@
         },
         {
           "name": "years_mam-grdd-tb4886",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-grdd-tb5086",
@@ -872,7 +910,8 @@
         },
         {
           "name": "years_mam-grdd-tb5086",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-prcp-normal",
@@ -892,7 +931,8 @@
         },
         {
           "name": "years_mam-prcp-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-prcp-avgnds-ge001hi",
@@ -912,7 +952,8 @@
         },
         {
           "name": "years_mam-prcp-avgnds-ge001hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-prcp-avgnds-ge010hi",
@@ -932,7 +973,8 @@
         },
         {
           "name": "years_mam-prcp-avgnds-ge010hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-prcp-avgnds-ge025hi",
@@ -952,7 +994,8 @@
         },
         {
           "name": "years_mam-prcp-avgnds-ge025hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-prcp-avgnds-ge050hi",
@@ -972,7 +1015,8 @@
         },
         {
           "name": "years_mam-prcp-avgnds-ge050hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-prcp-avgnds-ge100hi",
@@ -992,7 +1036,8 @@
         },
         {
           "name": "years_mam-prcp-avgnds-ge100hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-prcp-avgnds-ge200hi",
@@ -1012,7 +1057,8 @@
         },
         {
           "name": "years_mam-prcp-avgnds-ge200hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "mam-prcp-avgnds-ge400hi",
@@ -1032,7 +1078,8 @@
         },
         {
           "name": "years_mam-prcp-avgnds-ge400hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "comp_flag_mam-prcp-avgnds-ge600hi",
@@ -1046,7 +1093,8 @@
         },
         {
           "name": "years_mam-prcp-avgnds-ge600hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tavg-normal",
@@ -1066,7 +1114,8 @@
         },
         {
           "name": "years_jja-tavg-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmin-normal",
@@ -1086,7 +1135,8 @@
         },
         {
           "name": "years_jja-tmin-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmax-normal",
@@ -1106,7 +1156,8 @@
         },
         {
           "name": "years_jja-tmax-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-dutr-normal",
@@ -1126,7 +1177,8 @@
         },
         {
           "name": "years_jja-dutr-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmin-avgnds-lsth000",
@@ -1146,7 +1198,8 @@
         },
         {
           "name": "years_jja-tmin-avgnds-lsth000",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmin-avgnds-lsth010",
@@ -1166,7 +1219,8 @@
         },
         {
           "name": "years_jja-tmin-avgnds-lsth010",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmin-avgnds-lsth020",
@@ -1186,7 +1240,8 @@
         },
         {
           "name": "years_jja-tmin-avgnds-lsth020",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmin-avgnds-lsth032",
@@ -1206,7 +1261,8 @@
         },
         {
           "name": "years_jja-tmin-avgnds-lsth032",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmin-avgnds-lsth040",
@@ -1226,7 +1282,8 @@
         },
         {
           "name": "years_jja-tmin-avgnds-lsth040",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmin-avgnds-lsth050",
@@ -1246,7 +1303,8 @@
         },
         {
           "name": "years_jja-tmin-avgnds-lsth050",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmin-avgnds-lsth060",
@@ -1266,7 +1324,8 @@
         },
         {
           "name": "years_jja-tmin-avgnds-lsth060",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-tmin-avgnds-lsth070",
@@ -1286,7 +1345,8 @@
         },
         {
           "name": "years_jja-tmin-avgnds-lsth070",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-htdd-normal",
@@ -1306,7 +1366,8 @@
         },
         {
           "name": "years_jja-htdd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-htdd-base40",
@@ -1326,7 +1387,8 @@
         },
         {
           "name": "years_jja-htdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-htdd-base45",
@@ -1346,7 +1408,8 @@
         },
         {
           "name": "years_jja-htdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-htdd-base50",
@@ -1366,7 +1429,8 @@
         },
         {
           "name": "years_jja-htdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-htdd-base55",
@@ -1386,7 +1450,8 @@
         },
         {
           "name": "years_jja-htdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-htdd-base57",
@@ -1406,7 +1471,8 @@
         },
         {
           "name": "years_jja-htdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-htdd-base60",
@@ -1426,7 +1492,8 @@
         },
         {
           "name": "years_jja-htdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-cldd-normal",
@@ -1446,7 +1513,8 @@
         },
         {
           "name": "years_jja-cldd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-cldd-base40",
@@ -1466,7 +1534,8 @@
         },
         {
           "name": "years_jja-cldd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-cldd-base45",
@@ -1486,7 +1555,8 @@
         },
         {
           "name": "years_jja-cldd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-cldd-base50",
@@ -1506,7 +1576,8 @@
         },
         {
           "name": "years_jja-cldd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-cldd-base55",
@@ -1526,7 +1597,8 @@
         },
         {
           "name": "years_jja-cldd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-cldd-base57",
@@ -1546,7 +1618,8 @@
         },
         {
           "name": "years_jja-cldd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-cldd-base60",
@@ -1566,7 +1639,8 @@
         },
         {
           "name": "years_jja-cldd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-cldd-base70",
@@ -1586,7 +1660,8 @@
         },
         {
           "name": "years_jja-cldd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-cldd-base72",
@@ -1606,7 +1681,8 @@
         },
         {
           "name": "years_jja-cldd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-base65",
@@ -1626,7 +1702,8 @@
         },
         {
           "name": "years_jja-grdd-base65",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-base40",
@@ -1646,7 +1723,8 @@
         },
         {
           "name": "years_jja-grdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-base45",
@@ -1666,7 +1744,8 @@
         },
         {
           "name": "years_jja-grdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-base50",
@@ -1686,7 +1765,8 @@
         },
         {
           "name": "years_jja-grdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-base55",
@@ -1706,7 +1786,8 @@
         },
         {
           "name": "years_jja-grdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-base57",
@@ -1726,7 +1807,8 @@
         },
         {
           "name": "years_jja-grdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-base60",
@@ -1746,7 +1828,8 @@
         },
         {
           "name": "years_jja-grdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-base70",
@@ -1766,7 +1849,8 @@
         },
         {
           "name": "years_jja-grdd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-base72",
@@ -1786,7 +1870,8 @@
         },
         {
           "name": "years_jja-grdd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-tb4886",
@@ -1806,7 +1891,8 @@
         },
         {
           "name": "years_jja-grdd-tb4886",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-grdd-tb5086",
@@ -1826,7 +1912,8 @@
         },
         {
           "name": "years_jja-grdd-tb5086",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-prcp-normal",
@@ -1846,7 +1933,8 @@
         },
         {
           "name": "years_jja-prcp-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-prcp-avgnds-ge001hi",
@@ -1866,7 +1954,8 @@
         },
         {
           "name": "years_jja-prcp-avgnds-ge001hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-prcp-avgnds-ge010hi",
@@ -1886,7 +1975,8 @@
         },
         {
           "name": "years_jja-prcp-avgnds-ge010hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-prcp-avgnds-ge025hi",
@@ -1906,7 +1996,8 @@
         },
         {
           "name": "years_jja-prcp-avgnds-ge025hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-prcp-avgnds-ge050hi",
@@ -1926,7 +2017,8 @@
         },
         {
           "name": "years_jja-prcp-avgnds-ge050hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-prcp-avgnds-ge100hi",
@@ -1946,7 +2038,8 @@
         },
         {
           "name": "years_jja-prcp-avgnds-ge100hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-prcp-avgnds-ge200hi",
@@ -1966,7 +2059,8 @@
         },
         {
           "name": "years_jja-prcp-avgnds-ge200hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-prcp-avgnds-ge400hi",
@@ -1986,7 +2080,8 @@
         },
         {
           "name": "years_jja-prcp-avgnds-ge400hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "jja-prcp-avgnds-ge600hi",
@@ -2006,7 +2101,8 @@
         },
         {
           "name": "years_jja-prcp-avgnds-ge600hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tavg-normal",
@@ -2026,7 +2122,8 @@
         },
         {
           "name": "years_son-tavg-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmin-normal",
@@ -2046,7 +2143,8 @@
         },
         {
           "name": "years_son-tmin-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmax-normal",
@@ -2066,7 +2164,8 @@
         },
         {
           "name": "years_son-tmax-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-dutr-normal",
@@ -2086,7 +2185,8 @@
         },
         {
           "name": "years_son-dutr-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmin-avgnds-lsth000",
@@ -2106,7 +2206,8 @@
         },
         {
           "name": "years_son-tmin-avgnds-lsth000",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmin-avgnds-lsth010",
@@ -2126,7 +2227,8 @@
         },
         {
           "name": "years_son-tmin-avgnds-lsth010",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmin-avgnds-lsth020",
@@ -2146,7 +2248,8 @@
         },
         {
           "name": "years_son-tmin-avgnds-lsth020",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmin-avgnds-lsth032",
@@ -2166,7 +2269,8 @@
         },
         {
           "name": "years_son-tmin-avgnds-lsth032",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmin-avgnds-lsth040",
@@ -2186,7 +2290,8 @@
         },
         {
           "name": "years_son-tmin-avgnds-lsth040",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmin-avgnds-lsth050",
@@ -2206,7 +2311,8 @@
         },
         {
           "name": "years_son-tmin-avgnds-lsth050",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmin-avgnds-lsth060",
@@ -2226,7 +2332,8 @@
         },
         {
           "name": "years_son-tmin-avgnds-lsth060",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-tmin-avgnds-lsth070",
@@ -2246,7 +2353,8 @@
         },
         {
           "name": "years_son-tmin-avgnds-lsth070",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-htdd-normal",
@@ -2266,7 +2374,8 @@
         },
         {
           "name": "years_son-htdd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-htdd-base40",
@@ -2286,7 +2395,8 @@
         },
         {
           "name": "years_son-htdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-htdd-base45",
@@ -2306,7 +2416,8 @@
         },
         {
           "name": "years_son-htdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-htdd-base50",
@@ -2326,7 +2437,8 @@
         },
         {
           "name": "years_son-htdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-htdd-base55",
@@ -2346,7 +2458,8 @@
         },
         {
           "name": "years_son-htdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-htdd-base57",
@@ -2366,7 +2479,8 @@
         },
         {
           "name": "years_son-htdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-htdd-base60",
@@ -2386,7 +2500,8 @@
         },
         {
           "name": "years_son-htdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-cldd-normal",
@@ -2406,7 +2521,8 @@
         },
         {
           "name": "years_son-cldd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-cldd-base40",
@@ -2426,7 +2542,8 @@
         },
         {
           "name": "years_son-cldd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-cldd-base45",
@@ -2446,7 +2563,8 @@
         },
         {
           "name": "years_son-cldd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-cldd-base50",
@@ -2466,7 +2584,8 @@
         },
         {
           "name": "years_son-cldd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-cldd-base55",
@@ -2486,7 +2605,8 @@
         },
         {
           "name": "years_son-cldd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-cldd-base57",
@@ -2506,7 +2626,8 @@
         },
         {
           "name": "years_son-cldd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-cldd-base60",
@@ -2526,7 +2647,8 @@
         },
         {
           "name": "years_son-cldd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-cldd-base70",
@@ -2546,7 +2668,8 @@
         },
         {
           "name": "years_son-cldd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-cldd-base72",
@@ -2566,7 +2689,8 @@
         },
         {
           "name": "years_son-cldd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-base65",
@@ -2586,7 +2710,8 @@
         },
         {
           "name": "years_son-grdd-base65",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-base40",
@@ -2606,7 +2731,8 @@
         },
         {
           "name": "years_son-grdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-base45",
@@ -2626,7 +2752,8 @@
         },
         {
           "name": "years_son-grdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-base50",
@@ -2646,7 +2773,8 @@
         },
         {
           "name": "years_son-grdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-base55",
@@ -2666,7 +2794,8 @@
         },
         {
           "name": "years_son-grdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-base57",
@@ -2686,7 +2815,8 @@
         },
         {
           "name": "years_son-grdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-base60",
@@ -2706,7 +2836,8 @@
         },
         {
           "name": "years_son-grdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-base70",
@@ -2726,7 +2857,8 @@
         },
         {
           "name": "years_son-grdd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-base72",
@@ -2746,7 +2878,8 @@
         },
         {
           "name": "years_son-grdd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-tb4886",
@@ -2766,7 +2899,8 @@
         },
         {
           "name": "years_son-grdd-tb4886",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-grdd-tb5086",
@@ -2786,7 +2920,8 @@
         },
         {
           "name": "years_son-grdd-tb5086",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-prcp-normal",
@@ -2806,7 +2941,8 @@
         },
         {
           "name": "years_son-prcp-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-prcp-avgnds-ge001hi",
@@ -2826,7 +2962,8 @@
         },
         {
           "name": "years_son-prcp-avgnds-ge001hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-prcp-avgnds-ge010hi",
@@ -2846,7 +2983,8 @@
         },
         {
           "name": "years_son-prcp-avgnds-ge010hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-prcp-avgnds-ge025hi",
@@ -2866,7 +3004,8 @@
         },
         {
           "name": "years_son-prcp-avgnds-ge025hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-prcp-avgnds-ge050hi",
@@ -2886,7 +3025,8 @@
         },
         {
           "name": "years_son-prcp-avgnds-ge050hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-prcp-avgnds-ge100hi",
@@ -2906,7 +3046,8 @@
         },
         {
           "name": "years_son-prcp-avgnds-ge100hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-prcp-avgnds-ge200hi",
@@ -2926,7 +3067,8 @@
         },
         {
           "name": "years_son-prcp-avgnds-ge200hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-prcp-avgnds-ge400hi",
@@ -2946,7 +3088,8 @@
         },
         {
           "name": "years_son-prcp-avgnds-ge400hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "son-prcp-avgnds-ge600hi",
@@ -2966,7 +3109,8 @@
         },
         {
           "name": "years_son-prcp-avgnds-ge600hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tavg-normal",
@@ -2986,7 +3130,8 @@
         },
         {
           "name": "years_djf-tavg-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmin-normal",
@@ -3006,7 +3151,8 @@
         },
         {
           "name": "years_djf-tmin-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmax-normal",
@@ -3026,7 +3172,8 @@
         },
         {
           "name": "years_djf-tmax-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-dutr-normal",
@@ -3046,7 +3193,8 @@
         },
         {
           "name": "years_djf-dutr-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmin-avgnds-lsth000",
@@ -3066,7 +3214,8 @@
         },
         {
           "name": "years_djf-tmin-avgnds-lsth000",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmin-avgnds-lsth010",
@@ -3086,7 +3235,8 @@
         },
         {
           "name": "years_djf-tmin-avgnds-lsth010",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmin-avgnds-lsth020",
@@ -3106,7 +3256,8 @@
         },
         {
           "name": "years_djf-tmin-avgnds-lsth020",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmin-avgnds-lsth032",
@@ -3126,7 +3277,8 @@
         },
         {
           "name": "years_djf-tmin-avgnds-lsth032",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmin-avgnds-lsth040",
@@ -3146,7 +3298,8 @@
         },
         {
           "name": "years_djf-tmin-avgnds-lsth040",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmin-avgnds-lsth050",
@@ -3166,7 +3319,8 @@
         },
         {
           "name": "years_djf-tmin-avgnds-lsth050",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmin-avgnds-lsth060",
@@ -3186,7 +3340,8 @@
         },
         {
           "name": "years_djf-tmin-avgnds-lsth060",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-tmin-avgnds-lsth070",
@@ -3206,7 +3361,8 @@
         },
         {
           "name": "years_djf-tmin-avgnds-lsth070",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-htdd-normal",
@@ -3226,7 +3382,8 @@
         },
         {
           "name": "years_djf-htdd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-htdd-base40",
@@ -3246,7 +3403,8 @@
         },
         {
           "name": "years_djf-htdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-htdd-base45",
@@ -3266,7 +3424,8 @@
         },
         {
           "name": "years_djf-htdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-htdd-base50",
@@ -3286,7 +3445,8 @@
         },
         {
           "name": "years_djf-htdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-htdd-base55",
@@ -3306,7 +3466,8 @@
         },
         {
           "name": "years_djf-htdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-htdd-base57",
@@ -3326,7 +3487,8 @@
         },
         {
           "name": "years_djf-htdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-htdd-base60",
@@ -3346,7 +3508,8 @@
         },
         {
           "name": "years_djf-htdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-cldd-normal",
@@ -3366,7 +3529,8 @@
         },
         {
           "name": "years_djf-cldd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-cldd-base40",
@@ -3386,7 +3550,8 @@
         },
         {
           "name": "years_djf-cldd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-cldd-base45",
@@ -3406,7 +3571,8 @@
         },
         {
           "name": "years_djf-cldd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-cldd-base50",
@@ -3426,7 +3592,8 @@
         },
         {
           "name": "years_djf-cldd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-cldd-base55",
@@ -3446,7 +3613,8 @@
         },
         {
           "name": "years_djf-cldd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-cldd-base57",
@@ -3466,7 +3634,8 @@
         },
         {
           "name": "years_djf-cldd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-cldd-base60",
@@ -3486,7 +3655,8 @@
         },
         {
           "name": "years_djf-cldd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-cldd-base70",
@@ -3506,7 +3676,8 @@
         },
         {
           "name": "years_djf-cldd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-cldd-base72",
@@ -3526,7 +3697,8 @@
         },
         {
           "name": "years_djf-cldd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-base65",
@@ -3546,7 +3718,8 @@
         },
         {
           "name": "years_djf-grdd-base65",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-base40",
@@ -3566,7 +3739,8 @@
         },
         {
           "name": "years_djf-grdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-base45",
@@ -3586,7 +3760,8 @@
         },
         {
           "name": "years_djf-grdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-base50",
@@ -3606,7 +3781,8 @@
         },
         {
           "name": "years_djf-grdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-base55",
@@ -3626,7 +3802,8 @@
         },
         {
           "name": "years_djf-grdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-base57",
@@ -3646,7 +3823,8 @@
         },
         {
           "name": "years_djf-grdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-base60",
@@ -3666,7 +3844,8 @@
         },
         {
           "name": "years_djf-grdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-base70",
@@ -3686,7 +3865,8 @@
         },
         {
           "name": "years_djf-grdd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-base72",
@@ -3706,7 +3886,8 @@
         },
         {
           "name": "years_djf-grdd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-tb4886",
@@ -3726,7 +3907,8 @@
         },
         {
           "name": "years_djf-grdd-tb4886",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-grdd-tb5086",
@@ -3746,7 +3928,8 @@
         },
         {
           "name": "years_djf-grdd-tb5086",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-prcp-normal",
@@ -3766,7 +3949,8 @@
         },
         {
           "name": "years_djf-prcp-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-prcp-avgnds-ge001hi",
@@ -3786,7 +3970,8 @@
         },
         {
           "name": "years_djf-prcp-avgnds-ge001hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-prcp-avgnds-ge010hi",
@@ -3806,7 +3991,8 @@
         },
         {
           "name": "years_djf-prcp-avgnds-ge010hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-prcp-avgnds-ge025hi",
@@ -3826,7 +4012,8 @@
         },
         {
           "name": "years_djf-prcp-avgnds-ge025hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-prcp-avgnds-ge050hi",
@@ -3846,7 +4033,8 @@
         },
         {
           "name": "years_djf-prcp-avgnds-ge050hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-prcp-avgnds-ge100hi",
@@ -3866,7 +4054,8 @@
         },
         {
           "name": "years_djf-prcp-avgnds-ge100hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-prcp-avgnds-ge200hi",
@@ -3886,7 +4075,8 @@
         },
         {
           "name": "years_djf-prcp-avgnds-ge200hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-prcp-avgnds-ge400hi",
@@ -3906,7 +4096,8 @@
         },
         {
           "name": "years_djf-prcp-avgnds-ge400hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "djf-prcp-avgnds-ge600hi",
@@ -3926,7 +4117,8 @@
         },
         {
           "name": "years_djf-prcp-avgnds-ge600hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tavg-normal",
@@ -3946,7 +4138,8 @@
         },
         {
           "name": "years_ann-tavg-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-normal",
@@ -3966,7 +4159,8 @@
         },
         {
           "name": "years_ann-tmin-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmax-normal",
@@ -3986,7 +4180,8 @@
         },
         {
           "name": "years_ann-tmax-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-dutr-normal",
@@ -4006,7 +4201,8 @@
         },
         {
           "name": "years_ann-dutr-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-avgnds-lsth000",
@@ -4026,7 +4222,8 @@
         },
         {
           "name": "years_ann-tmin-avgnds-lsth000",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-avgnds-lsth010",
@@ -4046,7 +4243,8 @@
         },
         {
           "name": "years_ann-tmin-avgnds-lsth010",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-avgnds-lsth020",
@@ -4066,7 +4264,8 @@
         },
         {
           "name": "years_ann-tmin-avgnds-lsth020",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-avgnds-lsth032",
@@ -4086,7 +4285,8 @@
         },
         {
           "name": "years_ann-tmin-avgnds-lsth032",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-avgnds-lsth040",
@@ -4106,7 +4306,8 @@
         },
         {
           "name": "years_ann-tmin-avgnds-lsth040",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-avgnds-lsth050",
@@ -4126,7 +4327,8 @@
         },
         {
           "name": "years_ann-tmin-avgnds-lsth050",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-avgnds-lsth060",
@@ -4146,7 +4348,8 @@
         },
         {
           "name": "years_ann-tmin-avgnds-lsth060",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-avgnds-lsth070",
@@ -4166,7 +4369,8 @@
         },
         {
           "name": "years_ann-tmin-avgnds-lsth070",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-htdd-normal",
@@ -4186,7 +4390,8 @@
         },
         {
           "name": "years_ann-htdd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-htdd-base40",
@@ -4206,7 +4411,8 @@
         },
         {
           "name": "years_ann-htdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-htdd-base45",
@@ -4226,7 +4432,8 @@
         },
         {
           "name": "years_ann-htdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-htdd-base50",
@@ -4246,7 +4453,8 @@
         },
         {
           "name": "years_ann-htdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-htdd-base55",
@@ -4266,7 +4474,8 @@
         },
         {
           "name": "years_ann-htdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-htdd-base57",
@@ -4286,7 +4495,8 @@
         },
         {
           "name": "years_ann-htdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-htdd-base60",
@@ -4306,7 +4516,8 @@
         },
         {
           "name": "years_ann-htdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-cldd-normal",
@@ -4326,7 +4537,8 @@
         },
         {
           "name": "years_ann-cldd-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-cldd-base40",
@@ -4346,7 +4558,8 @@
         },
         {
           "name": "years_ann-cldd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-cldd-base45",
@@ -4366,7 +4579,8 @@
         },
         {
           "name": "years_ann-cldd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-cldd-base50",
@@ -4386,7 +4600,8 @@
         },
         {
           "name": "years_ann-cldd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-cldd-base55",
@@ -4406,7 +4621,8 @@
         },
         {
           "name": "years_ann-cldd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-cldd-base57",
@@ -4426,7 +4642,8 @@
         },
         {
           "name": "years_ann-cldd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-cldd-base60",
@@ -4446,7 +4663,8 @@
         },
         {
           "name": "years_ann-cldd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-cldd-base70",
@@ -4466,7 +4684,8 @@
         },
         {
           "name": "years_ann-cldd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-cldd-base72",
@@ -4486,7 +4705,8 @@
         },
         {
           "name": "years_ann-cldd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-base65",
@@ -4506,7 +4726,8 @@
         },
         {
           "name": "years_ann-grdd-base65",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-base40",
@@ -4521,7 +4742,8 @@
         },
         {
           "name": "years_ann-grdd-base40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-base45",
@@ -4541,7 +4763,8 @@
         },
         {
           "name": "years_ann-grdd-base45",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-base50",
@@ -4561,7 +4784,8 @@
         },
         {
           "name": "years_ann-grdd-base50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-base55",
@@ -4581,7 +4805,8 @@
         },
         {
           "name": "years_ann-grdd-base55",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-base57",
@@ -4601,7 +4826,8 @@
         },
         {
           "name": "years_ann-grdd-base57",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-base60",
@@ -4621,7 +4847,8 @@
         },
         {
           "name": "years_ann-grdd-base60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-base70",
@@ -4641,7 +4868,8 @@
         },
         {
           "name": "years_ann-grdd-base70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-base72",
@@ -4661,7 +4889,8 @@
         },
         {
           "name": "years_ann-grdd-base72",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-tb4886",
@@ -4681,7 +4910,8 @@
         },
         {
           "name": "years_ann-grdd-tb4886",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-grdd-tb5086",
@@ -4701,7 +4931,8 @@
         },
         {
           "name": "years_ann-grdd-tb5086",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-prcp-normal",
@@ -4721,7 +4952,8 @@
         },
         {
           "name": "years_ann-prcp-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-prcp-avgnds-ge001hi",
@@ -4741,7 +4973,8 @@
         },
         {
           "name": "years_ann-prcp-avgnds-ge001hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-prcp-avgnds-ge010hi",
@@ -4761,7 +4994,8 @@
         },
         {
           "name": "years_ann-prcp-avgnds-ge010hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-prcp-avgnds-ge025hi",
@@ -4781,7 +5015,8 @@
         },
         {
           "name": "years_ann-prcp-avgnds-ge025hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-prcp-avgnds-ge050hi",
@@ -4801,7 +5036,8 @@
         },
         {
           "name": "years_ann-prcp-avgnds-ge050hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-prcp-avgnds-ge100hi",
@@ -4821,7 +5057,8 @@
         },
         {
           "name": "years_ann-prcp-avgnds-ge100hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-prcp-avgnds-ge200hi",
@@ -4841,7 +5078,8 @@
         },
         {
           "name": "years_ann-prcp-avgnds-ge200hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-prcp-avgnds-ge400hi",
@@ -4861,7 +5099,8 @@
         },
         {
           "name": "years_ann-prcp-avgnds-ge400hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-prcp-avgnds-ge600hi",
@@ -4881,7 +5120,8 @@
         },
         {
           "name": "years_ann-prcp-avgnds-ge600hi",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t16fp10",
@@ -4901,7 +5141,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t16fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t16fp20",
@@ -4921,7 +5162,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t16fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t16fp30",
@@ -4941,7 +5183,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t16fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t16fp40",
@@ -4961,7 +5204,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t16fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t16fp50",
@@ -4981,7 +5225,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t16fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t16fp60",
@@ -5001,7 +5246,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t16fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t16fp70",
@@ -5021,7 +5267,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t16fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t16fp80",
@@ -5041,7 +5288,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t16fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t16fp90",
@@ -5061,7 +5309,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t16fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t20fp10",
@@ -5081,7 +5330,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t20fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t20fp20",
@@ -5101,7 +5351,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t20fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t20fp30",
@@ -5121,7 +5372,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t20fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t20fp40",
@@ -5141,7 +5393,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t20fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t20fp50",
@@ -5161,7 +5414,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t20fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t20fp60",
@@ -5181,7 +5435,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t20fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t20fp70",
@@ -5201,7 +5456,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t20fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t20fp80",
@@ -5221,7 +5477,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t20fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t20fp90",
@@ -5241,7 +5498,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t20fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t24fp10",
@@ -5261,7 +5519,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t24fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t24fp20",
@@ -5281,7 +5540,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t24fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t24fp30",
@@ -5301,7 +5561,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t24fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t24fp40",
@@ -5321,7 +5582,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t24fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t24fp50",
@@ -5341,7 +5603,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t24fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t24fp60",
@@ -5361,7 +5624,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t24fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t24fp70",
@@ -5381,7 +5645,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t24fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t24fp80",
@@ -5401,7 +5666,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t24fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t24fp90",
@@ -5421,7 +5687,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t24fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t28fp10",
@@ -5441,7 +5708,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t28fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t28fp20",
@@ -5461,7 +5729,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t28fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t28fp30",
@@ -5481,7 +5750,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t28fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t28fp40",
@@ -5501,7 +5771,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t28fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t28fp50",
@@ -5521,7 +5792,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t28fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t28fp60",
@@ -5541,7 +5813,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t28fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t28fp70",
@@ -5561,7 +5834,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t28fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t28fp80",
@@ -5581,7 +5855,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t28fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t28fp90",
@@ -5601,7 +5876,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t28fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t32fp10",
@@ -5621,7 +5897,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t32fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t32fp20",
@@ -5641,7 +5918,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t32fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t32fp30",
@@ -5661,7 +5939,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t32fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t32fp40",
@@ -5681,7 +5960,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t32fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t32fp50",
@@ -5701,7 +5981,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t32fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t32fp60",
@@ -5721,7 +6002,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t32fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t32fp70",
@@ -5741,7 +6023,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t32fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t32fp80",
@@ -5761,7 +6044,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t32fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t32fp90",
@@ -5781,7 +6065,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t32fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t36fp10",
@@ -5801,7 +6086,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t36fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t36fp20",
@@ -5821,7 +6107,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t36fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t36fp30",
@@ -5841,7 +6128,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t36fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t36fp40",
@@ -5861,7 +6149,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t36fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t36fp50",
@@ -5881,7 +6170,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t36fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t36fp60",
@@ -5901,7 +6191,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t36fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t36fp70",
@@ -5921,7 +6212,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t36fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t36fp80",
@@ -5941,7 +6233,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t36fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbfst-t36fp90",
@@ -5961,7 +6254,8 @@
         },
         {
           "name": "years_ann-tmin-prbfst-t36fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t16fp10",
@@ -5981,7 +6275,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t16fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t16fp20",
@@ -6001,7 +6296,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t16fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t16fp30",
@@ -6021,7 +6317,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t16fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t16fp40",
@@ -6041,7 +6338,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t16fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t16fp50",
@@ -6061,7 +6359,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t16fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t16fp60",
@@ -6081,7 +6380,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t16fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t16fp70",
@@ -6101,7 +6401,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t16fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t16fp80",
@@ -6121,7 +6422,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t16fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t16fp90",
@@ -6141,7 +6443,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t16fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t20fp10",
@@ -6161,7 +6464,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t20fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t20fp20",
@@ -6181,7 +6485,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t20fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t20fp30",
@@ -6201,7 +6506,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t20fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t20fp40",
@@ -6221,7 +6527,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t20fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t20fp50",
@@ -6241,7 +6548,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t20fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t20fp60",
@@ -6261,7 +6569,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t20fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t20fp70",
@@ -6281,7 +6590,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t20fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t20fp80",
@@ -6301,7 +6611,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t20fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t20fp90",
@@ -6321,7 +6632,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t20fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t24fp10",
@@ -6341,7 +6653,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t24fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t24fp20",
@@ -6361,7 +6674,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t24fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t24fp30",
@@ -6381,7 +6695,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t24fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t24fp40",
@@ -6401,7 +6716,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t24fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t24fp50",
@@ -6421,7 +6737,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t24fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t24fp60",
@@ -6441,7 +6758,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t24fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t24fp70",
@@ -6461,7 +6779,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t24fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t24fp80",
@@ -6481,7 +6800,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t24fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t24fp90",
@@ -6501,7 +6821,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t24fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t28fp10",
@@ -6521,7 +6842,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t28fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t28fp20",
@@ -6541,7 +6863,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t28fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t28fp30",
@@ -6561,7 +6884,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t28fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t28fp40",
@@ -6581,7 +6905,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t28fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t28fp50",
@@ -6601,7 +6926,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t28fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t28fp60",
@@ -6621,7 +6947,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t28fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t28fp70",
@@ -6641,7 +6968,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t28fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t28fp80",
@@ -6661,7 +6989,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t28fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t28fp90",
@@ -6681,7 +7010,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t28fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t32fp10",
@@ -6701,7 +7031,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t32fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t32fp20",
@@ -6721,7 +7052,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t32fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t32fp30",
@@ -6741,7 +7073,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t32fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t32fp40",
@@ -6761,7 +7094,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t32fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t32fp50",
@@ -6781,7 +7115,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t32fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t32fp60",
@@ -6801,7 +7136,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t32fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t32fp70",
@@ -6821,7 +7157,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t32fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t32fp80",
@@ -6841,7 +7178,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t32fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t32fp90",
@@ -6861,7 +7199,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t32fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t36fp10",
@@ -6881,7 +7220,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t36fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t36fp20",
@@ -6901,7 +7241,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t36fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t36fp30",
@@ -6921,7 +7262,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t36fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t36fp40",
@@ -6941,7 +7283,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t36fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t36fp50",
@@ -6961,7 +7304,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t36fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t36fp60",
@@ -6981,7 +7325,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t36fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t36fp70",
@@ -7001,7 +7346,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t36fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t36fp80",
@@ -7021,7 +7367,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t36fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbgsl-t36fp90",
@@ -7041,7 +7388,8 @@
         },
         {
           "name": "years_ann-tmin-prbgsl-t36fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t16fp10",
@@ -7061,7 +7409,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t16fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t16fp20",
@@ -7081,7 +7430,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t16fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t16fp30",
@@ -7101,7 +7451,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t16fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t16fp40",
@@ -7121,7 +7472,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t16fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t16fp50",
@@ -7141,7 +7493,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t16fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t16fp60",
@@ -7161,7 +7514,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t16fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t16fp70",
@@ -7181,7 +7535,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t16fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t16fp80",
@@ -7201,7 +7556,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t16fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t16fp90",
@@ -7221,7 +7577,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t16fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t20fp10",
@@ -7241,7 +7598,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t20fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t20fp20",
@@ -7261,7 +7619,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t20fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t20fp30",
@@ -7281,7 +7640,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t20fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t20fp40",
@@ -7301,7 +7661,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t20fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t20fp50",
@@ -7321,7 +7682,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t20fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t20fp60",
@@ -7341,7 +7703,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t20fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t20fp70",
@@ -7361,7 +7724,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t20fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t20fp80",
@@ -7381,7 +7745,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t20fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t20fp90",
@@ -7401,7 +7766,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t20fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t24fp10",
@@ -7421,7 +7787,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t24fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t24fp20",
@@ -7441,7 +7808,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t24fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t24fp30",
@@ -7461,7 +7829,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t24fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t24fp40",
@@ -7481,7 +7850,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t24fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t24fp50",
@@ -7501,7 +7871,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t24fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t24fp60",
@@ -7521,7 +7892,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t24fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t24fp70",
@@ -7541,7 +7913,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t24fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t24fp80",
@@ -7561,7 +7934,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t24fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t24fp90",
@@ -7581,7 +7955,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t24fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t28fp10",
@@ -7601,7 +7976,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t28fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t28fp20",
@@ -7621,7 +7997,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t28fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t28fp30",
@@ -7641,7 +8018,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t28fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t28fp40",
@@ -7661,7 +8039,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t28fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t28fp50",
@@ -7681,7 +8060,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t28fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t28fp60",
@@ -7701,7 +8081,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t28fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t28fp70",
@@ -7721,7 +8102,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t28fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t28fp80",
@@ -7741,7 +8123,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t28fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t28fp90",
@@ -7761,7 +8144,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t28fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t32fp10",
@@ -7781,7 +8165,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t32fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t32fp20",
@@ -7801,7 +8186,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t32fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t32fp30",
@@ -7821,7 +8207,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t32fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t32fp40",
@@ -7841,7 +8228,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t32fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t32fp50",
@@ -7861,7 +8249,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t32fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t32fp60",
@@ -7881,7 +8270,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t32fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t32fp70",
@@ -7901,7 +8291,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t32fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t32fp80",
@@ -7921,7 +8312,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t32fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t32fp90",
@@ -7941,7 +8333,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t32fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t36fp10",
@@ -7961,7 +8354,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t36fp10",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t36fp20",
@@ -7981,7 +8375,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t36fp20",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t36fp30",
@@ -8001,7 +8396,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t36fp30",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t36fp40",
@@ -8021,7 +8417,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t36fp40",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t36fp50",
@@ -8041,7 +8438,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t36fp50",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t36fp60",
@@ -8061,7 +8459,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t36fp60",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t36fp70",
@@ -8081,7 +8480,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t36fp70",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t36fp80",
@@ -8101,7 +8501,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t36fp80",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prblst-t36fp90",
@@ -8121,7 +8522,8 @@
         },
         {
           "name": "years_ann-tmin-prblst-t36fp90",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbocc-lsth016",
@@ -8141,7 +8543,8 @@
         },
         {
           "name": "years_ann-tmin-prbocc-lsth016",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbocc-lsth020",
@@ -8161,7 +8564,8 @@
         },
         {
           "name": "years_ann-tmin-prbocc-lsth020",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbocc-lsth024",
@@ -8181,7 +8585,8 @@
         },
         {
           "name": "years_ann-tmin-prbocc-lsth024",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbocc-lsth028",
@@ -8201,12 +8606,13 @@
         },
         {
           "name": "years_ann-tmin-prbocc-lsth028",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbocc-lsth032",
           "type": "int64",
-          "description": "probability of 36F or below at least once in the year",
+          "description": "probability of 32F or below at least once in the year",
           "unit": "percent"
         },
         {
@@ -8221,11 +8627,14 @@
         },
         {
           "name": "years_ann-tmin-prbocc-lsth032",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "ann-tmin-prbocc-lsth036",
-          "type": "int64"
+          "type": "int64",
+          "description": "probability of 36F or below at least once in the year",
+          "unit": "percent"
         },
         {
           "name": "comp_flag_ann-tmin-prbocc-lsth036",
@@ -8239,7 +8648,8 @@
         },
         {
           "name": "years_ann-tmin-prbocc-lsth036",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "geometry",

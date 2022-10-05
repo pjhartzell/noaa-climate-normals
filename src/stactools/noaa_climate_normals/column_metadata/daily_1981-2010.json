@@ -135,6 +135,10 @@
         "description": "Long-term averages of daily growing degree days with base 60F",
         "unit": "degree Fahrenheit"
     },
+    "dly-grdd-base65": {
+        "description": "Long-term averages of daily growing degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
     "dly-grdd-base70": {
         "description": "Long-term averages of daily growing degree days with base 70F",
         "unit": "degree Fahrenheit"

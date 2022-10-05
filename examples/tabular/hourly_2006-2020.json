@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "2006-2020",
     "start_datetime": "2006-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-10-05T13:48:12.056727Z",
+    "created": "2022-10-05T15:55:51.627912Z",
     "title": "Hourly NOAA US Climate Normals for Period 2006-2020",
     "proj:epsg": 4269,
     "sci:publications": [
@@ -117,7 +117,8 @@
         },
         {
           "name": "years_hly-temp-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-temp-10pctl",
@@ -137,7 +138,8 @@
         },
         {
           "name": "years_hly-temp-10pctl",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-temp-90pctl",
@@ -157,7 +159,8 @@
         },
         {
           "name": "years_hly-temp-90pctl",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-dewp-normal",
@@ -177,7 +180,8 @@
         },
         {
           "name": "years_hly-dewp-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-dewp-10pctl",
@@ -197,7 +201,8 @@
         },
         {
           "name": "years_hly-dewp-10pctl",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-dewp-90pctl",
@@ -217,7 +222,8 @@
         },
         {
           "name": "years_hly-dewp-90pctl",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-pres-normal",
@@ -237,7 +243,8 @@
         },
         {
           "name": "years_hly-pres-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-pres-10pctl",
@@ -257,7 +264,8 @@
         },
         {
           "name": "years_hly-pres-10pctl",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-pres-90pctl",
@@ -277,7 +285,8 @@
         },
         {
           "name": "years_hly-pres-90pctl",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-cldh-normal",
@@ -297,7 +306,8 @@
         },
         {
           "name": "years_hly-cldh-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-htdh-normal",
@@ -317,7 +327,8 @@
         },
         {
           "name": "years_hly-htdh-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-clod-pctclr",
@@ -337,7 +348,8 @@
         },
         {
           "name": "years_hly-clod-pctclr",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-clod-pctfew",
@@ -357,7 +369,8 @@
         },
         {
           "name": "years_hly-clod-pctfew",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-clod-pctsct",
@@ -377,7 +390,8 @@
         },
         {
           "name": "years_hly-clod-pctsct",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-clod-pctbkn",
@@ -397,7 +411,8 @@
         },
         {
           "name": "years_hly-clod-pctbkn",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-clod-pctovc",
@@ -417,7 +432,8 @@
         },
         {
           "name": "years_hly-clod-pctovc",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-hidx-normal",
@@ -437,7 +453,8 @@
         },
         {
           "name": "years_hly-hidx-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-wchl-normal",
@@ -457,7 +474,8 @@
         },
         {
           "name": "years_hly-wchl-normal",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-wind-avgspd",
@@ -477,7 +495,8 @@
         },
         {
           "name": "years_hly-wind-avgspd",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-wind-pctclm",
@@ -497,7 +516,8 @@
         },
         {
           "name": "years_hly-wind-pctclm",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-wind-vctdir",
@@ -517,7 +537,8 @@
         },
         {
           "name": "years_hly-wind-vctdir",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-wind-vctspd",
@@ -537,7 +558,8 @@
         },
         {
           "name": "years_hly-wind-vctspd",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-wind-1stdir",
@@ -556,7 +578,8 @@
         },
         {
           "name": "years_hly-wind-1stdir",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-wind-1stpct",
@@ -576,7 +599,8 @@
         },
         {
           "name": "years_hly-wind-1stpct",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-wind-2nddir",
@@ -595,7 +619,8 @@
         },
         {
           "name": "years_hly-wind-2nddir",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "hly-wind-2ndpct",
@@ -615,7 +640,8 @@
         },
         {
           "name": "years_hly-wind-2ndpct",
-          "type": "int64"
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "geometry",

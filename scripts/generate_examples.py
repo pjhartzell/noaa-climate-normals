@@ -7,10 +7,10 @@ file_lists = [
     ["tests/data-files/annualseasonal/1991-2020/USW00094765.csv"],
     ["tests/data-files/annualseasonal/2006-2020/USW00094745.csv"],
     ["tests/data-files/daily/1981-2010/USW00094765.csv"],
-    ["tests/data-files/daily/1991-2020/USW00094745.csv"],
+    ["tests/data-files/daily/1991-2020/USW00094765.csv"],
     ["tests/data-files/daily/2006-2020/USW00094745.csv"],
     ["tests/data-files/hourly/1981-2010/USW00094746.csv"],
-    ["tests/data-files/hourly/1991-2020/USW00094765.csv"],
+    ["tests/data-files/hourly/1991-2020/USW00094745.csv"],
     ["tests/data-files/hourly/2006-2020/USW00094745.csv"],
     [
         "tests/data-files/monthly/1981-2010/USW00013740.csv",

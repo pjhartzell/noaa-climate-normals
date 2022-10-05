@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "1991-2020",
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-10-05T13:48:10.976547Z",
+    "created": "2022-10-05T15:55:50.232026Z",
     "title": "Daily NOAA US Climate Normals for Period 1991-2020",
     "proj:epsg": 4269,
     "sci:publications": [
@@ -21,9 +21,9 @@
   "geometry": {
     "type": "Point",
     "coordinates": [
-      -73.7075,
-      41.0669,
-      115.5
+      -72.3047,
+      43.6264,
+      182.3
     ]
   },
   "links": [
@@ -57,9 +57,9 @@
           "description": "Station identification code"
         },
         {
-          "name": "name",
+          "name": "date",
           "type": "string",
-          "description": "Station name"
+          "description": "Month and day in MM-DD format"
         },
         {
           "name": "latitude",
@@ -80,9 +80,9 @@
           "unit": "meter"
         },
         {
-          "name": "date",
+          "name": "name",
           "type": "string",
-          "description": "Month and day in MM-DD format"
+          "description": "Station name"
         },
         {
           "name": "month",
@@ -100,472 +100,1012 @@
           "description": "Hour of day"
         },
         {
-          "name": "hly-temp-normal",
-          "type": "float64"
+          "name": "dly-tavg-normal",
+          "type": "float64",
+          "description": "Long-term averages of daily average temperature",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-temp-normal",
+          "name": "meas_flag_dly-tavg-normal",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-temp-normal",
+          "name": "comp_flag_dly-tavg-normal",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-temp-normal",
-          "type": "int64"
+          "name": "years_dly-tavg-normal",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-temp-10pctl",
-          "type": "float64"
+          "name": "dly-tmax-normal",
+          "type": "float64",
+          "description": "Long-term averages of daily maximum temperature",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-temp-10pctl",
+          "name": "meas_flag_dly-tmax-normal",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-temp-10pctl",
+          "name": "comp_flag_dly-tmax-normal",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-temp-10pctl",
-          "type": "int64"
+          "name": "years_dly-tmax-normal",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-temp-90pctl",
-          "type": "float64"
+          "name": "dly-tmin-normal",
+          "type": "float64",
+          "description": "Long-term averages of daily minimum temperature",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-temp-90pctl",
+          "name": "meas_flag_dly-tmin-normal",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-temp-90pctl",
+          "name": "comp_flag_dly-tmin-normal",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-temp-90pctl",
-          "type": "int64"
+          "name": "years_dly-tmin-normal",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-dewp-normal",
-          "type": "float64"
+          "name": "dly-dutr-normal",
+          "type": "float64",
+          "description": "Long-term averages of daily diurnal temperature range",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-dewp-normal",
+          "name": "meas_flag_dly-dutr-normal",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-dewp-normal",
+          "name": "comp_flag_dly-dutr-normal",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-dewp-normal",
-          "type": "int64"
+          "name": "years_dly-dutr-normal",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-dewp-10pctl",
-          "type": "float64"
+          "name": "dly-tavg-stddev",
+          "type": "float64",
+          "description": "Long-term standard deviations of daily average temperature",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-dewp-10pctl",
+          "name": "meas_flag_dly-tavg-stddev",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-dewp-10pctl",
+          "name": "comp_flag_dly-tavg-stddev",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-dewp-10pctl",
-          "type": "int64"
+          "name": "years_dly-tavg-stddev",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-dewp-90pctl",
-          "type": "float64"
+          "name": "dly-tmax-stddev",
+          "type": "float64",
+          "description": "Long-term standard deviations of daily maximum temperature",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-dewp-90pctl",
+          "name": "meas_flag_dly-tmax-stddev",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-dewp-90pctl",
+          "name": "comp_flag_dly-tmax-stddev",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-dewp-90pctl",
-          "type": "int64"
+          "name": "years_dly-tmax-stddev",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-pres-normal",
-          "type": "float64"
+          "name": "dly-tmin-stddev",
+          "type": "float64",
+          "description": "Long-term standard deviations of daily minimum temperature",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-pres-normal",
+          "name": "meas_flag_dly-tmin-stddev",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-pres-normal",
+          "name": "comp_flag_dly-tmin-stddev",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-pres-normal",
-          "type": "int64"
+          "name": "years_dly-tmin-stddev",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-pres-10pctl",
-          "type": "float64"
+          "name": "dly-dutr-stddev",
+          "type": "float64",
+          "description": "Long-term standard deviations of daily diurnal temperature range",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-pres-10pctl",
+          "name": "meas_flag_dly-dutr-stddev",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-pres-10pctl",
+          "name": "comp_flag_dly-dutr-stddev",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-pres-10pctl",
-          "type": "int64"
+          "name": "years_dly-dutr-stddev",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-pres-90pctl",
-          "type": "float64"
+          "name": "dly-htdd-normal",
+          "type": "float64",
+          "description": "Long-term averages of daily heating degree days with base 65F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-pres-90pctl",
+          "name": "meas_flag_dly-htdd-normal",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-pres-90pctl",
+          "name": "comp_flag_dly-htdd-normal",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-pres-90pctl",
-          "type": "int64"
+          "name": "years_dly-htdd-normal",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-cldh-normal",
-          "type": "float64"
+          "name": "dly-htdd-base40",
+          "type": "float64",
+          "description": "Long-term averages of daily heating degree days with base 40F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-cldh-normal",
+          "name": "meas_flag_dly-htdd-base40",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-cldh-normal",
+          "name": "comp_flag_dly-htdd-base40",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-cldh-normal",
-          "type": "int64"
+          "name": "years_dly-htdd-base40",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-htdh-normal",
-          "type": "float64"
+          "name": "dly-htdd-base45",
+          "type": "float64",
+          "description": "Long-term averages of daily heating degree days with base 45F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-htdh-normal",
+          "name": "meas_flag_dly-htdd-base45",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-htdh-normal",
+          "name": "comp_flag_dly-htdd-base45",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-htdh-normal",
-          "type": "int64"
+          "name": "years_dly-htdd-base45",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-clod-pctclr",
-          "type": "int64"
+          "name": "dly-htdd-base50",
+          "type": "float64",
+          "description": "Long-term averages of daily heating degree days with base 50F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-clod-pctclr",
+          "name": "meas_flag_dly-htdd-base50",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-clod-pctclr",
+          "name": "comp_flag_dly-htdd-base50",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-clod-pctclr",
-          "type": "int64"
+          "name": "years_dly-htdd-base50",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-clod-pctfew",
-          "type": "int64"
+          "name": "dly-htdd-base55",
+          "type": "float64",
+          "description": "Long-term averages of daily heating degree days with base 55F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-clod-pctfew",
+          "name": "meas_flag_dly-htdd-base55",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-clod-pctfew",
+          "name": "comp_flag_dly-htdd-base55",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-clod-pctfew",
-          "type": "int64"
+          "name": "years_dly-htdd-base55",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-clod-pctsct",
-          "type": "int64"
+          "name": "dly-htdd-base57",
+          "type": "float64",
+          "description": "Long-term averages of daily heating degree days with base 57F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-clod-pctsct",
+          "name": "meas_flag_dly-htdd-base57",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-clod-pctsct",
+          "name": "comp_flag_dly-htdd-base57",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-clod-pctsct",
-          "type": "int64"
+          "name": "years_dly-htdd-base57",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-clod-pctbkn",
-          "type": "int64"
+          "name": "dly-htdd-base60",
+          "type": "float64",
+          "description": "Long-term averages of daily heating degree days with base 60F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-clod-pctbkn",
+          "name": "meas_flag_dly-htdd-base60",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-clod-pctbkn",
+          "name": "comp_flag_dly-htdd-base60",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-clod-pctbkn",
-          "type": "int64"
+          "name": "years_dly-htdd-base60",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-clod-pctovc",
-          "type": "int64"
+          "name": "dly-cldd-normal",
+          "type": "float64",
+          "description": "Long-term averages of daily cooling degree days with base 65F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-clod-pctovc",
+          "name": "meas_flag_dly-cldd-normal",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-clod-pctovc",
+          "name": "comp_flag_dly-cldd-normal",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-clod-pctovc",
-          "type": "int64"
+          "name": "years_dly-cldd-normal",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-hidx-normal",
-          "type": "float64"
+          "name": "dly-cldd-base40",
+          "type": "float64",
+          "description": "Long-term averages of daily cooling degree days with base 40F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-hidx-normal",
+          "name": "meas_flag_dly-cldd-base40",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-hidx-normal",
+          "name": "comp_flag_dly-cldd-base40",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-hidx-normal",
-          "type": "int64"
+          "name": "years_dly-cldd-base40",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-wchl-normal",
-          "type": "float64"
+          "name": "dly-cldd-base45",
+          "type": "float64",
+          "description": "Long-term averages of daily cooling degree days with base 45F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-wchl-normal",
+          "name": "meas_flag_dly-cldd-base45",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-wchl-normal",
+          "name": "comp_flag_dly-cldd-base45",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-wchl-normal",
-          "type": "int64"
+          "name": "years_dly-cldd-base45",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-wind-avgspd",
-          "type": "float64"
+          "name": "dly-cldd-base50",
+          "type": "float64",
+          "description": "Long-term averages of daily cooling degree days with base 50F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-wind-avgspd",
+          "name": "meas_flag_dly-cldd-base50",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-wind-avgspd",
+          "name": "comp_flag_dly-cldd-base50",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-wind-avgspd",
-          "type": "int64"
+          "name": "years_dly-cldd-base50",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-wind-pctclm",
-          "type": "float64"
+          "name": "dly-cldd-base55",
+          "type": "float64",
+          "description": "Long-term averages of daily cooling degree days with base 55F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-wind-pctclm",
+          "name": "meas_flag_dly-cldd-base55",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-wind-pctclm",
+          "name": "comp_flag_dly-cldd-base55",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-wind-pctclm",
-          "type": "int64"
+          "name": "years_dly-cldd-base55",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-wind-vctdir",
-          "type": "int64"
+          "name": "dly-cldd-base57",
+          "type": "float64",
+          "description": "Long-term averages of daily cooling degree days with base 57F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-wind-vctdir",
+          "name": "meas_flag_dly-cldd-base57",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-wind-vctdir",
+          "name": "comp_flag_dly-cldd-base57",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-wind-vctdir",
-          "type": "int64"
+          "name": "years_dly-cldd-base57",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-wind-vctspd",
-          "type": "float64"
+          "name": "dly-cldd-base60",
+          "type": "float64",
+          "description": "Long-term averages of daily cooling degree days with base 60F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-wind-vctspd",
+          "name": "meas_flag_dly-cldd-base60",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-wind-vctspd",
+          "name": "comp_flag_dly-cldd-base60",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-wind-vctspd",
-          "type": "int64"
+          "name": "years_dly-cldd-base60",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-wind-1stdir",
-          "type": "int64"
+          "name": "dly-cldd-base70",
+          "type": "float64",
+          "description": "Long-term averages of daily cooling degree days with base 70F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-wind-1stdir",
+          "name": "meas_flag_dly-cldd-base70",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-wind-1stdir",
+          "name": "comp_flag_dly-cldd-base70",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-wind-1stdir",
-          "type": "int64"
+          "name": "years_dly-cldd-base70",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-wind-1stpct",
-          "type": "float64"
+          "name": "dly-cldd-base72",
+          "type": "float64",
+          "description": "Long-term averages of daily cooling degree days with base 72F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-wind-1stpct",
+          "name": "meas_flag_dly-cldd-base72",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-wind-1stpct",
+          "name": "comp_flag_dly-cldd-base72",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-wind-1stpct",
-          "type": "int64"
+          "name": "years_dly-cldd-base72",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-wind-2nddir",
-          "type": "int64"
+          "name": "dly-grdd-base65",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 65F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-wind-2nddir",
+          "name": "meas_flag_dly-grdd-base65",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-wind-2nddir",
+          "name": "comp_flag_dly-grdd-base65",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-wind-2nddir",
-          "type": "int64"
+          "name": "years_dly-grdd-base65",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
-          "name": "hly-wind-2ndpct",
-          "type": "float64"
+          "name": "dly-grdd-base40",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 40F",
+          "unit": "degree Fahrenheit"
         },
         {
-          "name": "meas_flag_hly-wind-2ndpct",
+          "name": "meas_flag_dly-grdd-base40",
           "type": "string",
           "description": "Data record measurement flag"
         },
         {
-          "name": "comp_flag_hly-wind-2ndpct",
+          "name": "comp_flag_dly-grdd-base40",
           "type": "string",
           "description": "Data record completeness flag"
         },
         {
-          "name": "years_hly-wind-2ndpct",
-          "type": "int64"
+          "name": "years_dly-grdd-base40",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-grdd-base45",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 45F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_dly-grdd-base45",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-grdd-base45",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-grdd-base45",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-grdd-base50",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 50F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_dly-grdd-base50",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-grdd-base50",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-grdd-base50",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-grdd-base55",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 55F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_dly-grdd-base55",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-grdd-base55",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-grdd-base55",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-grdd-base57",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 57F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_dly-grdd-base57",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-grdd-base57",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-grdd-base57",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-grdd-base60",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 60F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_dly-grdd-base60",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-grdd-base60",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-grdd-base60",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-grdd-base70",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 70F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_dly-grdd-base70",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-grdd-base70",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-grdd-base70",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-grdd-base72",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 72F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_dly-grdd-base72",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-grdd-base72",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-grdd-base72",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-grdd-tb4886",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 48F limit 86F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_dly-grdd-tb4886",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-grdd-tb4886",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-grdd-tb4886",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-grdd-tb5086",
+          "type": "float64",
+          "description": "Long-term averages of daily growing degree days with base 50F limit 86F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_dly-grdd-tb5086",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-grdd-tb5086",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-grdd-tb5086",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-pctall-ge001hi",
+          "type": "float64",
+          "description": "Probability of daily precipitation >= 0.01 inches",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_dly-prcp-pctall-ge001hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-pctall-ge001hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-pctall-ge001hi",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-pctall-ge010hi",
+          "type": "float64",
+          "description": "Probability of daily precipitation >= 0.10 inches",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_dly-prcp-pctall-ge010hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-pctall-ge010hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-pctall-ge010hi",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-pctall-ge025hi",
+          "type": "float64",
+          "description": "Probability of daily precipitation >= 0.25 inches",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_dly-prcp-pctall-ge025hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-pctall-ge025hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-pctall-ge025hi",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-pctall-ge050hi",
+          "type": "float64",
+          "description": "Probability of daily precipitation >= 0.50 inches",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_dly-prcp-pctall-ge050hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-pctall-ge050hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-pctall-ge050hi",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-pctall-ge100hi",
+          "type": "float64",
+          "description": "Probability of daily precipitation >= 1.00 inches",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_dly-prcp-pctall-ge100hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-pctall-ge100hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-pctall-ge100hi",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-pctall-ge200hi",
+          "type": "float64",
+          "description": "Probability of daily precipitation >= 2.00 inches",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_dly-prcp-pctall-ge200hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-pctall-ge200hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-pctall-ge200hi",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-pctall-ge400hi",
+          "type": "float64",
+          "description": "Probability of daily precipitation >= 4.00 inches",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_dly-prcp-pctall-ge400hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-pctall-ge400hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-pctall-ge400hi",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-pctall-ge600hi",
+          "type": "int64",
+          "description": "Probability of daily precipitation >= 6.00 inches",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_dly-prcp-pctall-ge600hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-pctall-ge600hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-pctall-ge600hi",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-25pctl",
+          "type": "float64",
+          "description": "First quartile of daily nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_dly-prcp-25pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-25pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-25pctl",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-50pctl",
+          "type": "float64",
+          "description": "Second quartile of daily nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_dly-prcp-50pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-50pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-50pctl",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "dly-prcp-75pctl",
+          "type": "float64",
+          "description": "Third quartile of daily nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_dly-prcp-75pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_dly-prcp-75pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_dly-prcp-75pctl",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "mtd-prcp-normal",
+          "type": "float64",
+          "description": "Long-term average month-to-date liquid precipitation amount",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mtd-prcp-normal",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mtd-prcp-normal",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mtd-prcp-normal",
+          "type": "int64",
+          "description": "Number of years used"
+        },
+        {
+          "name": "ytd-prcp-normal",
+          "type": "float64",
+          "description": "Long-term average year-to-date liquid precipitation amount",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_ytd-prcp-normal",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_ytd-prcp-normal",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_ytd-prcp-normal",
+          "type": "int64",
+          "description": "Number of years used"
         },
         {
           "name": "geometry",
@@ -573,7 +1113,7 @@
           "description": "Station 3D point location"
         }
       ],
-      "table:row_count": 8760,
+      "table:row_count": 366,
       "roles": [
         "data",
         "cloud-optimized"
@@ -581,10 +1121,10 @@
     }
   },
   "bbox": [
-    -73.7075,
-    41.0669,
-    -73.7075,
-    41.0669
+    -72.3047,
+    43.6264,
+    -72.3047,
+    43.6264
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",

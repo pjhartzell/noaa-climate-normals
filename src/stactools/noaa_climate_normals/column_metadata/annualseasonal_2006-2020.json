@@ -2160,6 +2160,10 @@
         "unit": "percent"
     },
     "ann-tmin-prbocc-lsth032": {
+        "description": "probability of 32F or below at least once in the year",
+        "unit": "percent"
+    },
+    "ann-tmin-prbocc-lsth036": {
         "description": "probability of 36F or below at least once in the year",
         "unit": "percent"
     }
