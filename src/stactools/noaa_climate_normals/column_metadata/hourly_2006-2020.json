@@ -1,0 +1,146 @@
+{
+    "station": {
+        "description": "Station identification code",
+        "unit": null
+    },
+    "date": {
+        "description": "Month, day, and hour in MM-DDTHH:00:00 format",
+        "unit": null
+    },
+    "latitude": {
+        "description": "Station latitude",
+        "unit": "degree"
+    },
+    "longitude": {
+        "description": "Station longitude",
+        "unit": "degree"
+    },
+    "elevation": {
+        "description": "Station elevation",
+        "unit": "meter"
+    },
+    "name": {
+        "description": "Station name",
+        "unit": null
+    },
+    "month": {
+        "description": "Month of year",
+        "unit": null
+    },
+    "day": {
+        "description": "Day of month",
+        "unit": null
+    },
+    "hour": {
+        "description": "Hour of day",
+        "unit": null
+    },
+    "geometry": {
+        "description": "Station 3D point location",
+        "unit": null
+    },
+    "hly-cldh-normal": {
+        "description": "Cooling degree hours",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-clod-pctbkn": {
+        "description": "Clouds broken percentage",
+        "unit": "percent"
+    },
+    "hly-clod-pctclr": {
+        "description": "Clouds clear percentage",
+        "unit": "percent"
+    },
+    "hly-clod-pctfew": {
+        "description": "Clouds few percentage",
+        "unit": "percent"
+    },
+    "hly-clod-pctovc": {
+        "description": "Clouds overcast percentage",
+        "unit": "percent"
+    },
+    "hly-clod-pctsct": {
+        "description": "Clouds scattered percentage",
+        "unit": "percent"
+    },
+    "hly-dewp-10pctl": {
+        "description": "Dew point 10th percentile",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-dewp-90pctl": {
+        "description": "Dew point 90th percentile",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-dewp-normal": {
+        "description": "Dew point mean",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-hidx-normal": {
+        "description": "Heat index mean",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-htdh-normal": {
+        "description": "Heating degree hours",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-pres-10pctl": {
+        "description": "Sea level pressure 10th percentile",
+        "unit": "hectoPascal"
+    },
+    "hly-pres-90pctl": {
+        "description": "Sea level pressure 90th percentile",
+        "unit": "hectoPascal"
+    },
+    "hly-pres-normal": {
+        "description": "Sea level pressure mean",
+        "unit": "hectoPascal"
+    },
+    "hly-temp-10pctl": {
+        "description": "Temperature 10th percentile",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-temp-90pctl": {
+        "description": "Temperature 90th percentile",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-temp-normal": {
+        "description": "Temperature mean",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-wchl-normal": {
+        "description": "Wind chill mean",
+        "unit": "degree Fahrenheit"
+    },
+    "hly-wind-1stdir": {
+        "description": "Prevailing wind direction (1-8)",
+        "unit": null
+    },
+    "hly-wind-1stpct": {
+        "description": "Prevailing wind percentage",
+        "unit": "percent"
+    },
+    "hly-wind-2nddir": {
+        "description": "Secondary wind direction (1-8)",
+        "unit": null
+    },
+    "hly-wind-2ndpct": {
+        "description": "Secondary wind percentage",
+        "unit": "percent"
+    },
+    "hly-wind-avgspd": {
+        "description": "Average wind speed",
+        "unit": "mile per hour"
+    },
+    "hly-wind-pctclm": {
+        "description": "Percentage calm",
+        "unit": "percent"
+    },
+    "hly-wind-vctdir": {
+        "description": "Mean wind vector direction",
+        "unit": "degree"
+    },
+    "hly-wind-vctspd": {
+        "description": "Mean wind vector magnitude",
+        "unit": "mile per hour"
+    }
+}

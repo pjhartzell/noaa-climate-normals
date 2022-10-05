@@ -1,18 +1,19 @@
 from enum import Enum
 
 import pystac
+from pystac.extensions.scientific import Publication
 
 
 class Frequency(str, Enum):
     HOURLY = "hourly"
     DAILY = "daily"
     MONTHLY = "monthly"
-    ANNUALSEASONAL = "annual/seasonal"
+    ANNUALSEASONAL = "annualseasonal"
 
 
 class Period(str, Enum):
     ONE = "1981-2010"
-    TWO = "1991-2010"
+    TWO = "1991-2020"
     THREE = "2006-2020"
 
 
@@ -48,7 +49,59 @@ HOMEPAGE = {
             media_type="text/html",
             title="U.S. Annual/Seasonal Climate Normals (1981-2010) Landing Page",
         ),
-    }
+    },
+    "1991-2020": {
+        "hourly": pystac.Link(
+            rel="about",
+            target="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01622/html",  # noqa
+            media_type="text/html",
+            title="U.S. Hourly Climate Normals (1991-2020) Landing Page",
+        ),
+        "daily": pystac.Link(
+            rel="about",
+            target="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01621/html",  # noqa
+            media_type="text/html",
+            title="U.S. Daily Climate Normals (1991-2020) Landing Page",
+        ),
+        "monthly": pystac.Link(
+            rel="about",
+            target="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01620/html",  # noqa
+            media_type="text/html",
+            title="U.S. Monthly Climate Normals (1991-2020) Landing Page",
+        ),
+        "annualseasonal": pystac.Link(
+            rel="about",
+            target="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01619/html",  # noqa
+            media_type="text/html",
+            title="U.S. Annual/Seasonal Climate Normals (1991-2020) Landing Page",
+        ),
+    },
+    "2006-2020": {
+        "hourly": pystac.Link(
+            rel="about",
+            target="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01626/html",  # noqa
+            media_type="text/html",
+            title="U.S. Hourly Climate Normals (2006-2020) Landing Page",
+        ),
+        "daily": pystac.Link(
+            rel="about",
+            target="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01625/html",  # noqa
+            media_type="text/html",
+            title="U.S. Daily Climate Normals (2006-2020) Landing Page",
+        ),
+        "monthly": pystac.Link(
+            rel="about",
+            target="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01624/html",  # noqa
+            media_type="text/html",
+            title="U.S. Monthly Climate Normals (2006-2020) Landing Page",
+        ),
+        "annualseasonal": pystac.Link(
+            rel="about",
+            target="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01623/html",  # noqa
+            media_type="text/html",
+            title="U.S. Annual/Seasonal Climate Normals (2006-2020) Landing Page",
+        ),
+    },
 }
 
 DOCUMENTATION = {
@@ -85,17 +138,62 @@ DOCUMENTATION = {
             media_type="application/pdf",
             title="U.S. Hourly Climate Normals (1991-2020) Documentation",
         ),
+        "daily": pystac.Link(
+            rel="describedby",
+            target="https://www.ncei.noaa.gov/data/normals-daily/1991-2020/doc/Normals_DLY_Documentation_1991-2020.pdf",  # noqa
+            media_type="application/pdf",
+            title="U.S. Daily Climate Normals (1991-2020) Documentation",
+        ),
+        "monthly": pystac.Link(
+            rel="describedby",
+            target="https://www.ncei.noaa.gov/data/normals-monthly/1991-2020/doc/Normals_MLY_Documentation_1991-2020.pdf",  # noqa
+            media_type="application/pdf",
+            title="U.S. Monthly Climate Normals (1991-2020) Documentation",
+        ),
+        "annualseasonal": pystac.Link(
+            rel="describedby",
+            target="https://www.ncei.noaa.gov/data/normals-annualseasonal/1991-2020/doc/Normals_ANN_Documentation_1991-2020.pdf",  # noqa
+            media_type="application/pdf",
+            title="U.S. Annual/Seasonal Climate Normals (1991-2020) Documentation",
+        ),
+    },
+    "2006-2020": {
+        "hourly": pystac.Link(
+            rel="describedby",
+            target="https://www.ncei.noaa.gov/data/normals-hourly/2006-2020/doc/Normals_HLY_Documentation_2006-2020.pdf",  # noqa
+            media_type="application/pdf",
+            title="U.S. Hourly Climate Normals (2006-2020) Documentation",
+        ),
+        "daily": pystac.Link(
+            rel="describedby",
+            target="https://www.ncei.noaa.gov/data/normals-daily/2006-2020/doc/Normals_DLY_Documentation_2006-2020.pdf",  # noqa
+            media_type="application/pdf",
+            title="U.S. Daily Climate Normals (2006-2020) Documentation",
+        ),
+        "monthly": pystac.Link(
+            rel="describedby",
+            target="https://www.ncei.noaa.gov/data/normals-monthly/2006-2020/doc/Normals_MLY_Documentation_2006-2020.pdf",  # noqa
+            media_type="application/pdf",
+            title="U.S. Monthly Climate Normals (2006-2020) Documentation",
+        ),
+        "annualseasonal": pystac.Link(
+            rel="describedby",
+            target="https://www.ncei.noaa.gov/data/normals-annualseasonal/2006-2020/doc/Normals_ANN_Documentation_2006-2020.pdf",  # noqa
+            media_type="application/pdf",
+            title="U.S. Annual/Seasonal Climate Normals (2006-2020) Documentation",
+        ),
     },
 }
 
-CITE_AS = {
-    "1981-2010": {
-        "doi": "10.7289/V5PN93JP",
-        "citation": (
-            "Anthony Arguez, Imke Durre, Scott Applequist, Mike Squires, "
-            "Russell Vose, Xungang Yin, and Rocky Bilotta (2010). NOAA's "
-            "U.S. Climate Normals (1981-2010). FREQUENCY. NOAA National "
-            "Centers for Environmental Information. DOI:10.7289/V5PN93JP."
-        ),
-    }
+DATA_1981_2010 = {
+    "doi": "10.7289/V5PN93JP",
+    "citation": "Anthony Arguez, Imke Durre, Scott Applequist, Mike Squires, Russell Vose, Xungang Yin, and Rocky Bilotta (2010). NOAA's U.S. Climate Normals (1981-2010). FREQUENCY subset. NOAA National Centers for Environmental Information. DOI:10.7289/V5PN93JP.",  # noqa
 }
+PUBLICATION_HOURLY = Publication(
+    doi="10.1175/BAMS-D-11-00173.1",
+    citation="Applequist, S., A. Arguez, I. Durre, M. Squires, R. Vose, and X. Yin, 2012: 1981-2010 U.S. Hourly Normals. Bulletin of the American Meteorological Society, 93, 1637-1640. DOI: 10.1175/BAMS-D-11-00173.1.",  # noqa
+)
+PUBLICATION_DAILY_MONTHLY_ANNUALSEASONAL = Publication(
+    doi="10.1175/BAMS-D-11-00197.1",
+    citation="Arguez, A., I. Durre, S. Applequist, R. Vose, M. Squires, X. Yin, R. Heim, and T. Owen, 2012: NOAA's 1981-2010 climate normals: An overview. Bull. Amer. Meteor. Soc., 93, 1687-1697. DOI: 10.1175/BAMS-D-11-00197.1.",  # noqa
+)

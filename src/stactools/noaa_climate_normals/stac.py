@@ -22,12 +22,14 @@ def create_tabular_item(
     parquet_dir: str,
 ) -> Item:
 
-    # Add documentation links
-
     start_year = int(period.value[0:4])
     end_year = int(period.value[5:])
     id = f"{frequency}_{period}"
-    formatted_frequency = "/".join([f.capitalize() for f in frequency.split("/")])
+
+    if frequency is constants.Frequency.ANNUALSEASONAL:
+        formatted_frequency = "Annual/Seasonal"
+    else:
+        formatted_frequency = frequency.value.capitalize()
     title = f"{formatted_frequency} NOAA US Climate Normals for Period {period}"
 
     parquet_dict = create_parquet(
@@ -58,17 +60,22 @@ def create_tabular_item(
     projection = ProjectionExtension.ext(item, add_if_missing=True)
     projection.epsg = int(constants.CRS[5:])
 
+    scientific = ScientificExtension.ext(item, add_if_missing=True)
+    if period is constants.Period.ONE:
+        scientific.doi = constants.DATA_1981_2010["doi"]
+        citation = constants.DATA_1981_2010["citation"]
+        scientific.citation = citation.replace("FREQUENCY", formatted_frequency)
+    if frequency is constants.Frequency.HOURLY:
+        scientific.publications = [constants.PUBLICATION_HOURLY]
+    else:
+        scientific.publications = [constants.PUBLICATION_DAILY_MONTHLY_ANNUALSEASONAL]
+
     item.add_links(
         [
             constants.HOMEPAGE[period][frequency],
             constants.DOCUMENTATION[period][frequency],
         ]
     )
-
-    scientific = ScientificExtension.ext(item, add_if_missing=True)
-    scientific.doi = constants.CITE_AS[period]["doi"]
-    citation = constants.CITE_AS[period]["citation"]
-    scientific.citation = citation.replace("FREQUENCY", formatted_frequency)
 
     return item
 

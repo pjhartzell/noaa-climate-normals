@@ -1,0 +1,401 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "hourly_1981-2010",
+  "properties": {
+    "noaa-climate-normals:frequency": "hourly",
+    "noaa-climate-normals:period": "1981-2010",
+    "start_datetime": "1981-01-01T00:00:00Z",
+    "end_datetime": "2010-12-31T23:59:59Z",
+    "created": "2022-10-05T13:48:11.470324Z",
+    "title": "Hourly NOAA US Climate Normals for Period 1981-2010",
+    "proj:epsg": 4269,
+    "sci:doi": "10.7289/V5PN93JP",
+    "sci:citation": "Anthony Arguez, Imke Durre, Scott Applequist, Mike Squires, Russell Vose, Xungang Yin, and Rocky Bilotta (2010). NOAA's U.S. Climate Normals (1981-2010). Hourly subset. NOAA National Centers for Environmental Information. DOI:10.7289/V5PN93JP.",
+    "sci:publications": [
+      {
+        "doi": "10.1175/BAMS-D-11-00173.1",
+        "citation": "Applequist, S., A. Arguez, I. Durre, M. Squires, R. Vose, and X. Yin, 2012: 1981-2010 U.S. Hourly Normals. Bulletin of the American Meteorological Society, 93, 1637-1640. DOI: 10.1175/BAMS-D-11-00173.1."
+      }
+    ],
+    "datetime": null
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -71.8731,
+      42.2706,
+      304.8
+    ]
+  },
+  "links": [
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.7289/V5PN93JP"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.1175/BAMS-D-11-00173.1"
+    },
+    {
+      "rel": "about",
+      "href": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00824",
+      "type": "text/html",
+      "title": "U.S. Hourly Climate Normals (1981-2010) Landing Page"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://www.ncei.noaa.gov/data/normals-hourly/1981-2010/doc/NORMAL_HLY_documentation.pdf",
+      "type": "application/pdf",
+      "title": "U.S. Hourly Climate Normals (1981-2010) Documentation"
+    }
+  ],
+  "assets": {
+    "parquet": {
+      "href": "./hourly_1981-2010.parquet",
+      "type": "application/x-parquet",
+      "title": "GeoParquet for all stations",
+      "table:primary_geometry": "geometry",
+      "table:columns": [
+        {
+          "name": "station",
+          "type": "string",
+          "description": "Station identification code"
+        },
+        {
+          "name": "date",
+          "type": "string",
+          "description": "Month, day, and hour in MM-DDTHH:00:00 format"
+        },
+        {
+          "name": "latitude",
+          "type": "float64",
+          "description": "Station latitude",
+          "unit": "degree"
+        },
+        {
+          "name": "longitude",
+          "type": "float64",
+          "description": "Station longitude",
+          "unit": "degree"
+        },
+        {
+          "name": "elevation",
+          "type": "float64",
+          "description": "Station elevation",
+          "unit": "meter"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Station name"
+        },
+        {
+          "name": "hly-cldh-normal",
+          "type": "int64",
+          "description": "Cooling degree hours",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-cldh-normal_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-clod-pctbkn",
+          "type": "int64",
+          "description": "Clouds broken percentage",
+          "unit": "tenth of percent"
+        },
+        {
+          "name": "hly-clod-pctbkn_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-clod-pctclr",
+          "type": "int64",
+          "description": "Clouds clear percentage",
+          "unit": "tenth of percent"
+        },
+        {
+          "name": "hly-clod-pctclr_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-clod-pctfew",
+          "type": "int64",
+          "description": "Clouds few percentage",
+          "unit": "tenth of percent"
+        },
+        {
+          "name": "hly-clod-pctfew_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-clod-pctovc",
+          "type": "int64",
+          "description": "Clouds overcast percentage",
+          "unit": "tenth of percent"
+        },
+        {
+          "name": "hly-clod-pctovc_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-clod-pctsct",
+          "type": "int64",
+          "description": "Clouds scattered percentage",
+          "unit": "tenth of percent"
+        },
+        {
+          "name": "hly-clod-pctsct_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-dewp-10pctl",
+          "type": "int64",
+          "description": "Dew point 10th percentile",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-dewp-10pctl_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-dewp-90pctl",
+          "type": "int64",
+          "description": "Dew point 90th percentile",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-dewp-90pctl_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-dewp-normal",
+          "type": "int64",
+          "description": "Dew point mean",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-dewp-normal_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-hidx-normal",
+          "type": "int64",
+          "description": "Heat index mean",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-hidx-normal_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-htdh-normal",
+          "type": "int64",
+          "description": "Heating degree hours",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-htdh-normal_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-pres-10pctl",
+          "type": "int64",
+          "description": "Sea level pressure 10th percentile",
+          "unit": "tenth of hectoPascal"
+        },
+        {
+          "name": "hly-pres-10pctl_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-pres-90pctl",
+          "type": "int64",
+          "description": "Sea level pressure 90th percentile",
+          "unit": "tenth of hectoPascal"
+        },
+        {
+          "name": "hly-pres-90pctl_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-pres-normal",
+          "type": "int64",
+          "description": "Sea level pressure mean",
+          "unit": "tenth of hectoPascal"
+        },
+        {
+          "name": "hly-pres-normal_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-temp-10pctl",
+          "type": "int64",
+          "description": "Temperature 10th percentile",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-temp-10pctl_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-temp-90pctl",
+          "type": "int64",
+          "description": "Temperature 90th percentile",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-temp-90pctl_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-temp-normal",
+          "type": "int64",
+          "description": "Temperature mean",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-temp-normal_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-wchl-normal",
+          "type": "int64",
+          "description": "Wind chill mean",
+          "unit": "tenth of degree Fahrenheit"
+        },
+        {
+          "name": "hly-wchl-normal_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-wind-1stdir",
+          "type": "int64",
+          "description": "Prevailing wind direction (1-8)"
+        },
+        {
+          "name": "hly-wind-1stdir_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-wind-1stpct",
+          "type": "int64",
+          "description": "Prevailing wind percentage",
+          "unit": "tenth of percent"
+        },
+        {
+          "name": "hly-wind-1stpct_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-wind-2nddir",
+          "type": "int64",
+          "description": "Secondary wind direction (1-8)"
+        },
+        {
+          "name": "hly-wind-2nddir_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-wind-2ndpct",
+          "type": "int64",
+          "description": "Secondary wind percentage",
+          "unit": "tenth of percent"
+        },
+        {
+          "name": "hly-wind-2ndpct_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-wind-avgspd",
+          "type": "int64",
+          "description": "Average wind speed",
+          "unit": "tenth of mile per hour"
+        },
+        {
+          "name": "hly-wind-avgspd_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-wind-pctclm",
+          "type": "int64",
+          "description": "Percentage calm",
+          "unit": "tenth of percent"
+        },
+        {
+          "name": "hly-wind-pctclm_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-wind-vctdir",
+          "type": "int64",
+          "description": "Mean wind vector direction",
+          "unit": "degree"
+        },
+        {
+          "name": "hly-wind-vctdir_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "hly-wind-vctspd",
+          "type": "int64",
+          "description": "Mean wind vector magnitude",
+          "unit": "tenth of mile per hour"
+        },
+        {
+          "name": "hly-wind-vctspd_attributes",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "geometry",
+          "type": "geometry",
+          "description": "Station 3D point location"
+        }
+      ],
+      "table:row_count": 8760,
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    }
+  },
+  "bbox": [
+    -71.8731,
+    42.2706,
+    -71.8731,
+    42.2706
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json"
+  ]
+}

@@ -1,0 +1,1646 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "monthly_2006-2020",
+  "properties": {
+    "noaa-climate-normals:frequency": "monthly",
+    "noaa-climate-normals:period": "2006-2020",
+    "start_datetime": "2006-01-01T00:00:00Z",
+    "end_datetime": "2020-12-31T23:59:59Z",
+    "created": "2022-10-05T13:48:12.311880Z",
+    "title": "Monthly NOAA US Climate Normals for Period 2006-2020",
+    "proj:epsg": 4269,
+    "sci:publications": [
+      {
+        "doi": "10.1175/BAMS-D-11-00197.1",
+        "citation": "Arguez, A., I. Durre, S. Applequist, R. Vose, M. Squires, X. Yin, R. Heim, and T. Owen, 2012: NOAA's 1981-2010 climate normals: An overview. Bull. Amer. Meteor. Soc., 93, 1687-1697. DOI: 10.1175/BAMS-D-11-00197.1."
+      }
+    ],
+    "datetime": null
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -72.3047,
+      43.6264,
+      182.3
+    ]
+  },
+  "links": [
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.1175/BAMS-D-11-00197.1"
+    },
+    {
+      "rel": "about",
+      "href": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01624/html",
+      "type": "text/html",
+      "title": "U.S. Monthly Climate Normals (2006-2020) Landing Page"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://www.ncei.noaa.gov/data/normals-monthly/2006-2020/doc/Normals_MLY_Documentation_2006-2020.pdf",
+      "type": "application/pdf",
+      "title": "U.S. Monthly Climate Normals (2006-2020) Documentation"
+    }
+  ],
+  "assets": {
+    "parquet": {
+      "href": "./monthly_2006-2020.parquet",
+      "type": "application/x-parquet",
+      "title": "GeoParquet for all stations",
+      "table:primary_geometry": "geometry",
+      "table:columns": [
+        {
+          "name": "station",
+          "type": "string",
+          "description": "Station identification code"
+        },
+        {
+          "name": "date",
+          "type": "int64",
+          "description": "Month of year"
+        },
+        {
+          "name": "latitude",
+          "type": "float64",
+          "description": "Station latitude",
+          "unit": "degree"
+        },
+        {
+          "name": "longitude",
+          "type": "float64",
+          "description": "Station longitude",
+          "unit": "degree"
+        },
+        {
+          "name": "elevation",
+          "type": "float64",
+          "description": "Station elevation",
+          "unit": "meter"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Station name"
+        },
+        {
+          "name": "month",
+          "type": "int64",
+          "description": "Month of year"
+        },
+        {
+          "name": "day",
+          "type": "int64",
+          "description": "Day of month"
+        },
+        {
+          "name": "hour",
+          "type": "int64",
+          "description": "Hour of day"
+        },
+        {
+          "name": "mly-tavg-normal",
+          "type": "float64",
+          "description": "Long-term averages of monthly average temperature",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-tavg-normal",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tavg-normal",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tavg-normal",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-normal",
+          "type": "float64",
+          "description": "Long-term averages of monthly maximum temperature",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-tmax-normal",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-normal",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-normal",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-normal",
+          "type": "float64",
+          "description": "Long-term averages of monthly minimum temperature",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-tmin-normal",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-normal",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-normal",
+          "type": "int64"
+        },
+        {
+          "name": "mly-dutr-normal",
+          "type": "float64",
+          "description": "Long-term monthly mean of daily temperature range",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-dutr-normal",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-dutr-normal",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-dutr-normal",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tavg-stddev",
+          "type": "float64",
+          "description": "Long-term standard deviations of monthly average temperature",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-tavg-stddev",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tavg-stddev",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tavg-stddev",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-stddev",
+          "type": "float64",
+          "description": "Long-term standard deviations of monthly maximum temperature",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-tmax-stddev",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-stddev",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-stddev",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-stddev",
+          "type": "float64",
+          "description": "Long-term standard deviations of monthly minimum temperature",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-tmin-stddev",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-stddev",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-stddev",
+          "type": "int64"
+        },
+        {
+          "name": "mly-dutr-stddev",
+          "type": "float64",
+          "description": "Long-term monthly standard deviations of daily temperature range",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-dutr-stddev",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-dutr-stddev",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-dutr-stddev",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-avgnds-lsth000",
+          "type": "float64",
+          "description": "Monthly number of days with minimum temperature <= 0F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmin-avgnds-lsth000",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-avgnds-lsth000",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-avgnds-lsth000",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-avgnds-lsth010",
+          "type": "float64",
+          "description": "Monthly number of days with minimum temperature <= 10F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmin-avgnds-lsth010",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-avgnds-lsth010",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-avgnds-lsth010",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-avgnds-lsth020",
+          "type": "float64",
+          "description": "Monthly number of days with minimum temperature <= 20F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmin-avgnds-lsth020",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-avgnds-lsth020",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-avgnds-lsth020",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-avgnds-lsth032",
+          "type": "float64",
+          "description": "Monthly number of days with minimum temperature <= 32F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmin-avgnds-lsth032",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-avgnds-lsth032",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-avgnds-lsth032",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-avgnds-lsth040",
+          "type": "float64",
+          "description": "Monthly number of days with minimum temperature <= 40F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmin-avgnds-lsth040",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-avgnds-lsth040",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-avgnds-lsth040",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-avgnds-lsth050",
+          "type": "float64",
+          "description": "Monthly number of days with minimum temperature <= 50F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmin-avgnds-lsth050",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-avgnds-lsth050",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-avgnds-lsth050",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-avgnds-lsth060",
+          "type": "float64",
+          "description": "Monthly number of days with minimum temperature <= 60F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmin-avgnds-lsth060",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-avgnds-lsth060",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-avgnds-lsth060",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-avgnds-lsth070",
+          "type": "float64",
+          "description": "Monthly number of days with minimum temperature <= 70F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmin-avgnds-lsth070",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-avgnds-lsth070",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-avgnds-lsth070",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-avgnds-grth032",
+          "type": "float64",
+          "description": "Monthly number of days with maximum temperature >= 32F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmax-avgnds-grth032",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-avgnds-grth032",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-avgnds-grth032",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-avgnds-grth040",
+          "type": "float64",
+          "description": "Monthly number of days with maximum temperature >= 40F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmax-avgnds-grth040",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-avgnds-grth040",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-avgnds-grth040",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-avgnds-grth050",
+          "type": "float64",
+          "description": "Monthly number of days with maximum temperature >= 50F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmax-avgnds-grth050",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-avgnds-grth050",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-avgnds-grth050",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-avgnds-grth060",
+          "type": "float64",
+          "description": "Monthly number of days with maximum temperature >= 60F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmax-avgnds-grth060",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-avgnds-grth060",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-avgnds-grth060",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-avgnds-grth070",
+          "type": "float64",
+          "description": "Monthly number of days with maximum temperature >= 70F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmax-avgnds-grth070",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-avgnds-grth070",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-avgnds-grth070",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-avgnds-grth080",
+          "type": "float64",
+          "description": "Monthly number of days with maximum temperature >= 80F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmax-avgnds-grth080",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-avgnds-grth080",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-avgnds-grth080",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-avgnds-grth090",
+          "type": "float64",
+          "description": "Monthly number of days with maximum temperature >= 90F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmax-avgnds-grth090",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-avgnds-grth090",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-avgnds-grth090",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-avgnds-grth100",
+          "type": "int64",
+          "description": "Monthly number of days with maximum temperature >= 100F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmax-avgnds-grth100",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-avgnds-grth100",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-avgnds-grth100",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmax-avgnds-lsth032",
+          "type": "float64",
+          "description": "Monthly number of days with maximum temperature <= 32F",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-tmax-avgnds-lsth032",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmax-avgnds-lsth032",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmax-avgnds-lsth032",
+          "type": "int64"
+        },
+        {
+          "name": "mly-htdd-normal",
+          "type": "float64",
+          "description": "Long-term averages of monthly heating degree days with base 65F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-htdd-normal",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-htdd-normal",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-htdd-normal",
+          "type": "int64"
+        },
+        {
+          "name": "mly-htdd-base40",
+          "type": "float64",
+          "description": "Long-term averages of monthly heating degree days with base 40F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-htdd-base40",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-htdd-base40",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-htdd-base40",
+          "type": "int64"
+        },
+        {
+          "name": "mly-htdd-base45",
+          "type": "float64",
+          "description": "Long-term averages of monthly heating degree days with base 45F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-htdd-base45",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-htdd-base45",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-htdd-base45",
+          "type": "int64"
+        },
+        {
+          "name": "mly-htdd-base50",
+          "type": "float64",
+          "description": "Long-term averages of monthly heating degree days with base 50F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-htdd-base50",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-htdd-base50",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-htdd-base50",
+          "type": "int64"
+        },
+        {
+          "name": "mly-htdd-base55",
+          "type": "float64",
+          "description": "Long-term averages of monthly heating degree days with base 55F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-htdd-base55",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-htdd-base55",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-htdd-base55",
+          "type": "int64"
+        },
+        {
+          "name": "mly-htdd-base57",
+          "type": "float64",
+          "description": "Long-term averages of monthly heating degree days with base 57F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-htdd-base57",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-htdd-base57",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-htdd-base57",
+          "type": "int64"
+        },
+        {
+          "name": "mly-htdd-base60",
+          "type": "float64",
+          "description": "Long-term averages of monthly heating degree days with base 60F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-htdd-base60",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-htdd-base60",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-htdd-base60",
+          "type": "int64"
+        },
+        {
+          "name": "mly-cldd-normal",
+          "type": "float64",
+          "description": "Long-term averages of monthly cooling degree days with base 65F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-cldd-normal",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-cldd-normal",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-cldd-normal",
+          "type": "int64"
+        },
+        {
+          "name": "mly-cldd-base40",
+          "type": "float64",
+          "description": "Long-term averages of monthly cooling degree days with base 40F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-cldd-base40",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-cldd-base40",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-cldd-base40",
+          "type": "int64"
+        },
+        {
+          "name": "mly-cldd-base45",
+          "type": "float64",
+          "description": "Long-term averages of monthly cooling degree days with base 45F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-cldd-base45",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-cldd-base45",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-cldd-base45",
+          "type": "int64"
+        },
+        {
+          "name": "mly-cldd-base50",
+          "type": "float64",
+          "description": "Long-term averages of monthly cooling degree days with base 50F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-cldd-base50",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-cldd-base50",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-cldd-base50",
+          "type": "int64"
+        },
+        {
+          "name": "mly-cldd-base55",
+          "type": "float64",
+          "description": "Long-term averages of monthly cooling degree days with base 55F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-cldd-base55",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-cldd-base55",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-cldd-base55",
+          "type": "int64"
+        },
+        {
+          "name": "mly-cldd-base57",
+          "type": "float64",
+          "description": "Long-term averages of monthly cooling degree days with base 57F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-cldd-base57",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-cldd-base57",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-cldd-base57",
+          "type": "int64"
+        },
+        {
+          "name": "mly-cldd-base60",
+          "type": "float64",
+          "description": "Long-term averages of monthly cooling degree days with base 60F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-cldd-base60",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-cldd-base60",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-cldd-base60",
+          "type": "int64"
+        },
+        {
+          "name": "mly-cldd-base70",
+          "type": "float64",
+          "description": "Long-term averages of monthly cooling degree days with base 70F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-cldd-base70",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-cldd-base70",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-cldd-base70",
+          "type": "int64"
+        },
+        {
+          "name": "mly-cldd-base72",
+          "type": "float64",
+          "description": "Long-term averages of monthly cooling degree days with base 72F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-cldd-base72",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-cldd-base72",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-cldd-base72",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-base65",
+          "type": "float64",
+          "description": "Long-term averages of monthly growing degree days with base 65F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-base65",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-base65",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-base65",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-base40",
+          "type": "float64",
+          "description": "Long-term averages of monthly growing degree days with base 40F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-base40",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-base40",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-base40",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-base45",
+          "type": "float64",
+          "description": "Long-term averages of monthly growing degree days with base 45F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-base45",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-base45",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-base45",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-base50",
+          "type": "float64",
+          "description": "Long-term averages of monthly growing degree days with base 50F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-base50",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-base50",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-base50",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-base55",
+          "type": "float64",
+          "description": "Long-term averages of monthly growing degree days with base 55F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-base55",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-base55",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-base55",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-base57",
+          "type": "float64",
+          "description": "Long-term averages of monthly growing degree days with base 57F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-base57",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-base57",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-base57",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-base60",
+          "type": "float64",
+          "description": "Long-term averages of monthly growing degree days with base 60F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-base60",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-base60",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-base60",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-base70",
+          "type": "float64",
+          "description": "Long-term averages of monthly growing degree days with base 70F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-base70",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-base70",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-base70",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-base72",
+          "type": "float64",
+          "description": "Long-term averages of monthly growing degree days with base 72F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-base72",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-base72",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-base72",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-tb4886",
+          "type": "float64",
+          "description": "Long-term avgs of monthly growing degree days with base 48F limit 86F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-tb4886",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-tb4886",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-tb4886",
+          "type": "int64"
+        },
+        {
+          "name": "mly-grdd-tb5086",
+          "type": "float64",
+          "description": "Long-term avgs of monthly growing degree days with base 50F limit 86F",
+          "unit": "degree Fahrenheit"
+        },
+        {
+          "name": "meas_flag_mly-grdd-tb5086",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-grdd-tb5086",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-grdd-tb5086",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-prbocc-lsth016",
+          "type": "float64",
+          "description": "Probability of minimum temperature at least once monthly <= 16F",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_mly-tmin-prbocc-lsth016",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-prbocc-lsth016",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-prbocc-lsth016",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-prbocc-lsth020",
+          "type": "float64",
+          "description": "Probability of minimum temperature at least once monthly <= 20F",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_mly-tmin-prbocc-lsth020",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-prbocc-lsth020",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-prbocc-lsth020",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-prbocc-lsth024",
+          "type": "float64",
+          "description": "Probability of minimum temperature at least once monthly <= 24F",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_mly-tmin-prbocc-lsth024",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-prbocc-lsth024",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-prbocc-lsth024",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-prbocc-lsth028",
+          "type": "float64",
+          "description": "Probability of minimum temperature at least once monthly <= 28F",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_mly-tmin-prbocc-lsth028",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-prbocc-lsth028",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-prbocc-lsth028",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-prbocc-lsth032",
+          "type": "float64",
+          "description": "Probability of minimum temperature at least once monthly <= 32F",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_mly-tmin-prbocc-lsth032",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-prbocc-lsth032",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-prbocc-lsth032",
+          "type": "int64"
+        },
+        {
+          "name": "mly-tmin-prbocc-lsth036",
+          "type": "float64",
+          "description": "Probability of minimum temperature at least once monthly <= 36F",
+          "unit": "percent"
+        },
+        {
+          "name": "meas_flag_mly-tmin-prbocc-lsth036",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-tmin-prbocc-lsth036",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-tmin-prbocc-lsth036",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-normal",
+          "type": "float64",
+          "description": "Long-term averages of monthly precipitation total",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-normal",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-normal",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-normal",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-avgnds-ge001hi",
+          "type": "float64",
+          "description": "Monthly number of days with precipitation >= 0.01 inches",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-prcp-avgnds-ge001hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-avgnds-ge001hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-avgnds-ge001hi",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-avgnds-ge010hi",
+          "type": "float64",
+          "description": "Monthly number of days with precipitation >= 0.10 inches",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-prcp-avgnds-ge010hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-avgnds-ge010hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-avgnds-ge010hi",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-avgnds-ge025hi",
+          "type": "float64",
+          "description": "Monthly number of days with precipitation >= 0.25 inches",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-prcp-avgnds-ge025hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-avgnds-ge025hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-avgnds-ge025hi",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-avgnds-ge050hi",
+          "type": "float64",
+          "description": "Monthly number of days with precipitation >= 0.50 inches",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-prcp-avgnds-ge050hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-avgnds-ge050hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-avgnds-ge050hi",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-avgnds-ge100hi",
+          "type": "float64",
+          "description": "Monthly number of days with precipitation >= 1.00 inches",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-prcp-avgnds-ge100hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-avgnds-ge100hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-avgnds-ge100hi",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-avgnds-ge200hi",
+          "type": "float64",
+          "description": "Monthly number of days with precipitation >= 2.00 inches",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-prcp-avgnds-ge200hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-avgnds-ge200hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-avgnds-ge200hi",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-avgnds-ge400hi",
+          "type": "int64",
+          "description": "Monthly number of days with precipitation >= 4.00 inches",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-prcp-avgnds-ge400hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-avgnds-ge400hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-avgnds-ge400hi",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-avgnds-ge600hi",
+          "type": "int64",
+          "description": "Monthly number of days with precipitation >= 6.00 inches",
+          "unit": "day"
+        },
+        {
+          "name": "meas_flag_mly-prcp-avgnds-ge600hi",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-avgnds-ge600hi",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-avgnds-ge600hi",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-25pctl",
+          "type": "float64",
+          "description": "First quartile of monthly nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-25pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-25pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-25pctl",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-50pctl",
+          "type": "float64",
+          "description": "Second quartile of monthly nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-50pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-50pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-50pctl",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-75pctl",
+          "type": "float64",
+          "description": "Third quartile of monthly nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-75pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-75pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-75pctl",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-20pctl",
+          "type": "float64",
+          "description": "First quintile of monthly nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-20pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-20pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-20pctl",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-40pctl",
+          "type": "float64",
+          "description": "Second quintile of monthly nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-40pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-40pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-40pctl",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-60pctl",
+          "type": "float64",
+          "description": "Third quintile of monthly nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-60pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-60pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-60pctl",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-80pctl",
+          "type": "float64",
+          "description": "Fourth quintile of monthly nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-80pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-80pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-80pctl",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-33pctl",
+          "type": "float64",
+          "description": "First tercile of monthly nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-33pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-33pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-33pctl",
+          "type": "int64"
+        },
+        {
+          "name": "mly-prcp-67pctl",
+          "type": "float64",
+          "description": "Second tercile of monthly nonzero precipitation totals",
+          "unit": "inch"
+        },
+        {
+          "name": "meas_flag_mly-prcp-67pctl",
+          "type": "string",
+          "description": "Data record measurement flag"
+        },
+        {
+          "name": "comp_flag_mly-prcp-67pctl",
+          "type": "string",
+          "description": "Data record completeness flag"
+        },
+        {
+          "name": "years_mly-prcp-67pctl",
+          "type": "int64"
+        },
+        {
+          "name": "geometry",
+          "type": "geometry",
+          "description": "Station 3D point location"
+        }
+      ],
+      "table:row_count": 12,
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    }
+  },
+  "bbox": [
+    -72.3047,
+    43.6264,
+    -72.3047,
+    43.6264
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json"
+  ]
+}

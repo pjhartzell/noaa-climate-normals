@@ -1,0 +1,2166 @@
+{
+    "station": {
+        "description": "Station identification code",
+        "unit": null
+    },
+    "latitude": {
+        "description": "Station latitude",
+        "unit": "degree"
+    },
+    "longitude": {
+        "description": "Station longitude",
+        "unit": "degree"
+    },
+    "elevation": {
+        "description": "Station elevation",
+        "unit": "meter"
+    },
+    "name": {
+        "description": "Station name",
+        "unit": null
+    },
+    "month": {
+        "description": "Month of year",
+        "unit": null
+    },
+    "day": {
+        "description": "Day of month",
+        "unit": null
+    },
+    "hour": {
+        "description": "Hour of day",
+        "unit": null
+    },
+    "geometry": {
+        "description": "Station 3D point location",
+        "unit": null
+    },
+    "mam-tavg-normal": {
+        "description": "Long-term averages of spring average temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-tmax-normal": {
+        "description": "Long-term averages of spring maximum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-tmin-normal": {
+        "description": "Long-term averages of spring minimum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-dutr-normal": {
+        "description": "Long-term spring mean of daily temperature range",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-cldd-base40": {
+        "description": "Long-term averages of spring cooling degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-cldd-base45": {
+        "description": "Long-term averages of spring cooling degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-cldd-base50": {
+        "description": "Long-term averages of spring cooling degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-cldd-base55": {
+        "description": "Long-term averages of spring cooling degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-cldd-base57": {
+        "description": "Long-term averages of spring cooling degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-cldd-base60": {
+        "description": "Long-term averages of spring cooling degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-cldd-base70": {
+        "description": "Long-term averages of spring cooling degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-cldd-base72": {
+        "description": "Long-term averages of spring cooling degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-cldd-normal": {
+        "description": "Long-term averages of spring cooling degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-base40": {
+        "description": "Long-term averages of spring growing degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-base45": {
+        "description": "Long-term averages of spring growing degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-base50": {
+        "description": "Long-term averages of spring growing degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-base55": {
+        "description": "Long-term averages of spring growing degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-base57": {
+        "description": "Long-term averages of spring growing degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-base60": {
+        "description": "Long-term averages of spring growing degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-base65": {
+        "description": "Long-term averages of spring growing degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-base70": {
+        "description": "Long-term averages of spring growing degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-base72": {
+        "description": "Long-term averages of spring growing degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-tb4886": {
+        "description": "Long-term avgs of spring growing degree days with base 48F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-grdd-tb5086": {
+        "description": "Long-term avgs of spring growing degree days with base 50F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-htdd-base40": {
+        "description": "Long-term averages of spring heating degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-htdd-base45": {
+        "description": "Long-term averages of spring heating degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-htdd-base50": {
+        "description": "Long-term averages of spring heating degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-htdd-base55": {
+        "description": "Long-term averages of spring heating degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-htdd-base57": {
+        "description": "Long-term averages of spring heating degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-htdd-base60": {
+        "description": "Long-term averages of spring heating degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-htdd-normal": {
+        "description": "Long-term averages of spring heating degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "mam-prcp-normal": {
+        "description": "Long-term averages of spring precipitation total",
+        "unit": "inch"
+    },
+    "mam-prcp-avgnds-ge001hi": {
+        "description": "Spring number of days with precipitation >= 0.01 inches",
+        "unit": "day"
+    },
+    "mam-prcp-avgnds-ge010hi": {
+        "description": "Spring number of days with precipitation >= 0.10 inches",
+        "unit": "day"
+    },
+    "mam-prcp-avgnds-ge025hi": {
+        "description": "Spring number of days with precipitation >= 0.25 inches",
+        "unit": "day"
+    },
+    "mam-prcp-avgnds-ge050hi": {
+        "description": "Spring number of days with precipitation >= 0.50 inches",
+        "unit": "day"
+    },
+    "mam-prcp-avgnds-ge100hi": {
+        "description": "Spring number of days with precipitation >= 1.00 inches",
+        "unit": "day"
+    },
+    "mam-prcp-avgnds-ge200hi": {
+        "description": "Spring number of days with precipitation >= 2.00 inches",
+        "unit": "day"
+    },
+    "mam-prcp-avgnds-ge400hi": {
+        "description": "Spring number of days with precipitation >= 4.00 inches",
+        "unit": "day"
+    },
+    "mam-prcp-avgnds-ge600hi": {
+        "description": "Spring number of days with precipitation >= 6.00 inches",
+        "unit": "day"
+    },
+    "mam-snow-normal": {
+        "description": "Long-term averages of spring snowfall total",
+        "unit": "inch"
+    },
+    "mam-snow-avgnds-ge001ti": {
+        "description": "Spring number of days with snowfall >= 0.1 inch",
+        "unit": "day"
+    },
+    "mam-snow-avgnds-ge010ti": {
+        "description": "Spring number of days with snowfall >= 1.0 inch",
+        "unit": "day"
+    },
+    "mam-snow-avgnds-ge020ti": {
+        "description": "Spring number of days with snowfall >= 2.0 inches",
+        "unit": "day"
+    },
+    "mam-snow-avgnds-ge030ti": {
+        "description": "Spring number of days with snowfall >= 3.0 inches",
+        "unit": "day"
+    },
+    "mam-snow-avgnds-ge040ti": {
+        "description": "Spring number of days with snowfall >= 4.0 inches",
+        "unit": "day"
+    },
+    "mam-snow-avgnds-ge050ti": {
+        "description": "Spring number of days with snowfall >= 5.0 inches",
+        "unit": "day"
+    },
+    "mam-snow-avgnds-ge100ti": {
+        "description": "Spring number of days with snowfall >= 10 inches",
+        "unit": "day"
+    },
+    "mam-snow-avgnds-ge200ti": {
+        "description": "Spring number of days with snowfall >= 20 inches",
+        "unit": "day"
+    },
+    "mam-snwd-avgnds-ge001wi": {
+        "description": "Spring number of days with snow depth >= 1 inch",
+        "unit": "day"
+    },
+    "mam-snwd-avgnds-ge002wi": {
+        "description": "Spring number of days with snow depth >= 2 inches",
+        "unit": "day"
+    },
+    "mam-snwd-avgnds-ge003wi": {
+        "description": "Spring number of days with snow depth >= 3 inches",
+        "unit": "day"
+    },
+    "mam-snwd-avgnds-ge004wi": {
+        "description": "Spring number of days with snow depth >= 4 inches",
+        "unit": "day"
+    },
+    "mam-snwd-avgnds-ge005wi": {
+        "description": "Spring number of days with snow depth >= 5 inches",
+        "unit": "day"
+    },
+    "mam-snwd-avgnds-ge010wi": {
+        "description": "Spring number of days with snow depth >= 10 inches",
+        "unit": "day"
+    },
+    "mam-snwd-avgnds-ge020wi": {
+        "description": "Spring number of days with snow depth >= 20 inches",
+        "unit": "day"
+    },
+    "mam-tmin-avgnds-lsth000": {
+        "description": "Spring number of days with minimum temperature <= 0F",
+        "unit": "day"
+    },
+    "mam-tmin-avgnds-lsth010": {
+        "description": "Spring number of days with minimum temperature <= 10F",
+        "unit": "day"
+    },
+    "mam-tmin-avgnds-lsth020": {
+        "description": "Spring number of days with minimum temperature <= 20F",
+        "unit": "day"
+    },
+    "mam-tmin-avgnds-lsth032": {
+        "description": "Spring number of days with minimum temperature <= 32F",
+        "unit": "day"
+    },
+    "mam-tmin-avgnds-lsth040": {
+        "description": "Spring number of days with minimum temperature <= 40F",
+        "unit": "day"
+    },
+    "mam-tmin-avgnds-lsth050": {
+        "description": "Spring number of days with minimum temperature <= 50F",
+        "unit": "day"
+    },
+    "mam-tmin-avgnds-lsth060": {
+        "description": "Spring number of days with minimum temperature <= 60F",
+        "unit": "day"
+    },
+    "mam-tmin-avgnds-lsth070": {
+        "description": "Spring number of days with minimum temperature <= 70F",
+        "unit": "day"
+    },
+    "mam-tmax-avgnds-grth032": {
+        "description": "Spring number of days with maximum temperature >= 32F",
+        "unit": "day"
+    },
+    "mam-tmax-avgnds-grth040": {
+        "description": "Spring number of days with maximum temperature >= 40F",
+        "unit": "day"
+    },
+    "mam-tmax-avgnds-grth050": {
+        "description": "Spring number of days with maximum temperature >= 50F",
+        "unit": "day"
+    },
+    "mam-tmax-avgnds-grth060": {
+        "description": "Spring number of days with maximum temperature >= 60F",
+        "unit": "day"
+    },
+    "mam-tmax-avgnds-grth070": {
+        "description": "Spring number of days with maximum temperature >= 70F",
+        "unit": "day"
+    },
+    "mam-tmax-avgnds-grth080": {
+        "description": "Spring number of days with maximum temperature >= 80F",
+        "unit": "day"
+    },
+    "mam-tmax-avgnds-grth090": {
+        "description": "Spring number of days with maximum temperature >= 90F",
+        "unit": "day"
+    },
+    "mam-tmax-avgnds-grth100": {
+        "description": "Spring number of days with maximum temperature >= 100F",
+        "unit": "day"
+    },
+    "mam-tmax-avgnds-lsth032": {
+        "description": "Spring number of days with maximum temperature <= 32F",
+        "unit": "day"
+    },
+    "jja-tavg-normal": {
+        "description": "Long-term averages of summer average temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-tmax-normal": {
+        "description": "Long-term averages of summer maximum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-tmin-normal": {
+        "description": "Long-term averages of summer minimum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-dutr-normal": {
+        "description": "Long-term summer mean of daily temperature range",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-cldd-base40": {
+        "description": "Long-term averages of summer cooling degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-cldd-base45": {
+        "description": "Long-term averages of summer cooling degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-cldd-base50": {
+        "description": "Long-term averages of summer cooling degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-cldd-base55": {
+        "description": "Long-term averages of summer cooling degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-cldd-base57": {
+        "description": "Long-term averages of summer cooling degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-cldd-base60": {
+        "description": "Long-term averages of summer cooling degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-cldd-base70": {
+        "description": "Long-term averages of summer cooling degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-cldd-base72": {
+        "description": "Long-term averages of summer cooling degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-cldd-normal": {
+        "description": "Long-term averages of summer cooling degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-base40": {
+        "description": "Long-term averages of summer growing degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-base45": {
+        "description": "Long-term averages of summer growing degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-base50": {
+        "description": "Long-term averages of summer growing degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-base55": {
+        "description": "Long-term averages of summer growing degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-base57": {
+        "description": "Long-term averages of summer growing degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-base60": {
+        "description": "Long-term averages of summer growing degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-base65": {
+        "description": "Long-term averages of summer growing degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-base70": {
+        "description": "Long-term averages of summer growing degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-base72": {
+        "description": "Long-term averages of summer growing degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-tb4886": {
+        "description": "Long-term avgs of summer growing degree days with base 48F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-grdd-tb5086": {
+        "description": "Long-term avgs of summer growing degree days with base 50F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-htdd-base40": {
+        "description": "Long-term averages of summer heating degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-htdd-base45": {
+        "description": "Long-term averages of summer heating degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-htdd-base50": {
+        "description": "Long-term averages of summer heating degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-htdd-base55": {
+        "description": "Long-term averages of summer heating degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-htdd-base57": {
+        "description": "Long-term averages of summer heating degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-htdd-base60": {
+        "description": "Long-term averages of summer heating degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-htdd-normal": {
+        "description": "Long-term averages of summer heating degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "jja-prcp-normal": {
+        "description": "Long-term averages of summer precipitation total",
+        "unit": "inch"
+    },
+    "jja-prcp-avgnds-ge001hi": {
+        "description": "Summer number of days with precipitation >= 0.01 inches",
+        "unit": "day"
+    },
+    "jja-prcp-avgnds-ge010hi": {
+        "description": "Summer number of days with precipitation >= 0.10 inches",
+        "unit": "day"
+    },
+    "jja-prcp-avgnds-ge025hi": {
+        "description": "Summer number of days with precipitation >= 0.25 inches",
+        "unit": "day"
+    },
+    "jja-prcp-avgnds-ge050hi": {
+        "description": "Summer number of days with precipitation >= 0.50 inches",
+        "unit": "day"
+    },
+    "jja-prcp-avgnds-ge100hi": {
+        "description": "Summer number of days with precipitation >= 1.00 inches",
+        "unit": "day"
+    },
+    "jja-prcp-avgnds-ge200hi": {
+        "description": "Summer number of days with precipitation >= 2.00 inches",
+        "unit": "day"
+    },
+    "jja-prcp-avgnds-ge400hi": {
+        "description": "Summer number of days with precipitation >= 4.00 inches",
+        "unit": "day"
+    },
+    "jja-prcp-avgnds-ge600hi": {
+        "description": "Summer number of days with precipitation >= 6.00 inches",
+        "unit": "day"
+    },
+    "jja-snow-normal": {
+        "description": "Long-term averages of summer snowfall total",
+        "unit": "inch"
+    },
+    "jja-snow-avgnds-ge001ti": {
+        "description": "Summer number of days with snowfall >= 0.1 inch",
+        "unit": "day"
+    },
+    "jja-snow-avgnds-ge010ti": {
+        "description": "Summer number of days with snowfall >= 1.0 inch",
+        "unit": "day"
+    },
+    "jja-snow-avgnds-ge020ti": {
+        "description": "Summer number of days with snowfall >= 2.0 inches",
+        "unit": "day"
+    },
+    "jja-snow-avgnds-ge030ti": {
+        "description": "Summer number of days with snowfall >= 3.0 inches",
+        "unit": "day"
+    },
+    "jja-snow-avgnds-ge040ti": {
+        "description": "Summer number of days with snowfall >= 4.0 inches",
+        "unit": "day"
+    },
+    "jja-snow-avgnds-ge050ti": {
+        "description": "Summer number of days with snowfall >= 5.0 inches",
+        "unit": "day"
+    },
+    "jja-snow-avgnds-ge100ti": {
+        "description": "Summer number of days with snowfall >= 10 inches",
+        "unit": "day"
+    },
+    "jja-snow-avgnds-ge200ti": {
+        "description": "Summer number of days with snowfall >= 20 inches",
+        "unit": "day"
+    },
+    "jja-snwd-avgnds-ge001wi": {
+        "description": "Summer number of days with snow depth >= 1 inch",
+        "unit": "day"
+    },
+    "jja-snwd-avgnds-ge002wi": {
+        "description": "Summer number of days with snow depth >= 2 inches",
+        "unit": "day"
+    },
+    "jja-snwd-avgnds-ge003wi": {
+        "description": "Summer number of days with snow depth >= 3 inches",
+        "unit": "day"
+    },
+    "jja-snwd-avgnds-ge004wi": {
+        "description": "Summer number of days with snow depth >= 4 inches",
+        "unit": "day"
+    },
+    "jja-snwd-avgnds-ge005wi": {
+        "description": "Summer number of days with snow depth >= 5 inches",
+        "unit": "day"
+    },
+    "jja-snwd-avgnds-ge010wi": {
+        "description": "Summer number of days with snow depth >= 10 inches",
+        "unit": "day"
+    },
+    "jja-snwd-avgnds-ge020wi": {
+        "description": "Summer number of days with snow depth >= 20 inches",
+        "unit": "day"
+    },
+    "jja-tmin-avgnds-lsth000": {
+        "description": "Summer number of days with minimum temperature <= 0F",
+        "unit": "day"
+    },
+    "jja-tmin-avgnds-lsth010": {
+        "description": "Summer number of days with minimum temperature <= 10F",
+        "unit": "day"
+    },
+    "jja-tmin-avgnds-lsth020": {
+        "description": "Summer number of days with minimum temperature <= 20F",
+        "unit": "day"
+    },
+    "jja-tmin-avgnds-lsth032": {
+        "description": "Summer number of days with minimum temperature <= 32F",
+        "unit": "day"
+    },
+    "jja-tmin-avgnds-lsth040": {
+        "description": "Summer number of days with minimum temperature <= 40F",
+        "unit": "day"
+    },
+    "jja-tmin-avgnds-lsth050": {
+        "description": "Summer number of days with minimum temperature <= 50F",
+        "unit": "day"
+    },
+    "jja-tmin-avgnds-lsth060": {
+        "description": "Summer number of days with minimum temperature <= 60F",
+        "unit": "day"
+    },
+    "jja-tmin-avgnds-lsth070": {
+        "description": "Summer number of days with minimum temperature <= 70F",
+        "unit": "day"
+    },
+    "jja-tmax-avgnds-grth032": {
+        "description": "Summer number of days with maximum temperature >= 32F",
+        "unit": "day"
+    },
+    "jja-tmax-avgnds-grth040": {
+        "description": "Summer number of days with maximum temperature >= 40F",
+        "unit": "day"
+    },
+    "jja-tmax-avgnds-grth050": {
+        "description": "Summer number of days with maximum temperature >= 50F",
+        "unit": "day"
+    },
+    "jja-tmax-avgnds-grth060": {
+        "description": "Summer number of days with maximum temperature >= 60F",
+        "unit": "day"
+    },
+    "jja-tmax-avgnds-grth070": {
+        "description": "Summer number of days with maximum temperature >= 70F",
+        "unit": "day"
+    },
+    "jja-tmax-avgnds-grth080": {
+        "description": "Summer number of days with maximum temperature >= 80F",
+        "unit": "day"
+    },
+    "jja-tmax-avgnds-grth090": {
+        "description": "Summer number of days with maximum temperature >= 90F",
+        "unit": "day"
+    },
+    "jja-tmax-avgnds-grth100": {
+        "description": "Summer number of days with maximum temperature >= 100F",
+        "unit": "day"
+    },
+    "jja-tmax-avgnds-lsth032": {
+        "description": "Summer number of days with maximum temperature <= 32F",
+        "unit": "day"
+    },
+    "son-tavg-normal": {
+        "description": "Long-term averages of autumn average temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "son-tmax-normal": {
+        "description": "Long-term averages of autumn maximum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "son-tmin-normal": {
+        "description": "Long-term averages of autumn minimum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "son-dutr-normal": {
+        "description": "Long-term autumn mean of daily temperature range",
+        "unit": "degree Fahrenheit"
+    },
+    "son-cldd-base40": {
+        "description": "Long-term averages of autumn cooling degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-cldd-base45": {
+        "description": "Long-term averages of autumn cooling degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-cldd-base50": {
+        "description": "Long-term averages of autumn cooling degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-cldd-base55": {
+        "description": "Long-term averages of autumn cooling degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-cldd-base57": {
+        "description": "Long-term averages of autumn cooling degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-cldd-base60": {
+        "description": "Long-term averages of autumn cooling degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-cldd-base70": {
+        "description": "Long-term averages of autumn cooling degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-cldd-base72": {
+        "description": "Long-term averages of autumn cooling degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-cldd-normal": {
+        "description": "Long-term averages of autumn cooling degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-base40": {
+        "description": "Long-term averages of autumn growing degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-base45": {
+        "description": "Long-term averages of autumn growing degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-base50": {
+        "description": "Long-term averages of autumn growing degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-base55": {
+        "description": "Long-term averages of autumn growing degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-base57": {
+        "description": "Long-term averages of autumn growing degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-base60": {
+        "description": "Long-term averages of autumn growing degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-base65": {
+        "description": "Long-term averages of autumn growing degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-base70": {
+        "description": "Long-term averages of autumn growing degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-base72": {
+        "description": "Long-term averages of autumn growing degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-tb4886": {
+        "description": "Long-term avgs of autumn growing degree days with base 48F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-grdd-tb5086": {
+        "description": "Long-term avgs of autumn growing degree days with base 50F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-htdd-base40": {
+        "description": "Long-term averages of autumn heating degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-htdd-base45": {
+        "description": "Long-term averages of autumn heating degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-htdd-base50": {
+        "description": "Long-term averages of autumn heating degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-htdd-base55": {
+        "description": "Long-term averages of autumn heating degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-htdd-base57": {
+        "description": "Long-term averages of autumn heating degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-htdd-base60": {
+        "description": "Long-term averages of autumn heating degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-htdd-normal": {
+        "description": "Long-term averages of autumn heating degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "son-prcp-normal": {
+        "description": "Long-term averages of autumn precipitation total",
+        "unit": "inch"
+    },
+    "son-prcp-avgnds-ge001hi": {
+        "description": "Autumn number of days with precipitation >= 0.01 inches",
+        "unit": "day"
+    },
+    "son-prcp-avgnds-ge010hi": {
+        "description": "Autumn number of days with precipitation >= 0.10 inches",
+        "unit": "day"
+    },
+    "son-prcp-avgnds-ge025hi": {
+        "description": "Autumn number of days with precipitation >= 0.25 inches",
+        "unit": "day"
+    },
+    "son-prcp-avgnds-ge050hi": {
+        "description": "Autumn number of days with precipitation >= 0.50 inches",
+        "unit": "day"
+    },
+    "son-prcp-avgnds-ge100hi": {
+        "description": "Autumn number of days with precipitation >= 1.00 inches",
+        "unit": "day"
+    },
+    "son-prcp-avgnds-ge200hi": {
+        "description": "Autumn number of days with precipitation >= 2.00 inches",
+        "unit": "day"
+    },
+    "son-prcp-avgnds-ge400hi": {
+        "description": "Autumn number of days with precipitation >= 4.00 inches",
+        "unit": "day"
+    },
+    "son-prcp-avgnds-ge600hi": {
+        "description": "Autumn number of days with precipitation >= 6.00 inches",
+        "unit": "day"
+    },
+    "son-snow-normal": {
+        "description": "Long-term averages of autumn snowfall total",
+        "unit": "inch"
+    },
+    "son-snow-avgnds-ge001ti": {
+        "description": "Autumn number of days with snowfall >= 0.1 inch",
+        "unit": "day"
+    },
+    "son-snow-avgnds-ge010ti": {
+        "description": "Autumn number of days with snowfall >= 1.0 inch",
+        "unit": "day"
+    },
+    "son-snow-avgnds-ge020ti": {
+        "description": "Autumn number of days with snowfall >= 2.0 inches",
+        "unit": "day"
+    },
+    "son-snow-avgnds-ge030ti": {
+        "description": "Autumn number of days with snowfall >= 3.0 inches",
+        "unit": "day"
+    },
+    "son-snow-avgnds-ge040ti": {
+        "description": "Autumn number of days with snowfall >= 4.0 inches",
+        "unit": "day"
+    },
+    "son-snow-avgnds-ge050ti": {
+        "description": "Autumn number of days with snowfall >= 5.0 inches",
+        "unit": "day"
+    },
+    "son-snow-avgnds-ge100ti": {
+        "description": "Autumn number of days with snowfall >= 10 inches",
+        "unit": "day"
+    },
+    "son-snow-avgnds-ge200ti": {
+        "description": "Autumn number of days with snowfall >= 20 inches",
+        "unit": "day"
+    },
+    "son-snwd-avgnds-ge001wi": {
+        "description": "Autumn number of days with snow depth >= 1 inch",
+        "unit": "day"
+    },
+    "son-snwd-avgnds-ge002wi": {
+        "description": "Autumn number of days with snow depth >= 2 inches",
+        "unit": "day"
+    },
+    "son-snwd-avgnds-ge003wi": {
+        "description": "Autumn number of days with snow depth >= 3 inches",
+        "unit": "day"
+    },
+    "son-snwd-avgnds-ge004wi": {
+        "description": "Autumn number of days with snow depth >= 4 inches",
+        "unit": "day"
+    },
+    "son-snwd-avgnds-ge005wi": {
+        "description": "Autumn number of days with snow depth >= 5 inches",
+        "unit": "day"
+    },
+    "son-snwd-avgnds-ge010wi": {
+        "description": "Autumn number of days with snow depth >= 10 inches",
+        "unit": "day"
+    },
+    "son-snwd-avgnds-ge020wi": {
+        "description": "Autumn number of days with snow depth >= 20 inches",
+        "unit": "day"
+    },
+    "son-tmin-avgnds-lsth000": {
+        "description": "Autumn number of days with minimum temperature <= 0F",
+        "unit": "day"
+    },
+    "son-tmin-avgnds-lsth010": {
+        "description": "Autumn number of days with minimum temperature <= 10F",
+        "unit": "day"
+    },
+    "son-tmin-avgnds-lsth020": {
+        "description": "Autumn number of days with minimum temperature <= 20F",
+        "unit": "day"
+    },
+    "son-tmin-avgnds-lsth032": {
+        "description": "Autumn number of days with minimum temperature <= 32F",
+        "unit": "day"
+    },
+    "son-tmin-avgnds-lsth040": {
+        "description": "Autumn number of days with minimum temperature <= 40F",
+        "unit": "day"
+    },
+    "son-tmin-avgnds-lsth050": {
+        "description": "Autumn number of days with minimum temperature <= 50F",
+        "unit": "day"
+    },
+    "son-tmin-avgnds-lsth060": {
+        "description": "Autumn number of days with minimum temperature <= 60F",
+        "unit": "day"
+    },
+    "son-tmin-avgnds-lsth070": {
+        "description": "Autumn number of days with minimum temperature <= 70F",
+        "unit": "day"
+    },
+    "son-tmax-avgnds-grth032": {
+        "description": "Autumn number of days with maximum temperature >= 32F",
+        "unit": "day"
+    },
+    "son-tmax-avgnds-grth040": {
+        "description": "Autumn number of days with maximum temperature >= 40F",
+        "unit": "day"
+    },
+    "son-tmax-avgnds-grth050": {
+        "description": "Autumn number of days with maximum temperature >= 50F",
+        "unit": "day"
+    },
+    "son-tmax-avgnds-grth060": {
+        "description": "Autumn number of days with maximum temperature >= 60F",
+        "unit": "day"
+    },
+    "son-tmax-avgnds-grth070": {
+        "description": "Autumn number of days with maximum temperature >= 70F",
+        "unit": "day"
+    },
+    "son-tmax-avgnds-grth080": {
+        "description": "Autumn number of days with maximum temperature >= 80F",
+        "unit": "day"
+    },
+    "son-tmax-avgnds-grth090": {
+        "description": "Autumn number of days with maximum temperature >= 90F",
+        "unit": "day"
+    },
+    "son-tmax-avgnds-grth100": {
+        "description": "Autumn number of days with maximum temperature >= 100F",
+        "unit": "day"
+    },
+    "son-tmax-avgnds-lsth032": {
+        "description": "Autumn number of days with maximum temperature <= 32F",
+        "unit": "day"
+    },
+    "djf-tavg-normal": {
+        "description": "Long-term averages of winter average temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-tmax-normal": {
+        "description": "Long-term averages of winter maximum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-tmin-normal": {
+        "description": "Long-term averages of winter minimum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-dutr-normal": {
+        "description": "Long-term winter mean of daily temperature range",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-cldd-base40": {
+        "description": "Long-term averages of winter cooling degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-cldd-base45": {
+        "description": "Long-term averages of winter cooling degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-cldd-base50": {
+        "description": "Long-term averages of winter cooling degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-cldd-base55": {
+        "description": "Long-term averages of winter cooling degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-cldd-base57": {
+        "description": "Long-term averages of winter cooling degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-cldd-base60": {
+        "description": "Long-term averages of winter cooling degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-cldd-base70": {
+        "description": "Long-term averages of winter cooling degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-cldd-base72": {
+        "description": "Long-term averages of winter cooling degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-cldd-normal": {
+        "description": "Long-term averages of winter cooling degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-base40": {
+        "description": "Long-term averages of winter growing degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-base45": {
+        "description": "Long-term averages of winter growing degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-base50": {
+        "description": "Long-term averages of winter growing degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-base55": {
+        "description": "Long-term averages of winter growing degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-base57": {
+        "description": "Long-term averages of winter growing degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-base60": {
+        "description": "Long-term averages of winter growing degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-base65": {
+        "description": "Long-term averages of winter growing degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-base70": {
+        "description": "Long-term averages of winter growing degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-base72": {
+        "description": "Long-term averages of winter growing degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-tb4886": {
+        "description": "Long-term avgs of winter growing degree days with base 48F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-grdd-tb5086": {
+        "description": "Long-term avgs of winter growing degree days with base 50F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-htdd-base40": {
+        "description": "Long-term averages of winter heating degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-htdd-base45": {
+        "description": "Long-term averages of winter heating degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-htdd-base50": {
+        "description": "Long-term averages of winter heating degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-htdd-base55": {
+        "description": "Long-term averages of winter heating degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-htdd-base57": {
+        "description": "Long-term averages of winter heating degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-htdd-base60": {
+        "description": "Long-term averages of winter heating degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-htdd-normal": {
+        "description": "Long-term averages of winter heating degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "djf-prcp-normal": {
+        "description": "Long-term averages of winter precipitation total",
+        "unit": "inch"
+    },
+    "djf-prcp-avgnds-ge001hi": {
+        "description": "Winter number of days with precipitation >= 0.01 inches",
+        "unit": "day"
+    },
+    "djf-prcp-avgnds-ge010hi": {
+        "description": "Winter number of days with precipitation >= 0.10 inches",
+        "unit": "day"
+    },
+    "djf-prcp-avgnds-ge025hi": {
+        "description": "Winter number of days with precipitation >= 0.25 inches",
+        "unit": "day"
+    },
+    "djf-prcp-avgnds-ge050hi": {
+        "description": "Winter number of days with precipitation >= 0.50 inches",
+        "unit": "day"
+    },
+    "djf-prcp-avgnds-ge100hi": {
+        "description": "Winter number of days with precipitation >= 1.00 inches",
+        "unit": "day"
+    },
+    "djf-prcp-avgnds-ge200hi": {
+        "description": "Winter number of days with precipitation >= 2.00 inches",
+        "unit": "day"
+    },
+    "djf-prcp-avgnds-ge400hi": {
+        "description": "Winter number of days with precipitation >= 4.00 inches",
+        "unit": "day"
+    },
+    "djf-prcp-avgnds-ge600hi": {
+        "description": "Winter number of days with precipitation >= 6.00 inches",
+        "unit": "day"
+    },
+    "djf-snow-normal": {
+        "description": "Long-term averages of winter snowfall total",
+        "unit": "inch"
+    },
+    "djf-snow-avgnds-ge001ti": {
+        "description": "Winter number of days with snowfall >= 0.1 inch",
+        "unit": "day"
+    },
+    "djf-snow-avgnds-ge010ti": {
+        "description": "Winter number of days with snowfall >= 1.0 inch",
+        "unit": "day"
+    },
+    "djf-snow-avgnds-ge020ti": {
+        "description": "Winter number of days with snowfall >= 2.0 inches",
+        "unit": "day"
+    },
+    "djf-snow-avgnds-ge030ti": {
+        "description": "Winter number of days with snowfall >= 3.0 inches",
+        "unit": "day"
+    },
+    "djf-snow-avgnds-ge040ti": {
+        "description": "Winter number of days with snowfall >= 4.0 inches",
+        "unit": "day"
+    },
+    "djf-snow-avgnds-ge050ti": {
+        "description": "Winter number of days with snowfall >= 5.0 inches",
+        "unit": "day"
+    },
+    "djf-snow-avgnds-ge100ti": {
+        "description": "Winter number of days with snowfall >= 10 inches",
+        "unit": "day"
+    },
+    "djf-snow-avgnds-ge200ti": {
+        "description": "Winter number of days with snowfall >= 20 inches",
+        "unit": "day"
+    },
+    "djf-snwd-avgnds-ge001wi": {
+        "description": "Winter number of days with snow depth >= 1 inch",
+        "unit": "day"
+    },
+    "djf-snwd-avgnds-ge002wi": {
+        "description": "Winter number of days with snow depth >= 2 inches",
+        "unit": "day"
+    },
+    "djf-snwd-avgnds-ge003wi": {
+        "description": "Winter number of days with snow depth >= 3 inches",
+        "unit": "day"
+    },
+    "djf-snwd-avgnds-ge004wi": {
+        "description": "Winter number of days with snow depth >= 4 inches",
+        "unit": "day"
+    },
+    "djf-snwd-avgnds-ge005wi": {
+        "description": "Winter number of days with snow depth >= 5 inches",
+        "unit": "day"
+    },
+    "djf-snwd-avgnds-ge010wi": {
+        "description": "Winter number of days with snow depth >= 10 inches",
+        "unit": "day"
+    },
+    "djf-snwd-avgnds-ge020wi": {
+        "description": "Winter number of days with snow depth >= 20 inches",
+        "unit": "day"
+    },
+    "djf-tmin-avgnds-lsth000": {
+        "description": "Winter number of days with minimum temperature <= 0F",
+        "unit": "day"
+    },
+    "djf-tmin-avgnds-lsth010": {
+        "description": "Winter number of days with minimum temperature <= 10F",
+        "unit": "day"
+    },
+    "djf-tmin-avgnds-lsth020": {
+        "description": "Winter number of days with minimum temperature <= 20F",
+        "unit": "day"
+    },
+    "djf-tmin-avgnds-lsth032": {
+        "description": "Winter number of days with minimum temperature <= 32F",
+        "unit": "day"
+    },
+    "djf-tmin-avgnds-lsth040": {
+        "description": "Winter number of days with minimum temperature <= 40F",
+        "unit": "day"
+    },
+    "djf-tmin-avgnds-lsth050": {
+        "description": "Winter number of days with minimum temperature <= 50F",
+        "unit": "day"
+    },
+    "djf-tmin-avgnds-lsth060": {
+        "description": "Winter number of days with minimum temperature <= 60F",
+        "unit": "day"
+    },
+    "djf-tmin-avgnds-lsth070": {
+        "description": "Winter number of days with minimum temperature <= 70F",
+        "unit": "day"
+    },
+    "djf-tmax-avgnds-grth032": {
+        "description": "Winter number of days with maximum temperature >= 32F",
+        "unit": "day"
+    },
+    "djf-tmax-avgnds-grth040": {
+        "description": "Winter number of days with maximum temperature >= 40F",
+        "unit": "day"
+    },
+    "djf-tmax-avgnds-grth050": {
+        "description": "Winter number of days with maximum temperature >= 50F",
+        "unit": "day"
+    },
+    "djf-tmax-avgnds-grth060": {
+        "description": "Winter number of days with maximum temperature >= 60F",
+        "unit": "day"
+    },
+    "djf-tmax-avgnds-grth070": {
+        "description": "Winter number of days with maximum temperature >= 70F",
+        "unit": "day"
+    },
+    "djf-tmax-avgnds-grth080": {
+        "description": "Winter number of days with maximum temperature >= 80F",
+        "unit": "day"
+    },
+    "djf-tmax-avgnds-grth090": {
+        "description": "Winter number of days with maximum temperature >= 90F",
+        "unit": "day"
+    },
+    "djf-tmax-avgnds-grth100": {
+        "description": "Winter number of days with maximum temperature >= 100F",
+        "unit": "day"
+    },
+    "djf-tmax-avgnds-lsth032": {
+        "description": "Winter number of days with maximum temperature <= 32F",
+        "unit": "day"
+    },
+    "ann-tavg-normal": {
+        "description": "Long-term averages of annual average temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-tmax-normal": {
+        "description": "Long-term averages of annual maximum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-tmin-normal": {
+        "description": "Long-term averages of annual minimum temperature",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-dutr-normal": {
+        "description": "Long-term annual mean of daily temperature range",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-cldd-base40": {
+        "description": "Long-term averages of annual cooling degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-cldd-base45": {
+        "description": "Long-term averages of annual cooling degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-cldd-base50": {
+        "description": "Long-term averages of annual cooling degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-cldd-base55": {
+        "description": "Long-term averages of annual cooling degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-cldd-base57": {
+        "description": "Long-term averages of annual cooling degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-cldd-base60": {
+        "description": "Long-term averages of annual cooling degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-cldd-base70": {
+        "description": "Long-term averages of annual cooling degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-cldd-base72": {
+        "description": "Long-term averages of annual cooling degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-cldd-normal": {
+        "description": "Long-term averages of annual cooling degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-base40": {
+        "description": "Long-term averages of annual growing degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-base45": {
+        "description": "Long-term averages of annual growing degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-base50": {
+        "description": "Long-term averages of annual growing degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-base55": {
+        "description": "Long-term averages of annual growing degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-base57": {
+        "description": "Long-term averages of annual growing degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-base60": {
+        "description": "Long-term averages of annual growing degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-base65": {
+        "description": "Long-term averages of annual growing degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-base70": {
+        "description": "Long-term averages of annual growing degree days with base 70F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-base72": {
+        "description": "Long-term averages of annual growing degree days with base 72F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-tb4886": {
+        "description": "Long-term avgs of annual growing degree days with base 48F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-grdd-tb5086": {
+        "description": "Long-term avgs of annual growing degree days with base 50F limit 86F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-htdd-base40": {
+        "description": "Long-term averages of annual heating degree days with base 40F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-htdd-base45": {
+        "description": "Long-term averages of annual heating degree days with base 45F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-htdd-base50": {
+        "description": "Long-term averages of annual heating degree days with base 50F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-htdd-base55": {
+        "description": "Long-term averages of annual heating degree days with base 55F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-htdd-base57": {
+        "description": "Long-term averages of annual heating degree days with base 57F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-htdd-base60": {
+        "description": "Long-term averages of annual heating degree days with base 60F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-htdd-normal": {
+        "description": "Long-term averages of annual heating degree days with base 65F",
+        "unit": "degree Fahrenheit"
+    },
+    "ann-prcp-normal": {
+        "description": "Long-term averages of annual precipitation total",
+        "unit": "inch"
+    },
+    "ann-prcp-avgnds-ge001hi": {
+        "description": "Annual number of days with precipitation >= 0.01 inches",
+        "unit": "day"
+    },
+    "ann-prcp-avgnds-ge010hi": {
+        "description": "Annual number of days with precipitation >= 0.10 inches",
+        "unit": "day"
+    },
+    "ann-prcp-avgnds-ge025hi": {
+        "description": "Annual number of days with precipitation >= 0.25 inches",
+        "unit": "day"
+    },
+    "ann-prcp-avgnds-ge050hi": {
+        "description": "Annual number of days with precipitation >= 0.50 inches",
+        "unit": "day"
+    },
+    "ann-prcp-avgnds-ge100hi": {
+        "description": "Annual number of days with precipitation >= 1.00 inches",
+        "unit": "day"
+    },
+    "ann-prcp-avgnds-ge200hi": {
+        "description": "Annual number of days with precipitation >= 2.00 inches",
+        "unit": "day"
+    },
+    "ann-prcp-avgnds-ge400hi": {
+        "description": "Annual number of days with precipitation >= 4.00 inches",
+        "unit": "day"
+    },
+    "ann-prcp-avgnds-ge600hi": {
+        "description": "Annual number of days with precipitation >= 6.00 inches",
+        "unit": "day"
+    },
+    "ann-snow-normal": {
+        "description": "Long-term averages of annual snowfall total",
+        "unit": "inch"
+    },
+    "ann-snow-avgnds-ge001ti": {
+        "description": "Annual number of days with snowfall >= 0.1 inch",
+        "unit": "day"
+    },
+    "ann-snow-avgnds-ge010ti": {
+        "description": "Annual number of days with snowfall >= 1.0 inch",
+        "unit": "day"
+    },
+    "ann-snow-avgnds-ge020ti": {
+        "description": "Annual number of days with snowfall >= 2.0 inches",
+        "unit": "day"
+    },
+    "ann-snow-avgnds-ge030ti": {
+        "description": "Annual number of days with snowfall >= 3.0 inches",
+        "unit": "day"
+    },
+    "ann-snow-avgnds-ge040ti": {
+        "description": "Annual number of days with snowfall >= 4.0 inches",
+        "unit": "day"
+    },
+    "ann-snow-avgnds-ge050ti": {
+        "description": "Annual number of days with snowfall >= 5.0 inches",
+        "unit": "day"
+    },
+    "ann-snow-avgnds-ge100ti": {
+        "description": "Annual number of days with snowfall >= 10 inches",
+        "unit": "day"
+    },
+    "ann-snow-avgnds-ge200ti": {
+        "description": "Annual number of days with snowfall >= 20 inches",
+        "unit": "day"
+    },
+    "ann-snwd-avgnds-ge001wi": {
+        "description": "Annual number of days with snow depth >= 1 inch",
+        "unit": "day"
+    },
+    "ann-snwd-avgnds-ge002wi": {
+        "description": "Annual number of days with snow depth >= 2 inches",
+        "unit": "day"
+    },
+    "ann-snwd-avgnds-ge003wi": {
+        "description": "Annual number of days with snow depth >= 3 inches",
+        "unit": "day"
+    },
+    "ann-snwd-avgnds-ge004wi": {
+        "description": "Annual number of days with snow depth >= 4 inches",
+        "unit": "day"
+    },
+    "ann-snwd-avgnds-ge005wi": {
+        "description": "Annual number of days with snow depth >= 5 inches",
+        "unit": "day"
+    },
+    "ann-snwd-avgnds-ge010wi": {
+        "description": "Annual number of days with snow depth >= 10 inches",
+        "unit": "day"
+    },
+    "ann-snwd-avgnds-ge020wi": {
+        "description": "Annual number of days with snow depth >= 20 inches",
+        "unit": "day"
+    },
+    "ann-tmin-avgnds-lsth000": {
+        "description": "Annual number of days with minimum temperature <= 0F",
+        "unit": "day"
+    },
+    "ann-tmin-avgnds-lsth010": {
+        "description": "Annual number of days with minimum temperature <= 10F",
+        "unit": "day"
+    },
+    "ann-tmin-avgnds-lsth020": {
+        "description": "Annual number of days with minimum temperature <= 20F",
+        "unit": "day"
+    },
+    "ann-tmin-avgnds-lsth032": {
+        "description": "Annual number of days with minimum temperature <= 32F",
+        "unit": "day"
+    },
+    "ann-tmin-avgnds-lsth040": {
+        "description": "Annual number of days with minimum temperature <= 40F",
+        "unit": "day"
+    },
+    "ann-tmin-avgnds-lsth050": {
+        "description": "Annual number of days with minimum temperature <= 50F",
+        "unit": "day"
+    },
+    "ann-tmin-avgnds-lsth060": {
+        "description": "Annual number of days with minimum temperature <= 60F",
+        "unit": "day"
+    },
+    "ann-tmin-avgnds-lsth070": {
+        "description": "Annual number of days with minimum temperature <= 70F",
+        "unit": "day"
+    },
+    "ann-tmax-avgnds-grth032": {
+        "description": "Annual number of days with maximum temperature >= 32F",
+        "unit": "day"
+    },
+    "ann-tmax-avgnds-grth040": {
+        "description": "Annual number of days with maximum temperature >= 40F",
+        "unit": "day"
+    },
+    "ann-tmax-avgnds-grth050": {
+        "description": "Annual number of days with maximum temperature >= 50F",
+        "unit": "day"
+    },
+    "ann-tmax-avgnds-grth060": {
+        "description": "Annual number of days with maximum temperature >= 60F",
+        "unit": "day"
+    },
+    "ann-tmax-avgnds-grth070": {
+        "description": "Annual number of days with maximum temperature >= 70F",
+        "unit": "day"
+    },
+    "ann-tmax-avgnds-grth080": {
+        "description": "Annual number of days with maximum temperature >= 80F",
+        "unit": "day"
+    },
+    "ann-tmax-avgnds-grth090": {
+        "description": "Annual number of days with maximum temperature >= 90F",
+        "unit": "day"
+    },
+    "ann-tmax-avgnds-grth100": {
+        "description": "Annual number of days with maximum temperature >= 100F",
+        "unit": "day"
+    },
+    "ann-tmax-avgnds-lsth032": {
+        "description": "Annual number of days with maximum temperature <= 32F",
+        "unit": "day"
+    },
+    "ann-tmin-prbfst-t16fp10": {
+        "description": "10% probability date of first 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t16fp20": {
+        "description": "20% probability date of first 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t16fp30": {
+        "description": "30% probability date of first 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t16fp40": {
+        "description": "40% probability date of first 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t16fp50": {
+        "description": "50% probability date of first 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t16fp60": {
+        "description": "60% probability date of first 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t16fp70": {
+        "description": "70% probability date of first 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t16fp80": {
+        "description": "80% probability date of first 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t16fp90": {
+        "description": "90% probability date of first 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t20fp10": {
+        "description": "10% probability date of first 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t20fp20": {
+        "description": "20% probability date of first 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t20fp30": {
+        "description": "30% probability date of first 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t20fp40": {
+        "description": "40% probability date of first 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t20fp50": {
+        "description": "50% probability date of first 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t20fp60": {
+        "description": "60% probability date of first 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t20fp70": {
+        "description": "70% probability date of first 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t20fp80": {
+        "description": "80% probability date of first 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t20fp90": {
+        "description": "90% probability date of first 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t24fp10": {
+        "description": "10% probability date of first 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t24fp20": {
+        "description": "20% probability date of first 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t24fp30": {
+        "description": "30% probability date of first 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t24fp40": {
+        "description": "40% probability date of first 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t24fp50": {
+        "description": "50% probability date of first 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t24fp60": {
+        "description": "60% probability date of first 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t24fp70": {
+        "description": "70% probability date of first 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t24fp80": {
+        "description": "80% probability date of first 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t24fp90": {
+        "description": "90% probability date of first 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t28fp10": {
+        "description": "10% probability date of first 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t28fp20": {
+        "description": "20% probability date of first 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t28fp30": {
+        "description": "30% probability date of first 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t28fp40": {
+        "description": "40% probability date of first 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t28fp50": {
+        "description": "50% probability date of first 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t28fp60": {
+        "description": "60% probability date of first 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t28fp70": {
+        "description": "70% probability date of first 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t28fp80": {
+        "description": "80% probability date of first 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t28fp90": {
+        "description": "90% probability date of first 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t32fp10": {
+        "description": "10% probability date of first 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t32fp20": {
+        "description": "20% probability date of first 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t32fp30": {
+        "description": "30% probability date of first 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t32fp40": {
+        "description": "40% probability date of first 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t32fp50": {
+        "description": "50% probability date of first 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t32fp60": {
+        "description": "60% probability date of first 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t32fp70": {
+        "description": "70% probability date of first 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t32fp80": {
+        "description": "80% probability date of first 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t32fp90": {
+        "description": "90% probability date of first 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t36fp10": {
+        "description": "10% probability date of first 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t36fp20": {
+        "description": "20% probability date of first 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t36fp30": {
+        "description": "30% probability date of first 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t36fp40": {
+        "description": "40% probability date of first 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t36fp50": {
+        "description": "50% probability date of first 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t36fp60": {
+        "description": "60% probability date of first 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t36fp70": {
+        "description": "70% probability date of first 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t36fp80": {
+        "description": "80% probability date of first 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbfst-t36fp90": {
+        "description": "90% probability date of first 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbgsl-t16fp10": {
+        "description": "10% probability of 16F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t16fp20": {
+        "description": "20% probability of 16F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t16fp30": {
+        "description": "30% probability of 16F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t16fp40": {
+        "description": "40% probability of 16F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t16fp50": {
+        "description": "50% probability of 16F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t16fp60": {
+        "description": "60% probability of 16F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t16fp70": {
+        "description": "70% probability of 16F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t16fp80": {
+        "description": "80% probability of 16F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t16fp90": {
+        "description": "90% probability of 16F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t20fp10": {
+        "description": "10% probability of 20F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t20fp20": {
+        "description": "20% probability of 20F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t20fp30": {
+        "description": "30% probability of 20F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t20fp40": {
+        "description": "40% probability of 20F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t20fp50": {
+        "description": "50% probability of 20F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t20fp60": {
+        "description": "60% probability of 20F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t20fp70": {
+        "description": "70% probability of 20F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t20fp80": {
+        "description": "80% probability of 20F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t20fp90": {
+        "description": "90% probability of 20F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t24fp10": {
+        "description": "10% probability of 24F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t24fp20": {
+        "description": "20% probability of 24F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t24fp30": {
+        "description": "30% probability of 24F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t24fp40": {
+        "description": "40% probability of 24F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t24fp50": {
+        "description": "50% probability of 24F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t24fp60": {
+        "description": "60% probability of 24F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t24fp70": {
+        "description": "70% probability of 24F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t24fp80": {
+        "description": "80% probability of 24F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t24fp90": {
+        "description": "90% probability of 24F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t28fp10": {
+        "description": "10% probability of 28F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t28fp20": {
+        "description": "20% probability of 28F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t28fp30": {
+        "description": "30% probability of 28F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t28fp40": {
+        "description": "40% probability of 28F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t28fp50": {
+        "description": "50% probability of 28F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t28fp60": {
+        "description": "60% probability of 28F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t28fp70": {
+        "description": "70% probability of 28F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t28fp80": {
+        "description": "80% probability of 28F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t28fp90": {
+        "description": "90% probability of 28F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t32fp10": {
+        "description": "10% probability of 32F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t32fp20": {
+        "description": "20% probability of 32F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t32fp30": {
+        "description": "30% probability of 32F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t32fp40": {
+        "description": "40% probability of 32F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t32fp50": {
+        "description": "50% probability of 32F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t32fp60": {
+        "description": "60% probability of 32F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t32fp70": {
+        "description": "70% probability of 32F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t32fp80": {
+        "description": "80% probability of 32F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t32fp90": {
+        "description": "90% probability of 32F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t36fp10": {
+        "description": "10% probability of 36F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t36fp20": {
+        "description": "20% probability of 36F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t36fp30": {
+        "description": "30% probability of 36F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t36fp40": {
+        "description": "40% probability of 36F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t36fp50": {
+        "description": "50% probability of 36F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t36fp60": {
+        "description": "60% probability of 36F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t36fp70": {
+        "description": "70% probability of 36F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t36fp80": {
+        "description": "80% probability of 36F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prbgsl-t36fp90": {
+        "description": "90% probability of 36F growing season length or longer",
+        "unit": "day"
+    },
+    "ann-tmin-prblst-t16fp10": {
+        "description": "10% probability date of last 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t16fp20": {
+        "description": "20% probability date of last 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t16fp30": {
+        "description": "30% probability date of last 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t16fp40": {
+        "description": "40% probability date of last 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t16fp50": {
+        "description": "50% probability date of last 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t16fp60": {
+        "description": "60% probability date of last 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t16fp70": {
+        "description": "70% probability date of last 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t16fp80": {
+        "description": "80% probability date of last 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t16fp90": {
+        "description": "90% probability date of last 16F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t20fp10": {
+        "description": "10% probability date of last 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t20fp20": {
+        "description": "20% probability date of last 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t20fp30": {
+        "description": "30% probability date of last 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t20fp40": {
+        "description": "40% probability date of last 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t20fp50": {
+        "description": "50% probability date of last 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t20fp60": {
+        "description": "60% probability date of last 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t20fp70": {
+        "description": "70% probability date of last 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t20fp80": {
+        "description": "80% probability date of last 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t20fp90": {
+        "description": "90% probability date of last 20F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t24fp10": {
+        "description": "10% probability date of last 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t24fp20": {
+        "description": "20% probability date of last 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t24fp30": {
+        "description": "30% probability date of last 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t24fp40": {
+        "description": "40% probability date of last 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t24fp50": {
+        "description": "50% probability date of last 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t24fp60": {
+        "description": "60% probability date of last 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t24fp70": {
+        "description": "70% probability date of last 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t24fp80": {
+        "description": "80% probability date of last 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t24fp90": {
+        "description": "90% probability date of last 24F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t28fp10": {
+        "description": "10% probability date of last 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t28fp20": {
+        "description": "20% probability date of last 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t28fp30": {
+        "description": "30% probability date of last 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t28fp40": {
+        "description": "40% probability date of last 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t28fp50": {
+        "description": "50% probability date of last 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t28fp60": {
+        "description": "60% probability date of last 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t28fp70": {
+        "description": "70% probability date of last 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t28fp80": {
+        "description": "80% probability date of last 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t28fp90": {
+        "description": "90% probability date of last 28F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t32fp10": {
+        "description": "10% probability date of last 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t32fp20": {
+        "description": "20% probability date of last 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t32fp30": {
+        "description": "30% probability date of last 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t32fp40": {
+        "description": "40% probability date of last 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t32fp50": {
+        "description": "50% probability date of last 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t32fp60": {
+        "description": "60% probability date of last 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t32fp70": {
+        "description": "70% probability date of last 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t32fp80": {
+        "description": "80% probability date of last 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t32fp90": {
+        "description": "90% probability date of last 32F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t36fp10": {
+        "description": "10% probability date of last 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t36fp20": {
+        "description": "20% probability date of last 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t36fp30": {
+        "description": "30% probability date of last 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t36fp40": {
+        "description": "40% probability date of last 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t36fp50": {
+        "description": "50% probability date of last 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t36fp60": {
+        "description": "60% probability date of last 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t36fp70": {
+        "description": "70% probability date of last 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t36fp80": {
+        "description": "80% probability date of last 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prblst-t36fp90": {
+        "description": "90% probability date of last 36F occurrence or earlier",
+        "unit": "MM/DD"
+    },
+    "ann-tmin-prbocc-lsth016": {
+        "description": "probability of 16F or below at least once in the year",
+        "unit": "percent"
+    },
+    "ann-tmin-prbocc-lsth020": {
+        "description": "probability of 20F or below at least once in the year",
+        "unit": "percent"
+    },
+    "ann-tmin-prbocc-lsth024": {
+        "description": "probability of 24F or below at least once in the year",
+        "unit": "percent"
+    },
+    "ann-tmin-prbocc-lsth028": {
+        "description": "probability of 28F or below at least once in the year",
+        "unit": "percent"
+    },
+    "ann-tmin-prbocc-lsth032": {
+        "description": "probability of 36F or below at least once in the year",
+        "unit": "percent"
+    }
+}

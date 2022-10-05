@@ -65,8 +65,11 @@ def geodataframe_columns(
         description = column_metadata.get(column, {}).get("description")
         if description:
             temp["description"] = description
-        if "_ATTRIBUTES" in column:
-            temp["description"] = "Data record completeness flag"
+        if not description:
+            if "_attributes" in column or "comp_flag_" in column:
+                temp["description"] = "Data record completeness flag"
+            elif "meas_flag" in column:
+                temp["description"] = "Data record measurement flag"
 
         unit = column_metadata.get(column, {}).get("unit")
         if unit:

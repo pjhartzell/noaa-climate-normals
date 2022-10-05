@@ -73,15 +73,15 @@
     },
     "hly-pres-10pctl": {
         "description": "Sea level pressure 10th percentile",
-        "unit": "tenth of millibar"
+        "unit": "tenth of hectoPascal"
     },
     "hly-pres-90pctl": {
         "description": "Sea level pressure 90th percentile",
-        "unit": "tenth of millibar"
+        "unit": "tenth of hectoPascal"
     },
     "hly-pres-normal": {
         "description": "Sea level pressure mean",
-        "unit": "tenth of millibar"
+        "unit": "tenth of hectoPascal"
     },
     "hly-temp-10pctl": {
         "description": "Temperature 10th percentile",
@@ -125,7 +125,7 @@
     },
     "hly-wind-vctdir": {
         "description": "Mean wind vector direction",
-        "unit": null
+        "unit": "degree"
     },
     "hly-wind-vctspd": {
         "description": "Mean wind vector magnitude",

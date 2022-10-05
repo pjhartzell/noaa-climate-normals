@@ -137,7 +137,7 @@
     },
     "hly-wind-vctdir": {
         "description": "Mean wind vector direction",
-        "unit": null
+        "unit": "degree"
     },
     "hly-wind-vctspd": {
         "description": "Mean wind vector magnitude",

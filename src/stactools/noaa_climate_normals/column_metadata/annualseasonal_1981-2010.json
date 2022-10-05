@@ -333,111 +333,111 @@
     },
     "jja-cldd-base40": {
         "description": "Long-term averages of summer cooling degree days with base 40F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-cldd-base45": {
         "description": "Long-term averages of summer cooling degree days with base 45F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-cldd-base50": {
         "description": "Long-term averages of summer cooling degree days with base 50F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-cldd-base55": {
         "description": "Long-term averages of summer cooling degree days with base 55F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-cldd-base57": {
         "description": "Long-term averages of summer cooling degree days with base 57F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-cldd-base60": {
         "description": "Long-term averages of summer cooling degree days with base 60F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-cldd-base70": {
         "description": "Long-term averages of summer cooling degree days with base 70F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-cldd-base72": {
         "description": "Long-term averages of summer cooling degree days with base 72F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-cldd-normal": {
         "description": "Long-term averages of summer cooling degree days with base 65F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-base40": {
         "description": "Long-term averages of summer growing degree days with base 40F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-base45": {
         "description": "Long-term averages of summer growing degree days with base 45F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-base50": {
         "description": "Long-term averages of summer growing degree days with base 50F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-base55": {
         "description": "Long-term averages of summer growing degree days with base 55F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-base57": {
         "description": "Long-term averages of summer growing degree days with base 57F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-base60": {
         "description": "Long-term averages of summer growing degree days with base 60F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-base65": {
         "description": "Long-term averages of summer growing degree days with base 65F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-base70": {
         "description": "Long-term averages of summer growing degree days with base 70F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-base72": {
         "description": "Long-term averages of summer growing degree days with base 72F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-tb4886": {
         "description": "Long-term avgs of summer growing degree days with base 48F limit 86F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-grdd-tb5086": {
         "description": "Long-term avgs of summer growing degree days with base 50F limit 86F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-htdd-base40": {
         "description": "Long-term averages of summer heating degree days with base 40F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-htdd-base45": {
         "description": "Long-term averages of summer heating degree days with base 45F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-htdd-base50": {
         "description": "Long-term averages of summer heating degree days with base 50F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-htdd-base55": {
         "description": "Long-term averages of summer heating degree days with base 55F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-htdd-base57": {
         "description": "Long-term averages of summer heating degree days with base 57F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-htdd-base60": {
         "description": "Long-term averages of summer heating degree days with base 60F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-htdd-normal": {
         "description": "Long-term averages of summer heating degree days with base 65F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "jja-prcp-normal": {
         "description": "Long-term averages of summer precipitation total",
@@ -625,111 +625,111 @@
     },
     "son-cldd-base40": {
         "description": "Long-term averages of autumn cooling degree days with base 40F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-cldd-base45": {
         "description": "Long-term averages of autumn cooling degree days with base 45F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-cldd-base50": {
         "description": "Long-term averages of autumn cooling degree days with base 50F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-cldd-base55": {
         "description": "Long-term averages of autumn cooling degree days with base 55F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-cldd-base57": {
         "description": "Long-term averages of autumn cooling degree days with base 57F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-cldd-base60": {
         "description": "Long-term averages of autumn cooling degree days with base 60F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-cldd-base70": {
         "description": "Long-term averages of autumn cooling degree days with base 70F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-cldd-base72": {
         "description": "Long-term averages of autumn cooling degree days with base 72F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-cldd-normal": {
         "description": "Long-term averages of autumn cooling degree days with base 65F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-base40": {
         "description": "Long-term averages of autumn growing degree days with base 40F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-base45": {
         "description": "Long-term averages of autumn growing degree days with base 45F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-base50": {
         "description": "Long-term averages of autumn growing degree days with base 50F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-base55": {
         "description": "Long-term averages of autumn growing degree days with base 55F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-base57": {
         "description": "Long-term averages of autumn growing degree days with base 57F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-base60": {
         "description": "Long-term averages of autumn growing degree days with base 60F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-base65": {
         "description": "Long-term averages of autumn growing degree days with base 65F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-base70": {
         "description": "Long-term averages of autumn growing degree days with base 70F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-base72": {
         "description": "Long-term averages of autumn growing degree days with base 72F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-tb4886": {
         "description": "Long-term avgs of autumn growing degree days with base 48F limit 86F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-grdd-tb5086": {
         "description": "Long-term avgs of autumn growing degree days with base 50F limit 86F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-htdd-base40": {
         "description": "Long-term averages of autumn heating degree days with base 40F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-htdd-base45": {
         "description": "Long-term averages of autumn heating degree days with base 45F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-htdd-base50": {
         "description": "Long-term averages of autumn heating degree days with base 50F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-htdd-base55": {
         "description": "Long-term averages of autumn heating degree days with base 55F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-htdd-base57": {
         "description": "Long-term averages of autumn heating degree days with base 57F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-htdd-base60": {
         "description": "Long-term averages of autumn heating degree days with base 60F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-htdd-normal": {
         "description": "Long-term averages of autumn heating degree days with base 65F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "son-prcp-normal": {
         "description": "Long-term averages of autumn precipitation total",
@@ -917,111 +917,111 @@
     },
     "djf-cldd-base40": {
         "description": "Long-term averages of winter cooling degree days with base 40F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-cldd-base45": {
         "description": "Long-term averages of winter cooling degree days with base 45F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-cldd-base50": {
         "description": "Long-term averages of winter cooling degree days with base 50F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-cldd-base55": {
         "description": "Long-term averages of winter cooling degree days with base 55F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-cldd-base57": {
         "description": "Long-term averages of winter cooling degree days with base 57F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-cldd-base60": {
         "description": "Long-term averages of winter cooling degree days with base 60F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-cldd-base70": {
         "description": "Long-term averages of winter cooling degree days with base 70F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-cldd-base72": {
         "description": "Long-term averages of winter cooling degree days with base 72F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-cldd-normal": {
         "description": "Long-term averages of winter cooling degree days with base 65F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-base40": {
         "description": "Long-term averages of winter growing degree days with base 40F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-base45": {
         "description": "Long-term averages of winter growing degree days with base 45F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-base50": {
         "description": "Long-term averages of winter growing degree days with base 50F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-base55": {
         "description": "Long-term averages of winter growing degree days with base 55F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-base57": {
         "description": "Long-term averages of winter growing degree days with base 57F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-base60": {
         "description": "Long-term averages of winter growing degree days with base 60F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-base65": {
         "description": "Long-term averages of winter growing degree days with base 65F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-base70": {
         "description": "Long-term averages of winter growing degree days with base 70F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-base72": {
         "description": "Long-term averages of winter growing degree days with base 72F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-tb4886": {
         "description": "Long-term avgs of winter growing degree days with base 48F limit 86F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-grdd-tb5086": {
         "description": "Long-term avgs of winter growing degree days with base 50F limit 86F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-htdd-base40": {
         "description": "Long-term averages of winter heating degree days with base 40F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-htdd-base45": {
         "description": "Long-term averages of winter heating degree days with base 45F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-htdd-base50": {
         "description": "Long-term averages of winter heating degree days with base 50F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-htdd-base55": {
         "description": "Long-term averages of winter heating degree days with base 55F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-htdd-base57": {
         "description": "Long-term averages of winter heating degree days with base 57F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-htdd-base60": {
         "description": "Long-term averages of winter heating degree days with base 60F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-htdd-normal": {
         "description": "Long-term averages of winter heating degree days with base 65F",
-        "unit": "degrees Fahrenheit"
+        "unit": "degree Fahrenheit"
     },
     "djf-prcp-normal": {
         "description": "Long-term averages of winter precipitation total",
