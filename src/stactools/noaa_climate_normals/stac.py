@@ -1,18 +1,71 @@
+import json
 import logging
 import os
-from datetime import datetime, timezone
-from typing import List
+from datetime import date, datetime, timezone, timedelta
+from typing import List, Optional
 
 from pystac import Asset, Item
 from pystac.extensions.projection import ProjectionExtension
+from pystac.extensions.raster import RasterExtension
 from pystac.extensions.scientific import ScientificExtension
 from pystac.extensions.table import TableExtension
 from pystac.utils import datetime_to_str, make_absolute_href
+from stactools.core.io import ReadHrefModifier
 
-from stactools.noaa_climate_normals import constants
+from stactools.noaa_climate_normals import constants, gridded_constants, utils
+from stactools.noaa_climate_normals.cog import cog_asset, create_cogs
 from stactools.noaa_climate_normals.parquet import create_parquet
+import stactools.core.create
 
 logger = logging.getLogger(__name__)
+
+
+def create_gridded_item(
+    nc_href: str,
+    frequency: gridded_constants.Frequency,
+    *,
+    time_index: Optional[int] = None,
+    cog_dir: Optional[str] = None,
+    no_netcdf_assets: bool = False,
+    read_href_modifier: Optional[ReadHrefModifier] = None,
+) -> Item:
+
+    if not time_index and frequency is not gridded_constants.Frequency.ANN:
+        raise ValueError(f"A time_index value is required for {frequency.value} data.")
+
+    period = gridded_constants.Period(os.path.basename(nc_href).split("-")[1].replace("_", "-"))
+    id = f"{period.value.replace('-', '_')}-{frequency}"
+    if time_index:
+        id += f"-{time_index}"
+    title = f"{frequency.value.capitalize()} Climate Normals for Period {period}"
+
+    cogs = dict()
+    nc_hrefs = utils.nc_href_dict(nc_href, frequency)
+    for _, nc_href in nc_hrefs.items():
+        modified_href = utils.modify_href(nc_href, read_href_modifier)
+        create_cogs(modified_href, frequency, period, cog_dir, cogs, time_index)
+
+    item = stactools.core.create.item(next(iter(cogs.values()))["href"])
+    item.id = id
+    item.datetime = None
+    item.common_metadata.start_datetime = datetime(int(period.value[0:4]), 1, 1, 0, 0, 0)
+    item.common_metadata.end_datetime = datetime(int(period.value[5:]), 12, 31, 0, 0, 0)
+    item.common_metadata.created = datetime.now(tz=timezone.utc)
+    item.properties["noaa-climate-normals:frequency"] = frequency
+    item.properties["noaa-climate-normals:period"] = period
+    item.properties["title"] = title
+
+    item.assets.pop("data")
+    for key, value in cogs.items():
+        item.add_asset(key, cog_asset(key, value))
+
+    if not no_netcdf_assets:
+        for prefix, href in nc_hrefs.items():
+            item.add_asset(f"{prefix}_source", utils.nc_asset(prefix, href))
+
+    item.stac_extensions.append(gridded_constants.RASTER_EXTENSION_V11)
+
+    return item
 
 
 def create_tabular_item(
@@ -30,7 +83,7 @@ def create_tabular_item(
         formatted_frequency = "Annual/Seasonal"
     else:
         formatted_frequency = frequency.value.capitalize()
-    title = f"{formatted_frequency} NOAA US Climate Normals for Period {period}"
+    title = f"{formatted_frequency} Climate Normals for Period {period}"
 
     parquet_dict = create_parquet(
         csv_hrefs, frequency, period, os.path.join(parquet_dir, f"{id}.parquet")
@@ -61,7 +114,7 @@ def create_tabular_item(
     projection.epsg = int(constants.CRS[5:])
 
     scientific = ScientificExtension.ext(item, add_if_missing=True)
-    if period is constants.Period.ONE:
+    if period is constants.Period.PERIOD_1981_2010:
         scientific.doi = constants.DATA_1981_2010["doi"]
         citation = constants.DATA_1981_2010["citation"]
         scientific.citation = citation.replace("FREQUENCY", formatted_frequency)
@@ -80,5 +133,10 @@ def create_tabular_item(
     return item
 
 
-def create_gridded_item() -> None:
-    return None
+href = "/Users/pjh/data/noaa-climate-normals/gridded/monthly/1901-2000/prcp-1901_2000-monthly-normals-v1.0.nc"
+frequency = gridded_constants.Frequency("monthly")
+period = gridded_constants.Period("1901-2000")
+time_index = 1
+cog_dir = "examples/cogs"
+item = create_gridded_item(href, frequency, time_index=time_index, cog_dir=cog_dir)
+print(json.dumps(item.to_dict(), indent=4))

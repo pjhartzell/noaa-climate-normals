@@ -12,9 +12,9 @@ class Frequency(str, Enum):
 
 
 class Period(str, Enum):
-    ONE = "1981-2010"
-    TWO = "1991-2020"
-    THREE = "2006-2020"
+    PERIOD_1981_2010 = "1981-2010"
+    PERIOD_1991_2020 = "1991-2020"
+    PERIOD_2006_2020 = "2006-2020"
 
 
 PARQUET_MEDIA_TYPE = "application/x-parquet"
