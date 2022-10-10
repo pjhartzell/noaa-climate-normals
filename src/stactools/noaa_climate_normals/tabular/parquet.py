@@ -7,7 +7,7 @@ import pandas as pd
 import pkg_resources
 from shapely.geometry import mapping
 
-from stactools.noaa_climate_normals import constants
+from . import constants
 
 logger = logging.getLogger(__name__)
 
@@ -92,7 +92,7 @@ def load_column_metadata(
 ) -> Any:
     try:
         with pkg_resources.resource_stream(
-            "stactools.noaa_climate_normals.parquet",
+            "stactools.noaa_climate_normals.tabular.parquet",
             f"column_metadata/{frequency}_{period}.json",
         ) as stream:
             return json.load(stream)

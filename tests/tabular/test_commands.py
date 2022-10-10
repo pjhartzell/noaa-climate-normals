@@ -6,13 +6,13 @@ import pystac
 from click import Command, Group
 from stactools.testing.cli_test import CliTestCase
 
-from stactools.noaa_climate_normals.commands import create_noaaclimatenormals_command
+from stactools.noaa_climate_normals.commands import create_noaa_climate_normals_command
 from tests import test_data
 
 
 class CommandsTest(CliTestCase):
     def create_subcommand_functions(self) -> List[Callable[[Group], Command]]:
-        return [create_noaaclimatenormals_command]
+        return [create_noaa_climate_normals_command]
 
     def test_create_tabular_item(self) -> None:
         with TemporaryDirectory() as tmp_dir:
@@ -30,7 +30,7 @@ class CommandsTest(CliTestCase):
                 )
 
             result = self.run_command(
-                f"noaa-climate-normals create-tabular-item {file_list_path} "
+                f"noaa-climate-normals tabular create-item {file_list_path} "
                 f"monthly 1981-2010 {tmp_dir}"
             )
             assert result.exit_code == 0, "\n{}".format(result.output)

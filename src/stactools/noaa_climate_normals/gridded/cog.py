@@ -10,7 +10,7 @@ from pystac import Asset, MediaType
 from pystac.utils import make_absolute_href
 from rasterio.io import MemoryFile
 
-from stactools.noaa_climate_normals import gridded_constants
+from . import constants
 
 TRANSFORM = [0.04166667, 0.0, -124.70833333, 0.0, -0.04166667, 49.37500127]
 
@@ -29,8 +29,8 @@ COG_PROFILE = {"compress": "deflate", "blocksize": 512, "driver": "COG"}
 
 def create_cogs(
     nc_href: str,
-    frequency: gridded_constants.Frequency,
-    period: gridded_constants.Period,
+    frequency: constants.Frequency,
+    period: constants.Period,
     cog_dir: str,
     cogs: Dict[str, Dict[str, str]],
     time_index: Optional[int] = None,
@@ -38,11 +38,11 @@ def create_cogs(
     with fsspec.open(nc_href, mode="rb"):
         with xarray.open_dataset(nc_href) as dataset:
             data_vars = list(dataset.data_vars)
-            if frequency is not gridded_constants.Frequency.DAILY:
+            if frequency is not constants.Frequency.DAILY:
                 data_vars = [var for var in data_vars if frequency.name.lower() in var]
 
             if time_index:
-                kwargs = {gridded_constants.TIME_VARS[frequency]: time_index - 1}
+                kwargs = {constants.TIME_VARS[frequency]: time_index - 1}
             else:
                 kwargs = None
 

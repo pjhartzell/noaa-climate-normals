@@ -1,0 +1,169 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "2006_2020-daily-1",
+  "properties": {
+    "proj:epsg": 4326,
+    "proj:transform": [
+      0.04166667,
+      0.0,
+      -124.70833333,
+      0.0,
+      -0.04166667,
+      49.37500127
+    ],
+    "proj:shape": [
+      596,
+      1385
+    ],
+    "start_datetime": "2006-01-01T00:00:00Z",
+    "end_datetime": "2020-12-31T00:00:00Z",
+    "created": "2022-10-10T20:25:04.177700Z",
+    "noaa-climate-normals:frequency": "daily",
+    "noaa-climate-normals:period": "2006-2020",
+    "title": "Daily Climate Normals for Period 2006-2020",
+    "datetime": null
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.999995,
+          24.541666
+        ],
+        [
+          -66.999995,
+          49.375001
+        ],
+        [
+          -124.708333,
+          49.375001
+        ],
+        [
+          -124.708333,
+          24.541666
+        ],
+        [
+          -66.999995,
+          24.541666
+        ]
+      ]
+    ]
+  },
+  "links": [],
+  "assets": {
+    "dlyprcp_norm": {
+      "href": "./2006_2020-daily-dlyprcp_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Precipitation normals from daily averages",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "dlytavg_norm": {
+      "href": "./2006_2020-daily-dlytavg_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Average Temperature normals from daily averages",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "dlytmax_norm": {
+      "href": "./2006_2020-daily-dlytmax_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum Temperature normals from daily averages",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "dlytmin_norm": {
+      "href": "./2006_2020-daily-dlytmin_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum Temperature normals from daily averages",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "m2dprcp_norm": {
+      "href": "./2006_2020-daily-m2dprcp_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Month-To-Day Precipitation normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "y2dprcp_norm": {
+      "href": "./2006_2020-daily-y2dprcp_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Year-To-Day Precipitation normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    }
+  },
+  "bbox": [
+    -124.708333,
+    24.541666,
+    -66.999995,
+    49.375001
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ]
+}
