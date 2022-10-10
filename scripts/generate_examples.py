@@ -1,6 +1,6 @@
 import os
 
-from stactools.noaa_climate_normals import constants, stac
+from stactools.noaa_climate_normals.tabular import constants, stac
 
 file_lists = [
     ["tests/data-files/annualseasonal/1981-2010/USW00094765.csv"],
@@ -28,7 +28,7 @@ for file_list in file_lists:
     _period = constants.Period(period)
 
     output_dir = "examples/tabular"
-    item = stac.create_tabular_item(file_list, _frequency, _period, output_dir)
+    item = stac.create_item(file_list, _frequency, _period, output_dir)
     item.set_self_href(os.path.join(output_dir, item.id + ".json"))
     item.make_asset_hrefs_relative()
     item.validate()
