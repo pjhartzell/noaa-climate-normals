@@ -6,9 +6,9 @@ import numpy as np
 import rasterio
 import rasterio.shutil
 import xarray
-from rasterio.io import MemoryFile
 from pystac import Asset, MediaType
 from pystac.utils import make_absolute_href
+from rasterio.io import MemoryFile
 
 from stactools.noaa_climate_normals import gridded_constants
 
@@ -32,7 +32,7 @@ def create_cogs(
     frequency: gridded_constants.Frequency,
     period: gridded_constants.Period,
     cog_dir: str,
-    cogs: Dict[str, str],
+    cogs: Dict[str, Dict[str, str]],
     time_index: Optional[int] = None,
 ) -> None:
     with fsspec.open(nc_href, mode="rb"):
@@ -41,17 +41,18 @@ def create_cogs(
             if frequency is not gridded_constants.Frequency.DAILY:
                 data_vars = [var for var in data_vars if frequency.name.lower() in var]
 
-            if gridded_constants.TIME_VARS.get(frequency, None):
+            if time_index:
                 kwargs = {gridded_constants.TIME_VARS[frequency]: time_index - 1}
             else:
                 kwargs = None
 
             for data_var in data_vars:
-                cog_filename = f"{period.value.replace('-', '_')}-{data_var}.tif"
+                cog_filename = (
+                    f"{period.value.replace('-', '_')}-{frequency}-{data_var}.tif"
+                )
                 if time_index:
                     cog_filename = cog_filename[0:-4] + f"-{time_index}.tif"
 
-                cogs[data_var] = dict()
                 cogs[data_var]["href"] = os.path.join(cog_dir, cog_filename)
                 cogs[data_var]["description"] = dataset[data_var].long_name
                 cogs[data_var]["unit"] = dataset[data_var].units
@@ -62,12 +63,19 @@ def create_cogs(
                     values = dataset[data_var].isel(**kwargs)
                 else:
                     values = dataset[data_var]
-                values = np.round(values, 2)  # per comments in NetCDF files
+
+                # round per comments in NetCDF files
+                if "prcp" in data_var:
+                    values = np.round(values, 2)
+                else:
+                    values = np.round(values, 1)
 
                 with MemoryFile() as mem:
                     with mem.open(**GTIFF_PROFILE, nodata=nodata) as temp:
                         temp.write(values, 1)
-                        rasterio.shutil.copy(temp, cogs[data_var]["href"], **COG_PROFILE)
+                        rasterio.shutil.copy(
+                            temp, cogs[data_var]["href"], **COG_PROFILE
+                        )
 
 
 def cog_asset(key: str, cog: Dict[str, str]) -> Asset:
@@ -85,7 +93,7 @@ def cog_asset(key: str, cog: Dict[str, str]) -> Asset:
             "data_type": "float32",
             "nodata": nodata,
             "unit": unit,
-            "spatial_resolution": 5000
+            "spatial_resolution": 5000,
         }
     ]
 
@@ -94,7 +102,5 @@ def cog_asset(key: str, cog: Dict[str, str]) -> Asset:
         description=cog["description"],
         media_type=MediaType.COG,
         roles=roles,
-        extra_fields={
-            "raster:bands": raster_bands
-        }
+        extra_fields={"raster:bands": raster_bands},
     )

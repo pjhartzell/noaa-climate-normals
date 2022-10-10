@@ -19,10 +19,14 @@ class CommandsTest(CliTestCase):
             file_list_path = f"{tmp_dir}/test_monthly_1981-2010.txt"
             with open(file_list_path, "w") as f:
                 f.write(
-                    test_data.get_path("data-files/monthly/1981-2010/USW00013740.csv\n")
+                    test_data.get_path(
+                        "data-files/tabular/monthly/1981-2010/USW00013740.csv\n"
+                    )
                 )
                 f.write(
-                    test_data.get_path("data-files/monthly/1981-2010/USW00094765.csv")
+                    test_data.get_path(
+                        "data-files/tabular/monthly/1981-2010/USW00094765.csv"
+                    )
                 )
 
             result = self.run_command(

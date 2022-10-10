@@ -18,7 +18,7 @@ TIME_VARS = {
     Frequency.DAILY: "time",
     Frequency.MLY: "time",
     Frequency.SEAS: "seasons",
-    Frequency.ANN: None
+    Frequency.ANN: None,
 }
 
 PREFIXES = {
@@ -27,10 +27,12 @@ PREFIXES = {
     "tmax": "Maximum temperature",
     "tmin": "Minimum temperature",
     "m2dprcp": "Month-to-date precipitation",
-    "y2dprcp": "Year-to-date precipitation"
+    "y2dprcp": "Year-to-date precipitation",
 }
 
 RASTER_EXTENSION_V11 = "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
 
 NETCDF_MEDIA_TYPE = "application/netcdf"
 NETCDF_ROLES = ["data", "source"]
+
+MONTHLY_FILES = ["prcp", "tavg", "tmin", "tmax"]

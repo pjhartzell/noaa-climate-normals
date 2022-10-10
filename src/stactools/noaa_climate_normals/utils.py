@@ -1,10 +1,9 @@
-from pystac.utils import make_absolute_href
 import os
 from typing import Dict, Optional
 
-from stactools.core.io import ReadHrefModifier
-
 from pystac import Asset
+from pystac.utils import make_absolute_href
+from stactools.core.io import ReadHrefModifier
 
 from . import gridded_constants
 
@@ -28,7 +27,9 @@ def modify_href(
         return href
 
 
-def nc_href_dict(nc_href: str, frequency: gridded_constants.Frequency) -> Dict[str, str]:
+def nc_href_dict(
+    nc_href: str, frequency: gridded_constants.Frequency
+) -> Dict[str, str]:
     """Creates a dictionary of NetCDF file names that contain data required to
     create an Item.
 
@@ -54,5 +55,5 @@ def nc_asset(prefix: str, nc_href: str) -> Asset:
         href=make_absolute_href(nc_href),
         description=f"{gridded_constants.PREFIXES[prefix]} source data",
         media_type=gridded_constants.NETCDF_MEDIA_TYPE,
-        roles=gridded_constants.NETCDF_ROLES
+        roles=gridded_constants.NETCDF_ROLES,
     )
