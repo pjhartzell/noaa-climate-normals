@@ -1,5 +1,6 @@
+import calendar
 import os
-from typing import Dict
+from typing import Dict, Optional
 
 from pystac import Asset
 from pystac.utils import make_absolute_href
@@ -35,3 +36,23 @@ def nc_asset(prefix: str, nc_href: str) -> Asset:
         media_type=constants.NETCDF_MEDIA_TYPE,
         roles=constants.NETCDF_ROLES,
     )
+
+
+def item_title(
+    frequency: constants.Frequency,
+    period: constants.Period,
+    time_index: Optional[int] = None,
+) -> str:
+    if time_index:
+        if frequency is constants.Frequency.MLY:
+            title = f"{period} Monthly Climate Normals for {calendar.month_name[time_index]}"
+        if frequency is constants.Frequency.DAILY:
+            title = f"{period} Daily Climate Normals for Day of Year {time_index}"
+        if frequency is constants.Frequency.SEAS:
+            title = (
+                f"{period} Seasonal Climate Normals for {constants.SEASONS[time_index]}"
+            )
+    else:
+        title = f"{period} Annual Climate Normals"
+
+    return title

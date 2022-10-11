@@ -2,7 +2,7 @@ import logging
 import os
 from collections import defaultdict
 from datetime import datetime, timezone
-from typing import Any, DefaultDict, Optional
+from typing import DefaultDict, Dict, Optional
 
 import stactools.core.create
 from pystac import Item
@@ -11,7 +11,7 @@ from stactools.core.io import ReadHrefModifier
 from ..utils import modify_href
 from .cog import cog_asset, create_cogs
 from .constants import RASTER_EXTENSION_V11, Frequency, Period
-from .utils import nc_asset, nc_href_dict
+from .utils import item_title, nc_asset, nc_href_dict
 
 logger = logging.getLogger(__name__)
 
@@ -36,9 +36,9 @@ def create_item(
     id = f"{period.value.replace('-', '_')}-{frequency}"
     if time_index:
         id += f"-{time_index}"
-    title = f"{frequency.value.capitalize()} Climate Normals for Period {period}"
+    title = item_title(frequency, period, time_index)
 
-    cogs: DefaultDict[str, Any] = defaultdict(dict)
+    cogs: DefaultDict[str, Dict[str, str]] = defaultdict(dict)
     nc_hrefs = nc_href_dict(nc_href, frequency)
     for _, nc_href in nc_hrefs.items():
         modified_href = modify_href(nc_href, read_href_modifier)

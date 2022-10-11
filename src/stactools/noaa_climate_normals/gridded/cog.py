@@ -1,5 +1,5 @@
 import os
-from typing import Dict, Optional
+from typing import DefaultDict, Dict, Optional
 
 import fsspec
 import numpy as np
@@ -32,7 +32,7 @@ def create_cogs(
     frequency: constants.Frequency,
     period: constants.Period,
     cog_dir: str,
-    cogs: Dict[str, Dict[str, str]],
+    cogs: DefaultDict[str, Dict[str, str]],
     time_index: Optional[int] = None,
 ) -> None:
     with fsspec.open(nc_href, mode="rb"):

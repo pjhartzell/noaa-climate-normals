@@ -21,6 +21,13 @@ TIME_VARS = {
     Frequency.ANN: None,
 }
 
+SEASONS = {
+    1: "Winter (Dec-Jan-Feb)",
+    2: "Spring (Mar-Apr-May)",
+    3: "Summer (Jun-Jul-Aug)",
+    4: "Fall (Sep-Oct-Nov)",
+}
+
 PREFIXES = {
     "prcp": "Precipitation",
     "tavg": "Average temperature",

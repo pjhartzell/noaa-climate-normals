@@ -50,7 +50,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
             infile (str): HREF to one of the source NetCDF files.
             frequency (str): Choice of 'daily', 'monthly', 'seasonal', or
                 'annual'.
-            destination (str): An HREF for the created Item and COGs.
+            destination (str): Directory to store the created Item and COGs.
             time_index (int): An integer index into the timestack of the
                 chosen frequency. Valid values are 1-366 for daily data, 1-12
                 for monthly data, and 1-4 for seasonal data. Not required for
