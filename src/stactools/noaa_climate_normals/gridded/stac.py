@@ -2,7 +2,7 @@ import logging
 import os
 from collections import defaultdict
 from datetime import datetime, timezone
-from typing import DefaultDict, Dict, Optional
+from typing import Any, DefaultDict, Optional
 
 import stactools.core.create
 from pystac import Item
@@ -38,7 +38,7 @@ def create_item(
         id += f"-{time_index}"
     title = f"{frequency.value.capitalize()} Climate Normals for Period {period}"
 
-    cogs: DefaultDict[str, Dict[str, str]] = defaultdict(dict)
+    cogs: DefaultDict[str, Any] = defaultdict(dict)
     nc_hrefs = nc_href_dict(nc_href, frequency)
     for _, nc_href in nc_hrefs.items():
         modified_href = modify_href(nc_href, read_href_modifier)
@@ -54,6 +54,8 @@ def create_item(
     item.common_metadata.created = datetime.now(tz=timezone.utc)
     item.properties["noaa-climate-normals:frequency"] = frequency
     item.properties["noaa-climate-normals:period"] = period
+    if time_index:
+        item.properties["noaa-climate-normals:time-index"] = time_index
     item.properties["title"] = title
 
     item.assets.pop("data")
