@@ -1,4 +1,5 @@
 import calendar
+import datetime
 import os
 from typing import Dict, Optional
 
@@ -44,10 +45,12 @@ def item_title(
     time_index: Optional[int] = None,
 ) -> str:
     if time_index:
+        if frequency is constants.Frequency.DAILY:
+            not_leap = 2021
+            date = datetime.datetime.strptime(f"{time_index} {not_leap}", "%j %Y")
+            title = f"{period} Daily Climate Normals for {date.strftime('%B %-d')}"
         if frequency is constants.Frequency.MLY:
             title = f"{period} Monthly Climate Normals for {calendar.month_name[time_index]}"
-        if frequency is constants.Frequency.DAILY:
-            title = f"{period} Daily Climate Normals for Day of Year {time_index}"
         if frequency is constants.Frequency.SEAS:
             title = (
                 f"{period} Seasonal Climate Normals for {constants.SEASONS[time_index]}"
