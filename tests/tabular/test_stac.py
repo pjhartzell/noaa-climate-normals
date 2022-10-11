@@ -43,7 +43,7 @@ def test_create_tabular_item(file_list: List[str]) -> None:
             Period(period),
             tmp_dir,
         )
-        assert item.id == f"{frequency}_{period}"
+        assert item.id == f"{period.replace('-', '_')}-{frequency}"
         assert os.path.isfile(os.path.join(tmp_dir, f"{item.id}.parquet"))
 
     item.validate()

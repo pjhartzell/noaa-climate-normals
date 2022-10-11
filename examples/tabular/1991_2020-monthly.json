@@ -1,14 +1,14 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "monthly_2006-2020",
+  "id": "1991_2020-monthly",
   "properties": {
     "noaa-climate-normals:frequency": "monthly",
-    "noaa-climate-normals:period": "2006-2020",
-    "start_datetime": "2006-01-01T00:00:00Z",
+    "noaa-climate-normals:period": "1991-2020",
+    "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-10-05T15:55:51.859813Z",
-    "title": "Monthly NOAA US Climate Normals for Period 2006-2020",
+    "created": "2022-10-11T15:01:04.782700Z",
+    "title": "Monthly Climate Normals for Period 1991-2020",
     "proj:epsg": 4269,
     "sci:publications": [
       {
@@ -33,20 +33,20 @@
     },
     {
       "rel": "about",
-      "href": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01624/html",
+      "href": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01620/html",
       "type": "text/html",
-      "title": "U.S. Monthly Climate Normals (2006-2020) Landing Page"
+      "title": "U.S. Monthly Climate Normals (1991-2020) Landing Page"
     },
     {
       "rel": "describedby",
-      "href": "https://www.ncei.noaa.gov/data/normals-monthly/2006-2020/doc/Normals_MLY_Documentation_2006-2020.pdf",
+      "href": "https://www.ncei.noaa.gov/data/normals-monthly/1991-2020/doc/Normals_MLY_Documentation_1991-2020.pdf",
       "type": "application/pdf",
-      "title": "U.S. Monthly Climate Normals (2006-2020) Documentation"
+      "title": "U.S. Monthly Climate Normals (1991-2020) Documentation"
     }
   ],
   "assets": {
     "parquet": {
-      "href": "./monthly_2006-2020.parquet",
+      "href": "./1991_2020-monthly.parquet",
       "type": "application/x-parquet",
       "title": "GeoParquet for all stations",
       "table:primary_geometry": "geometry",

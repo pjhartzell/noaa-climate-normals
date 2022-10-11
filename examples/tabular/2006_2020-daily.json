@@ -1,14 +1,14 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "daily_1991-2020",
+  "id": "2006_2020-daily",
   "properties": {
     "noaa-climate-normals:frequency": "daily",
-    "noaa-climate-normals:period": "1991-2020",
-    "start_datetime": "1991-01-01T00:00:00Z",
+    "noaa-climate-normals:period": "2006-2020",
+    "start_datetime": "2006-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-10-05T15:55:50.232026Z",
-    "title": "Daily NOAA US Climate Normals for Period 1991-2020",
+    "created": "2022-10-11T15:01:03.251410Z",
+    "title": "Daily Climate Normals for Period 2006-2020",
     "proj:epsg": 4269,
     "sci:publications": [
       {
@@ -21,9 +21,9 @@
   "geometry": {
     "type": "Point",
     "coordinates": [
-      -72.3047,
-      43.6264,
-      182.3
+      -73.7075,
+      41.0669,
+      115.5
     ]
   },
   "links": [
@@ -33,20 +33,20 @@
     },
     {
       "rel": "about",
-      "href": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01621/html",
+      "href": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01625/html",
       "type": "text/html",
-      "title": "U.S. Daily Climate Normals (1991-2020) Landing Page"
+      "title": "U.S. Daily Climate Normals (2006-2020) Landing Page"
     },
     {
       "rel": "describedby",
-      "href": "https://www.ncei.noaa.gov/data/normals-daily/1991-2020/doc/Normals_DLY_Documentation_1991-2020.pdf",
+      "href": "https://www.ncei.noaa.gov/data/normals-daily/2006-2020/doc/Normals_DLY_Documentation_2006-2020.pdf",
       "type": "application/pdf",
-      "title": "U.S. Daily Climate Normals (1991-2020) Documentation"
+      "title": "U.S. Daily Climate Normals (2006-2020) Documentation"
     }
   ],
   "assets": {
     "parquet": {
-      "href": "./daily_1991-2020.parquet",
+      "href": "./2006_2020-daily.parquet",
       "type": "application/x-parquet",
       "title": "GeoParquet for all stations",
       "table:primary_geometry": "geometry",
@@ -983,7 +983,7 @@
         },
         {
           "name": "dly-prcp-pctall-ge600hi",
-          "type": "int64",
+          "type": "float64",
           "description": "Probability of daily precipitation >= 6.00 inches",
           "unit": "percent"
         },
@@ -1121,10 +1121,10 @@
     }
   },
   "bbox": [
-    -72.3047,
-    43.6264,
-    -72.3047,
-    43.6264
+    -73.7075,
+    41.0669,
+    -73.7075,
+    41.0669
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",

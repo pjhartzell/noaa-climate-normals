@@ -1,14 +1,14 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "monthly_1981-2010",
+  "id": "1981_2010-monthly",
   "properties": {
     "noaa-climate-normals:frequency": "monthly",
     "noaa-climate-normals:period": "1981-2010",
     "start_datetime": "1981-01-01T00:00:00Z",
     "end_datetime": "2010-12-31T23:59:59Z",
-    "created": "2022-10-05T15:55:51.697626Z",
-    "title": "Monthly NOAA US Climate Normals for Period 1981-2010",
+    "created": "2022-10-11T15:01:04.702533Z",
+    "title": "Monthly Climate Normals for Period 1981-2010",
     "proj:epsg": 4269,
     "sci:doi": "10.7289/V5PN93JP",
     "sci:citation": "Anthony Arguez, Imke Durre, Scott Applequist, Mike Squires, Russell Vose, Xungang Yin, and Rocky Bilotta (2010). NOAA's U.S. Climate Normals (1981-2010). Monthly subset. NOAA National Centers for Environmental Information. DOI:10.7289/V5PN93JP.",
@@ -59,7 +59,7 @@
   ],
   "assets": {
     "parquet": {
-      "href": "./monthly_1981-2010.parquet",
+      "href": "./1981_2010-monthly.parquet",
       "type": "application/x-parquet",
       "title": "GeoParquet for all stations",
       "table:primary_geometry": "geometry",

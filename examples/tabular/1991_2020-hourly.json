@@ -1,14 +1,14 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "hourly_2006-2020",
+  "id": "1991_2020-hourly",
   "properties": {
     "noaa-climate-normals:frequency": "hourly",
-    "noaa-climate-normals:period": "2006-2020",
-    "start_datetime": "2006-01-01T00:00:00Z",
+    "noaa-climate-normals:period": "1991-2020",
+    "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-10-05T15:55:51.627912Z",
-    "title": "Hourly NOAA US Climate Normals for Period 2006-2020",
+    "created": "2022-10-11T15:01:04.142876Z",
+    "title": "Hourly Climate Normals for Period 1991-2020",
     "proj:epsg": 4269,
     "sci:publications": [
       {
@@ -33,20 +33,20 @@
     },
     {
       "rel": "about",
-      "href": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01626/html",
+      "href": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01622/html",
       "type": "text/html",
-      "title": "U.S. Hourly Climate Normals (2006-2020) Landing Page"
+      "title": "U.S. Hourly Climate Normals (1991-2020) Landing Page"
     },
     {
       "rel": "describedby",
-      "href": "https://www.ncei.noaa.gov/data/normals-hourly/2006-2020/doc/Normals_HLY_Documentation_2006-2020.pdf",
+      "href": "https://www.ncei.noaa.gov/data/normals-hourly/1991-2020/doc/Normals_HLY_Documentation_1991-2020.pdf",
       "type": "application/pdf",
-      "title": "U.S. Hourly Climate Normals (2006-2020) Documentation"
+      "title": "U.S. Hourly Climate Normals (1991-2020) Documentation"
     }
   ],
   "assets": {
     "parquet": {
-      "href": "./hourly_2006-2020.parquet",
+      "href": "./1991_2020-hourly.parquet",
       "type": "application/x-parquet",
       "title": "GeoParquet for all stations",
       "table:primary_geometry": "geometry",
@@ -332,7 +332,7 @@
         },
         {
           "name": "hly-clod-pctclr",
-          "type": "float64",
+          "type": "int64",
           "description": "Clouds clear percentage",
           "unit": "percent"
         },
@@ -353,7 +353,7 @@
         },
         {
           "name": "hly-clod-pctfew",
-          "type": "float64",
+          "type": "int64",
           "description": "Clouds few percentage",
           "unit": "percent"
         },
@@ -374,7 +374,7 @@
         },
         {
           "name": "hly-clod-pctsct",
-          "type": "float64",
+          "type": "int64",
           "description": "Clouds scattered percentage",
           "unit": "percent"
         },
@@ -395,7 +395,7 @@
         },
         {
           "name": "hly-clod-pctbkn",
-          "type": "float64",
+          "type": "int64",
           "description": "Clouds broken percentage",
           "unit": "percent"
         },
@@ -416,7 +416,7 @@
         },
         {
           "name": "hly-clod-pctovc",
-          "type": "float64",
+          "type": "int64",
           "description": "Clouds overcast percentage",
           "unit": "percent"
         },

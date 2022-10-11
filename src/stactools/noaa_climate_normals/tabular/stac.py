@@ -25,7 +25,7 @@ def create_item(
 
     start_year = int(period.value[0:4])
     end_year = int(period.value[5:])
-    id = f"{frequency}_{period}"
+    id = f"{period.value.replace('-', '_')}-{frequency}"
 
     if frequency is constants.Frequency.ANNUALSEASONAL:
         formatted_frequency = "Annual/Seasonal"

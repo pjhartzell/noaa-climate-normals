@@ -37,7 +37,7 @@ class CommandsTest(CliTestCase):
 
             jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
             assert len(jsons) == 1
-            item = pystac.read_file(os.path.join(tmp_dir, "monthly_1981-2010.json"))
+            item = pystac.read_file(os.path.join(tmp_dir, "1981_2010-monthly.json"))
             assert os.path.isfile(os.path.join(tmp_dir, f"{item.id}.parquet"))
 
             item.validate()
