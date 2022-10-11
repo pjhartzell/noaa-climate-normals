@@ -1,5 +1,5 @@
 import os
-from typing import Any, DefaultDict, Dict, Optional
+from typing import Any, Dict, Optional
 
 import fsspec
 import numpy as np
@@ -32,7 +32,7 @@ def create_cogs(
     frequency: constants.Frequency,
     period: constants.Period,
     cog_dir: str,
-    cogs: DefaultDict[str, Dict[Any, Any]],
+    cogs: Dict[str, Any],
     time_index: Optional[int] = None,
 ) -> None:
     with fsspec.open(nc_href, mode="rb"):
@@ -53,6 +53,7 @@ def create_cogs(
                 if time_index:
                     cog_filename = cog_filename[0:-4] + f"-{time_index}.tif"
 
+                cogs[data_var] = {}
                 cogs[data_var]["href"] = os.path.join(cog_dir, cog_filename)
                 cogs[data_var]["description"] = dataset[data_var].long_name
                 cogs[data_var]["unit"] = dataset[data_var].units
