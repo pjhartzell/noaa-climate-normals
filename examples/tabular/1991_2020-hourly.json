@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "1991-2020",
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-10-11T15:01:04.142876Z",
+    "created": "2022-10-12T21:42:17.690240Z",
     "title": "Hourly Climate Normals for Period 1991-2020",
     "proj:epsg": 4269,
     "sci:publications": [
@@ -107,12 +107,12 @@
         },
         {
           "name": "meas_flag_hly-temp-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-temp-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -128,12 +128,12 @@
         },
         {
           "name": "meas_flag_hly-temp-10pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-temp-10pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -149,12 +149,12 @@
         },
         {
           "name": "meas_flag_hly-temp-90pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-temp-90pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -170,12 +170,12 @@
         },
         {
           "name": "meas_flag_hly-dewp-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-dewp-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -191,12 +191,12 @@
         },
         {
           "name": "meas_flag_hly-dewp-10pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-dewp-10pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -212,12 +212,12 @@
         },
         {
           "name": "meas_flag_hly-dewp-90pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-dewp-90pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -233,12 +233,12 @@
         },
         {
           "name": "meas_flag_hly-pres-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-pres-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -254,12 +254,12 @@
         },
         {
           "name": "meas_flag_hly-pres-10pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-pres-10pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -275,12 +275,12 @@
         },
         {
           "name": "meas_flag_hly-pres-90pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-pres-90pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -296,12 +296,12 @@
         },
         {
           "name": "meas_flag_hly-cldh-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-cldh-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -317,12 +317,12 @@
         },
         {
           "name": "meas_flag_hly-htdh-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-htdh-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -338,12 +338,12 @@
         },
         {
           "name": "meas_flag_hly-clod-pctclr",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctclr",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -359,12 +359,12 @@
         },
         {
           "name": "meas_flag_hly-clod-pctfew",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctfew",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -380,12 +380,12 @@
         },
         {
           "name": "meas_flag_hly-clod-pctsct",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctsct",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -401,12 +401,12 @@
         },
         {
           "name": "meas_flag_hly-clod-pctbkn",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctbkn",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -422,12 +422,12 @@
         },
         {
           "name": "meas_flag_hly-clod-pctovc",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctovc",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -443,12 +443,12 @@
         },
         {
           "name": "meas_flag_hly-hidx-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-hidx-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -464,12 +464,12 @@
         },
         {
           "name": "meas_flag_hly-wchl-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wchl-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -485,12 +485,12 @@
         },
         {
           "name": "meas_flag_hly-wind-avgspd",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-avgspd",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -506,12 +506,12 @@
         },
         {
           "name": "meas_flag_hly-wind-pctclm",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-pctclm",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -527,12 +527,12 @@
         },
         {
           "name": "meas_flag_hly-wind-vctdir",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-vctdir",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -548,12 +548,12 @@
         },
         {
           "name": "meas_flag_hly-wind-vctspd",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-vctspd",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -563,22 +563,22 @@
         },
         {
           "name": "hly-wind-1stdir",
-          "type": "int64",
+          "type": "category",
           "description": "Prevailing wind direction (1-8)"
         },
         {
           "name": "meas_flag_hly-wind-1stdir",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-1stdir",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
           "name": "years_hly-wind-1stdir",
-          "type": "int64",
+          "type": "category",
           "description": "Number of years used"
         },
         {
@@ -589,12 +589,12 @@
         },
         {
           "name": "meas_flag_hly-wind-1stpct",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-1stpct",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -604,22 +604,22 @@
         },
         {
           "name": "hly-wind-2nddir",
-          "type": "int64",
+          "type": "category",
           "description": "Secondary wind direction (1-8)"
         },
         {
           "name": "meas_flag_hly-wind-2nddir",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-2nddir",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
           "name": "years_hly-wind-2nddir",
-          "type": "int64",
+          "type": "category",
           "description": "Number of years used"
         },
         {
@@ -630,12 +630,12 @@
         },
         {
           "name": "meas_flag_hly-wind-2ndpct",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-2ndpct",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {

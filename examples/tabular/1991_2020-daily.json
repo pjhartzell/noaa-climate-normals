@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "1991-2020",
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-10-11T15:01:03.169699Z",
+    "created": "2022-10-12T21:42:16.691847Z",
     "title": "Daily Climate Normals for Period 1991-2020",
     "proj:epsg": 4269,
     "sci:publications": [
@@ -107,12 +107,12 @@
         },
         {
           "name": "meas_flag_dly-tavg-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-tavg-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -128,12 +128,12 @@
         },
         {
           "name": "meas_flag_dly-tmax-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-tmax-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -149,12 +149,12 @@
         },
         {
           "name": "meas_flag_dly-tmin-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-tmin-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -170,12 +170,12 @@
         },
         {
           "name": "meas_flag_dly-dutr-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-dutr-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -191,12 +191,12 @@
         },
         {
           "name": "meas_flag_dly-tavg-stddev",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-tavg-stddev",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -212,12 +212,12 @@
         },
         {
           "name": "meas_flag_dly-tmax-stddev",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-tmax-stddev",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -233,12 +233,12 @@
         },
         {
           "name": "meas_flag_dly-tmin-stddev",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-tmin-stddev",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -254,12 +254,12 @@
         },
         {
           "name": "meas_flag_dly-dutr-stddev",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-dutr-stddev",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -275,12 +275,12 @@
         },
         {
           "name": "meas_flag_dly-htdd-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-htdd-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -296,12 +296,12 @@
         },
         {
           "name": "meas_flag_dly-htdd-base40",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-htdd-base40",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -317,12 +317,12 @@
         },
         {
           "name": "meas_flag_dly-htdd-base45",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-htdd-base45",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -338,12 +338,12 @@
         },
         {
           "name": "meas_flag_dly-htdd-base50",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-htdd-base50",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -359,12 +359,12 @@
         },
         {
           "name": "meas_flag_dly-htdd-base55",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-htdd-base55",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -380,12 +380,12 @@
         },
         {
           "name": "meas_flag_dly-htdd-base57",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-htdd-base57",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -401,12 +401,12 @@
         },
         {
           "name": "meas_flag_dly-htdd-base60",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-htdd-base60",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -422,12 +422,12 @@
         },
         {
           "name": "meas_flag_dly-cldd-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-cldd-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -443,12 +443,12 @@
         },
         {
           "name": "meas_flag_dly-cldd-base40",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-cldd-base40",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -464,12 +464,12 @@
         },
         {
           "name": "meas_flag_dly-cldd-base45",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-cldd-base45",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -485,12 +485,12 @@
         },
         {
           "name": "meas_flag_dly-cldd-base50",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-cldd-base50",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -506,12 +506,12 @@
         },
         {
           "name": "meas_flag_dly-cldd-base55",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-cldd-base55",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -527,12 +527,12 @@
         },
         {
           "name": "meas_flag_dly-cldd-base57",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-cldd-base57",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -548,12 +548,12 @@
         },
         {
           "name": "meas_flag_dly-cldd-base60",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-cldd-base60",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -569,12 +569,12 @@
         },
         {
           "name": "meas_flag_dly-cldd-base70",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-cldd-base70",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -590,12 +590,12 @@
         },
         {
           "name": "meas_flag_dly-cldd-base72",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-cldd-base72",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -611,12 +611,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-base65",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-base65",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -632,12 +632,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-base40",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-base40",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -653,12 +653,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-base45",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-base45",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -674,12 +674,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-base50",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-base50",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -695,12 +695,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-base55",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-base55",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -716,12 +716,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-base57",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-base57",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -737,12 +737,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-base60",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-base60",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -758,12 +758,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-base70",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-base70",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -779,12 +779,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-base72",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-base72",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -800,12 +800,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-tb4886",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-tb4886",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -821,12 +821,12 @@
         },
         {
           "name": "meas_flag_dly-grdd-tb5086",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-grdd-tb5086",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -842,12 +842,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-pctall-ge001hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-pctall-ge001hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -863,12 +863,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-pctall-ge010hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-pctall-ge010hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -884,12 +884,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-pctall-ge025hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-pctall-ge025hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -905,12 +905,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-pctall-ge050hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-pctall-ge050hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -926,12 +926,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-pctall-ge100hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-pctall-ge100hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -947,12 +947,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-pctall-ge200hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-pctall-ge200hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -968,12 +968,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-pctall-ge400hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-pctall-ge400hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -989,12 +989,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-pctall-ge600hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-pctall-ge600hi",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -1010,12 +1010,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-25pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-25pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -1031,12 +1031,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-50pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-50pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -1052,12 +1052,12 @@
         },
         {
           "name": "meas_flag_dly-prcp-75pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_dly-prcp-75pctl",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -1073,12 +1073,12 @@
         },
         {
           "name": "meas_flag_mtd-prcp-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_mtd-prcp-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -1094,12 +1094,12 @@
         },
         {
           "name": "meas_flag_ytd-prcp-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_ytd-prcp-normal",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {

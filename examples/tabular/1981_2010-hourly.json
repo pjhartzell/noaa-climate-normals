@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "1981-2010",
     "start_datetime": "1981-01-01T00:00:00Z",
     "end_datetime": "2010-12-31T23:59:59Z",
-    "created": "2022-10-11T15:01:03.646340Z",
+    "created": "2022-10-12T21:42:17.201826Z",
     "title": "Hourly Climate Normals for Period 1981-2010",
     "proj:epsg": 4269,
     "sci:doi": "10.7289/V5PN93JP",
@@ -98,7 +98,7 @@
         },
         {
           "name": "hly-cldh-normal_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -109,7 +109,7 @@
         },
         {
           "name": "hly-clod-pctbkn_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -120,7 +120,7 @@
         },
         {
           "name": "hly-clod-pctclr_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -131,7 +131,7 @@
         },
         {
           "name": "hly-clod-pctfew_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -142,7 +142,7 @@
         },
         {
           "name": "hly-clod-pctovc_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -153,7 +153,7 @@
         },
         {
           "name": "hly-clod-pctsct_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -164,7 +164,7 @@
         },
         {
           "name": "hly-dewp-10pctl_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -175,7 +175,7 @@
         },
         {
           "name": "hly-dewp-90pctl_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -186,7 +186,7 @@
         },
         {
           "name": "hly-dewp-normal_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -197,7 +197,7 @@
         },
         {
           "name": "hly-hidx-normal_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -208,7 +208,7 @@
         },
         {
           "name": "hly-htdh-normal_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -219,7 +219,7 @@
         },
         {
           "name": "hly-pres-10pctl_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -230,7 +230,7 @@
         },
         {
           "name": "hly-pres-90pctl_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -241,7 +241,7 @@
         },
         {
           "name": "hly-pres-normal_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -252,7 +252,7 @@
         },
         {
           "name": "hly-temp-10pctl_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -263,7 +263,7 @@
         },
         {
           "name": "hly-temp-90pctl_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -274,7 +274,7 @@
         },
         {
           "name": "hly-temp-normal_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -285,17 +285,17 @@
         },
         {
           "name": "hly-wchl-normal_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
           "name": "hly-wind-1stdir",
-          "type": "int64",
+          "type": "category",
           "description": "Prevailing wind direction (1-8)"
         },
         {
           "name": "hly-wind-1stdir_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -306,17 +306,17 @@
         },
         {
           "name": "hly-wind-1stpct_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
           "name": "hly-wind-2nddir",
-          "type": "int64",
+          "type": "category",
           "description": "Secondary wind direction (1-8)"
         },
         {
           "name": "hly-wind-2nddir_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -327,7 +327,7 @@
         },
         {
           "name": "hly-wind-2ndpct_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -338,7 +338,7 @@
         },
         {
           "name": "hly-wind-avgspd_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -349,7 +349,7 @@
         },
         {
           "name": "hly-wind-pctclm_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -360,7 +360,7 @@
         },
         {
           "name": "hly-wind-vctdir_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {
@@ -371,7 +371,7 @@
         },
         {
           "name": "hly-wind-vctspd_attributes",
-          "type": "string",
+          "type": "category",
           "description": "Data record completeness flag"
         },
         {

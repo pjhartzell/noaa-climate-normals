@@ -19,6 +19,7 @@ def create_parquet(
     parquet_path: str,
 ) -> Dict[str, Any]:
     geodataframe = csv_to_geodataframe(csv_hrefs)
+    geodataframe = make_categorical(geodataframe)
     columns = geodataframe_columns(geodataframe, frequency, period)
     geodataframe_dict = {
         "geometry": mapping(geodataframe.unary_union.convex_hull),
@@ -35,6 +36,20 @@ def create_parquet(
     geodataframe.to_parquet(parquet_path)
 
     return geodataframe_dict
+
+
+def make_categorical(gdf: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
+    substrings = [
+        "_attributes",
+        "comp_flag_",
+        "meas_flag",
+        "wind-1stdir",
+        "wind-2nddir",
+    ]
+    for column in gdf.columns:
+        if any([substring in column for substring in substrings]):
+            gdf[column] = gdf[column].astype("category")
+    return gdf
 
 
 def csv_to_geodataframe(csv_hrefs: List[str]) -> gpd.GeoDataFrame:
