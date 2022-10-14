@@ -23,6 +23,23 @@ def create_item(
     *,
     read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Item:
+    """Creates a STAC Item with a single GeoParquet asset created from specified
+    CSV HREFs.
+
+    Args:
+        csv_hrefs (List[str]): List of HREFs to CSV files that will be
+            converted to a single parquet file.
+        frequency (constants.Frequency): Temporal interval of CSV data, e.g.,
+            'monthly' or 'hourly'.
+        period (constants.Period): Climate normal time period of CSV data, e.g.,
+            '1991-2020'.
+        parquet_dir (str): Directory to store created parquet file.
+        read_href_modifier (Optional[ReadHrefModifier]): An optional function
+            to modify an href, e.g., to add a token to a url.
+
+    Returns:
+        Item: A STAC Item for the created GeoParquet file.
+    """
 
     start_year = int(period.value[0:4])
     end_year = int(period.value[5:])
@@ -85,7 +102,16 @@ def create_item(
     return item
 
 
-def create_collection(destination: str) -> Collection:
+def create_collection() -> Collection:
+    """Creates a STAC Collection for tabular data.
+
+    Args:
+        destination (str): Directory to store the created 'collection.json'
+            file.
+
+    Returns:
+        Collection: A STAC Collection for tabular Items.
+    """
     collection = Collection(**constants.COLLECTION)
 
     scientific = ScientificExtension.ext(collection, add_if_missing=True)

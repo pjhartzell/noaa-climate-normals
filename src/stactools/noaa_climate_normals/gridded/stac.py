@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 
 import stactools.core.create
-from pystac import Item
+from pystac import Collection, Item
 from stactools.core.io import ReadHrefModifier
 
 from ..utils import modify_href
@@ -21,10 +21,29 @@ def create_item(
     cog_dir: str,
     *,
     time_index: Optional[int] = None,
-    no_netcdf_assets: bool = False,
+    netcdf_assets: bool = False,
     read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Item:
+    """Creates a STAC Item and COGs for a single timestep of Climate Normal
+    data, e.g., an Item for the month of March for the monthly Climate Normals.
 
+    Args:
+        nc_href (str): HREF to one of the NetCDF files containing data required
+            for Item creation. Any additional required NetCDF files are assumed
+            to exist in the same location.
+        frequency (Frequency): Temporal interval of Item to be created, e.g.,
+            'monthly' or 'daily'.
+        cog_dir (str): Directory to store created COGs.
+        time_index (Optional[int]): 1-based time index into the NetCDF
+            timestack, e.g., 'time_index=3' for the month of March for a NetCDF
+            holding monthly frequency data.
+        no_netcdf_assets (bool, optional): Flag to include the NetCDF files as
+            Assets on the Item.
+        read_href_modifier (Optional[ReadHrefModifier]): An optional function
+
+    Returns:
+        Item: A STAC Item for a single timestep of Climate Normal data.
+    """
     if not time_index and frequency is not Frequency.ANN:
         raise ValueError(f"A time_index value is required for {frequency.value} data.")
     if time_index and frequency is Frequency.ANN:
@@ -61,10 +80,15 @@ def create_item(
     for key, value in cogs.items():
         item.add_asset(key, cog_asset(key, value))
 
-    if not no_netcdf_assets:
+    if netcdf_assets:
         for prefix, href in nc_hrefs.items():
             item.add_asset(f"{prefix}_source", nc_asset(prefix, href))
 
     item.stac_extensions.append(RASTER_EXTENSION_V11)
 
     return item
+
+
+def create_collection() -> Collection:
+    ...
+    # collection = Collection(**constants.COLLECTION)

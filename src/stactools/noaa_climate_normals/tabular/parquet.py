@@ -19,6 +19,21 @@ def create_parquet(
     period: constants.Period,
     parquet_path: str,
 ) -> Dict[str, Any]:
+    """Creates a parquet file from a list of CSV files along with metadata
+    for asset and Item creation.
+
+    Args:
+        csv_hrefs (List[str]): List of HREFs to CSV files that will be
+            converted to a single parquet file.
+        frequency (constants.Frequency): Temporal interval of CSV data, e.g.,
+            'monthly' or 'hourly'.
+        period (constants.Period): Climate normal time period of CSV data, e.g.,
+            '1991-2020'.
+        parquet_path (str): Path for created parquet file.
+
+    Returns:
+        Dict[str, Any]: Dictionary of metadata for asset and Item creation.
+    """
     geodataframe = csv_to_geodataframe(csv_hrefs)
     make_categorical(geodataframe)
     geodataframe.to_parquet(parquet_path)
@@ -41,6 +56,15 @@ def create_parquet(
 
 
 def get_parquet_dtypes(parquet_path: str) -> Dict[str, str]:
+    """Extracts the parquet (as opposed to pandas) data types for each column
+    in a parquet file.
+
+    Args:
+        parquet_path (str): Path to parquet file.
+
+    Returns:
+        Dict[str, str]: Mapping of column name to column data type.
+    """
     ds = pq.ParquetDataset(parquet_path, use_legacy_dataset=False)
     return {
         col.name.lower(): col.physical_type.lower()
@@ -49,6 +73,13 @@ def get_parquet_dtypes(parquet_path: str) -> Dict[str, str]:
 
 
 def make_categorical(gdf: gpd.GeoDataFrame) -> None:
+    """Convert pandas columns that contain categorical data to a categorical
+    data type.
+
+    Args:
+        gdf (gpd.GeoDataFrame): GeoPandas DataFrame containing the unconverted
+            data types.
+    """
     categorical_substrings = [
         "_attributes",
         "comp_flag_",
@@ -62,6 +93,16 @@ def make_categorical(gdf: gpd.GeoDataFrame) -> None:
 
 
 def csv_to_geodataframe(csv_hrefs: List[str]) -> gpd.GeoDataFrame:
+    """Combines a list of CSV file HREFs to a single GeoPandas DataFrame. Also
+    creates a geometry column from the lat/lon/z columns in the data.
+
+    Args:
+        csv_hrefs (List[str]): List of HREFs to CSV files that will be
+            be converted to a GeoPandas DataFrame.
+
+    Returns:
+        gpd.GeoDataFrame: GeoPandas DataFrame containing the combined CSV data.
+    """
     dataframes = (pd.read_csv(href) for href in csv_hrefs)
     dataframe = pd.concat(dataframes, ignore_index=True).copy()
     dataframe.columns = dataframe.columns.str.lower()
@@ -82,6 +123,23 @@ def geodataframe_columns(
     frequency: constants.Frequency,
     period: constants.Period,
 ) -> List[Dict[str, Any]]:
+    """Creates metadata for each column in a GeoPandas DataFrame for use in the
+    'table' extension.
+
+    Args:
+        geodataframe (gpd.GeoDataFrame): GeoPandas DataFrame containing the
+            columns to be described.
+        parquet_dtypes (Dict[str, str]): A dictionary mapping column names to
+            parquet data types.
+        frequency (constants.Frequency): Temporal interval of CSV data, e.g.,
+            'monthly' or 'hourly'.
+        period (constants.Period): Climate normal time period of CSV data, e.g.,
+            '1991-2020'.
+
+    Returns:
+        List[Dict[str, Any]]: A list of dictionaries, each specifying a column
+            name, data type, description, and unit.
+    """
     column_metadata = load_column_metadata(frequency, period)
     columns = []
     for column in geodataframe.columns:
@@ -124,6 +182,17 @@ def geodataframe_columns(
 def load_column_metadata(
     frequency: constants.Frequency, period: constants.Period
 ) -> Any:
+    """Loads a dictionary mapping column names to descriptions.
+
+    Args:
+        frequency (constants.Frequency): Temporal interval of CSV data, e.g.,
+            'monthly' or 'hourly'.
+        period (constants.Period): Climate normal time period of CSV data, e.g.,
+            '1991-2020'.
+
+    Returns:
+        Any: A dictionary mapping column names to descriptions and units.
+    """
     try:
         with pkg_resources.resource_stream(
             "stactools.noaa_climate_normals.tabular.parquet",
@@ -134,8 +203,15 @@ def load_column_metadata(
         raise e
 
 
-def get_tables() -> Dict[str, str]:
-    tables = {}
+def get_tables() -> Dict[int, Dict[str, str]]:
+    """Creates a dictionary of dictionaries containing table names and
+    descriptions for use in the 'table' extension on a Collection.
+
+    Returns:
+        Dict[int, Dict[str, str]]: Dictionaries containing table names and
+            descriptions.
+    """
+    tables: Dict[int, Dict[str, str]] = {}
     idx = 0
     for period in constants.Period:
         for frequency in constants.Frequency:

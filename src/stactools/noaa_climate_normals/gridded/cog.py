@@ -35,6 +35,22 @@ def create_cogs(
     cogs: Dict[str, Any],
     time_index: Optional[int] = None,
 ) -> None:
+    """Creates COGs for all variables in a NetCDF for a particular Climate
+    Normal frequency.
+
+    Args:
+        nc_href (str): HREF to to the NetCDF file.
+        period (constants.Period): Climate normal time period of CSV data, e.g.,
+            '1991-2020'.
+        frequency (constants.Frequency): Temporal interval of COGs to be
+            created, e.g., 'monthly' or 'daily'.
+        cog_dir (str): Directory to store created COGs.
+        cogs (Dict[str, Any]): A dictionary for COG metadata to be used in STAC
+            Item assets.
+        time_index (Optional[int]): 1-based time index into the NetCDF
+            timestack, e.g., 'time_index=3' for the month of March for a NetCDF
+            holding monthly frequency data.
+    """
     with fsspec.open(nc_href, mode="rb"):
         with xarray.open_dataset(nc_href) as dataset:
             data_vars = list(dataset.data_vars)
@@ -79,11 +95,18 @@ def create_cogs(
                         )
 
 
-def cog_asset(key: str, cog: Dict[str, str]) -> Asset:
-    roles = ["metadata"] if "flag" in key else ["data"]
-    roles.append("cloud-optimized")
+def cog_asset(data_var: str, cog: Dict[str, str]) -> Asset:
+    """Creates a STAC Asset for a COG.
 
-    nodata = 0 if "flag" in key else "nan"
+    Args:
+        data_var (str): Name of the NetCDF data variable the COG was created
+            from.
+        cog (Dict[str, str]): Dictionary of COG metadata.
+
+    Returns:
+        Asset: A STAC Asset for the COG.
+    """
+    nodata = 0 if "flag" in data_var else "nan"
 
     unit = cog["unit"].replace("_", " ")
     if "number of" in unit:
@@ -102,6 +125,6 @@ def cog_asset(key: str, cog: Dict[str, str]) -> Asset:
         href=make_absolute_href(cog["href"]),
         description=cog["description"],
         media_type=MediaType.COG,
-        roles=roles,
+        roles=["data", "cloud-optimized"],
         extra_fields={"raster:bands": raster_bands},
     )

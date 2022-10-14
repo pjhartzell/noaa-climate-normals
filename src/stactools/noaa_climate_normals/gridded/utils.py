@@ -15,10 +15,11 @@ def nc_href_dict(nc_href: str, frequency: constants.Frequency) -> Dict[str, str]
 
     Args:
         nc_href (str): HREF to one of the NetCDFs necessary to create an Item.
-        frequency (Frequency): Temporal interval specified in the NetCDF filename.
+        frequency (Frequency): Temporal interval of Item to be created, e.g.,
+            'monthly' or 'daily'.
 
     Returns:
-        List[str]: ...
+        Dict[str, str]: Mapping of weather variable type to NetCDF filename.
     """
     base, filename = os.path.split(nc_href)
     suffix = "-".join(filename.split("-")[1:])
@@ -31,6 +32,15 @@ def nc_href_dict(nc_href: str, frequency: constants.Frequency) -> Dict[str, str]
 
 
 def nc_asset(prefix: str, nc_href: str) -> Asset:
+    """Creates a STAC Asset for a NetCDF file.
+
+    Args:
+        prefix (str): Weather variable type from constants.PREFIXES
+        nc_href (str): HREF to the NetCDF file for which to create an Asset.
+
+    Returns:
+        Asset: A STAC Asset for the NetCDF file.
+    """
     return Asset(
         href=make_absolute_href(nc_href),
         description=f"{constants.PREFIXES[prefix]} source data",
@@ -44,6 +54,19 @@ def item_title(
     period: constants.Period,
     time_index: Optional[int] = None,
 ) -> str:
+    """Generates a formatted title for an Item.
+
+    Args:
+        frequency (Frequency): Temporal interval of Item being created, e.g.,
+            'monthly' or 'daily'.
+        period (constants.Period): Climate normal time period, e.g., '1991-2020'.
+        time_index (Optional[int]): 1-based time index relating to the
+            frequency, e.g., 'time_index=3' for the month of March for monthly
+            frequency data.
+
+    Returns:
+        str: Formatted Item title.
+    """
     if time_index:
         if frequency is constants.Frequency.DAILY:
             not_leap = 2021

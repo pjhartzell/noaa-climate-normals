@@ -1,9 +1,9 @@
+from datetime import datetime, timezone
 from enum import Enum
 from typing import Any, Dict
-from datetime import datetime, timezone
-from pystac.extensions.item_assets import AssetDefinition
 
 import pystac
+from pystac.extensions.item_assets import AssetDefinition
 from pystac.extensions.scientific import Publication
 
 
@@ -205,7 +205,7 @@ PUBLICATION_DAILY_MONTHLY_ANNUALSEASONAL = Publication(
 LANDING_PAGE_LINK = pystac.Link(
     rel="about",
     target="https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
-    media_type=pystac.MediaType.HTML,
+    media_type="text/html",
     title="NOAA U.S. Climate Normals Landing Page",
 )
 LICENSE_LINK = pystac.Link(

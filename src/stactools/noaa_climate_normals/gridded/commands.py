@@ -31,14 +31,14 @@ def create_command(noaa_climate_normals: Group) -> Command:
     )
     @click.option(
         "-n",
-        "--no-netcdf",
+        "--netcdf",
         is_flag=True,
         default=False,
         show_default=True,
-        help="Exclude NetCDF source data assets from Item",
+        help="Include NetCDF source data files as assets on the Item",
     )
     def create_item_command(
-        infile: str, frequency: str, destination: str, time_index: int, no_netcdf: bool
+        infile: str, frequency: str, destination: str, time_index: int, netcdf: bool
     ) -> None:
         """Creates a STAC Item for a single timestep of gridded data.
 
@@ -55,15 +55,15 @@ def create_command(noaa_climate_normals: Group) -> Command:
                 chosen frequency. Valid values are 1-366 for daily data, 1-12
                 for monthly data, and 1-4 for seasonal data. Not required for
                 annual data.
-            no_netcdf (bool): Flag to exclude NetCDF source data assets from
-                Item. Default is False.
+            netcdf (bool): Flag to include the NetCDF files as Assets on the
+                Item.
         """
         item = create_item(
             infile,
             Frequency(frequency),
             destination,
             time_index=time_index,
-            no_netcdf_assets=no_netcdf,
+            netcdf_assets=netcdf,
         )
         item.set_self_href(os.path.join(destination, f"{item.id}.json"))
         item.make_asset_hrefs_relative()
