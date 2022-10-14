@@ -1,0 +1,192 @@
+{
+  "type": "Collection",
+  "id": "noaa-climate-normals-tabular",
+  "stac_version": "1.0.0",
+  "description": "The NOAA U.S. Climate Normals provide information about typical climate conditions for thousands of weather station locations across the United States. Normals act both as a ruler to compare current weather and as a predictor of conditions in the near future. The official normals are calculated for a uniform 30 year period, and consist of annual/seasonal, monthly, daily, and hourly averages and statistics of temperature, precipitation, and other climatological variables for each weather station. This collection contains tabular format data for weather station climate normals for two conventional 30 year periods (1981-2010 and 1991-2020) and a recent 15 year period (2006-2020).",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "NOAA U.S. Climate Normals"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.1175/BAMS-D-11-00197.1"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.1175/BAMS-D-11-00173.1"
+    },
+    {
+      "rel": "about",
+      "href": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
+      "type": "text/html",
+      "title": "NOAA U.S. Climate Normals Landing Page"
+    },
+    {
+      "rel": "license",
+      "href": "https://www.noaa.gov/information-technology/open-data-dissemination",
+      "type": "text/html",
+      "title": "NOAA Open Data Dissemination"
+    },
+    {
+      "rel": "item",
+      "href": "./1981_2010-annualseasonal/1981_2010-annualseasonal.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./1981_2010-daily/1981_2010-daily.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./1981_2010-hourly/1981_2010-hourly.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./1981_2010-monthly/1981_2010-monthly.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "NOAA U.S. Climate Normals"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "sci:publications": [
+    {
+      "doi": "10.1175/BAMS-D-11-00197.1",
+      "citation": "Arguez, A., I. Durre, S. Applequist, R. Vose, M. Squires, X. Yin, R. Heim, and T. Owen, 2012: NOAA's 1981-2010 climate normals: An overview. Bull. Amer. Meteor. Soc., 93, 1687-1697. DOI: 10.1175/BAMS-D-11-00197.1."
+    },
+    {
+      "doi": "10.1175/BAMS-D-11-00173.1",
+      "citation": "Applequist, S., A. Arguez, I. Durre, M. Squires, R. Vose, and X. Yin, 2012: 1981-2010 U.S. Hourly Normals. Bulletin of the American Meteorological Society, 93, 1637-1640. DOI: 10.1175/BAMS-D-11-00173.1."
+    }
+  ],
+  "item_assets": {
+    "parquet": {
+      "type": "application/x-parquet",
+      "title": "GeoParquet for all stations",
+      "table:primary_geometry": "geometry",
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    }
+  },
+  "table:tables": {
+    "0": {
+      "name": "1981_2010-hourly",
+      "description": "Hourly Climate Normals for Period 1981-2010"
+    },
+    "1": {
+      "name": "1981_2010-daily",
+      "description": "Daily Climate Normals for Period 1981-2010"
+    },
+    "2": {
+      "name": "1981_2010-monthly",
+      "description": "Monthly Climate Normals for Period 1981-2010"
+    },
+    "3": {
+      "name": "1981_2010-annualseasonal",
+      "description": "Annual/Seasonal Climate Normals for Period 1981-2010"
+    },
+    "4": {
+      "name": "1991_2020-hourly",
+      "description": "Hourly Climate Normals for Period 1991-2020"
+    },
+    "5": {
+      "name": "1991_2020-daily",
+      "description": "Daily Climate Normals for Period 1991-2020"
+    },
+    "6": {
+      "name": "1991_2020-monthly",
+      "description": "Monthly Climate Normals for Period 1991-2020"
+    },
+    "7": {
+      "name": "1991_2020-annualseasonal",
+      "description": "Annual/Seasonal Climate Normals for Period 1991-2020"
+    },
+    "8": {
+      "name": "2006_2020-hourly",
+      "description": "Hourly Climate Normals for Period 2006-2020"
+    },
+    "9": {
+      "name": "2006_2020-daily",
+      "description": "Daily Climate Normals for Period 2006-2020"
+    },
+    "10": {
+      "name": "2006_2020-monthly",
+      "description": "Monthly Climate Normals for Period 2006-2020"
+    },
+    "11": {
+      "name": "2006_2020-annualseasonal",
+      "description": "Annual/Seasonal Climate Normals for Period 2006-2020"
+    }
+  },
+  "title": "Tabular U.S. Climate Normals",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -124.708333,
+          24.541666,
+          -66.999995,
+          49.375001
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1981-01-01T00:00:00Z",
+          "2020-12-31T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "proprietary",
+  "keywords": [
+    "NOAA",
+    "Climate Normals",
+    "Air Temperature",
+    "Precipitation",
+    "Surface Observations",
+    "Climatology",
+    "CONUS"
+  ],
+  "providers": [
+    {
+      "name": "NOAA National Centers for Environmental Information",
+      "roles": [
+        "producer",
+        "processor",
+        "licensor",
+        "host"
+      ],
+      "url": "https://www.ncei.noaa.gov/"
+    }
+  ],
+  "summaries": {
+    "frequency": [
+      "hourly",
+      "daily",
+      "monthly",
+      "annualseasonal"
+    ],
+    "period": [
+      "1981-2010",
+      "1991-2020",
+      "2006-2020"
+    ]
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "1991_2020-seasonal-1",
+  "properties": {
+    "proj:epsg": 4326,
+    "proj:transform": [
+      0.04166667,
+      0.0,
+      -124.70833333,
+      0.0,
+      -0.04166667,
+      49.37500127
+    ],
+    "proj:shape": [
+      596,
+      1385
+    ],
+    "start_datetime": "1991-01-01T00:00:00Z",
+    "end_datetime": "2020-12-31T00:00:00Z",
+    "created": "2022-10-14T17:43:44.856302Z",
+    "noaa-climate-normals:frequency": "seasonal",
+    "noaa-climate-normals:period": "1991-2020",
+    "noaa-climate-normals:time_index": 1,
+    "title": "1991-2020 Seasonal Climate Normals for Winter (Dec-Jan-Feb)",
+    "datetime": null
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.999995,
+          24.541666
+        ],
+        [
+          -66.999995,
+          49.375001
+        ],
+        [
+          -124.708333,
+          49.375001
+        ],
+        [
+          -124.708333,
+          24.541666
+        ],
+        [
+          -66.999995,
+          24.541666
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "NOAA U.S. Climate Normals"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Gridded U.S. Climate Normals"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Gridded U.S. Climate Normals"
+    }
+  ],
+  "assets": {
+    "seasprcp_norm": {
+      "href": "./1991_2020-seasonal-seasprcp_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Seasonal precipitation normals (WSSF) from monthly normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seasprcp_std": {
+      "href": "./1991_2020-seasonal-seasprcp_std-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Standard deviation of all input monthly precipitation normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seasprcp_min": {
+      "href": "./1991_2020-seasonal-seasprcp_min-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum values of all input monthly precipitation normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seasprcp_max": {
+      "href": "./1991_2020-seasonal-seasprcp_max-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum values of all input monthly precipitation normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seasprcp_flag": {
+      "href": "./1991_2020-seasonal-seasprcp_flag-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Number of months used to calculate seasonal precipitation normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": 0,
+          "unit": "months",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastavg_norm": {
+      "href": "./1991_2020-seasonal-seastavg_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Seasonal mean temperature normals (WSSF) from monthly normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastavg_std": {
+      "href": "./1991_2020-seasonal-seastavg_std-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Standard deviation of all input monthly mean temperature normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastavg_min": {
+      "href": "./1991_2020-seasonal-seastavg_min-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum values of all input monthly mean temperature normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastavg_max": {
+      "href": "./1991_2020-seasonal-seastavg_max-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum values of all input monthly mean temperature normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastavg_flag": {
+      "href": "./1991_2020-seasonal-seastavg_flag-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Number of months used to calculate seasonal mean temperature normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": 0,
+          "unit": "months",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmax_norm": {
+      "href": "./1991_2020-seasonal-seastmax_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Seasonal maximum temperature normals (WSSF) from monthly normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmax_std": {
+      "href": "./1991_2020-seasonal-seastmax_std-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Standard deviation of all input monthly maximum temperature normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmax_min": {
+      "href": "./1991_2020-seasonal-seastmax_min-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum values of all input monthly maximum temperature normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmax_max": {
+      "href": "./1991_2020-seasonal-seastmax_max-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum values of all input monthly maximum temperature normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmax_flag": {
+      "href": "./1991_2020-seasonal-seastmax_flag-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Number of months used to calculate seasonal maximum temperature normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": 0,
+          "unit": "months",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmin_norm": {
+      "href": "./1991_2020-seasonal-seastmin_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Seasonal minimum temperature normals (WSSF) from monthly normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmin_std": {
+      "href": "./1991_2020-seasonal-seastmin_std-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Standard deviation of all input monthly minimum temperature normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmin_min": {
+      "href": "./1991_2020-seasonal-seastmin_min-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum values of all input monthly minimum temperature normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmin_max": {
+      "href": "./1991_2020-seasonal-seastmin_max-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum values of all input monthly minimum temperature normal values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "seastmin_flag": {
+      "href": "./1991_2020-seasonal-seastmin_flag-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Number of months used to calculate seasonal minimum temperature normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": 0,
+          "unit": "months",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    }
+  },
+  "bbox": [
+    -124.708333,
+    24.541666,
+    -66.999995,
+    49.375001
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "collection": "noaa-climate-normals-gridded"
+}

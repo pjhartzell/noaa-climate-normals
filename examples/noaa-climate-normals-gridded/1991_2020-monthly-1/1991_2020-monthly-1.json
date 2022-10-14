@@ -1,0 +1,428 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "1991_2020-monthly-1",
+  "properties": {
+    "proj:epsg": 4326,
+    "proj:transform": [
+      0.04166667,
+      0.0,
+      -124.70833333,
+      0.0,
+      -0.04166667,
+      49.37500127
+    ],
+    "proj:shape": [
+      596,
+      1385
+    ],
+    "start_datetime": "1991-01-01T00:00:00Z",
+    "end_datetime": "2020-12-31T00:00:00Z",
+    "created": "2022-10-14T17:43:42.060151Z",
+    "noaa-climate-normals:frequency": "monthly",
+    "noaa-climate-normals:period": "1991-2020",
+    "noaa-climate-normals:time_index": 1,
+    "title": "1991-2020 Monthly Climate Normals for January",
+    "datetime": null
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.999995,
+          24.541666
+        ],
+        [
+          -66.999995,
+          49.375001
+        ],
+        [
+          -124.708333,
+          49.375001
+        ],
+        [
+          -124.708333,
+          24.541666
+        ],
+        [
+          -66.999995,
+          24.541666
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "NOAA U.S. Climate Normals"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Gridded U.S. Climate Normals"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Gridded U.S. Climate Normals"
+    }
+  ],
+  "assets": {
+    "mlyprcp_norm": {
+      "href": "./1991_2020-monthly-mlyprcp_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Monthly precipitation normals from monthly precipitation values",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlyprcp_std": {
+      "href": "./1991_2020-monthly-mlyprcp_std-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Standard deviation of monthly precipitation values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlyprcp_min": {
+      "href": "./1991_2020-monthly-mlyprcp_min-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum precipitation of monthly precipitation values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlyprcp_max": {
+      "href": "./1991_2020-monthly-mlyprcp_max-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum precipitation of monthly precipitation values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "millimeter",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlyprcp_flag": {
+      "href": "./1991_2020-monthly-mlyprcp_flag-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Number of years used to calculate monthly precipitation normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": 0,
+          "unit": "months",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytavg_norm": {
+      "href": "./1991_2020-monthly-mlytavg_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Monthly mean temperature normals from monthly averages",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytavg_std": {
+      "href": "./1991_2020-monthly-mlytavg_std-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Standard deviation of monthly mean temperature values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytavg_min": {
+      "href": "./1991_2020-monthly-mlytavg_min-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum temperature of monthly mean temperature values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytavg_max": {
+      "href": "./1991_2020-monthly-mlytavg_max-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum temperature of monthly mean temperature values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytavg_flag": {
+      "href": "./1991_2020-monthly-mlytavg_flag-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Number of years used to calculate monthly mean temperature normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": 0,
+          "unit": "months",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmax_norm": {
+      "href": "./1991_2020-monthly-mlytmax_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum temperature normals from monthly averages",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmax_std": {
+      "href": "./1991_2020-monthly-mlytmax_std-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Standard deviation of monthly maximum temperature values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmax_min": {
+      "href": "./1991_2020-monthly-mlytmax_min-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum temperature of monthly maximum temperature values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmax_max": {
+      "href": "./1991_2020-monthly-mlytmax_max-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum temperature of monthly maximum temperature values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmax_flag": {
+      "href": "./1991_2020-monthly-mlytmax_flag-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Number of years used to calculate monthly maximum temperature normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": 0,
+          "unit": "months",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmin_norm": {
+      "href": "./1991_2020-monthly-mlytmin_norm-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum temperature normals from monthly averages",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmin_std": {
+      "href": "./1991_2020-monthly-mlytmin_std-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Standard deviation of monthly minimum temperature values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmin_min": {
+      "href": "./1991_2020-monthly-mlytmin_min-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Minimum temperature of monthly minimum temperature values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmin_max": {
+      "href": "./1991_2020-monthly-mlytmin_max-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Maximum temperature of monthly minimum temperature values of all input years for a given month",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    },
+    "mlytmin_flag": {
+      "href": "./1991_2020-monthly-mlytmin_flag-1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "description": "Number of years used to calculate monthly minimum temperature normals",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": 0,
+          "unit": "months",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data",
+        "cloud-optimized"
+      ]
+    }
+  },
+  "bbox": [
+    -124.708333,
+    24.541666,
+    -66.999995,
+    49.375001
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "collection": "noaa-climate-normals-gridded"
+}

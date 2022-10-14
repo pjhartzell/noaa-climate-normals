@@ -19,36 +19,38 @@
   - `noaa-climate-normals:frequency`: The temporal interval for the climate normals, e.g., daily or hourly.
 - [Browse the example in human-readable form](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/stactools-packages/noaa-climate-normals/main/examples/catalog.json)
 
-The NOAA U.S. Climate Normals provide information about typical climate conditions for thousands of weather station locations across the United States. Normals act both as a ruler to compare current weather and as a predictor of conditions in the near future. Climate normals are calculated for uniform time periods (conventionally 30 years long), and consist of annual/seasonal, monthly, daily, and hourly averages and statistics of temperature, precipitation, and other climatological variables for each weather station. Data is available in two forms: tabular and gridded. The tabular data consists of weather variables for each weather station location. The gridded data is an interpolated form of the tabular data, is derived from the [NClimGrid](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00332) dataset, and is limited to temperature and precipitation information.
+The NOAA U.S. Climate Normals provide information about typical climate conditions for thousands of weather station locations across the United States. Normals act both as a ruler to compare current weather and as a predictor of conditions in the near future. Climate normals are calculated for uniform time periods (conventionally 30 years long), and consist of annual/seasonal, monthly, daily, and hourly averages and statistics of temperature, precipitation, and other climatological variables for each weather station.
+
+Data is available in two forms: tabular and gridded. The tabular data consists of weather variables for each weather station location. The gridded data is an interpolated form of the tabular data and is derived from the [NClimGrid](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00332) dataset. Gridded data is limited to temperature and precipitation information.
 
 Three Collections, and corresponding Items, can be generated with this package:
 
-**noaa-climate-normals-tabular**
+1. `noaa-climate-normals-tabular`
 
-- Items for each Climate Normal time period (e.g., 1991-2020) and temporal interval (e.g., monthly) combination.
-- Each Item contains a single GeoParquet Asset created from weather station tabular data contained in CSV files.
+    - Items for each Climate Normal time period (e.g., 1991-2020) and temporal interval (e.g., monthly) combination.
+    - Each Item contains a single GeoParquet Asset created from weather station tabular data contained in CSV files.
 
-**noaa-climate-normals-gridded**
+2. `noaa-climate-normals-gridded`
 
-- Items for each Climate Normal time period (e.g., 1991-2020) and temporal interval timestep (e.g., a month or a day) combination.
-- Each Item contains COG Assets for all available weather variables.
+    - Items for each Climate Normal time period (e.g., 1991-2020) and temporal interval timestep (e.g., a month or a day) combination.
+    - Each Item contains COG Assets for all available weather variables.
 
-**noaa-climate-normals-netcdf**
+3. `noaa-climate-normals-netcdf`
 
-- Items for the NetCDF files that serve as the source data for the COGs in the gridded Collection.
+    - Items for the NetCDF files that serve as the source data for the COGs in the gridded Collection.
 
 ## STAC Examples
 
 - Collections
 
-    - tabular
-    - gridded
+    - [tabular](examples/noaa-climate-normals-tabular/collection.json)
+    - [gridded](examples/noaa-climate-normals-gridded/collection.json)
     - netcdf
 
 - Items
 
-    - tabular
-    - gridded
+    - [tabular](examples/noaa-climate-normals-tabular/1981_2010-daily/1981_2010-daily.json)
+    - [gridded](examples/noaa-climate-normals-gridded/1991_2020-monthly-1/1991_2020-monthly-1.json)
     - netcdf
 
 ## Installation
@@ -65,7 +67,7 @@ To create a Collection, e.g., for the tabular data:
 stac noaa-climate-normals tabular create-collection directory/for/collection
 ```
 
-To create an Item, e.g., for the monthly tabular data from the 1991-2020 time period:
+To create an Item, e.g., for the `monthly` tabular data from the `1991-2020` time period:
 
 ```shell
 stac noaa-climate-normals tabular create-item path/to/file_of_csv_hrefs.txt monthly 1991-2020 directory/for/item_and_parquet_file

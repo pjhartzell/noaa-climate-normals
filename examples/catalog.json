@@ -1,0 +1,28 @@
+{
+  "type": "Catalog",
+  "id": "noaa-climate-normals",
+  "stac_version": "1.0.0",
+  "description": "The U.S. Climate Normals are a large suite of data products that provide information about typical climate conditions for thousands of locations across the United States. Normals act both as a ruler to compare today's weather and tomorrow's forecast, and as a predictor of conditions in the near future. The official normals are calculated for a uniform 30 year period, and consist of annual/seasonal, monthly, daily, and hourly averages and statistics of temperature, precipitation, and other climatological variables from almost 15,000 U.S. weather stations.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "NOAA U.S. Climate Normals"
+    },
+    {
+      "rel": "child",
+      "href": "./noaa-climate-normals-tabular/collection.json",
+      "type": "application/json",
+      "title": "Tabular U.S. Climate Normals"
+    },
+    {
+      "rel": "child",
+      "href": "./noaa-climate-normals-gridded/collection.json",
+      "type": "application/json",
+      "title": "Gridded U.S. Climate Normals"
+    }
+  ],
+  "stac_extensions": [],
+  "title": "NOAA U.S. Climate Normals"
+}

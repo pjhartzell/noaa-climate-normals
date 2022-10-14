@@ -1,0 +1,121 @@
+{
+  "type": "Collection",
+  "id": "noaa-climate-normals-gridded",
+  "stac_version": "1.0.0",
+  "description": "The gridded version of NOAA's U.S. Climate Normals provide temperature and precipitation data derived from NOAA's NClimGrid dataset. Grid resolutions (nominal 5x5 kilometer) and spatial extents (Continental U.S.) therefore match that of NClimGrid. Monthly, seasonal, and annual gridded normals are derived from simple averaging of the NClimGrid data. Daily gridded normals are smoothed for a smooth transition from one day to another. Monthly, seasonal, and annual gridded normals are provided for three time periods: 1901-2020, 1991-2020, and 2006-2020.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "NOAA U.S. Climate Normals"
+    },
+    {
+      "rel": "about",
+      "href": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
+      "type": "text/html",
+      "title": "NOAA U.S. Climate Normals Landing Page"
+    },
+    {
+      "rel": "license",
+      "href": "https://www.noaa.gov/information-technology/open-data-dissemination",
+      "type": "text/html",
+      "title": "NOAA Open Data Dissemination"
+    },
+    {
+      "rel": "about",
+      "href": "https://www.ncei.noaa.gov/sites/default/files/2022-04/Readme_Monthly_Gridded_Normals.pdf",
+      "type": "application/pdf",
+      "title": "Readme for Monthly Gridded Normals"
+    },
+    {
+      "rel": "about",
+      "href": "https://www.ncei.noaa.gov/sites/default/files/2022-04/Documentation_Monthly_Gridded_Normals.pdf",
+      "type": "application/pdf",
+      "title": "Documentation for Monthly Gridded Normals"
+    },
+    {
+      "rel": "item",
+      "href": "./2006_2020-daily-1/2006_2020-daily-1.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./1991_2020-monthly-1/1991_2020-monthly-1.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./1991_2020-seasonal-1/1991_2020-seasonal-1.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./1991_2020-annual/1991_2020-annual.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "NOAA U.S. Climate Normals"
+    }
+  ],
+  "stac_extensions": [],
+  "title": "Gridded U.S. Climate Normals",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -124.708333,
+          24.541666,
+          -66.999995,
+          49.375001
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1901-01-01T00:00:00Z",
+          "2020-12-31T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "proprietary",
+  "keywords": [
+    "NOAA",
+    "Climate Normals",
+    "Air Temperature",
+    "Precipitation",
+    "Surface Observations",
+    "Climatology",
+    "CONUS"
+  ],
+  "providers": [
+    {
+      "name": "NOAA National Centers for Environmental Information",
+      "roles": [
+        "producer",
+        "processor",
+        "licensor",
+        "host"
+      ],
+      "url": "https://www.ncei.noaa.gov/"
+    }
+  ],
+  "summaries": {
+    "frequency": [
+      "daily",
+      "monthly",
+      "seasonal",
+      "annual"
+    ],
+    "period": [
+      "1901-2000",
+      "1991-2020",
+      "2006-2020"
+    ]
+  }
+}
