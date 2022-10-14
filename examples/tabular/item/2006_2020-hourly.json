@@ -1,14 +1,14 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "1991_2020-hourly",
+  "id": "2006_2020-hourly",
   "properties": {
     "noaa-climate-normals:frequency": "hourly",
-    "noaa-climate-normals:period": "1991-2020",
-    "start_datetime": "1991-01-01T00:00:00Z",
+    "noaa-climate-normals:period": "2006-2020",
+    "start_datetime": "2006-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-10-12T21:42:17.690240Z",
-    "title": "Hourly Climate Normals for Period 1991-2020",
+    "created": "2022-10-13T19:03:21.679169Z",
+    "title": "Hourly Climate Normals for Period 2006-2020",
     "proj:epsg": 4269,
     "sci:publications": [
       {
@@ -33,55 +33,55 @@
     },
     {
       "rel": "about",
-      "href": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01622/html",
+      "href": "https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.ncdc:C01626/html",
       "type": "text/html",
-      "title": "U.S. Hourly Climate Normals (1991-2020) Landing Page"
+      "title": "U.S. Hourly Climate Normals (2006-2020) Landing Page"
     },
     {
       "rel": "describedby",
-      "href": "https://www.ncei.noaa.gov/data/normals-hourly/1991-2020/doc/Normals_HLY_Documentation_1991-2020.pdf",
+      "href": "https://www.ncei.noaa.gov/data/normals-hourly/2006-2020/doc/Normals_HLY_Documentation_2006-2020.pdf",
       "type": "application/pdf",
-      "title": "U.S. Hourly Climate Normals (1991-2020) Documentation"
+      "title": "U.S. Hourly Climate Normals (2006-2020) Documentation"
     }
   ],
   "assets": {
     "parquet": {
-      "href": "./1991_2020-hourly.parquet",
+      "href": "./2006_2020-hourly.parquet",
       "type": "application/x-parquet",
       "title": "GeoParquet for all stations",
       "table:primary_geometry": "geometry",
       "table:columns": [
         {
           "name": "station",
-          "type": "string",
+          "type": "byte_array",
           "description": "Station identification code"
         },
         {
           "name": "name",
-          "type": "string",
+          "type": "byte_array",
           "description": "Station name"
         },
         {
           "name": "latitude",
-          "type": "float64",
+          "type": "double",
           "description": "Station latitude",
           "unit": "degree"
         },
         {
           "name": "longitude",
-          "type": "float64",
+          "type": "double",
           "description": "Station longitude",
           "unit": "degree"
         },
         {
           "name": "elevation",
-          "type": "float64",
+          "type": "double",
           "description": "Station elevation",
           "unit": "meter"
         },
         {
           "name": "date",
-          "type": "string",
+          "type": "byte_array",
           "description": "Month, day, and hour in MM-DDTHH:00:00 format"
         },
         {
@@ -101,18 +101,18 @@
         },
         {
           "name": "hly-temp-normal",
-          "type": "float64",
+          "type": "double",
           "description": "Temperature mean",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-temp-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-temp-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -122,18 +122,18 @@
         },
         {
           "name": "hly-temp-10pctl",
-          "type": "float64",
+          "type": "double",
           "description": "Temperature 10th percentile",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-temp-10pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-temp-10pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -143,18 +143,18 @@
         },
         {
           "name": "hly-temp-90pctl",
-          "type": "float64",
+          "type": "double",
           "description": "Temperature 90th percentile",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-temp-90pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-temp-90pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -164,18 +164,18 @@
         },
         {
           "name": "hly-dewp-normal",
-          "type": "float64",
+          "type": "double",
           "description": "Dew point mean",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-dewp-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-dewp-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -185,18 +185,18 @@
         },
         {
           "name": "hly-dewp-10pctl",
-          "type": "float64",
+          "type": "double",
           "description": "Dew point 10th percentile",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-dewp-10pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-dewp-10pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -206,18 +206,18 @@
         },
         {
           "name": "hly-dewp-90pctl",
-          "type": "float64",
+          "type": "double",
           "description": "Dew point 90th percentile",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-dewp-90pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-dewp-90pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -227,18 +227,18 @@
         },
         {
           "name": "hly-pres-normal",
-          "type": "float64",
+          "type": "double",
           "description": "Sea level pressure mean",
           "unit": "hectoPascal"
         },
         {
           "name": "meas_flag_hly-pres-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-pres-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -248,18 +248,18 @@
         },
         {
           "name": "hly-pres-10pctl",
-          "type": "float64",
+          "type": "double",
           "description": "Sea level pressure 10th percentile",
           "unit": "hectoPascal"
         },
         {
           "name": "meas_flag_hly-pres-10pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-pres-10pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -269,18 +269,18 @@
         },
         {
           "name": "hly-pres-90pctl",
-          "type": "float64",
+          "type": "double",
           "description": "Sea level pressure 90th percentile",
           "unit": "hectoPascal"
         },
         {
           "name": "meas_flag_hly-pres-90pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-pres-90pctl",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -290,18 +290,18 @@
         },
         {
           "name": "hly-cldh-normal",
-          "type": "float64",
+          "type": "double",
           "description": "Cooling degree hours",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-cldh-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-cldh-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -311,18 +311,18 @@
         },
         {
           "name": "hly-htdh-normal",
-          "type": "float64",
+          "type": "double",
           "description": "Heating degree hours",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-htdh-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-htdh-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -332,18 +332,18 @@
         },
         {
           "name": "hly-clod-pctclr",
-          "type": "int64",
+          "type": "double",
           "description": "Clouds clear percentage",
           "unit": "percent"
         },
         {
           "name": "meas_flag_hly-clod-pctclr",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctclr",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -353,18 +353,18 @@
         },
         {
           "name": "hly-clod-pctfew",
-          "type": "int64",
+          "type": "double",
           "description": "Clouds few percentage",
           "unit": "percent"
         },
         {
           "name": "meas_flag_hly-clod-pctfew",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctfew",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -374,18 +374,18 @@
         },
         {
           "name": "hly-clod-pctsct",
-          "type": "int64",
+          "type": "double",
           "description": "Clouds scattered percentage",
           "unit": "percent"
         },
         {
           "name": "meas_flag_hly-clod-pctsct",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctsct",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -395,18 +395,18 @@
         },
         {
           "name": "hly-clod-pctbkn",
-          "type": "int64",
+          "type": "double",
           "description": "Clouds broken percentage",
           "unit": "percent"
         },
         {
           "name": "meas_flag_hly-clod-pctbkn",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctbkn",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -416,18 +416,18 @@
         },
         {
           "name": "hly-clod-pctovc",
-          "type": "int64",
+          "type": "double",
           "description": "Clouds overcast percentage",
           "unit": "percent"
         },
         {
           "name": "meas_flag_hly-clod-pctovc",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-clod-pctovc",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -437,18 +437,18 @@
         },
         {
           "name": "hly-hidx-normal",
-          "type": "float64",
+          "type": "double",
           "description": "Heat index mean",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-hidx-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-hidx-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -458,18 +458,18 @@
         },
         {
           "name": "hly-wchl-normal",
-          "type": "float64",
+          "type": "double",
           "description": "Wind chill mean",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "meas_flag_hly-wchl-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wchl-normal",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -479,18 +479,18 @@
         },
         {
           "name": "hly-wind-avgspd",
-          "type": "float64",
+          "type": "double",
           "description": "Average wind speed",
           "unit": "mile per hour"
         },
         {
           "name": "meas_flag_hly-wind-avgspd",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-avgspd",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -500,18 +500,18 @@
         },
         {
           "name": "hly-wind-pctclm",
-          "type": "float64",
+          "type": "double",
           "description": "Percentage calm",
           "unit": "percent"
         },
         {
           "name": "meas_flag_hly-wind-pctclm",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-pctclm",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -527,12 +527,12 @@
         },
         {
           "name": "meas_flag_hly-wind-vctdir",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-vctdir",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -542,18 +542,18 @@
         },
         {
           "name": "hly-wind-vctspd",
-          "type": "float64",
+          "type": "double",
           "description": "Mean wind vector magnitude",
           "unit": "mile per hour"
         },
         {
           "name": "meas_flag_hly-wind-vctspd",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-vctspd",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -563,38 +563,38 @@
         },
         {
           "name": "hly-wind-1stdir",
-          "type": "category",
+          "type": "int64",
           "description": "Prevailing wind direction (1-8)"
         },
         {
           "name": "meas_flag_hly-wind-1stdir",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-1stdir",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "years_hly-wind-1stdir",
-          "type": "category",
+          "type": "int64",
           "description": "Number of years used"
         },
         {
           "name": "hly-wind-1stpct",
-          "type": "float64",
+          "type": "double",
           "description": "Prevailing wind percentage",
           "unit": "percent"
         },
         {
           "name": "meas_flag_hly-wind-1stpct",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-1stpct",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -604,38 +604,38 @@
         },
         {
           "name": "hly-wind-2nddir",
-          "type": "category",
+          "type": "int64",
           "description": "Secondary wind direction (1-8)"
         },
         {
           "name": "meas_flag_hly-wind-2nddir",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-2nddir",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "years_hly-wind-2nddir",
-          "type": "category",
+          "type": "int64",
           "description": "Number of years used"
         },
         {
           "name": "hly-wind-2ndpct",
-          "type": "float64",
+          "type": "double",
           "description": "Secondary wind percentage",
           "unit": "percent"
         },
         {
           "name": "meas_flag_hly-wind-2ndpct",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record measurement flag"
         },
         {
           "name": "comp_flag_hly-wind-2ndpct",
-          "type": "category",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
@@ -645,7 +645,7 @@
         },
         {
           "name": "geometry",
-          "type": "geometry",
+          "type": "byte_array",
           "description": "Station 3D point location"
         }
       ],

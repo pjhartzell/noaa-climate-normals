@@ -27,7 +27,7 @@ for file_list in file_lists:
     _frequency = constants.Frequency(frequency)
     _period = constants.Period(period)
 
-    output_dir = "examples/tabular"
+    output_dir = "examples/tabular/item"
     item = stac.create_item(file_list, _frequency, _period, output_dir)
     item.set_self_href(os.path.join(output_dir, item.id + ".json"))
     item.make_asset_hrefs_relative()

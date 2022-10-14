@@ -2,7 +2,8 @@ import os
 from datetime import datetime, timezone
 from typing import List, Optional
 
-from pystac import Asset, Item
+from pystac import Asset, CatalogType, Collection, Item, Summaries
+from pystac.extensions.item_assets import ItemAssetsExtension
 from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.scientific import ScientificExtension
 from pystac.extensions.table import TableExtension
@@ -11,7 +12,7 @@ from stactools.core.io import ReadHrefModifier
 
 from ..utils import modify_href
 from . import constants
-from .parquet import create_parquet
+from .parquet import create_parquet, get_tables
 
 
 def create_item(
@@ -82,3 +83,34 @@ def create_item(
     )
 
     return item
+
+
+def create_collection(destination: str) -> Collection:
+    collection = Collection(**constants.COLLECTION)
+
+    scientific = ScientificExtension.ext(collection, add_if_missing=True)
+    scientific.publications = [
+        constants.PUBLICATION_DAILY_MONTHLY_ANNUALSEASONAL,
+        constants.PUBLICATION_HOURLY,
+    ]
+
+    collection.providers = constants.PROVIDERS
+
+    item_assets = ItemAssetsExtension.ext(collection, add_if_missing=True)
+    item_assets.item_assets = constants.ITEM_ASSETS
+
+    TableExtension.ext(collection, add_if_missing=True)
+    collection.extra_fields["table:tables"] = get_tables()
+
+    collection.add_links([constants.LANDING_PAGE_LINK, constants.LICENSE_LINK])
+
+    collection.summaries = Summaries(
+        {
+            "frequency": [f.value for f in constants.Frequency],
+            "period": [p.value for p in constants.Period],
+        }
+    )
+
+    collection.catalog_type = CatalogType.SELF_CONTAINED
+
+    return collection

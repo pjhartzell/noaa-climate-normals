@@ -5,7 +5,7 @@ import click
 from click import Command, Group
 
 from .constants import Frequency, Period
-from .stac import create_item
+from .stac import create_item, create_collection
 
 logger = logging.getLogger(__name__)
 
@@ -59,5 +59,20 @@ def create_command(noaa_climate_normals: Group) -> Command:
         item.save_object(include_self_link=False)
 
         return None
+    
+    @tabular.command("create-collection", short_help="Creates a STAC Collection")
+    @click.argument("destination")
+    def create_collection_command(
+        destination: str,
+    ) -> None:
+        """_summary_
+
+        Args:
+            destination (str): _description_
+        """
+        collection = create_collection(destination)
+        collection.set_self_href(os.path.join(destination, "collection.json"))
+        collection.validate()
+        collection.save()
 
     return tabular

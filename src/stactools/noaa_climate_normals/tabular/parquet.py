@@ -5,6 +5,7 @@ from typing import Any, Dict, List
 import geopandas as gpd
 import pandas as pd
 import pkg_resources
+import pyarrow.parquet as pq
 from shapely.geometry import mapping
 
 from . import constants
@@ -19,8 +20,11 @@ def create_parquet(
     parquet_path: str,
 ) -> Dict[str, Any]:
     geodataframe = csv_to_geodataframe(csv_hrefs)
-    geodataframe = make_categorical(geodataframe)
-    columns = geodataframe_columns(geodataframe, frequency, period)
+    make_categorical(geodataframe)
+    geodataframe.to_parquet(parquet_path)
+    parquet_dtypes = get_parquet_dtypes(parquet_path)
+    columns = geodataframe_columns(geodataframe, parquet_dtypes, frequency, period)
+
     geodataframe_dict = {
         "geometry": mapping(geodataframe.unary_union.convex_hull),
         "bbox": list(geodataframe.total_bounds),
@@ -33,13 +37,19 @@ def create_parquet(
         "roles": ["data", "cloud-optimized"],
     }
 
-    geodataframe.to_parquet(parquet_path)
-
     return geodataframe_dict
 
 
-def make_categorical(gdf: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
-    substrings = [
+def get_parquet_dtypes(parquet_path: str) -> Dict[str, str]:
+    ds = pq.ParquetDataset(parquet_path, use_legacy_dataset=False)
+    return {
+        col.name.lower(): col.physical_type.lower()
+        for col in ds.fragments[0].metadata.schema
+    }
+
+
+def make_categorical(gdf: gpd.GeoDataFrame) -> None:
+    categorical_substrings = [
         "_attributes",
         "comp_flag_",
         "meas_flag",
@@ -47,9 +57,8 @@ def make_categorical(gdf: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
         "wind-2nddir",
     ]
     for column in gdf.columns:
-        if any([substring in column for substring in substrings]):
+        if any([substring in column for substring in categorical_substrings]):
             gdf[column] = gdf[column].astype("category")
-    return gdf
 
 
 def csv_to_geodataframe(csv_hrefs: List[str]) -> gpd.GeoDataFrame:
@@ -64,26 +73,34 @@ def csv_to_geodataframe(csv_hrefs: List[str]) -> gpd.GeoDataFrame:
             z=dataframe.elevation,
             crs=constants.CRS,
         ),
-    ).convert_dtypes()
+    )
 
 
 def geodataframe_columns(
     geodataframe: gpd.GeoDataFrame,
+    parquet_dtypes: Dict[str, str],
     frequency: constants.Frequency,
     period: constants.Period,
 ) -> List[Dict[str, Any]]:
     column_metadata = load_column_metadata(frequency, period)
     columns = []
-    for column, dtype in zip(geodataframe.columns, geodataframe.dtypes):
-        temp = {
-            "name": column,
-            "type": dtype.name.lower(),
-        }
+    for column in geodataframe.columns:
+        temp = {}
+
+        temp["name"] = column
+
+        data_type = parquet_dtypes.get(column, None)
+        if data_type:
+            temp["type"] = data_type
+        else:
+            logger.warning(
+                f"{frequency}_{period}: data type for column '{column}' is missing"
+            )
 
         description = column_metadata.get(column, {}).get("description")
         if description:
             temp["description"] = description
-        if not description:
+        else:
             if "_attributes" in column or "comp_flag_" in column:
                 temp["description"] = "Data record completeness flag"
             elif "meas_flag" in column:
@@ -91,7 +108,9 @@ def geodataframe_columns(
             elif "years_" in column:
                 temp["description"] = "Number of years used"
             else:
-                logger.warning(f"{frequency}_{period}: column '{column}' is missing")
+                logger.warning(
+                    f"{frequency}_{period}: description for column '{column}' is missing"
+                )
 
         unit = column_metadata.get(column, {}).get("unit")
         if unit:
@@ -113,3 +132,25 @@ def load_column_metadata(
             return json.load(stream)
     except FileNotFoundError as e:
         raise e
+
+
+def get_tables() -> Dict[str, str]:
+    tables = {}
+    idx = 0
+    for period in constants.Period:
+        for frequency in constants.Frequency:
+            tables[idx] = {}
+            tables[idx]["name"] = f"{period.value.replace('-', '_')}-{frequency}"
+
+            if frequency is constants.Frequency.ANNUALSEASONAL:
+                formatted_frequency = "Annual/Seasonal"
+            else:
+                formatted_frequency = frequency.value.capitalize()
+
+            tables[idx][
+                "description"
+            ] = f"{formatted_frequency} Climate Normals for Period {period}"
+
+            idx += 1
+
+    return tables

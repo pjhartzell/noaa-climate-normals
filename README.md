@@ -5,12 +5,18 @@
 - Name: noaa-climate-normals
 - Package: `stactools.noaa_climate_normals`
 - [stactools-noaa-climate-normals on PyPI](https://pypi.org/project/stactools-noaa-climate-normals/)
-- Owner: @githubusername
-- [Dataset homepage](http://example.com)
+- Owner: @pjhartzell
+- [Dataset homepage](https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals)
 - STAC extensions used:
+  - [item-assets](https://github.com/stac-extensions/item-assets)
   - [proj](https://github.com/stac-extensions/projection/)
+  - [raster](https://github.com/stac-extensions/raster)
+  - [scientific](https://github.com/stac-extensions/scientific)
+  - [table](https://github.com/stac-extensions/table)
+
 - Extra fields:
-  - `noaa-climate-normals:custom`: A custom attribute
+  - `noaa-climate-normals:period`: A year range indicating the time period from which the climate normals were computed.
+  - `noaa-climate-normals:frequency`: The temporal interval for the climate normals, e.g., daily or hourly.
 - [Browse the example in human-readable form](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/stactools-packages/noaa-climate-normals/main/examples/collection.json)
 
 A short description of the package and its usage.
