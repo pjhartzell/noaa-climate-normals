@@ -2,7 +2,7 @@ import os
 from datetime import datetime, timezone
 from typing import List, Optional
 
-from pystac import Asset, CatalogType, Collection, Item, Summaries
+from pystac import Asset, Collection, Item, Summaries
 from pystac.extensions.item_assets import ItemAssetsExtension
 from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.scientific import ScientificExtension
@@ -10,6 +10,7 @@ from pystac.extensions.table import TableExtension
 from pystac.utils import datetime_to_str, make_absolute_href
 from stactools.core.io import ReadHrefModifier
 
+from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from ..utils import modify_href
 from . import constants
 from .parquet import create_parquet, get_tables
@@ -29,9 +30,9 @@ def create_item(
     Args:
         csv_hrefs (List[str]): List of HREFs to CSV files that will be
             converted to a single parquet file.
-        frequency (constants.Frequency): Temporal interval of CSV data, e.g.,
-            'monthly' or 'hourly'.
-        period (constants.Period): Climate normal time period of CSV data, e.g.,
+        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly'
+            or 'hourly'.
+        period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
         parquet_dir (str): Directory to store created parquet file.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
@@ -120,7 +121,7 @@ def create_collection() -> Collection:
         constants.PUBLICATION_HOURLY,
     ]
 
-    collection.providers = constants.PROVIDERS
+    collection.providers = PROVIDERS
 
     item_assets = ItemAssetsExtension.ext(collection, add_if_missing=True)
     item_assets.item_assets = constants.ITEM_ASSETS
@@ -128,7 +129,7 @@ def create_collection() -> Collection:
     TableExtension.ext(collection, add_if_missing=True)
     collection.extra_fields["table:tables"] = get_tables()
 
-    collection.add_links([constants.LANDING_PAGE_LINK, constants.LICENSE_LINK])
+    collection.add_links([LANDING_PAGE_LINK, LICENSE_LINK])
 
     collection.summaries = Summaries(
         {
@@ -136,7 +137,5 @@ def create_collection() -> Collection:
             "period": [p.value for p in constants.Period],
         }
     )
-
-    collection.catalog_type = CatalogType.SELF_CONTAINED
 
     return collection

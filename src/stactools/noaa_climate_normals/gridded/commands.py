@@ -3,9 +3,10 @@ import os
 
 import click
 from click import Command, Group
+from pystac import CatalogType
 
 from .constants import Frequency
-from .stac import create_item
+from .stac import create_collection, create_item
 
 logger = logging.getLogger(__name__)
 
@@ -71,5 +72,22 @@ def create_command(noaa_climate_normals: Group) -> Command:
         item.save_object(include_self_link=False)
 
         return None
+
+    @gridded.command("create-collection", short_help="Creates a STAC Collection")
+    @click.argument("destination")
+    def create_collection_command(
+        destination: str,
+    ) -> None:
+        """Creates a STAC Collection for gridded Items.
+
+        \b
+        Args:
+            destination (str): Directory for the created collection.json file.
+        """
+        collection = create_collection()
+        collection.set_self_href(os.path.join(destination, "collection.json"))
+        collection.catalog_type = CatalogType.SELF_CONTAINED
+        collection.validate()
+        collection.save()
 
     return gridded

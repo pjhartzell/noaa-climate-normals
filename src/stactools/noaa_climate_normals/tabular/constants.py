@@ -6,6 +6,8 @@ import pystac
 from pystac.extensions.item_assets import AssetDefinition
 from pystac.extensions.scientific import Publication
 
+from ..constants import KEYWORDS
+
 
 class Frequency(str, Enum):
     HOURLY = "hourly"
@@ -201,40 +203,6 @@ PUBLICATION_DAILY_MONTHLY_ANNUALSEASONAL = Publication(
     citation="Arguez, A., I. Durre, S. Applequist, R. Vose, M. Squires, X. Yin, R. Heim, and T. Owen, 2012: NOAA's 1981-2010 climate normals: An overview. Bull. Amer. Meteor. Soc., 93, 1687-1697. DOI: 10.1175/BAMS-D-11-00197.1.",  # noqa
 )
 
-
-LANDING_PAGE_LINK = pystac.Link(
-    rel="about",
-    target="https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
-    media_type="text/html",
-    title="NOAA U.S. Climate Normals Landing Page",
-)
-LICENSE_LINK = pystac.Link(
-    rel="license",
-    target=("https://www.noaa.gov/information-technology/open-data-dissemination"),
-    title="NOAA Open Data Dissemination",
-    media_type="text/html",
-)
-KEYWORDS = [
-    "NOAA",
-    "Climate Normals",
-    "Air Temperature",
-    "Precipitation",
-    "Surface Observations",
-    "Climatology",
-    "CONUS",
-]
-PROVIDERS = [
-    pystac.Provider(
-        name="NOAA National Centers for Environmental Information",
-        roles=[
-            pystac.ProviderRole.PRODUCER,
-            pystac.ProviderRole.PROCESSOR,
-            pystac.ProviderRole.LICENSOR,
-            pystac.ProviderRole.HOST,
-        ],
-        url="https://www.ncei.noaa.gov/",
-    )
-]
 ITEM_ASSETS = {
     "parquet": AssetDefinition(
         {
@@ -248,17 +216,18 @@ ITEM_ASSETS = {
 
 COLLECTION: Dict[str, Any] = {
     "id": "noaa-climate-normals-tabular",
-    "title": "NOAA U.S. Climate Normals",
+    "title": "Tabular U.S. Climate Normals",
     "description": (
         "The NOAA U.S. Climate Normals provide information about typical climate "
-        "conditions for thousands of locations across the United States. Normals "
-        "act both as a ruler to compare current weather and as a predictor of "
-        "conditions in the near future. The official normals are calculated for a "
-        "uniform 30 year period, and consist of annual/seasonal, monthly, daily, "
-        "and hourly averages and statistics of temperature, precipitation, and "
-        "other climatological variables. This collection contains normals for two "
-        "conventional 30 year periods (1981-2010 and 1991-2020) and a recent 15 "
-        "year period (2006-2020)."
+        "conditions for thousands of weather station locations across the United "
+        "States. Normals act both as a ruler to compare current weather and as a "
+        "predictor of conditions in the near future. The official normals are "
+        "calculated for a uniform 30 year period, and consist of annual/seasonal, "
+        "monthly, daily, and hourly averages and statistics of temperature, "
+        "precipitation, and other climatological variables for each weather "
+        "station. This collection contains tabular format data for weather "
+        "station climate normals for two conventional 30 year periods (1981-2010 "
+        "and 1991-2020) and a recent 15 year period (2006-2020)."
     ),
     "license": "proprietary",
     "keywords": KEYWORDS,

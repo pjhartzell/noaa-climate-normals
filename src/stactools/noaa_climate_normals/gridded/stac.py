@@ -4,12 +4,13 @@ from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 
 import stactools.core.create
-from pystac import Collection, Item
+from pystac import Collection, Item, Summaries
 from stactools.core.io import ReadHrefModifier
 
+from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from ..utils import modify_href
+from . import constants
 from .cog import cog_asset, create_cogs
-from .constants import RASTER_EXTENSION_V11, Frequency, Period
 from .utils import item_title, nc_asset, nc_href_dict
 
 logger = logging.getLogger(__name__)
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 def create_item(
     nc_href: str,
-    frequency: Frequency,
+    frequency: constants.Frequency,
     cog_dir: str,
     *,
     time_index: Optional[int] = None,
@@ -44,13 +45,13 @@ def create_item(
     Returns:
         Item: A STAC Item for a single timestep of Climate Normal data.
     """
-    if not time_index and frequency is not Frequency.ANN:
+    if not time_index and frequency is not constants.Frequency.ANN:
         raise ValueError(f"A time_index value is required for {frequency.value} data.")
-    if time_index and frequency is Frequency.ANN:
+    if time_index and frequency is constants.Frequency.ANN:
         logger.info("time_index value is not used for Annual frequency data")
         time_index = None
 
-    period = Period(os.path.basename(nc_href).split("-")[1].replace("_", "-"))
+    period = constants.Period(os.path.basename(nc_href).split("-")[1].replace("_", "-"))
     id = f"{period.value.replace('-', '_')}-{frequency}"
     if time_index:
         id += f"-{time_index}"
@@ -84,11 +85,28 @@ def create_item(
         for prefix, href in nc_hrefs.items():
             item.add_asset(f"{prefix}_source", nc_asset(prefix, href))
 
-    item.stac_extensions.append(RASTER_EXTENSION_V11)
+    item.stac_extensions.append(constants.RASTER_EXTENSION_V11)
 
     return item
 
 
 def create_collection() -> Collection:
     ...
-    # collection = Collection(**constants.COLLECTION)
+    collection = Collection(**constants.COLLECTION)
+
+    collection.providers = PROVIDERS
+
+    collection.add_links(
+        [LANDING_PAGE_LINK, LICENSE_LINK, constants.README, constants.DOCUMENTATION]
+    )
+
+    collection.summaries = Summaries(
+        {
+            "frequency": [f.value for f in constants.Frequency],
+            "period": [p.value for p in constants.Period],
+        }
+    )
+
+    # add item assets
+
+    return collection

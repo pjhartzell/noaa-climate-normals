@@ -25,9 +25,9 @@ def create_parquet(
     Args:
         csv_hrefs (List[str]): List of HREFs to CSV files that will be
             converted to a single parquet file.
-        frequency (constants.Frequency): Temporal interval of CSV data, e.g.,
-            'monthly' or 'hourly'.
-        period (constants.Period): Climate normal time period of CSV data, e.g.,
+        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly'
+            'hourly'.
+        period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
         parquet_path (str): Path for created parquet file.
 
@@ -131,9 +131,9 @@ def geodataframe_columns(
             columns to be described.
         parquet_dtypes (Dict[str, str]): A dictionary mapping column names to
             parquet data types.
-        frequency (constants.Frequency): Temporal interval of CSV data, e.g.,
-            'monthly' or 'hourly'.
-        period (constants.Period): Climate normal time period of CSV data, e.g.,
+        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly'
+            'hourly'.
+        period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
 
     Returns:
@@ -185,9 +185,9 @@ def load_column_metadata(
     """Loads a dictionary mapping column names to descriptions.
 
     Args:
-        frequency (constants.Frequency): Temporal interval of CSV data, e.g.,
-            'monthly' or 'hourly'.
-        period (constants.Period): Climate normal time period of CSV data, e.g.,
+        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly'
+            'hourly'.
+        period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
 
     Returns:

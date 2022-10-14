@@ -3,6 +3,7 @@ import os
 
 import click
 from click import Command, Group
+from pystac import CatalogType
 
 from .constants import Frequency, Period
 from .stac import create_collection, create_item
@@ -73,6 +74,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
         """
         collection = create_collection()
         collection.set_self_href(os.path.join(destination, "collection.json"))
+        collection.catalog_type = CatalogType.SELF_CONTAINED
         collection.validate()
         collection.save()
 
