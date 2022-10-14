@@ -19,6 +19,8 @@
   - `noaa-climate-normals:frequency`: The temporal interval for the climate normals, e.g., daily or hourly.
 - [Browse the example in human-readable form](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/stactools-packages/noaa-climate-normals/main/examples/catalog.json)
 
+## Background
+
 The NOAA U.S. Climate Normals provide information about typical climate conditions for thousands of weather station locations across the United States. Normals act both as a ruler to compare current weather and as a predictor of conditions in the near future. Climate normals are calculated for uniform time periods (conventionally 30 years long), and consist of annual/seasonal, monthly, daily, and hourly averages and statistics of temperature, precipitation, and other climatological variables for each weather station.
 
 Data is available in two forms: tabular and gridded. The tabular data consists of weather variables for each weather station location. The gridded data is an interpolated form of the tabular data and is derived from the [NClimGrid](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00332) dataset. Gridded data is limited to temperature and precipitation information.
@@ -61,19 +63,19 @@ pip install stactools-noaa-climate-normals
 
 ## Command-line Usage
 
-To create a Collection, e.g., for the tabular data:
+To create a Collection:
 
 ```shell
-stac noaa-climate-normals tabular create-collection directory/for/collection
+stac noaa-climate-normals <tabular|gridded> create-collection <collection filepath>
 ```
 
 To create an Item, e.g., for the `monthly` tabular data from the `1991-2020` time period:
 
 ```shell
-stac noaa-climate-normals tabular create-item path/to/file_of_csv_hrefs.txt monthly 1991-2020 directory/for/item_and_parquet_file
+stac noaa-climate-normals tabular create-item <filepath to text file of csv hrefs> <daily|monthly|seasonal|annual> <1901-2020|1991-2020|2006-2020> <directory for created item and geoparquet files>
 ```
 
-Each Collection has a unique subcommand and options. Use `stac noaa-climate-normals <tabular|gridded|netcdf> --help` to see options for each Collection.
+Each Collection has unique subcommands and options. Use `stac noaa-climate-normals --help` to explore subcommands and options.
 
 ## Contributing
 

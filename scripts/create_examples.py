@@ -58,6 +58,7 @@ with TemporaryDirectory() as tmp_dir:
             parquet_dir=tmp_dir,
         )
         tabular.add_item(tabular_item)
+        tabular.update_extent_from_items()
     catalog.add_child(tabular)
 
     print("Creating gridded collection...")
@@ -81,6 +82,7 @@ with TemporaryDirectory() as tmp_dir:
             netcdf_assets=False,
         )
         gridded.add_item(gridded_item)
+        gridded.update_extent_from_items()
     catalog.add_child(gridded)
 
     print("Saving catalog")

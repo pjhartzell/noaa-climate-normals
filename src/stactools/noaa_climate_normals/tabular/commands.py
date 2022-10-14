@@ -70,10 +70,10 @@ def create_command(noaa_climate_normals: Group) -> Command:
 
         \b
         Args:
-            destination (str): Directory for the created collection.json file.
+            destination (str): Path to the created collection JSON file.
         """
         collection = create_collection()
-        collection.set_self_href(os.path.join(destination, "collection.json"))
+        collection.set_self_href(destination)
         collection.catalog_type = CatalogType.SELF_CONTAINED
         collection.validate()
         collection.save()

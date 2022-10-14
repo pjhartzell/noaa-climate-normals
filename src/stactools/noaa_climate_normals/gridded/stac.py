@@ -5,13 +5,14 @@ from typing import Any, Dict, Optional
 
 import stactools.core.create
 from pystac import Collection, Item, Summaries
+from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
 from stactools.core.io import ReadHrefModifier
 
 from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from ..utils import modify_href
 from . import constants
 from .cog import cog_asset, create_cogs
-from .utils import item_title, nc_asset, nc_href_dict
+from .utils import item_title, load_item_assets, nc_asset, nc_href_dict
 
 logger = logging.getLogger(__name__)
 
@@ -91,7 +92,6 @@ def create_item(
 
 
 def create_collection() -> Collection:
-    ...
     collection = Collection(**constants.COLLECTION)
 
     collection.providers = PROVIDERS
@@ -107,6 +107,12 @@ def create_collection() -> Collection:
         }
     )
 
-    # add item assets
+    item_asset_dicts = load_item_assets()
+    for key, value in item_asset_dicts.items():
+        item_asset_dicts[key] = AssetDefinition(value)
+    item_assets = ItemAssetsExtension.ext(collection, add_if_missing=True)
+    item_assets.item_assets = item_asset_dicts
+
+    collection.stac_extensions.append(constants.RASTER_EXTENSION_V11)
 
     return collection

@@ -1,8 +1,10 @@
 import calendar
 import datetime
+import json
 import os
-from typing import Dict, Optional
+from typing import Any, Dict, Optional
 
+import pkg_resources
 from pystac import Asset
 from pystac.utils import make_absolute_href
 
@@ -82,3 +84,19 @@ def item_title(
         title = f"{period} Annual Climate Normals"
 
     return title
+
+
+def load_item_assets() -> Any:
+    """Loads a dictionary of item_assets entries for the collection.
+
+    Returns:
+        Any: A dictionary of item_asset dictionaries
+    """
+    try:
+        with pkg_resources.resource_stream(
+            "stactools.noaa_climate_normals.gridded.utils",
+            "item_assets/item_assets.json",
+        ) as stream:
+            return json.load(stream)
+    except FileNotFoundError as e:
+        raise e
