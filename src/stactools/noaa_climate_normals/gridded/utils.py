@@ -71,8 +71,8 @@ def item_title(
     """
     if time_index:
         if frequency is constants.Frequency.DAILY:
-            not_leap = 2021
-            date = datetime.datetime.strptime(f"{time_index} {not_leap}", "%j %Y")
+            leap_year = 2020  # use a leap year for date since daily data has 366 days
+            date = datetime.datetime.strptime(f"{time_index} {leap_year}", "%j %Y")
             title = f"{period} Daily Climate Normals for {date.strftime('%B %-d')}"
         if frequency is constants.Frequency.MLY:
             title = f"{period} Monthly Climate Normals for {calendar.month_name[time_index]}"
