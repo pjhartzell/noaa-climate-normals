@@ -12,7 +12,7 @@ from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from ..utils import modify_href
 from . import constants
 from .cog import cog_asset, create_cogs
-from .utils import item_title, load_item_assets, nc_asset, nc_href_dict
+from .utils import item_title, load_item_assets, nc_href_dict
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +23,6 @@ def create_item(
     cog_dir: str,
     *,
     time_index: Optional[int] = None,
-    netcdf_assets: bool = False,
     read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Item:
     """Creates a STAC Item and COGs for a single timestep of Climate Normal
@@ -39,8 +38,6 @@ def create_item(
         time_index (Optional[int]): 1-based time index into the NetCDF
             timestack, e.g., 'time_index=3' for the month of March for a NetCDF
             holding monthly frequency data.
-        no_netcdf_assets (bool, optional): Flag to include the NetCDF files as
-            Assets on the Item.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
 
     Returns:
@@ -81,10 +78,6 @@ def create_item(
     item.assets.pop("data")
     for key, value in cogs.items():
         item.add_asset(key, cog_asset(key, value))
-
-    if netcdf_assets:
-        for prefix, href in nc_hrefs.items():
-            item.add_asset(f"{prefix}_source", nc_asset(prefix, href))
 
     item.stac_extensions.append(constants.RASTER_EXTENSION_V11)
 

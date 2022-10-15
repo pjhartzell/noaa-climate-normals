@@ -70,7 +70,6 @@ with TemporaryDirectory() as tmp_dir:
         frequency=gridded_constants.Frequency("daily"),
         cog_dir=tmp_dir,
         time_index=1,
-        netcdf_assets=False,
     )
     gridded.add_item(gridded_item)
     for frequency in ["monthly", "seasonal", "annual"]:
@@ -79,7 +78,6 @@ with TemporaryDirectory() as tmp_dir:
             frequency=gridded_constants.Frequency(frequency),
             cog_dir=tmp_dir,
             time_index=1,
-            netcdf_assets=False,
         )
         gridded.add_item(gridded_item)
         gridded.update_extent_from_items()
