@@ -33,3 +33,16 @@ class CommandsTest(CliTestCase):
             assert len(glob.glob(f"{tmp_dir}/*.tif")) == 6
 
             item.validate()
+
+    def test_create_gridded_collection(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            result = self.run_command(
+                f"noaa-climate-normals gridded create-collection "
+                f"{os.path.join(tmp_dir, 'collection.json')}"
+            )
+            assert result.exit_code == 0, "\n{}".format(result.output)
+
+            collection = pystac.read_file(os.path.join(tmp_dir, "collection.json"))
+            assert collection.id == "noaa-climate-normals-gridded"
+
+            collection.validate()

@@ -41,3 +41,16 @@ class CommandsTest(CliTestCase):
             assert os.path.isfile(os.path.join(tmp_dir, f"{item.id}.parquet"))
 
             item.validate()
+
+    def test_create_tabular_collection(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            result = self.run_command(
+                f"noaa-climate-normals tabular create-collection "
+                f"{os.path.join(tmp_dir, 'collection.json')}"
+            )
+            assert result.exit_code == 0, "\n{}".format(result.output)
+
+            collection = pystac.read_file(os.path.join(tmp_dir, "collection.json"))
+            assert collection.id == "noaa-climate-normals-tabular"
+
+            collection.validate()
