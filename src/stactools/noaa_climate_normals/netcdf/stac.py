@@ -9,6 +9,7 @@ from shapely.geometry import box, mapping
 
 from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from ..gridded.constants import DOCUMENTATION, README
+from . import netcdf_item_id
 from .constants import (
     BBOX,
     COLLECTION,
@@ -21,7 +22,7 @@ from .constants import (
 
 
 def create_item(nc_href: str) -> Item:
-    id = os.path.splitext(os.path.basename(nc_href))[0]
+    id = netcdf_item_id(nc_href)
     filename_parts = id.split("-")
     variable = filename_parts[0]
     period = filename_parts[1].replace("_", "-")

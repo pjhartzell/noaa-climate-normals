@@ -4,11 +4,12 @@ from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 
 import stactools.core.create
-from pystac import Collection, Item, Summaries
+from pystac import Collection, Item, Link, Summaries
 from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
 from stactools.core.io import ReadHrefModifier
 
 from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
+from ..netcdf import netcdf_item_id
 from ..utils import modify_href
 from . import constants
 from .cog import cog_asset, create_cogs
@@ -22,6 +23,7 @@ def create_item(
     frequency: constants.Frequency,
     cog_dir: str,
     *,
+    api_url_netcdf: Optional[str] = None,
     time_index: Optional[int] = None,
     read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Item:
@@ -57,7 +59,7 @@ def create_item(
 
     cogs: Dict[str, Any] = {}
     nc_hrefs = nc_href_dict(nc_href, frequency)
-    for _, nc_href in nc_hrefs.items():
+    for nc_href in nc_hrefs.values():
         modified_href = modify_href(nc_href, read_href_modifier)
         create_cogs(modified_href, frequency, period, cog_dir, cogs, time_index)
 
@@ -78,6 +80,18 @@ def create_item(
     item.assets.pop("data")
     for key, value in cogs.items():
         item.add_asset(key, cog_asset(key, value))
+
+    if api_url_netcdf:
+        for nc_href in nc_hrefs.values():
+            href = f"{api_url_netcdf}/{netcdf_item_id(nc_href)}"
+            item.add_link(
+                Link(
+                    rel="derived_from",
+                    target=href,
+                    media_type="",
+                    title=""
+                )
+            )
 
     item.stac_extensions.append(constants.RASTER_EXTENSION_V11)
 
