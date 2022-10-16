@@ -1,9 +1,11 @@
 import glob
 from tempfile import TemporaryDirectory
 
-from stactools.noaa_climate_normals.gridded.constants import MONTHLY_FILES, Frequency
+from stactools.noaa_climate_normals.gridded.constants import Frequency
 from stactools.noaa_climate_normals.gridded.stac import create_item
 from tests import test_data
+
+from .. import MONTHLY_FILES
 
 
 def test_create_daily_gridded_item() -> None:

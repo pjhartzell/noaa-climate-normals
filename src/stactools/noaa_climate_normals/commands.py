@@ -1,6 +1,7 @@
 from click import Command, Group
 
 from .gridded.commands import create_command as create_gridded_command
+from .netcdf.commands import create_command as create_netcdf_command
 from .tabular.commands import create_command as create_tabular_command
 
 
@@ -16,5 +17,6 @@ def create_noaa_climate_normals_command(cli: Group) -> Command:
 
     create_tabular_command(noaa_climate_normals)
     create_gridded_command(noaa_climate_normals)
+    create_netcdf_command(noaa_climate_normals)
 
     return noaa_climate_normals

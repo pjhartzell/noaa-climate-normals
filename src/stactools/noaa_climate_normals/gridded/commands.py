@@ -1,4 +1,3 @@
-import logging
 import os
 
 import click
@@ -7,8 +6,6 @@ from pystac import CatalogType
 
 from .constants import Frequency
 from .stac import create_collection, create_item
-
-logger = logging.getLogger(__name__)
 
 
 def create_command(noaa_climate_normals: Group) -> Command:

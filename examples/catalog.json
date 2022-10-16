@@ -21,6 +21,12 @@
       "href": "./noaa-climate-normals-gridded/collection.json",
       "type": "application/json",
       "title": "Gridded U.S. Climate Normals"
+    },
+    {
+      "rel": "child",
+      "href": "./noaa-climate-normals-netcdf/collection.json",
+      "type": "application/json",
+      "title": "Gridded U.S. Climate Normals - NetCDF Data"
     }
   ],
   "stac_extensions": [],

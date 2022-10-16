@@ -34,34 +34,25 @@ SEASONS = {
     4: "Fall (Sep-Oct-Nov)",
 }
 
-PREFIXES = {
-    "prcp": "Precipitation",
-    "tavg": "Average temperature",
-    "tmax": "Maximum temperature",
-    "tmin": "Minimum temperature",
-    "m2dprcp": "Month-to-date precipitation",
-    "y2dprcp": "Year-to-date precipitation",
-}
+PREFIXES = ["prcp", "tavg", "tmax", "tmin", "m2dprcp", "y2dprcp"]
 
 RASTER_EXTENSION_V11 = "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
-
-NETCDF_MEDIA_TYPE = "application/netcdf"
-NETCDF_ROLES = ["data", "source"]
-
-MONTHLY_FILES = ["prcp", "tavg", "tmin", "tmax"]
 
 COLLECTION: Dict[str, Any] = {
     "id": "noaa-climate-normals-gridded",
     "title": "Gridded U.S. Climate Normals",
     "description": (
-        "The gridded version of NOAA's U.S. Climate Normals provide temperature "
-        "and precipitation data derived from NOAA's NClimGrid dataset. Grid "
-        "resolutions (nominal 5x5 kilometer) and spatial extents (Continental "
-        "U.S.) therefore match that of NClimGrid. Monthly, seasonal, and annual "
-        "gridded normals are derived from simple averaging of the NClimGrid data. "
-        "Daily gridded normals are smoothed for a smooth transition from one day "
-        "to another. Monthly, seasonal, and annual gridded normals are provided "
-        "for three time periods: 1901-2020, 1991-2020, and 2006-2020."
+        "NOAA's Gridded U.S. Climate Normals provide a continuous grid of "
+        "temperature and precipitation data across the continental United States (CONUS). "
+        "The grids are derived from NOAA's NClimGrid dataset, and resolutions "
+        "(nominal 5x5 kilometer) and spatial extents (CONUS) therefore "
+        "match that of NClimGrid. Monthly, seasonal, and annual gridded normals "
+        "are computed from simple averages of the NClimGrid data "
+        "and are provided for three time periods: 1901-2020, 1991-2020, and "
+        "2006-2020. Daily gridded normals are smoothed for a smooth transition "
+        "from one day to another and are provided for two time periods: "
+        "1991-2020, and 2006-2020. The data in this Collection have been "
+        "converted from the original NetCDF format to Cloud-Optimized GeoTIFFs (COGs)."
     ),
     "license": "proprietary",
     "keywords": KEYWORDS,

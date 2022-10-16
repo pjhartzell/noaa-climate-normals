@@ -1,0 +1,81 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "tmax-1991_2020-monthly-normals-v1.0",
+  "properties": {
+    "noaa-climate-normals:frequency": "monthly",
+    "noaa-climate-normals:period": "1991-2020",
+    "start_datetime": "1991-01-01T00:00:00Z",
+    "end_datetime": "2020-12-31T00:00:00Z",
+    "created": "2022-10-16T13:00:04.356827Z",
+    "proj:epsg": 4326,
+    "datetime": null
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -66.999995,
+          24.541666
+        ],
+        [
+          -66.999995,
+          49.375001
+        ],
+        [
+          -124.708333,
+          49.375001
+        ],
+        [
+          -124.708333,
+          24.541666
+        ],
+        [
+          -66.999995,
+          24.541666
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "NOAA U.S. Climate Normals"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Gridded U.S. Climate Normals - NetCDF Data"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Gridded U.S. Climate Normals - NetCDF Data"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "href": "../../../tests/data-files/external/tmax-1991_2020-monthly-normals-v1.0.nc",
+      "type": "application/netcdf",
+      "title": "1991-2020 Monthly Gridded Climate Normals for Maximum Temperature",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    -124.708333,
+    24.541666,
+    -66.999995,
+    49.375001
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ],
+  "collection": "noaa-climate-normals-netcdf"
+}
