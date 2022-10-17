@@ -18,7 +18,7 @@
     ],
     "start_datetime": "2006-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T00:00:00Z",
-    "created": "2022-10-16T12:59:55.692718Z",
+    "created": "2022-10-17T14:03:28.737684Z",
     "noaa-climate-normals:frequency": "daily",
     "noaa-climate-normals:period": "2006-2020",
     "noaa-climate-normals:time_index": 1,
@@ -53,6 +53,42 @@
     ]
   },
   "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/prcp-2006_2020-daily-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/tavg-2006_2020-daily-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/tmax-2006_2020-daily-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/tmin-2006_2020-daily-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/m2dprcp-2006_2020-daily-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/y2dprcp-2006_2020-daily-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
     {
       "rel": "root",
       "href": "../../catalog.json",

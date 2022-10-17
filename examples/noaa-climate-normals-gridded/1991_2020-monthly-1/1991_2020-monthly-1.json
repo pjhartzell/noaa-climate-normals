@@ -18,7 +18,7 @@
     ],
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T00:00:00Z",
-    "created": "2022-10-16T12:59:58.946074Z",
+    "created": "2022-10-17T14:03:31.333699Z",
     "noaa-climate-normals:frequency": "monthly",
     "noaa-climate-normals:period": "1991-2020",
     "noaa-climate-normals:time_index": 1,
@@ -53,6 +53,30 @@
     ]
   },
   "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/prcp-1991_2020-monthly-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/tavg-1991_2020-monthly-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/tmax-1991_2020-monthly-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/noaa-climate-normals-netcdf/items/tmin-1991_2020-monthly-normals-v1.0",
+      "type": "application/json",
+      "title": "Source NetCDF File from NOAA NCEI"
+    },
     {
       "rel": "root",
       "href": "../../catalog.json",

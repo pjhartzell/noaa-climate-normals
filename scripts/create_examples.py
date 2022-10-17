@@ -71,6 +71,10 @@ with TemporaryDirectory() as tmp_dir:
         ),
         frequency=gridded_constants.Frequency("daily"),
         cog_dir=tmp_dir,
+        api_url_netcdf=(
+            "https://planetarycomputer.microsoft.com/api/stac/v1/"
+            "collections/noaa-climate-normals-netcdf/items/"
+        ),
         time_index=1,
     )
     gridded.add_item(gridded_item)
@@ -79,6 +83,10 @@ with TemporaryDirectory() as tmp_dir:
             nc_href=str(external_data / "prcp-1991_2020-monthly-normals-v1.0.nc"),
             frequency=gridded_constants.Frequency(frequency),
             cog_dir=tmp_dir,
+            api_url_netcdf=(
+                "https://planetarycomputer.microsoft.com/api/stac/v1/"
+                "collections/noaa-climate-normals-netcdf/items/"
+            ),
             time_index=1,
         )
         gridded.add_item(gridded_item)

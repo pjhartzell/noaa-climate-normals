@@ -1,4 +1,3 @@
-import os
 from datetime import datetime, timezone
 
 from pystac import Asset, Collection, Item, Summaries
@@ -9,7 +8,6 @@ from shapely.geometry import box, mapping
 
 from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from ..gridded.constants import DOCUMENTATION, README
-from . import netcdf_item_id
 from .constants import (
     BBOX,
     COLLECTION,
@@ -19,6 +17,7 @@ from .constants import (
     PERIODS,
     VARIABLES,
 )
+from .utils import netcdf_item_id
 
 
 def create_item(nc_href: str) -> Item:
