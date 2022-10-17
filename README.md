@@ -13,7 +13,6 @@
   - [raster](https://github.com/stac-extensions/raster)
   - [scientific](https://github.com/stac-extensions/scientific)
   - [table](https://github.com/stac-extensions/table)
-
 - Extra fields:
   - `noaa-climate-normals:period`: Time period from which the climate normals were computed, e.g., 1991-2020.
   - `noaa-climate-normals:frequency`: Temporal interval (frequency) of the climate normals, e.g., daily or hourly.
@@ -47,13 +46,13 @@ Three Collections, and corresponding Items, can be generated with this package:
 
     - [tabular](examples/noaa-climate-normals-tabular/collection.json)
     - [gridded](examples/noaa-climate-normals-gridded/collection.json)
-    - netcdf
+    - [netcdf](examples/noaa-climate-normals-netcdf/collection.json)
 
 - Items
 
     - [tabular](examples/noaa-climate-normals-tabular/1981_2010-daily/1981_2010-daily.json)
     - [gridded](examples/noaa-climate-normals-gridded/1991_2020-monthly-1/1991_2020-monthly-1.json)
-    - netcdf
+    - [netcdf](examples/noaa-climate-normals-netcdf/prcp-1991_2020-monthly-normals-v1.0/prcp-1991_2020-monthly-normals-v1.0.json)
 
 ## Installation
 
