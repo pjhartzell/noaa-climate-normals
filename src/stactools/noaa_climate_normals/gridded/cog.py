@@ -125,6 +125,6 @@ def cog_asset(data_var: str, cog: Dict[str, str]) -> Asset:
         href=make_absolute_href(cog["href"]),
         description=cog["description"],
         media_type=MediaType.COG,
-        roles=["data", "cloud-optimized"],
+        roles=["data"],
         extra_fields={"raster:bands": raster_bands},
     )

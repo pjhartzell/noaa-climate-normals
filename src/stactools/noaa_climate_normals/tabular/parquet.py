@@ -49,7 +49,7 @@ def create_parquet(
         "table:primary_geometry": constants.PARQUET_GEOMETRY_COL,
         "table:columns": columns,
         "table:row_count": geodataframe.shape[0],
-        "roles": ["data", "cloud-optimized"],
+        "roles": ["data"],
     }
 
     return geodataframe_dict

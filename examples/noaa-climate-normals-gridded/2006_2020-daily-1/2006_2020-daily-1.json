@@ -18,7 +18,7 @@
     ],
     "start_datetime": "2006-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T00:00:00Z",
-    "created": "2022-10-17T14:03:28.737684Z",
+    "created": "2022-10-17T18:44:03.485069Z",
     "noaa-climate-normals:frequency": "daily",
     "noaa-climate-normals:period": "2006-2020",
     "noaa-climate-normals:time_index": 1,
@@ -122,8 +122,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "dlytavg_norm": {
@@ -139,8 +138,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "dlytmax_norm": {
@@ -156,8 +154,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "dlytmin_norm": {
@@ -173,8 +170,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "m2dprcp_norm": {
@@ -190,8 +186,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "y2dprcp_norm": {
@@ -207,8 +202,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     }
   },

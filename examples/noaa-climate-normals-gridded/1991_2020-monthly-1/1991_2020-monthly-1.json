@@ -18,7 +18,7 @@
     ],
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T00:00:00Z",
-    "created": "2022-10-17T14:03:31.333699Z",
+    "created": "2022-10-17T18:44:06.104748Z",
     "noaa-climate-normals:frequency": "monthly",
     "noaa-climate-normals:period": "1991-2020",
     "noaa-climate-normals:time_index": 1,
@@ -110,8 +110,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlyprcp_std": {
@@ -127,8 +126,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlyprcp_min": {
@@ -144,8 +142,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlyprcp_max": {
@@ -161,8 +158,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlyprcp_flag": {
@@ -178,8 +174,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytavg_norm": {
@@ -195,8 +190,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytavg_std": {
@@ -212,8 +206,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytavg_min": {
@@ -229,8 +222,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytavg_max": {
@@ -246,8 +238,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytavg_flag": {
@@ -263,8 +254,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmax_norm": {
@@ -280,8 +270,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmax_std": {
@@ -297,8 +286,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmax_min": {
@@ -314,8 +302,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmax_max": {
@@ -331,8 +318,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmax_flag": {
@@ -348,8 +334,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmin_norm": {
@@ -365,8 +350,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmin_std": {
@@ -382,8 +366,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmin_min": {
@@ -399,8 +382,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmin_max": {
@@ -416,8 +398,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "mlytmin_flag": {
@@ -433,8 +414,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     }
   },

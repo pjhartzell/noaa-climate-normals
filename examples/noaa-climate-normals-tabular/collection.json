@@ -78,8 +78,7 @@
       "title": "GeoParquet for all stations",
       "table:primary_geometry": "geometry",
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     }
   },

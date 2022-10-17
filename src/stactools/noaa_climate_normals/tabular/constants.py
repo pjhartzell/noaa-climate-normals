@@ -209,7 +209,7 @@ ITEM_ASSETS = {
             "type": PARQUET_MEDIA_TYPE,
             "title": PARQUET_ASSET_TITLE,
             "table:primary_geometry": PARQUET_GEOMETRY_COL,
-            "roles": ["data", "cloud-optimized"],
+            "roles": ["data"],
         }
     )
 }

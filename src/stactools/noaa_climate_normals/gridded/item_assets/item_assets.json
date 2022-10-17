@@ -11,8 +11,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "dlytavg_norm": {
@@ -27,8 +26,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "dlytmax_norm": {
@@ -43,8 +41,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "dlytmin_norm": {
@@ -59,8 +56,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "m2dprcp_norm": {
@@ -75,8 +71,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "y2dprcp_norm": {
@@ -91,8 +86,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlyprcp_norm": {
@@ -107,8 +101,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlyprcp_std": {
@@ -123,8 +116,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlyprcp_min": {
@@ -139,8 +131,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlyprcp_max": {
@@ -155,8 +146,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlyprcp_flag": {
@@ -171,8 +161,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytavg_norm": {
@@ -187,8 +176,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytavg_std": {
@@ -203,8 +191,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytavg_min": {
@@ -219,8 +206,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytavg_max": {
@@ -235,8 +221,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytavg_flag": {
@@ -251,8 +236,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmax_norm": {
@@ -267,8 +251,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmax_std": {
@@ -283,8 +266,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmax_min": {
@@ -299,8 +281,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmax_max": {
@@ -315,8 +296,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmax_flag": {
@@ -331,8 +311,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmin_norm": {
@@ -347,8 +326,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmin_std": {
@@ -363,8 +341,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmin_min": {
@@ -379,8 +356,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmin_max": {
@@ -395,8 +371,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "mlytmin_flag": {
@@ -411,8 +386,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seasprcp_norm": {
@@ -427,8 +401,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seasprcp_std": {
@@ -443,8 +416,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seasprcp_min": {
@@ -459,8 +431,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seasprcp_max": {
@@ -475,8 +446,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seasprcp_flag": {
@@ -491,8 +461,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastavg_norm": {
@@ -507,8 +476,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastavg_std": {
@@ -523,8 +491,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastavg_min": {
@@ -539,8 +506,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastavg_max": {
@@ -555,8 +521,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastavg_flag": {
@@ -571,8 +536,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmax_norm": {
@@ -587,8 +551,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmax_std": {
@@ -603,8 +566,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmax_min": {
@@ -619,8 +581,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmax_max": {
@@ -635,8 +596,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmax_flag": {
@@ -651,8 +611,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmin_norm": {
@@ -667,8 +626,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmin_std": {
@@ -683,8 +641,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmin_min": {
@@ -699,8 +656,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmin_max": {
@@ -715,8 +671,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "seastmin_flag": {
@@ -731,8 +686,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "annprcp_norm": {
@@ -747,8 +701,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "annprcp_std": {
@@ -763,8 +716,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "annprcp_min": {
@@ -779,8 +731,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "annprcp_max": {
@@ -795,8 +746,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "annprcp_flag": {
@@ -811,8 +761,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntavg_norm": {
@@ -827,8 +776,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntavg_std": {
@@ -843,8 +791,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntavg_min": {
@@ -859,8 +806,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntavg_max": {
@@ -875,8 +821,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntavg_flag": {
@@ -891,8 +836,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmax_norm": {
@@ -907,8 +851,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmax_std": {
@@ -923,8 +866,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmax_min": {
@@ -939,8 +881,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmax_max": {
@@ -955,8 +896,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmax_flag": {
@@ -971,8 +911,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmin_norm": {
@@ -987,8 +926,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmin_std": {
@@ -1003,8 +941,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmin_min": {
@@ -1019,8 +956,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmin_max": {
@@ -1035,8 +971,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     },
     "anntmin_flag": {
@@ -1051,8 +986,7 @@
             }
         ],
         "roles": [
-            "data",
-            "cloud-optimized"
+            "data"
         ]
     }
 }

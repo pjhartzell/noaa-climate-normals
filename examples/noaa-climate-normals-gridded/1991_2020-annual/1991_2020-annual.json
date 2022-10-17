@@ -18,7 +18,7 @@
     ],
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T00:00:00Z",
-    "created": "2022-10-17T14:03:36.554338Z",
+    "created": "2022-10-17T18:44:11.372139Z",
     "noaa-climate-normals:frequency": "annual",
     "noaa-climate-normals:period": "1991-2020",
     "title": "1991-2020 Annual Climate Normals",
@@ -109,8 +109,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "annprcp_std": {
@@ -126,8 +125,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "annprcp_min": {
@@ -143,8 +141,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "annprcp_max": {
@@ -160,8 +157,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "annprcp_flag": {
@@ -177,8 +173,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntavg_norm": {
@@ -194,8 +189,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntavg_std": {
@@ -211,8 +205,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntavg_min": {
@@ -228,8 +221,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntavg_max": {
@@ -245,8 +237,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntavg_flag": {
@@ -262,8 +253,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmax_norm": {
@@ -279,8 +269,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmax_std": {
@@ -296,8 +285,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmax_min": {
@@ -313,8 +301,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmax_max": {
@@ -330,8 +317,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmax_flag": {
@@ -347,8 +333,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmin_norm": {
@@ -364,8 +349,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmin_std": {
@@ -381,8 +365,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmin_min": {
@@ -398,8 +381,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmin_max": {
@@ -415,8 +397,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     },
     "anntmin_flag": {
@@ -432,8 +413,7 @@
         }
       ],
       "roles": [
-        "data",
-        "cloud-optimized"
+        "data"
       ]
     }
   },
