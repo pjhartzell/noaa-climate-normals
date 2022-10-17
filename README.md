@@ -15,8 +15,8 @@
   - [table](https://github.com/stac-extensions/table)
 
 - Extra fields:
-  - `noaa-climate-normals:period`: A year range indicating the time period from which the climate normals were computed.
-  - `noaa-climate-normals:frequency`: The temporal interval for the climate normals, e.g., daily or hourly.
+  - `noaa-climate-normals:period`: Time period from which the climate normals were computed, e.g., 1991-2020.
+  - `noaa-climate-normals:frequency`: Temporal interval (frequency) of the climate normals, e.g., daily or hourly.
 - [Browse the example in human-readable form](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/pjhartzell/noaa-climate-normals/main/examples/catalog.json)
 
 ## Background
