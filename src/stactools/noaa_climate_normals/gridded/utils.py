@@ -5,8 +5,6 @@ import os
 from typing import Any, Dict, Optional
 
 import pkg_resources
-from pystac import Asset
-from pystac.utils import make_absolute_href
 
 from . import constants
 
@@ -31,24 +29,6 @@ def nc_href_dict(nc_href: str, frequency: constants.Frequency) -> Dict[str, str]
         href_dict.pop("m2dprcp")
         href_dict.pop("y2dprcp")
     return href_dict
-
-
-def nc_asset(prefix: str, nc_href: str) -> Asset:
-    """Creates a STAC Asset for a NetCDF file.
-
-    Args:
-        prefix (str): Weather variable type from constants.PREFIXES
-        nc_href (str): HREF to the NetCDF file for which to create an Asset.
-
-    Returns:
-        Asset: A STAC Asset for the NetCDF file.
-    """
-    return Asset(
-        href=make_absolute_href(nc_href),
-        description=f"{constants.PREFIXES[prefix]} source data",
-        media_type=constants.NETCDF_MEDIA_TYPE,
-        roles=constants.NETCDF_ROLES,
-    )
 
 
 def item_title(
