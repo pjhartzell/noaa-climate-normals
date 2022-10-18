@@ -16,7 +16,7 @@
 - Extra fields:
   - `noaa-climate-normals:period`: Time period from which the climate normals were computed, e.g., 1991-2020.
   - `noaa-climate-normals:frequency`: Temporal interval (frequency) of the climate normals, e.g., daily or hourly.
-- [Browse the example in human-readable form](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/pjhartzell/noaa-climate-normals/main/examples/catalog.json)
+- [Browse the example in human-readable form](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/stactools-packages/noaa-climate-normals/main/examples/catalog.json)
 
 ## Background
 
@@ -26,17 +26,17 @@ Data is available in two forms: tabular and gridded. The tabular data consists o
 
 Three Collections, and corresponding Items, can be generated with this package:
 
-1. `noaa-climate-normals-tabular`
+1. noaa-climate-normals-tabular
 
     - Items for each Climate Normal time period (e.g., 1991-2020) and temporal interval (e.g., monthly) combination.
     - Each Item contains a single GeoParquet Asset created from weather station tabular data contained in CSV files.
 
-2. `noaa-climate-normals-gridded`
+2. noaa-climate-normals-gridded
 
     - Items for each Climate Normal time period (e.g., 1991-2020) and temporal interval timestep (e.g., a month or a day) combination.
     - Each Item contains COG Assets for all available weather variables.
 
-3. `noaa-climate-normals-netcdf`
+3. noaa-climate-normals-netcdf
 
     - Items for the NetCDF files that serve as the source data for the COGs in the gridded Collection.
 
