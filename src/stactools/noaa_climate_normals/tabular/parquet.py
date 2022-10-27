@@ -42,7 +42,7 @@ def create_parquet(
 
     geodataframe_dict = {
         "geometry": mapping(geodataframe.unary_union.convex_hull),
-        "bbox": list(geodataframe.total_bounds),
+        "bbox": [float(b) for b in list(geodataframe.total_bounds)],
         "href": parquet_path,
         "type": constants.PARQUET_MEDIA_TYPE,
         "title": constants.PARQUET_ASSET_TITLE,
