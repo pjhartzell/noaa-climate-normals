@@ -77,8 +77,8 @@ def create_item(
     )
 
     parquet_dict["href"] = make_absolute_href(parquet_dict["href"])
-    item.add_asset("parquet", Asset.from_dict(parquet_dict))
-    TableExtension.ext(item.assets["parquet"], add_if_missing=True)
+    item.add_asset("geoparquet", Asset.from_dict(parquet_dict))
+    TableExtension.ext(item.assets["geoparquet"], add_if_missing=True)
 
     projection = ProjectionExtension.ext(item, add_if_missing=True)
     projection.epsg = int(constants.CRS[5:])

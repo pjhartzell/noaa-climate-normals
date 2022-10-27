@@ -204,7 +204,7 @@ PUBLICATION_DAILY_MONTHLY_ANNUALSEASONAL = Publication(
 )
 
 ITEM_ASSETS = {
-    "parquet": AssetDefinition(
+    "geoparquet": AssetDefinition(
         {
             "type": PARQUET_MEDIA_TYPE,
             "title": PARQUET_ASSET_TITLE,
