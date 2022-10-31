@@ -5,6 +5,7 @@ from typing import List
 import pytest
 
 from stactools.noaa_climate_normals.tabular.constants import Frequency, Period
+from stactools.noaa_climate_normals.tabular.parquet import create_parquet
 from stactools.noaa_climate_normals.tabular.stac import create_item
 from tests import test_data
 
@@ -37,11 +38,14 @@ def test_create_tabular_item(file_list: List[str]) -> None:
         hrefs.append(test_data.get_path(file))
 
     with TemporaryDirectory() as tmp_dir:
+        geoparquet_path = create_parquet(
+            csv_hrefs=hrefs,
+            frequency=Frequency(frequency),
+            period=Period(period),
+            parquet_dir=tmp_dir,
+        )
         item = create_item(
-            hrefs,
-            Frequency(frequency),
-            Period(period),
-            tmp_dir,
+            geoparquet_href=geoparquet_path,
         )
         assert item.id == f"{period.replace('-', '_')}-{frequency}"
         assert os.path.isfile(os.path.join(tmp_dir, f"{item.id}.parquet"))

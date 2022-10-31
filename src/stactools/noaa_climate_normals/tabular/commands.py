@@ -6,6 +6,7 @@ from click import Command, Group
 from pystac import CatalogType
 
 from .constants import Frequency, Period
+from .parquet import create_parquet
 from .stac import create_collection, create_item
 
 logger = logging.getLogger(__name__)
@@ -19,23 +20,19 @@ def create_command(noaa_climate_normals: Group) -> Command:
     def tabular() -> None:
         pass
 
-    @tabular.command("create-item", short_help="Creates a STAC Item")
+    @tabular.command("create-geoparquet", short_help="Creates a GeoParquet file")
     @click.argument("file-list")
     @click.argument("frequency", type=click.Choice([f.value for f in Frequency]))
     @click.argument("period", type=click.Choice([p.value for p in Period]))
     @click.argument("destination")
-    def create_item_command(
+    def create_geoparquet_command(
         file_list: str,
         frequency: str,
         period: str,
         destination: str,
     ) -> None:
-        """Creates a STAC Item for tabular data from a single temporal frequency
-        and normal period.
-
-        The Item will contain a single GeoParquet asset created from CSV files
-        listed in a text file. The Item and GeoParquet file are saved to the
-        specified `destination`.
+        """
+        Creates a GeoParquet file from CSV files listed in a text file.
 
         \b
         Args:
@@ -45,15 +42,34 @@ def create_command(noaa_climate_normals: Group) -> Command:
                 'annualseasonal'.
             period (Period): Choice of '1981-2010', '1991-2020', or
                 '2006-2020'.
-            destination (str): Directory for GeoParquet file and STAC Item.
+            destination (str): Directory for the created GeoParquet file.
         """
         with open(file_list) as f:
             hrefs = [line.strip() for line in f.readlines()]
-
         if not os.path.exists(destination):
             os.mkdir(destination)
+        parquet_path = create_parquet(
+            csv_hrefs=hrefs,
+            frequency=Frequency(frequency),
+            period=Period(period),
+            parquet_dir=destination,
+        )
+        click.echo(f"GeoParquet file created at {parquet_path}")
 
-        item = create_item(hrefs, Frequency(frequency), Period(period), destination)
+    @tabular.command("create-item", short_help="Creates a STAC Item")
+    @click.argument("geoparquet-href")
+    @click.argument("destination")
+    def create_item_command(
+        geoparquet_href: str,
+        destination: str,
+    ) -> None:
+        """Creates a STAC Item for a GeoParquet file.
+
+        \b
+        Args:
+            destination (str): Directory for the created Item JSON file.
+        """
+        item = create_item(geoparquet_href=geoparquet_href)
         item.set_self_href(os.path.join(destination, item.id + ".json"))
         item.make_asset_hrefs_relative()
         item.validate()
@@ -70,7 +86,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
 
         \b
         Args:
-            destination (str): Path to the created collection JSON file.
+            destination (str): Path for the Collection JSON file.
         """
         collection = create_collection()
         collection.set_self_href(destination)

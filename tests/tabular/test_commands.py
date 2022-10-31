@@ -14,7 +14,7 @@ class CommandsTest(CliTestCase):
     def create_subcommand_functions(self) -> List[Callable[[Group], Command]]:
         return [create_noaa_climate_normals_command]
 
-    def test_create_tabular_item(self) -> None:
+    def test_create_geoparquet_and_tabular_item(self) -> None:
         with TemporaryDirectory() as tmp_dir:
             file_list_path = f"{tmp_dir}/test_monthly_1981-2010.txt"
             with open(file_list_path, "w") as f:
@@ -30,8 +30,15 @@ class CommandsTest(CliTestCase):
                 )
 
             result = self.run_command(
-                f"noaa-climate-normals tabular create-item {file_list_path} "
+                f"noaa-climate-normals tabular create-geoparquet {file_list_path} "
                 f"monthly 1981-2010 {tmp_dir}"
+            )
+            assert result.exit_code == 0, "\n{}".format(result.output)
+            geoparquet_path = os.path.join(tmp_dir, "1981_2010-monthly.parquet")
+            assert os.path.isfile(geoparquet_path)
+
+            result = self.run_command(
+                f"noaa-climate-normals tabular create-item {geoparquet_path} {tmp_dir}"
             )
             assert result.exit_code == 0, "\n{}".format(result.output)
 
