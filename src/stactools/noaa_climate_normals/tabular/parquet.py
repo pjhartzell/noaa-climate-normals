@@ -10,6 +10,7 @@ import pkg_resources
 import pyarrow.parquet as pq
 from shapely.geometry import box, mapping
 from stactools.core.io import ReadHrefModifier
+from tqdm import tqdm
 
 from ..utils import modify_href
 from . import constants
@@ -43,10 +44,17 @@ def create_parquet(
     read_csv_hrefs = [
         modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
     ]
-    dataframes = (pd.read_csv(href) for href in read_csv_hrefs)
-    dataframe = pd.concat(dataframes, ignore_index=True).copy()
-    dataframe.columns = dataframe.columns.str.lower()
 
+    print("Reading CSV files.")
+    dataframes = []
+    for csv_href in tqdm(read_csv_hrefs):
+        dataframes.append(pd.read_csv(csv_href))
+
+    print("Concatenating dataframes.")
+    dataframe = pd.concat(dataframes, ignore_index=True).copy()
+
+    print("Finishing up.")
+    dataframe.columns = dataframe.columns.str.lower()
     make_categorical(dataframe)
 
     parquet_filename = f"{period.value.replace('-', '_')}-{frequency}.parquet"
@@ -61,6 +69,7 @@ def create_parquet(
             crs=constants.CRS,
         ),
     ).to_parquet(parquet_path)
+    print(f"Done. GeoParquet file written to '{parquet_path}'.\n")
 
     return parquet_path
 
