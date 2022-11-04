@@ -2,25 +2,27 @@
 
 """Creates the example STAC metadata, COGS, and GeoParquet.
 
-Assumptions:
-- The test suite has been run, so all external data have been downloaded.
 """
-
-from azure.storage.blob import ContainerClient
+import logging
+from pathlib import Path
 
 from stactools.noaa_climate_normals.tabular.constants import Frequency, Period
 from stactools.noaa_climate_normals.tabular.parquet import create_parquet
 
-blob_container = "https://noaanormals.blob.core.windows.net/climate-normals/"
+logging.basicConfig(format="%(message)s")
+logger = logging.getLogger()
+logger.setLevel("INFO")
+
+csv_base_directory = "/Volumes/Samsung_T5/data/ncn/tabular/"
 prefixes = [
-    # "normals-daily/1981-2010/access/",
-    # "normals-daily/1991-2020/access/",
-    # "normals-daily/2006-2020/access/",
-    # "normals-hourly/1981-2010/access/",
-    # "normals-hourly/1991-2020/access/",
-    # "normals-hourly/2006-2020/access/",
-    # "normals-monthly/1981-2010/access/",
-    # "normals-monthly/1991-2020/access/",
+    "normals-daily/1981-2010/access/",
+    "normals-daily/1991-2020/access/",
+    "normals-daily/2006-2020/access/",
+    "normals-hourly/1981-2010/access/",
+    "normals-hourly/1991-2020/access/",
+    "normals-hourly/2006-2020/access/",
+    "normals-monthly/1981-2010/access/",
+    "normals-monthly/1991-2020/access/",
     "normals-monthly/2006-2020/access/",
     "normals-annualseasonal/1981-2010/access/",
     "normals-annualseasonal/1991-2020/access/",
@@ -28,14 +30,16 @@ prefixes = [
 ]
 
 for prefix in prefixes:
-    print(f"Working on CSVs in '{prefix}'.")
-    container = ContainerClient.from_container_url(blob_container)
-    blob_list = list(container.list_blobs(name_starts_with=prefix))
-    href_list = [f"{blob_container}{blob['name']}" for blob in blob_list]
+    logger.info(f"Working on CSVs in '{prefix}'")
+    csv_paths = list(Path(csv_base_directory, prefix).glob("*.csv"))
+    csv_hrefs = [path.as_posix() for path in csv_paths]
 
     period = Period(prefix.split("/")[1])
     frequency = Frequency(prefix.split("/")[0].split("-")[1])
 
     geoparquet_href = create_parquet(
-        csv_hrefs=href_list, frequency=frequency, period=period, parquet_dir="."
+        csv_hrefs=csv_hrefs,
+        frequency=frequency,
+        period=period,
+        parquet_dir="geoparquet",
     )

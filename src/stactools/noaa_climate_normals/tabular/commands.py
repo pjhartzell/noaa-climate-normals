@@ -67,6 +67,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
 
         \b
         Args:
+            geoparquet_href (str): HREF to GeoParquet file.
             destination (str): Directory for the created Item JSON file.
         """
         item = create_item(geoparquet_href=geoparquet_href)

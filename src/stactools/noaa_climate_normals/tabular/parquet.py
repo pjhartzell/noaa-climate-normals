@@ -45,17 +45,43 @@ def create_parquet(
         modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
     ]
 
-    print("Reading CSV files.")
+    logger.info("Converting CSV files to dataframes:")
     dataframes = []
     for csv_href in tqdm(read_csv_hrefs):
         dataframes.append(pd.read_csv(csv_href))
 
-    print("Concatenating dataframes.")
+    logger.info("Concatenating dataframes.")
     dataframe = pd.concat(dataframes, ignore_index=True).copy()
 
-    print("Finishing up.")
+    # Parquet does not like columns containing data of multiple types. Some CSV
+    # columns contain string and integer types, where the valid data is a string
+    # and an integer flag is used to indicate why data is missing. Mixed column
+    # data types also occur when concatenating dataframes with different columns.
+    # In this case numpy.nan values are used as fill. These nan values are float
+    # types, which creates columns of mixed types when valid data is not float
+    # type. These issues only seem to occur for columns where valid data are
+    # string type, so we convert the column values to strings when mixed types
+    # are encountered. An error is raised if we encounter an unexpected mix of
+    # types in a column (a mix that does not contain a string type).
+    for column in dataframe.columns:
+        column_types = set(dataframe[column].apply(type).values)
+        if len(column_types) > 1 and type(str()) in column_types:
+            logger.debug(
+                f"Column '{column}' has mixed data types: {column_types}. "
+                f"Converting the column to 'str' data type."
+            )
+            dataframe[column] = dataframe[column].astype(str)
+        elif len(column_types) != 1:
+            print(dataframe[column].values)
+            print()
+            raise ValueError(
+                f"Unexpected data type mix in Column '{column}': {column_types}."
+            )
+
+    logger.info("Finishing up.")
     dataframe.columns = dataframe.columns.str.lower()
     make_categorical(dataframe)
+    dataframe = dataframe.copy()  # de-fragment
 
     parquet_filename = f"{period.value.replace('-', '_')}-{frequency}.parquet"
     parquet_path = os.path.join(parquet_dir, parquet_filename)
@@ -69,7 +95,7 @@ def create_parquet(
             crs=constants.CRS,
         ),
     ).to_parquet(parquet_path)
-    print(f"Done. GeoParquet file written to '{parquet_path}'.\n")
+    logger.info(f"Done. GeoParquet file written to '{parquet_path}'\n")
 
     return parquet_path
 
@@ -114,7 +140,9 @@ def parquet_metadata(
     """
     with fsspec.open(parquet_href) as fobj:
         metadata = pq.read_metadata(fobj)
-        columns_types = {col.name.lower(): col.physical_type for col in metadata.schema}
+        columns_types = {
+            col.name.lower(): col.physical_type.lower() for col in metadata.schema
+        }
         num_rows = metadata.num_rows
         schema = pq.read_schema(fobj)
         bbox = json.loads(schema.metadata[b"geo"].decode())["columns"]["geometry"][
