@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import sys
 from typing import Any, Dict, List, Optional
 
 import fsspec
@@ -45,12 +46,12 @@ def create_parquet(
         modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
     ]
 
-    logger.info("Converting CSV files to dataframes:")
+    sys.stdout.write("Converting CSV files to dataframes:")
     dataframes = []
     for csv_href in tqdm(read_csv_hrefs):
         dataframes.append(pd.read_csv(csv_href))
 
-    logger.info("Concatenating dataframes.")
+    sys.stdout.write("Concatenating dataframes.")
     dataframe = pd.concat(dataframes, ignore_index=True).copy()
 
     # Parquet does not like columns containing data of multiple types. Some CSV
@@ -66,7 +67,7 @@ def create_parquet(
     for column in dataframe.columns:
         column_types = set(dataframe[column].apply(type).values)
         if len(column_types) > 1 and type(str()) in column_types:
-            logger.debug(
+            sys.stdout.write(
                 f"Column '{column}' has mixed data types: {column_types}. "
                 f"Converting the column to 'str' data type."
             )
@@ -78,7 +79,7 @@ def create_parquet(
                 f"Unexpected data type mix in Column '{column}': {column_types}."
             )
 
-    logger.info("Finishing up.")
+    sys.stdout.write("Finishing up.")
     dataframe.columns = dataframe.columns.str.lower()
     make_categorical(dataframe)
     dataframe = dataframe.copy()  # de-fragment
@@ -95,7 +96,7 @@ def create_parquet(
             crs=constants.CRS,
         ),
     ).to_parquet(parquet_path)
-    logger.info(f"Done. GeoParquet file written to '{parquet_path}'\n")
+    sys.stdout.write(f"Done. GeoParquet file written to '{parquet_path}'\n")
 
     return parquet_path
 
