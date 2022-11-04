@@ -11,10 +11,12 @@ import pkg_resources
 import pyarrow.parquet as pq
 from shapely.geometry import box, mapping
 from stactools.core.io import ReadHrefModifier
-from tqdm import tqdm
 
 from ..utils import modify_href
 from . import constants
+
+# from tqdm import tqdm
+
 
 logger = logging.getLogger(__name__)
 
@@ -46,12 +48,12 @@ def create_parquet(
         modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
     ]
 
-    sys.stdout.write("Converting CSV files to dataframes:")
+    sys.stderr.write("Converting CSV files to dataframes.\n")
     dataframes = []
-    for csv_href in tqdm(read_csv_hrefs):
+    for csv_href in read_csv_hrefs:
         dataframes.append(pd.read_csv(csv_href))
 
-    sys.stdout.write("Concatenating dataframes.")
+    sys.stderr.write("Concatenating dataframes.\n")
     dataframe = pd.concat(dataframes, ignore_index=True).copy()
 
     # Parquet does not like columns containing data of multiple types. Some CSV
@@ -64,12 +66,13 @@ def create_parquet(
     # string type, so we convert the column values to strings when mixed types
     # are encountered. An error is raised if we encounter an unexpected mix of
     # types in a column (a mix that does not contain a string type).
+    sys.stderr.write("Inspecting columns.\n")
     for column in dataframe.columns:
         column_types = set(dataframe[column].apply(type).values)
         if len(column_types) > 1 and type(str()) in column_types:
-            sys.stdout.write(
+            sys.stderr.write(
                 f"Column '{column}' has mixed data types: {column_types}. "
-                f"Converting the column to 'str' data type."
+                f"Converting the column to 'str' data type.\n"
             )
             dataframe[column] = dataframe[column].astype(str)
         elif len(column_types) != 1:
@@ -79,7 +82,7 @@ def create_parquet(
                 f"Unexpected data type mix in Column '{column}': {column_types}."
             )
 
-    sys.stdout.write("Finishing up.")
+    sys.stderr.write("Finishing up.\n")
     dataframe.columns = dataframe.columns.str.lower()
     make_categorical(dataframe)
     dataframe = dataframe.copy()  # de-fragment
@@ -96,7 +99,7 @@ def create_parquet(
             crs=constants.CRS,
         ),
     ).to_parquet(parquet_path)
-    sys.stdout.write(f"Done. GeoParquet file written to '{parquet_path}'\n")
+    sys.stderr.write(f"Done. GeoParquet file written to '{parquet_path}'\n")
 
     return parquet_path
 
