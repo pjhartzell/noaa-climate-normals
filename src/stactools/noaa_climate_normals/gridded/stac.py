@@ -48,8 +48,8 @@ def create_item(
             "derived_from" Link for each source NetCDF file.
         cog_hrefs (Optional[List[str]]): List of HREFs to existing COGs. New
             COGs will not be created if they exist in the list.
-            holding monthly frequency data.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
+            to modify an HREF, e.g., to add a token to a URL.
 
     Returns:
         Item: A STAC Item for a single timestep of Climate Normal data.
@@ -110,6 +110,11 @@ def create_item(
 
 
 def create_collection() -> Collection:
+    """Creates a STAC Collection for gridded data.
+
+    Returns:
+        Collection: A STAC Collection for gridded Items.
+    """
     collection = Collection(**constants.COLLECTION)
 
     collection.providers = PROVIDERS

@@ -1,6 +1,5 @@
 import json
 import logging
-import os
 from typing import Any, Dict, List, Optional
 
 import fsspec
@@ -8,11 +7,13 @@ import geopandas as gpd
 import pandas as pd
 import pkg_resources
 import pyarrow.parquet as pq
-from shapely.geometry import box, mapping
+from pystac.utils import make_absolute_href
+from shapely.geometry import mapping
 from stactools.core.io import ReadHrefModifier
 
 from ..utils import modify_href
 from . import constants
+from .utils import formatted_frequency, id_string
 
 logger = logging.getLogger(__name__)
 
@@ -21,24 +22,24 @@ def create_parquet(
     csv_hrefs: List[str],
     frequency: constants.Frequency,
     period: constants.Period,
-    parquet_dir: str,
+    parquet_path: str,
     read_href_modifier: Optional[ReadHrefModifier] = None,
-) -> str:
+) -> Dict[str, Any]:
     """Creates a GeoParquet file from a list of CSV files.
 
     Args:
-        csv_hrefs (List[str]): List of HREFs to CSV files that will be
+        csv_hrefs (List[Dict[str, Any]]): List of HREFs to CSV files that will be
             converted to a single parquet file.
         frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
             'hourly'.
         period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
-        parquet_dir (str): Destination directory for the created parquet file.
+        parquet_path (str): Path for created parquet file.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
             to modify an HREF, e.g., to add a token to a URL.
 
     Returns:
-        str: Path to created GeoParquet file.
+        str: Dictionary of metadata for asset and Item creation.
     """
     read_csv_hrefs = [
         modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
@@ -51,12 +52,12 @@ def create_parquet(
     dataframe = pd.concat(dataframes, ignore_index=True).copy()
 
     # Parquet does not like columns containing data of multiple types. Some CSV
-    # columns contain string and integer types, where the valid data is a string
-    # and an integer flag is used to indicate why data is missing. Mixed column
+    # columns contain string and integer types, where valid data is a string
+    # and integer flags are used to indicate why data is missing. Mixed column
     # data types also occur when concatenating dataframes with different columns.
     # In this case numpy.nan values are used as fill. These nan values are float
     # types, which creates columns of mixed types when valid data is not float
-    # type. These issues only seem to occur for columns where valid data are
+    # type. These issues only appear to occur for columns where valid data are
     # string type, so we convert the column values to strings when mixed types
     # are encountered. An error is raised if we encounter an unexpected mix of
     # types in a column (a mix that does not contain a string type).
@@ -65,7 +66,7 @@ def create_parquet(
         if len(column_types) > 1 and type(str()) in column_types:
             logger.info(
                 f"Column '{column}' has mixed data types: {column_types}. "
-                f"Converting the column to 'str' data type.\n"
+                f"Converting the column to 'str' data type."
             )
             dataframe[column] = dataframe[column].astype(str)
         elif len(column_types) != 1:
@@ -74,13 +75,12 @@ def create_parquet(
             )
 
     dataframe.columns = dataframe.columns.str.lower()
+
     make_categorical(dataframe)
+
     dataframe = dataframe.copy()  # de-fragment
 
-    parquet_filename = f"{period.value.replace('-', '_')}-{frequency}.parquet"
-    parquet_path = os.path.join(parquet_dir, parquet_filename)
-
-    gpd.GeoDataFrame(
+    geodataframe = gpd.GeoDataFrame(
         data=dataframe,
         geometry=gpd.points_from_xy(
             x=dataframe.longitude,
@@ -88,9 +88,12 @@ def create_parquet(
             z=dataframe.elevation,
             crs=constants.CRS,
         ),
-    ).to_parquet(parquet_path)
+    )
+    geodataframe.to_parquet(parquet_path)
 
-    return parquet_path
+    geometry = mapping(geodataframe.unary_union.convex_hull)
+
+    return parquet_metadata(parquet_path, frequency, period, geometry=geometry)
 
 
 def make_categorical(df: pd.DataFrame) -> None:
@@ -117,6 +120,8 @@ def parquet_metadata(
     parquet_href: str,
     frequency: constants.Frequency,
     period: constants.Period,
+    geometry: Optional[Dict[str, Any]] = None,
+    read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Dict[str, Any]:
     """Generate metadata from a GeoParquet file for use in STAC Asset and Item
     creation.
@@ -127,23 +132,35 @@ def parquet_metadata(
             'hourly'.
         period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
+        geometry (Optional[Dict[str, Any]]: Convex hull of GeoParquet points in
+            GeoJSON format. Only the GeoParquet file metadata needs to be
+            touched when this option is provided.
+        read_href_modifier (Optional[ReadHrefModifier]): An optional function
+            to modify an HREF, e.g., to add a token to a URL.
 
     Returns:
         Dict[str, Any]: Dictionary of metadata for asset and Item creation.
     """
-    with fsspec.open(parquet_href) as fobj:
+    read_parquet_href = modify_href(parquet_href, read_href_modifier)
+    with fsspec.open(read_parquet_href) as fobj:
         metadata = pq.read_metadata(fobj)
         columns_types = {
             col.name.lower(): col.physical_type.lower() for col in metadata.schema
         }
         num_rows = metadata.num_rows
+
         schema = pq.read_schema(fobj)
         bbox = json.loads(schema.metadata[b"geo"].decode())["columns"]["geometry"][
             "bbox"
         ]
 
+        if not geometry:
+            geodataframe = gpd.read_parquet(fobj, columns=["geometry"])
+            geometry = mapping(geodataframe.unary_union.convex_hull)
+
     return {
-        "geometry": mapping(box(*bbox)),
+        "href": make_absolute_href(parquet_href),
+        "geometry": geometry,
         "bbox": bbox,
         "type": constants.PARQUET_MEDIA_TYPE,
         "title": constants.PARQUET_ASSET_TITLE,
@@ -239,21 +256,12 @@ def get_tables() -> Dict[int, Dict[str, str]]:
             descriptions.
     """
     tables: Dict[int, Dict[str, str]] = {}
-    idx = 0
-    for period in constants.Period:
+    for idx, period in enumerate(constants.Period):
         for frequency in constants.Frequency:
             tables[idx] = {}
-            tables[idx]["name"] = f"{period.value.replace('-', '_')}-{frequency}"
-
-            if frequency is constants.Frequency.ANNUALSEASONAL:
-                formatted_frequency = "Annual/Seasonal"
-            else:
-                formatted_frequency = frequency.value.capitalize()
-
+            tables[idx]["name"] = id_string(frequency, period)
             tables[idx][
                 "description"
-            ] = f"{formatted_frequency} Climate Normals for Period {period}"
-
-            idx += 1
+            ] = f"{formatted_frequency(frequency)} Climate Normals for Period {period}"
 
     return tables

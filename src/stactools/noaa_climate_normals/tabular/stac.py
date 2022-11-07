@@ -1,55 +1,70 @@
 import os
 from datetime import datetime, timezone
-from typing import Optional
+from typing import List, Optional
 
 from pystac import Asset, Collection, Item, Summaries
 from pystac.extensions.item_assets import ItemAssetsExtension
 from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.scientific import ScientificExtension
 from pystac.extensions.table import TableExtension
-from pystac.utils import datetime_to_str, make_absolute_href
+from pystac.utils import datetime_to_str
 from stactools.core.io import ReadHrefModifier
 
 from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
-from ..utils import modify_href
 from . import constants
-from .parquet import get_tables, parquet_metadata
+from .parquet import create_parquet, get_tables, parquet_metadata
+from .utils import formatted_frequency, id_string
 
 
 def create_item(
-    geoparquet_href: str,
+    csv_hrefs: List[str],
+    frequency: constants.Frequency,
+    period: constants.Period,
+    geoparquet_dir: str,
+    *,
+    geoparquet_href: Optional[str] = None,
     read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Item:
     """Creates a STAC Item for a GeoParquet file that was created from NOAA
     Climate Normal CSV files.
 
     Args:
-        geoparquet_href (str): HREF to a GeoParquet file created from climate
-            normals weather station CSV files.
+        csv_hrefs (List[str]): List of HREFs to CSV files that will be
+            converted to a single parquet file.
+        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly'
+            'hourly'.
+        period (Period): Climate normal time period of CSV data, e.g.,
+            '1991-2020'.
+        geoparquet_dir (str): Directory to store created GeoParquet file.
+        geoparquet_href (Optional[str]): HREF to a an existing GeoParquet file.
+            A new GeoParquet file will not be created from the `csv_hrefs` list
+            if this HREF is supplied.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
             to modify an HREF, e.g., to add a token to a URL.
 
     Returns:
-        Item: A STAC Item for the GeoParquet file at the passed HREF.
+        Item: A STAC Item for a GeoParquet file containing weather stataion data.
     """
-    id = os.path.splitext(os.path.basename(geoparquet_href))[0]
-    file_parts = id.split("-")
-    period = constants.Period(file_parts[0].replace("_", "-"))
-    frequency = constants.Frequency(file_parts[1])
-
     start_year = int(period.value[0:4])
     end_year = int(period.value[5:])
+    id = id_string(frequency, period)
+    title = f"{formatted_frequency(frequency)} Climate Normals for Period {period}"
 
-    if frequency is constants.Frequency.ANNUALSEASONAL:
-        formatted_frequency = "Annual/Seasonal"
+    if geoparquet_href:
+        parquet_asset_dict = parquet_metadata(
+            geoparquet_href, frequency, period, read_href_modifier=read_href_modifier
+        )
     else:
-        formatted_frequency = frequency.value.capitalize()
-    title = f"{formatted_frequency} Climate Normals for Period {period}"
+        parquet_asset_dict = create_parquet(
+            csv_hrefs,
+            frequency,
+            period,
+            os.path.join(geoparquet_dir, f"{id}.parquet"),
+            read_href_modifier=read_href_modifier,
+        )
 
-    read_geoparquet_href = modify_href(geoparquet_href, read_href_modifier)
-    parquet_dict = parquet_metadata(read_geoparquet_href, frequency, period)
-    geometry = parquet_dict.pop("geometry")
-    bbox = parquet_dict.pop("bbox")
+    geometry = parquet_asset_dict.pop("geometry")
+    bbox = parquet_asset_dict.pop("bbox")
 
     item = Item(
         id=id,
@@ -66,8 +81,7 @@ def create_item(
         },
     )
 
-    parquet_dict["href"] = make_absolute_href(geoparquet_href)
-    item.add_asset("geoparquet", Asset.from_dict(parquet_dict))
+    item.add_asset("geoparquet", Asset.from_dict(parquet_asset_dict))
     TableExtension.ext(item.assets["geoparquet"], add_if_missing=True)
 
     projection = ProjectionExtension.ext(item, add_if_missing=True)
@@ -77,7 +91,9 @@ def create_item(
     if period is constants.Period.PERIOD_1981_2010:
         scientific.doi = constants.DATA_1981_2010["doi"]
         citation = constants.DATA_1981_2010["citation"]
-        scientific.citation = citation.replace("FREQUENCY", formatted_frequency)
+        scientific.citation = citation.replace(
+            "FREQUENCY", formatted_frequency(frequency)
+        )
     if frequency is constants.Frequency.HOURLY:
         scientific.publications = [constants.PUBLICATION_HOURLY]
     else:
@@ -95,10 +111,6 @@ def create_item(
 
 def create_collection() -> Collection:
     """Creates a STAC Collection for tabular data.
-
-    Args:
-        destination (str): Directory to store the created 'collection.json'
-            file.
 
     Returns:
         Collection: A STAC Collection for tabular Items.

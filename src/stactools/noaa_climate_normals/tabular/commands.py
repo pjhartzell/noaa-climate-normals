@@ -8,6 +8,7 @@ from pystac import CatalogType
 from .constants import Frequency, Period
 from .parquet import create_parquet
 from .stac import create_collection, create_item
+from .utils import id_string
 
 logger = logging.getLogger(__name__)
 
@@ -48,29 +49,54 @@ def create_command(noaa_climate_normals: Group) -> Command:
             hrefs = [line.strip() for line in f.readlines()]
         if not os.path.exists(destination):
             os.mkdir(destination)
-        parquet_path = create_parquet(
+        geoparquet_path = os.path.join(
+            destination, f"{id_string(Frequency(frequency), Period(period))}.parquet"
+        )
+        create_parquet(
             csv_hrefs=hrefs,
             frequency=Frequency(frequency),
             period=Period(period),
-            parquet_dir=destination,
+            parquet_path=geoparquet_path,
         )
-        click.echo(f"GeoParquet file created at {parquet_path}")
+        click.echo(f"GeoParquet file created at {geoparquet_path}")
+
+        return None
 
     @tabular.command("create-item", short_help="Creates a STAC Item")
-    @click.argument("geoparquet-href")
+    @click.argument("file-list")
+    @click.argument("frequency", type=click.Choice([f.value for f in Frequency]))
+    @click.argument("period", type=click.Choice([p.value for p in Period]))
     @click.argument("destination")
     def create_item_command(
-        geoparquet_href: str,
+        file_list: str,
+        frequency: str,
+        period: str,
         destination: str,
     ) -> None:
-        """Creates a STAC Item for a GeoParquet file.
+        """Creates a STAC Item for tabular data from a single temporal frequency
+        and normal period.
+
+        The Item will contain a single GeoParquet asset created from CSV files
+        listed in a text file. The Item and GeoParquet file are saved to the
+        specified `destination`.
 
         \b
         Args:
-            geoparquet_href (str): HREF to GeoParquet file.
-            destination (str): Directory for the created Item JSON file.
+            file_list (str): Path to a text file containing HREFs to CSV files,
+                one HREF per line.
+            frequency (Frequency): Choice of 'hourly', 'daily', 'monthly', or
+                'annualseasonal'.
+            period (Period): Choice of '1981-2010', '1991-2020', or
+                '2006-2020'.
+            destination (str): Directory for GeoParquet file and STAC Item.
         """
-        item = create_item(geoparquet_href=geoparquet_href)
+        with open(file_list) as f:
+            hrefs = [line.strip() for line in f.readlines()]
+
+        if not os.path.exists(destination):
+            os.mkdir(destination)
+
+        item = create_item(hrefs, Frequency(frequency), Period(period), destination)
         item.set_self_href(os.path.join(destination, item.id + ".json"))
         item.make_asset_hrefs_relative()
         item.validate()

@@ -19,7 +19,6 @@ from stactools.noaa_climate_normals.gridded import stac as gridded_stac
 from stactools.noaa_climate_normals.netcdf import stac as netcdf_stac
 from stactools.noaa_climate_normals.tabular import constants as tabular_constants
 from stactools.noaa_climate_normals.tabular import stac as tabular_stac
-from stactools.noaa_climate_normals.tabular.parquet import create_parquet
 
 root = Path(__file__).parent.parent
 examples = root / "examples"
@@ -54,14 +53,11 @@ with TemporaryDirectory() as tmp_dir:
         ],
     }
     for key, value in csv_file_lists.items():
-        parquet_file = create_parquet(
+        tabular_item = tabular_stac.create_item(
             csv_hrefs=value,
             frequency=tabular_constants.Frequency(key),
             period=tabular_constants.Period("1981-2010"),
-            parquet_dir=tmp_dir,
-        )
-        tabular_item = tabular_stac.create_item(
-            geoparquet_href=parquet_file,
+            geoparquet_dir=tmp_dir,
         )
         tabular.add_item(tabular_item)
     tabular.update_extent_from_items()

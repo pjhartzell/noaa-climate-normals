@@ -1,2 +1,0 @@
-- option for "derived from" links in gridded Items
-- tests

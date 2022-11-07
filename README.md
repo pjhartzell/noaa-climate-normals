@@ -54,6 +54,8 @@ Three Collections, and corresponding Items, can be generated with this package:
     - [gridded](examples/noaa-climate-normals-gridded/1991_2020-monthly-1/1991_2020-monthly-1.json)
     - [netcdf](examples/noaa-climate-normals-netcdf/prcp-1991_2020-monthly-normals-v1.0/prcp-1991_2020-monthly-normals-v1.0.json)
 
+The example Collections and Items in the `examples` directory can be created by running `./scripts/create_examples.py`.
+
 ## Installation
 
 ```shell
@@ -65,7 +67,7 @@ pip install stactools-noaa-climate-normals
 To create a Collection:
 
 ```shell
-stac noaa-climate-normals <tabular|gridded> create-collection <collection filepath>
+stac noaa-climate-normals <gridded|netcdf|tabular> create-collection
 ```
 
 To create an Item, e.g., for the `monthly` tabular data from the `1991-2020` time period:

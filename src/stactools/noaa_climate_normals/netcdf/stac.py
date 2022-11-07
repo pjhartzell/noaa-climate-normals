@@ -64,6 +64,11 @@ def create_item(nc_href: str) -> Item:
 
 
 def create_collection() -> Collection:
+    """Creates a STAC Collection for NetCDF data.
+
+    Returns:
+        Collection: A STAC Collection for NetCDF Items.
+    """
     collection = Collection(**COLLECTION)
 
     collection.providers = PROVIDERS

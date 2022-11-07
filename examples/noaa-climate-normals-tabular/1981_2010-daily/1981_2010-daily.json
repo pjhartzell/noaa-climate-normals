@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "1981-2010",
     "start_datetime": "1981-01-01T00:00:00Z",
     "end_datetime": "2010-12-31T23:59:59Z",
-    "created": "2022-11-07T16:41:53.707211Z",
+    "created": "2022-11-07T21:48:48.608573Z",
     "title": "Daily Climate Normals for Period 1981-2010",
     "proj:epsg": 4269,
     "sci:doi": "10.7289/V5PN93JP",
@@ -21,26 +21,11 @@
     "datetime": null
   },
   "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
-      [
-        [
-          -72.30472,
-          43.62639
-        ],
-        [
-          -72.30472,
-          43.62639
-        ],
-        [
-          -72.30472,
-          43.62639
-        ],
-        [
-          -72.30472,
-          43.62639
-        ]
-      ]
+      -72.30472,
+      43.62639,
+      182.3
     ]
   },
   "links": [
