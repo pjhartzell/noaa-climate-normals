@@ -21,6 +21,15 @@ from .utils import netcdf_item_id
 
 
 def create_item(nc_href: str) -> Item:
+    """Creates a STAC Item for a NetCDF file containing gridded Climate Normal
+    data.
+
+    Args:
+        nc_href (str): HREF to a NetCDF file.
+
+    Returns:
+        Item: A STAC Item describing a NetCDF file.
+    """
     id = netcdf_item_id(nc_href)
     filename_parts = id.split("-")
     variable = filename_parts[0]
