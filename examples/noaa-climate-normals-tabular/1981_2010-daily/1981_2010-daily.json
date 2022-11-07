@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "1981-2010",
     "start_datetime": "1981-01-01T00:00:00Z",
     "end_datetime": "2010-12-31T23:59:59Z",
-    "created": "2022-10-31T21:11:56.903042Z",
+    "created": "2022-11-07T16:41:53.707211Z",
     "title": "Daily Climate Normals for Period 1981-2010",
     "proj:epsg": 4269,
     "sci:doi": "10.7289/V5PN93JP",
@@ -92,513 +92,513 @@
       "table:columns": [
         {
           "name": "station",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Station identification code"
         },
         {
           "name": "date",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Month and day in MM-DD format"
         },
         {
           "name": "latitude",
-          "type": "DOUBLE",
+          "type": "double",
           "description": "Station latitude",
           "unit": "degree"
         },
         {
           "name": "longitude",
-          "type": "DOUBLE",
+          "type": "double",
           "description": "Station longitude",
           "unit": "degree"
         },
         {
           "name": "elevation",
-          "type": "DOUBLE",
+          "type": "double",
           "description": "Station elevation",
           "unit": "meter"
         },
         {
           "name": "name",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Station name"
         },
         {
           "name": "dly-cldd-base45",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily cooling degree days with base 45F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-cldd-base45_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-cldd-base50",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily cooling degree days with base 50F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-cldd-base50_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-cldd-base55",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily cooling degree days with base 55F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-cldd-base55_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-cldd-base57",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily cooling degree days with base 57F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-cldd-base57_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-cldd-base60",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily cooling degree days with base 60F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-cldd-base60_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-cldd-base70",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily cooling degree days with base 70F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-cldd-base70_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-cldd-base72",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily cooling degree days with base 72F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-cldd-base72_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-cldd-normal",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily cooling degree days with base 65F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-cldd-normal_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-dutr-normal",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily diurnal temperature range",
           "unit": "tenth of degree Fahrenheit"
         },
         {
           "name": "dly-dutr-normal_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-dutr-stddev",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term standard deviations of daily diurnal temperature range",
           "unit": "tenth of degree Fahrenheit"
         },
         {
           "name": "dly-dutr-stddev_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-base40",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 40F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base40_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-base45",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 45F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base45_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-base50",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 50F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base50_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-base55",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 55F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base55_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-base57",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 57F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base57_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-base60",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 60F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base60_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-base65",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 65F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base65_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-base70",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 70F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base70_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-base72",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 72F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-base72_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-tb4886",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 48F limit 86F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-tb4886_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-grdd-tb5086",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily growing degree days with base 50F limit 86F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-grdd-tb5086_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-htdd-base40",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily heating degree days with base 40F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-htdd-base40_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-htdd-base45",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily heating degree days with base 45F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-htdd-base45_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-htdd-base50",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily heating degree days with base 50F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-htdd-base50_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-htdd-base55",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily heating degree days with base 55F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-htdd-base55_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-htdd-base57",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily heating degree days with base 57F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-htdd-base57_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-htdd-base60",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily heating degree days with base 60F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-htdd-base60_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-htdd-normal",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily heating degree days with base 65F",
           "unit": "degree Fahrenheit"
         },
         {
           "name": "dly-htdd-normal_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-prcp-25pctl",
-          "type": "INT64",
+          "type": "int64",
           "description": "First quartile of daily nonzero precipitation totals",
           "unit": "hundredth of inch"
         },
         {
           "name": "dly-prcp-25pctl_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-prcp-50pctl",
-          "type": "INT64",
+          "type": "int64",
           "description": "Second quartile of daily nonzero precipitation totals",
           "unit": "hundredth of inch"
         },
         {
           "name": "dly-prcp-50pctl_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-prcp-75pctl",
-          "type": "INT64",
+          "type": "int64",
           "description": "Third quartile of daily nonzero precipitation totals",
           "unit": "hundredth of inch"
         },
         {
           "name": "dly-prcp-75pctl_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-prcp-pctall-ge001hi",
-          "type": "INT64",
+          "type": "int64",
           "description": "Probability of daily precipitation >= 0.01 inches",
           "unit": "tenth of percent"
         },
         {
           "name": "dly-prcp-pctall-ge001hi_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-prcp-pctall-ge010hi",
-          "type": "INT64",
+          "type": "int64",
           "description": "Probability of daily precipitation >= 0.10 inches",
           "unit": "tenth of percent"
         },
         {
           "name": "dly-prcp-pctall-ge010hi_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-prcp-pctall-ge050hi",
-          "type": "INT64",
+          "type": "int64",
           "description": "Probability of daily precipitation >= 0.50 inches",
           "unit": "tenth of percent"
         },
         {
           "name": "dly-prcp-pctall-ge050hi_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-prcp-pctall-ge100hi",
-          "type": "INT64",
+          "type": "int64",
           "description": "Probability of daily precipitation >= 1.00 inches",
           "unit": "tenth of percent"
         },
         {
           "name": "dly-prcp-pctall-ge100hi_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-tavg-normal",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily average temperature",
           "unit": "tenth of degree Fahrenheit"
         },
         {
           "name": "dly-tavg-normal_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-tavg-stddev",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term standard deviations of daily average temperature",
           "unit": "tenth of degree Fahrenheit"
         },
         {
           "name": "dly-tavg-stddev_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-tmax-normal",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily maximum temperature",
           "unit": "tenth of degree Fahrenheit"
         },
         {
           "name": "dly-tmax-normal_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-tmax-stddev",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term standard deviations of daily maximum temperature",
           "unit": "tenth of degree Fahrenheit"
         },
         {
           "name": "dly-tmax-stddev_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-tmin-normal",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term averages of daily minimum temperature",
           "unit": "tenth of degree Fahrenheit"
         },
         {
           "name": "dly-tmin-normal_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "dly-tmin-stddev",
-          "type": "INT64",
+          "type": "int64",
           "description": "Long-term standard deviations of daily minimum temperature",
           "unit": "tenth of degree Fahrenheit"
         },
         {
           "name": "dly-tmin-stddev_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "mtd-prcp-normal",
-          "type": "DOUBLE",
+          "type": "double",
           "description": "Long-term average month-to-date liquid precipitation amount",
           "unit": "hundredth of inch"
         },
         {
           "name": "mtd-prcp-normal_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "ytd-prcp-normal",
-          "type": "DOUBLE",
+          "type": "double",
           "description": "Long-term average year-to-date liquid precipitation amount",
           "unit": "hundredth of inch"
         },
         {
           "name": "ytd-prcp-normal_attributes",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Data record completeness flag"
         },
         {
           "name": "geometry",
-          "type": "BYTE_ARRAY",
+          "type": "byte_array",
           "description": "Station 3D point location"
         }
       ],

@@ -7,7 +7,7 @@
     "noaa-climate-normals:period": "2006-2020",
     "start_datetime": "2006-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T00:00:00Z",
-    "created": "2022-10-31T21:12:06.880937Z",
+    "created": "2022-11-07T16:42:03.052204Z",
     "proj:epsg": 4326,
     "datetime": null
   },

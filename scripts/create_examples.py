@@ -74,24 +74,24 @@ with TemporaryDirectory() as tmp_dir:
             data_files / "gridded" / "daily" / "prcp-2006_2020-daily-normals-v1.0.nc"
         ),
         frequency=gridded_constants.Frequency("daily"),
+        time_index=1,
         cog_dir=tmp_dir,
         api_url_netcdf=(
             "https://planetarycomputer.microsoft.com/api/stac/v1/"
             "collections/noaa-climate-normals-netcdf/items/"
         ),
-        time_index=1,
     )
     gridded.add_item(gridded_item)
     for frequency in ["monthly", "seasonal", "annual"]:
         gridded_item = gridded_stac.create_item(
             nc_href=str(external_data / "prcp-1991_2020-monthly-normals-v1.0.nc"),
             frequency=gridded_constants.Frequency(frequency),
+            time_index=1,
             cog_dir=tmp_dir,
             api_url_netcdf=(
                 "https://planetarycomputer.microsoft.com/api/stac/v1/"
                 "collections/noaa-climate-normals-netcdf/items/"
             ),
-            time_index=1,
         )
         gridded.add_item(gridded_item)
     gridded.update_extent_from_items()

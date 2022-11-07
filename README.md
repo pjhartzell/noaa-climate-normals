@@ -28,17 +28,17 @@ Three Collections, and corresponding Items, can be generated with this package:
 
 1. noaa-climate-normals-tabular
 
-    - Items for each Climate Normal time period (e.g., 1991-2020) and temporal interval (e.g., monthly) combination.
-    - Each Item contains a single GeoParquet Asset created from weather station tabular data contained in CSV files.
+    - Items for each Climate Normal time period and temporal interval combination, e.g. monthly data for the 1991-2020 time period.
+    - Each Item contains a single GeoParquet asset created from the weather variables for all available weather stations (~10-15K) for the particular time period and frequency combination. The source data for each weather station is contained in a unique CSV file, so a single GeoParquet asset contains data from 10-15K CSV files.
 
 2. noaa-climate-normals-gridded
 
-    - Items for each Climate Normal time period (e.g., 1991-2020) and temporal interval timestep (e.g., a month or a day) combination.
+    - Items for each timestep in each Climate Normal time period and temporal interval combination, e.g., month 1 (January) of the monthly data in the 1991-2020 time period.
     - Each Item contains COG Assets for all available weather variables.
 
 3. noaa-climate-normals-netcdf
 
-    - Items for the NetCDF files that serve as the source data for the COGs in the gridded Collection.
+    - Items for the NetCDF files that serve as the source data for the COGs in the `noaa-climate-normals-gridded` Collection.
 
 ## STAC Examples
 

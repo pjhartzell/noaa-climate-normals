@@ -1,7 +1,7 @@
 import logging
 import os
 from datetime import datetime, timezone
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 import stactools.core.create
 from pystac import Collection, Item, Link, MediaType, Summaries
@@ -21,10 +21,11 @@ logger = logging.getLogger(__name__)
 def create_item(
     nc_href: str,
     frequency: constants.Frequency,
+    time_index: int,
     cog_dir: str,
     *,
     api_url_netcdf: Optional[str] = None,
-    time_index: Optional[int] = None,
+    cog_hrefs: Optional[List[str]] = None,
     read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Item:
     """Creates a STAC Item and COGs for a single timestep of Climate Normal
@@ -36,6 +37,8 @@ def create_item(
             to exist in the same location.
         frequency (Frequency): Temporal interval of Item to be created, e.g.,
             'daily', 'monthly', or 'seasonal'.
+        time_index (int): 1-based time index into the NetCDF timestack, e.g.,
+            'time_index=3' for the month of March for a NetCDF.
         cog_dir (str): Directory to store created COGs.
         api_url_netcdf (str): Base STAC API URL for NetCDF Items from which the
             COGs are derived, .e.g., "https://planetarycomputer.microsoft.com/
@@ -43,31 +46,33 @@ def create_item(
             Item IDs of the NetCDF files used to create the COGs for this Item
             will be appended to the base STAC API URL and used to create a
             "derived_from" Link for each source NetCDF file.
-        time_index (Optional[int]): 1-based time index into the NetCDF
-            timestack, e.g., 'time_index=3' for the month of March for a NetCDF
+        cog_hrefs (Optional[List[str]]): List of HREFs to existing COGs. New
+            COGs will not be created if they exist in the list.
             holding monthly frequency data.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
 
     Returns:
         Item: A STAC Item for a single timestep of Climate Normal data.
     """
-    if not time_index and frequency is not constants.Frequency.ANN:
-        raise ValueError(f"A time_index value is required for {frequency.value} data.")
-    if time_index and frequency is constants.Frequency.ANN:
-        logger.info("time_index value is not used for Annual frequency data")
-        time_index = None
-
     period = constants.Period(os.path.basename(nc_href).split("-")[1].replace("_", "-"))
     id = f"{period.value.replace('-', '_')}-{frequency}"
-    if time_index:
+
+    if frequency is constants.Frequency.ANN:
+        logger.info("time_index value is not used for Annual frequency data")
+        time_index_ = None
+    else:
         id += f"-{time_index}"
-    title = item_title(frequency, period, time_index)
+        time_index_ = time_index
+
+    title = item_title(frequency, period, time_index_)
 
     cogs: Dict[str, Any] = {}
     nc_hrefs = nc_href_dict(nc_href, frequency)
     for nc_href in nc_hrefs.values():
-        modified_href = modify_href(nc_href, read_href_modifier)
-        create_cogs(modified_href, frequency, period, cog_dir, cogs, time_index)
+        modified_nc_href = modify_href(nc_href, read_href_modifier)
+        create_cogs(
+            modified_nc_href, frequency, period, cog_dir, cogs, time_index_, cog_hrefs
+        )
 
     item = stactools.core.create.item(next(iter(cogs.values()))["href"])
     item.id = id
@@ -79,8 +84,8 @@ def create_item(
     item.common_metadata.created = datetime.now(tz=timezone.utc)
     item.properties["noaa-climate-normals:frequency"] = frequency
     item.properties["noaa-climate-normals:period"] = period
-    if time_index:
-        item.properties["noaa-climate-normals:time_index"] = time_index
+    if time_index_:
+        item.properties["noaa-climate-normals:time_index"] = time_index_
     item.properties["title"] = title
 
     item.assets.pop("data")
