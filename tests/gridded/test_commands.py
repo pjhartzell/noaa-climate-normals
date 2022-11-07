@@ -22,8 +22,8 @@ class CommandsTest(CliTestCase):
             )
 
             result = self.run_command(
-                f"noaa-climate-normals gridded create-item {nc_href} daily "
-                f"{tmp_dir} --time-index 1"
+                f"noaa-climate-normals gridded create-item {nc_href} daily 1 "
+                f"{tmp_dir}"
             )
             assert result.exit_code == 0, "\n{}".format(result.output)
 

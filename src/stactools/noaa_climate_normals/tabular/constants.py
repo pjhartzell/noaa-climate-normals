@@ -232,7 +232,7 @@ COLLECTION: Dict[str, Any] = {
     "license": "proprietary",
     "keywords": KEYWORDS,
     "extent": pystac.Extent(
-        pystac.SpatialExtent([[-124.708333, 24.541666, -66.999995, 49.375001]]),
+        pystac.SpatialExtent([[-177.38333, -14.3306, 174.1, 71.3214]]),
         pystac.TemporalExtent(
             [
                 [

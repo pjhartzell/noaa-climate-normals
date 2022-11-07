@@ -19,16 +19,10 @@ def create_command(noaa_climate_normals: Group) -> Command:
     @gridded.command("create-item", short_help="Creates a STAC Item")
     @click.argument("infile")
     @click.argument("frequency", type=click.Choice([f.value for f in Frequency]))
+    @click.argument("time-index", type=int)
     @click.argument("destination")
-    @click.option(
-        "-t",
-        "--time-index",
-        help="Time index, e.g., month of year (1-12)",
-        type=int,
-        default=1,
-    )
     def create_item_command(
-        infile: str, frequency: str, destination: str, time_index: int
+        infile: str, frequency: str, time_index: int, destination: str
     ) -> None:
         """Creates a STAC Item for a single timestep of gridded data.
 
@@ -40,17 +34,16 @@ def create_command(noaa_climate_normals: Group) -> Command:
             infile (str): HREF to one of the source NetCDF files.
             frequency (str): Choice of 'daily', 'monthly', 'seasonal', or
                 'annual'.
-            destination (str): Directory to store the created Item and COGs.
             time_index (int): An integer index into the timestack of the
                 chosen frequency. Valid values are 1-366 for daily data, 1-12
-                for monthly data, and 1-4 for seasonal data. Not required for
-                annual data.
+                for monthly data, 1-4 for seasonal data, and 1 for annual data.
+            destination (str): Directory to store the created Item and COGs.
         """
         item = create_item(
             infile,
             Frequency(frequency),
+            time_index,
             destination,
-            time_index=time_index,
         )
         item.set_self_href(os.path.join(destination, f"{item.id}.json"))
         item.make_asset_hrefs_relative()

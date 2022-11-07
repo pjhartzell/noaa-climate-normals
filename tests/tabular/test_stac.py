@@ -38,12 +38,31 @@ def test_create_tabular_item(file_list: List[str]) -> None:
 
     with TemporaryDirectory() as tmp_dir:
         item = create_item(
-            hrefs,
-            Frequency(frequency),
-            Period(period),
-            tmp_dir,
+            csv_hrefs=hrefs,
+            frequency=Frequency(frequency),
+            period=Period(period),
+            geoparquet_dir=tmp_dir,
         )
         assert item.id == f"{period.replace('-', '_')}-{frequency}"
         assert os.path.isfile(os.path.join(tmp_dir, f"{item.id}.parquet"))
+
+    item.validate()
+
+
+def test_existing_parquet() -> None:
+    with TemporaryDirectory() as tmp_dir:
+        href = test_data.get_path(
+            "data-files/tabular/monthly/1981-2010/1981_2010-monthly.parquet"
+        )
+        item = create_item(
+            csv_hrefs=[],
+            frequency=Frequency("monthly"),
+            period=Period("1981-2010"),
+            geoparquet_dir=tmp_dir,
+            geoparquet_href=href,
+        )
+        assert item.id == "1981_2010-monthly"
+        parquets = [p for p in os.listdir(tmp_dir) if p.endswith(".parquet")]
+        assert not parquets
 
     item.validate()

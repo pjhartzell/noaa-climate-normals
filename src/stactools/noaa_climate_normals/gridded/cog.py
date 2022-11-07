@@ -1,5 +1,5 @@
 import os
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 import fsspec
 import numpy as np
@@ -34,6 +34,7 @@ def create_cogs(
     cog_dir: str,
     cogs: Dict[str, Any],
     time_index: Optional[int] = None,
+    cog_hrefs: Optional[List[str]] = None,
 ) -> None:
     """Creates COGs for all variables in a NetCDF for a particular Climate
     Normal frequency.
@@ -50,7 +51,12 @@ def create_cogs(
         time_index (Optional[int]): 1-based time index into the NetCDF
             timestack, e.g., 'time_index=3' for the month of March for a NetCDF
             holding monthly frequency data.
+        cog_hrefs (Optional[List[str]]): List of HREFs to existing COGs. New
+            COGs will not be created if they exist in the list.
+            holding monthly frequency data.
     """
+    if cog_hrefs:
+        existing_cog_filenames = {os.path.basename(href): href for href in cog_hrefs}
     with fsspec.open(nc_href, mode="rb"):
         with xarray.open_dataset(nc_href) as dataset:
             data_vars = list(dataset.data_vars)
@@ -70,29 +76,33 @@ def create_cogs(
                     cog_filename = cog_filename[0:-4] + f"-{time_index}.tif"
 
                 cogs[data_var] = {}
-                cogs[data_var]["href"] = os.path.join(cog_dir, cog_filename)
                 cogs[data_var]["description"] = dataset[data_var].long_name
                 cogs[data_var]["unit"] = dataset[data_var].units
 
-                nodata = 0 if "flag" in data_var else np.nan
-
-                if kwargs:
-                    values = dataset[data_var].isel(**kwargs)
+                if cog_hrefs and cog_filename in existing_cog_filenames:
+                    cogs[data_var]["href"] = existing_cog_filenames[cog_filename]
                 else:
-                    values = dataset[data_var]
+                    cogs[data_var]["href"] = os.path.join(cog_dir, cog_filename)
 
-                # round per comments in NetCDF files
-                if "prcp" in data_var:
-                    values = np.round(values, 2)
-                else:
-                    values = np.round(values, 1)
+                    nodata = 0 if "flag" in data_var else np.nan
 
-                with MemoryFile() as mem:
-                    with mem.open(**GTIFF_PROFILE, nodata=nodata) as temp:
-                        temp.write(values, 1)
-                        rasterio.shutil.copy(
-                            temp, cogs[data_var]["href"], **COG_PROFILE
-                        )
+                    if kwargs:
+                        values = dataset[data_var].isel(**kwargs)
+                    else:
+                        values = dataset[data_var]
+
+                    # round per comments in NetCDF files
+                    if "prcp" in data_var:
+                        values = np.round(values, 2)
+                    else:
+                        values = np.round(values, 1)
+
+                    with MemoryFile() as mem:
+                        with mem.open(**GTIFF_PROFILE, nodata=nodata) as temp:
+                            temp.write(values, 1)
+                            rasterio.shutil.copy(
+                                temp, cogs[data_var]["href"], **COG_PROFILE
+                            )
 
 
 def cog_asset(data_var: str, cog: Dict[str, str]) -> Asset:
