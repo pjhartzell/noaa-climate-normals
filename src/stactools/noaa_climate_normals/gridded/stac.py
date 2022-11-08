@@ -80,7 +80,9 @@ def create_item(
     item.common_metadata.start_datetime = datetime(
         int(period.value[0:4]), 1, 1, 0, 0, 0
     )
-    item.common_metadata.end_datetime = datetime(int(period.value[5:]), 12, 31, 0, 0, 0)
+    item.common_metadata.end_datetime = datetime(
+        int(period.value[5:]), 12, 31, 23, 59, 59
+    )
     item.common_metadata.created = datetime.now(tz=timezone.utc)
     item.properties["noaa-climate-normals:frequency"] = frequency
     item.properties["noaa-climate-normals:period"] = period

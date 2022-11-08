@@ -236,8 +236,8 @@ COLLECTION: Dict[str, Any] = {
         pystac.TemporalExtent(
             [
                 [
-                    datetime(1981, 1, 1, tzinfo=timezone.utc),
-                    datetime(2020, 12, 31, tzinfo=timezone.utc),
+                    datetime(1981, 1, 1, 0, 0, 0, tzinfo=timezone.utc),
+                    datetime(2020, 12, 31, 23, 59, 59, tzinfo=timezone.utc),
                 ]
             ]
         ),

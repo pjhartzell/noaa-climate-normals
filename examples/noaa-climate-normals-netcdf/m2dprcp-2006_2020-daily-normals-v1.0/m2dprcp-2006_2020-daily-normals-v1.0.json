@@ -6,8 +6,8 @@
     "noaa-climate-normals:frequency": "daily",
     "noaa-climate-normals:period": "2006-2020",
     "start_datetime": "2006-01-01T00:00:00Z",
-    "end_datetime": "2020-12-31T00:00:00Z",
-    "created": "2022-11-07T21:48:58.519351Z",
+    "end_datetime": "2020-12-31T23:59:59Z",
+    "created": "2022-11-08T19:01:24.787326Z",
     "proj:epsg": 4326,
     "datetime": null
   },

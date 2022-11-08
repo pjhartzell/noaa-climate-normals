@@ -51,7 +51,9 @@ def create_item(nc_href: str) -> Item:
             "start_datetime": datetime_to_str(
                 datetime(int(period[0:4]), 1, 1, 0, 0, 0)
             ),
-            "end_datetime": datetime_to_str(datetime(int(period[5:]), 12, 31, 0, 0, 0)),
+            "end_datetime": datetime_to_str(
+                datetime(int(period[5:]), 12, 31, 23, 59, 59)
+            ),
             "created": datetime_to_str(datetime.now(tz=timezone.utc)),
         },
     )
