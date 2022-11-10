@@ -13,7 +13,7 @@ from ..netcdf.utils import netcdf_item_id
 from ..utils import modify_href
 from . import constants
 from .cog import cog_asset, create_cogs
-from .utils import item_title, load_item_assets, nc_href_dict
+from .utils import item_id, item_title, load_item_assets, nc_href_dict
 
 logger = logging.getLogger(__name__)
 
@@ -55,13 +55,12 @@ def create_item(
         Item: A STAC Item for a single timestep of Climate Normal data.
     """
     period = constants.Period(os.path.basename(nc_href).split("-")[1].replace("_", "-"))
-    id = f"{period.value.replace('-', '_')}-{frequency}"
+    id = item_id(frequency, period, time_index)
 
     if frequency is constants.Frequency.ANN:
         logger.info("time_index value is not used for Annual frequency data")
         time_index_ = None
     else:
-        id += f"-{time_index}"
         time_index_ = time_index
 
     title = item_title(frequency, period, time_index_)

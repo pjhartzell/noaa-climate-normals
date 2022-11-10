@@ -66,6 +66,32 @@ def item_title(
     return title
 
 
+def item_id(
+    frequency: constants.Frequency, period: constants.Period, time_index: int
+) -> str:
+    """Generates a formatted Item ID with zero-padded time index.
+
+    Args:
+        frequency (Frequency): Temporal interval of Item being created, e.g.,
+            'monthly' or 'daily'.
+        period (constants.Period): Climate normal time period, e.g., '1991-2020'.
+        time_index (Optional[int]): 1-based time index relating to the
+            frequency, e.g., 'time_index=3' for the month of March for monthly
+            frequency data.
+
+    Returns:
+        str: Formatted Item ID.
+    """
+    id = f"{period.value.replace('-', '_')}-{frequency}"
+    if frequency is constants.Frequency.SEAS:
+        id += f"-{time_index}"
+    if frequency is constants.Frequency.MLY:
+        id += f"-{time_index:02d}"
+    if frequency is constants.Frequency.DAILY:
+        id += f"-{time_index:03d}"
+    return id
+
+
 def load_item_assets() -> Any:
     """Loads a dictionary of item_assets entries for the collection.
 

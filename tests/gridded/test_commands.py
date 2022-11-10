@@ -29,7 +29,7 @@ class CommandsTest(CliTestCase):
 
             jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]
             assert len(jsons) == 1
-            item = pystac.read_file(os.path.join(tmp_dir, "2006_2020-daily-1.json"))
+            item = pystac.read_file(os.path.join(tmp_dir, "2006_2020-daily-001.json"))
             assert len(glob.glob(f"{tmp_dir}/*.tif")) == 6
 
             item.validate()

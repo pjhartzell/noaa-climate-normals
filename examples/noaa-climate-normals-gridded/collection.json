@@ -36,12 +36,12 @@
     },
     {
       "rel": "item",
-      "href": "./2006_2020-daily-1/2006_2020-daily-1.json",
+      "href": "./2006_2020-daily-001/2006_2020-daily-001.json",
       "type": "application/json"
     },
     {
       "rel": "item",
-      "href": "./1991_2020-monthly-1/1991_2020-monthly-1.json",
+      "href": "./1991_2020-monthly-01/1991_2020-monthly-01.json",
       "type": "application/json"
     },
     {

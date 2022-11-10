@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "1991_2020-monthly-1",
+  "id": "1991_2020-monthly-01",
   "properties": {
     "proj:epsg": 4326,
     "proj:transform": [
@@ -18,7 +18,7 @@
     ],
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-11-10T16:49:53.602312Z",
+    "created": "2022-11-10T22:12:51.931399Z",
     "noaa-climate-normals:frequency": "monthly",
     "noaa-climate-normals:period": "1991-2020",
     "noaa-climate-normals:time_index": 1,
@@ -98,7 +98,7 @@
   ],
   "assets": {
     "mlyprcp_norm": {
-      "href": "./1991_2020-monthly-mlyprcp_norm-1.tif",
+      "href": "./1991_2020-monthly-01-mlyprcp_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Monthly precipitation normals from monthly precipitation values",
       "raster:bands": [
@@ -114,7 +114,7 @@
       ]
     },
     "mlyprcp_std": {
-      "href": "./1991_2020-monthly-mlyprcp_std-1.tif",
+      "href": "./1991_2020-monthly-01-mlyprcp_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of monthly precipitation values of all input years for a given month",
       "raster:bands": [
@@ -130,7 +130,7 @@
       ]
     },
     "mlyprcp_min": {
-      "href": "./1991_2020-monthly-mlyprcp_min-1.tif",
+      "href": "./1991_2020-monthly-01-mlyprcp_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum precipitation of monthly precipitation values of all input years for a given month",
       "raster:bands": [
@@ -146,7 +146,7 @@
       ]
     },
     "mlyprcp_max": {
-      "href": "./1991_2020-monthly-mlyprcp_max-1.tif",
+      "href": "./1991_2020-monthly-01-mlyprcp_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum precipitation of monthly precipitation values of all input years for a given month",
       "raster:bands": [
@@ -162,7 +162,7 @@
       ]
     },
     "mlyprcp_flag": {
-      "href": "./1991_2020-monthly-mlyprcp_flag-1.tif",
+      "href": "./1991_2020-monthly-01-mlyprcp_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of years used to calculate monthly precipitation normals",
       "raster:bands": [
@@ -178,7 +178,7 @@
       ]
     },
     "mlytavg_norm": {
-      "href": "./1991_2020-monthly-mlytavg_norm-1.tif",
+      "href": "./1991_2020-monthly-01-mlytavg_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Monthly mean temperature normals from monthly averages",
       "raster:bands": [
@@ -194,7 +194,7 @@
       ]
     },
     "mlytavg_std": {
-      "href": "./1991_2020-monthly-mlytavg_std-1.tif",
+      "href": "./1991_2020-monthly-01-mlytavg_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of monthly mean temperature values of all input years for a given month",
       "raster:bands": [
@@ -210,7 +210,7 @@
       ]
     },
     "mlytavg_min": {
-      "href": "./1991_2020-monthly-mlytavg_min-1.tif",
+      "href": "./1991_2020-monthly-01-mlytavg_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum temperature of monthly mean temperature values of all input years for a given month",
       "raster:bands": [
@@ -226,7 +226,7 @@
       ]
     },
     "mlytavg_max": {
-      "href": "./1991_2020-monthly-mlytavg_max-1.tif",
+      "href": "./1991_2020-monthly-01-mlytavg_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum temperature of monthly mean temperature values of all input years for a given month",
       "raster:bands": [
@@ -242,7 +242,7 @@
       ]
     },
     "mlytavg_flag": {
-      "href": "./1991_2020-monthly-mlytavg_flag-1.tif",
+      "href": "./1991_2020-monthly-01-mlytavg_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of years used to calculate monthly mean temperature normals",
       "raster:bands": [
@@ -258,7 +258,7 @@
       ]
     },
     "mlytmax_norm": {
-      "href": "./1991_2020-monthly-mlytmax_norm-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmax_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum temperature normals from monthly averages",
       "raster:bands": [
@@ -274,7 +274,7 @@
       ]
     },
     "mlytmax_std": {
-      "href": "./1991_2020-monthly-mlytmax_std-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmax_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of monthly maximum temperature values of all input years for a given month",
       "raster:bands": [
@@ -290,7 +290,7 @@
       ]
     },
     "mlytmax_min": {
-      "href": "./1991_2020-monthly-mlytmax_min-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmax_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum temperature of monthly maximum temperature values of all input years for a given month",
       "raster:bands": [
@@ -306,7 +306,7 @@
       ]
     },
     "mlytmax_max": {
-      "href": "./1991_2020-monthly-mlytmax_max-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmax_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum temperature of monthly maximum temperature values of all input years for a given month",
       "raster:bands": [
@@ -322,7 +322,7 @@
       ]
     },
     "mlytmax_flag": {
-      "href": "./1991_2020-monthly-mlytmax_flag-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmax_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of years used to calculate monthly maximum temperature normals",
       "raster:bands": [
@@ -338,7 +338,7 @@
       ]
     },
     "mlytmin_norm": {
-      "href": "./1991_2020-monthly-mlytmin_norm-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmin_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum temperature normals from monthly averages",
       "raster:bands": [
@@ -354,7 +354,7 @@
       ]
     },
     "mlytmin_std": {
-      "href": "./1991_2020-monthly-mlytmin_std-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmin_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of monthly minimum temperature values of all input years for a given month",
       "raster:bands": [
@@ -370,7 +370,7 @@
       ]
     },
     "mlytmin_min": {
-      "href": "./1991_2020-monthly-mlytmin_min-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmin_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum temperature of monthly minimum temperature values of all input years for a given month",
       "raster:bands": [
@@ -386,7 +386,7 @@
       ]
     },
     "mlytmin_max": {
-      "href": "./1991_2020-monthly-mlytmin_max-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmin_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum temperature of monthly minimum temperature values of all input years for a given month",
       "raster:bands": [
@@ -402,7 +402,7 @@
       ]
     },
     "mlytmin_flag": {
-      "href": "./1991_2020-monthly-mlytmin_flag-1.tif",
+      "href": "./1991_2020-monthly-01-mlytmin_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of years used to calculate monthly minimum temperature normals",
       "raster:bands": [

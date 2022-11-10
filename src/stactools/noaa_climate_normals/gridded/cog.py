@@ -11,6 +11,7 @@ from pystac.utils import make_absolute_href
 from rasterio.io import MemoryFile
 
 from . import constants
+from .utils import item_id
 
 TRANSFORM = [0.04166667, 0.0, -124.70833333, 0.0, -0.04166667, 49.37500127]
 
@@ -66,15 +67,13 @@ def create_cogs(
 
             if time_index:
                 kwargs = {constants.TIME_VARS[frequency]: time_index - 1}
+                id = item_id(frequency, period, time_index)
             else:
                 kwargs = None
+                id = item_id(frequency, period, 1)
 
             for data_var in data_vars:
-                cog_filename = (
-                    f"{period.value.replace('-', '_')}-{frequency}-{data_var}.tif"
-                )
-                if time_index:
-                    cog_filename = cog_filename[0:-4] + f"-{time_index}.tif"
+                cog_filename = f"{id}-{data_var}.tif"
 
                 cogs[data_var] = {}
                 cogs[data_var]["description"] = dataset[data_var].long_name

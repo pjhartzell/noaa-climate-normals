@@ -1,7 +1,7 @@
 {
   "type": "Feature",
   "stac_version": "1.0.0",
-  "id": "2006_2020-daily-1",
+  "id": "2006_2020-daily-001",
   "properties": {
     "proj:epsg": 4326,
     "proj:transform": [
@@ -18,7 +18,7 @@
     ],
     "start_datetime": "2006-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-11-10T16:49:50.936831Z",
+    "created": "2022-11-10T22:12:49.296178Z",
     "noaa-climate-normals:frequency": "daily",
     "noaa-climate-normals:period": "2006-2020",
     "noaa-climate-normals:time_index": 1,
@@ -110,7 +110,7 @@
   ],
   "assets": {
     "dlyprcp_norm": {
-      "href": "./2006_2020-daily-dlyprcp_norm-1.tif",
+      "href": "./2006_2020-daily-001-dlyprcp_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Precipitation normals from daily averages",
       "raster:bands": [
@@ -126,7 +126,7 @@
       ]
     },
     "dlytavg_norm": {
-      "href": "./2006_2020-daily-dlytavg_norm-1.tif",
+      "href": "./2006_2020-daily-001-dlytavg_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Average Temperature normals from daily averages",
       "raster:bands": [
@@ -142,7 +142,7 @@
       ]
     },
     "dlytmax_norm": {
-      "href": "./2006_2020-daily-dlytmax_norm-1.tif",
+      "href": "./2006_2020-daily-001-dlytmax_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum Temperature normals from daily averages",
       "raster:bands": [
@@ -158,7 +158,7 @@
       ]
     },
     "dlytmin_norm": {
-      "href": "./2006_2020-daily-dlytmin_norm-1.tif",
+      "href": "./2006_2020-daily-001-dlytmin_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum Temperature normals from daily averages",
       "raster:bands": [
@@ -174,7 +174,7 @@
       ]
     },
     "m2dprcp_norm": {
-      "href": "./2006_2020-daily-m2dprcp_norm-1.tif",
+      "href": "./2006_2020-daily-001-m2dprcp_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Month-To-Day Precipitation normals",
       "raster:bands": [
@@ -190,7 +190,7 @@
       ]
     },
     "y2dprcp_norm": {
-      "href": "./2006_2020-daily-y2dprcp_norm-1.tif",
+      "href": "./2006_2020-daily-001-y2dprcp_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Year-To-Day Precipitation normals",
       "raster:bands": [
