@@ -60,6 +60,7 @@ def create_cogs(
     with fsspec.open(nc_href, mode="rb"):
         with xarray.open_dataset(nc_href) as dataset:
             data_vars = list(dataset.data_vars)
+            latitudes = dataset.lat.values
             if frequency is not constants.Frequency.DAILY:
                 data_vars = [var for var in data_vars if frequency.name.lower() in var]
 
@@ -96,6 +97,9 @@ def create_cogs(
                         values = np.round(values, 2)
                     else:
                         values = np.round(values, 1)
+
+                    if latitudes[0] < latitudes[-1]:
+                        values = np.flipud(values)
 
                     with MemoryFile() as mem:
                         with mem.open(**GTIFF_PROFILE, nodata=nodata) as temp:
