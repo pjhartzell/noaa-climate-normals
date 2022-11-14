@@ -50,6 +50,7 @@ def create_parquet(
         dataframes.append(pd.read_csv(csv_href))
 
     dataframe = pd.concat(dataframes, ignore_index=True).copy()
+    del dataframes
 
     # Parquet does not like columns containing data of multiple types. Some CSV
     # columns contain string and integer types, where valid data is a string
@@ -89,6 +90,8 @@ def create_parquet(
             crs=constants.CRS,
         ),
     )
+    del dataframe
+
     geodataframe.to_parquet(parquet_path)
 
     geometry = mapping(geodataframe.unary_union.convex_hull)
