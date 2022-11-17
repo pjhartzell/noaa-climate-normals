@@ -24,6 +24,18 @@ logger = logging.getLogger(__name__)
 def pandas_datatypes(
     frequency: constants.Frequency, period: constants.Period
 ) -> Dict[str, Any]:
+    """Generates a dictionary of pandas datatypes for the CSV file columns from
+    metadata stored in JSON files.
+
+    Args:
+        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
+            'hourly'.
+        period (Period): Climate normal time period of CSV data, e.g.,
+            '1991-2020'.
+
+    Returns:
+        Dict[str, Any]: Dictionary mapping column names to pandas datatypes.
+    """
     column_metadata = load_column_metadata(frequency, period)
     dtypes = {}
     for key, value in column_metadata.items():
@@ -83,7 +95,7 @@ def create_parquet(
     #     )
     # )
 
-    dask_geodataframe.repartition(10).to_parquet(parquet_path)
+    dask_geodataframe.repartition(10).to_parquet(parquet_path, write_index=False)
 
     return parquet_path
 
