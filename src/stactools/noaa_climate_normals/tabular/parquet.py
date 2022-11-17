@@ -2,9 +2,12 @@ import json
 import logging
 from typing import Any, Dict, List, Optional
 
+import dask
+import dask.dataframe
+import dask_geopandas
 import fsspec
-import geopandas as gpd
-import pandas as pd
+import geopandas
+import pandas
 import pkg_resources
 import pyarrow.parquet as pq
 from pystac.utils import make_absolute_href
@@ -18,13 +21,25 @@ from .utils import formatted_frequency, id_string
 logger = logging.getLogger(__name__)
 
 
+def pandas_datatypes(
+    frequency: constants.Frequency, period: constants.Period
+) -> Dict[str, Any]:
+    column_metadata = load_column_metadata(frequency, period)
+    dtypes = {}
+    for key, value in column_metadata.items():
+        if value["pandas_dtype"] == "category":
+            dtypes[key] = pandas.CategoricalDtype(value["categories"], ordered=False)
+        else:
+            dtypes[key] = value["pandas_dtype"]
+    return dtypes
+
+
 def create_parquet(
     csv_hrefs: List[str],
     frequency: constants.Frequency,
     period: constants.Period,
     parquet_path: str,
-    read_href_modifier: Optional[ReadHrefModifier] = None,
-) -> Dict[str, Any]:
+) -> str:
     """Creates a GeoParquet file from a list of CSV files.
 
     Args:
@@ -35,88 +50,42 @@ def create_parquet(
         period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
         parquet_path (str): Path for created parquet file.
-        read_href_modifier (Optional[ReadHrefModifier]): An optional function
-            to modify an HREF, e.g., to add a token to a URL.
 
     Returns:
-        str: Dictionary of metadata for asset and Item creation.
+        str: Path to created geoparquet file.
     """
-    read_csv_hrefs = [
-        modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
+
+    @dask.delayed
+    def dataframe_from_csv(
+        csv_href: str, pd_dtypes: Dict[str, Any], empty_df: pandas.DataFrame
+    ) -> pandas.DataFrame:
+        """Returns a dataframe with an ordered, complete set of columns."""
+        df = pandas.read_csv(csv_href, dtype=pd_dtypes)
+        return pandas.concat([df, empty_df])[empty_df.columns]
+
+    pd_dtypes = pandas_datatypes(frequency, period)
+    empty_df = pandas.DataFrame({c: pandas.Series(dtype=t) for c, t in pd_dtypes.items()})
+
+    pandas_dataframes = [
+        dataframe_from_csv(csv_href, pd_dtypes, empty_df) for csv_href in csv_hrefs
     ]
 
-    dataframes = []
-    for csv_href in read_csv_hrefs:
-        dataframes.append(pd.read_csv(csv_href))
+    dask_dataframe = dask.dataframe.from_delayed(pandas_dataframes, meta=empty_df)
 
-    dataframe = pd.concat(dataframes, ignore_index=True).copy()
-    del dataframes
+    dask_geodataframe = dask_geopandas.from_dask_dataframe(dask_dataframe)
 
-    # Parquet does not like columns containing data of multiple types. Some CSV
-    # columns contain string and integer types, where valid data is a string
-    # and integer flags are used to indicate why data is missing. Mixed column
-    # data types also occur when concatenating dataframes with different columns.
-    # In this case numpy.nan values are used as fill. These nan values are float
-    # types, which creates columns of mixed types when valid data is not float
-    # type. These issues only appear to occur for columns where valid data are
-    # string type, so we convert the column values to strings when mixed types
-    # are encountered. An error is raised if we encounter an unexpected mix of
-    # types in a column (a mix that does not contain a string type).
-    for column in dataframe.columns:
-        column_types = set(dataframe[column].apply(type).values)
-        if len(column_types) > 1 and type(str()) in column_types:
-            logger.info(
-                f"Column '{column}' has mixed data types: {column_types}. "
-                f"Converting the column to 'str' data type."
-            )
-            dataframe[column] = dataframe[column].astype(str)
-        elif len(column_types) != 1:
-            raise ValueError(
-                f"Unexpected data type mix in Column '{column}': {column_types}."
-            )
+    # dask_geodataframe.assign(
+    #     geometry=lambda df: geopandas.points_from_xy(
+    #         x=df.LONGITUDE,
+    #         y=df.LATITUDE,
+    #         z=df.ELEVATION,
+    #         crs=constants.CRS,
+    #     )
+    # )
 
-    dataframe.columns = dataframe.columns.str.lower()
+    dask_geodataframe.repartition(10).to_parquet(parquet_path)
 
-    make_categorical(dataframe)
-
-    dataframe = dataframe.copy()  # de-fragment
-
-    geodataframe = gpd.GeoDataFrame(
-        data=dataframe,
-        geometry=gpd.points_from_xy(
-            x=dataframe.longitude,
-            y=dataframe.latitude,
-            z=dataframe.elevation,
-            crs=constants.CRS,
-        ),
-    )
-    del dataframe
-
-    geodataframe.to_parquet(parquet_path)
-
-    geometry = mapping(geodataframe.unary_union.convex_hull)
-
-    return parquet_metadata(parquet_path, frequency, period, geometry=geometry)
-
-
-def make_categorical(df: pd.DataFrame) -> None:
-    """Convert pandas columns that contain categorical data to a categorical
-    data type.
-
-    Args:
-        df (pd.DataFrame): Pandas DataFrame containing the unconverted data
-            types.
-    """
-    categorical_substrings = [
-        "_attributes",
-        "comp_flag_",
-        "meas_flag",
-        "wind-1stdir",
-        "wind-2nddir",
-    ]
-    for column in df.columns:
-        if any([substring in column for substring in categorical_substrings]):
-            df[column] = df[column].astype("category")
+    return parquet_path
 
 
 def parquet_metadata(
@@ -158,7 +127,7 @@ def parquet_metadata(
         ]
 
         if not geometry:
-            geodataframe = gpd.read_parquet(fobj, columns=["geometry"])
+            geodataframe = geopandas.read_parquet(fobj, columns=["geometry"])
             geometry = mapping(geodataframe.unary_union.convex_hull)
 
     return {

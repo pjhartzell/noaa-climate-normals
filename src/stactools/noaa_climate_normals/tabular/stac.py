@@ -14,6 +14,7 @@ from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from . import constants
 from .parquet import create_parquet, get_tables, parquet_metadata
 from .utils import formatted_frequency, id_string
+from ..utils import modify_href
 
 
 def create_item(
@@ -50,17 +51,20 @@ def create_item(
     id = id_string(frequency, period)
     title = f"{formatted_frequency(frequency)} Climate Normals for Period {period}"
 
+    read_csv_hrefs = [
+        modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
+    ]
+
     if geoparquet_href:
         parquet_asset_dict = parquet_metadata(
             geoparquet_href, frequency, period, read_href_modifier=read_href_modifier
         )
     else:
         parquet_asset_dict = create_parquet(
-            csv_hrefs,
+            read_csv_hrefs,
             frequency,
             period,
             os.path.join(geoparquet_dir, f"{id}.parquet"),
-            read_href_modifier=read_href_modifier,
         )
 
     geometry = parquet_asset_dict.pop("geometry")
