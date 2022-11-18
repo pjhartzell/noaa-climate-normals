@@ -1,18 +1,17 @@
 from datetime import datetime, timezone
 from typing import List, Optional
 
-from pystac import Asset, Collection, Item, Summaries
+from pystac import Collection, Item, Summaries
 from pystac.extensions.item_assets import ItemAssetsExtension
-from pystac.extensions.projection import ProjectionExtension
 from pystac.extensions.scientific import ScientificExtension
 from pystac.extensions.table import TableExtension
-from pystac.utils import datetime_to_str
+from pystac.utils import datetime_to_str, make_absolute_href
 from stactools.core.io import ReadHrefModifier
 import stac_table
 
 from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from . import constants
-from .parquet import create_parquet, get_tables, parquet_metadata
+from .parquet import create_parquet, get_collection_tables
 from .utils import formatted_frequency, id_string
 
 
@@ -35,7 +34,7 @@ def create_item(
             'hourly'.
         period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
-        geoparquet_dir (str): Directory to store created GeoParquet file(s).
+        geoparquet_dir (str): Directory to store created GeoParquet data.
         existing_geoparquet (Optional[str]): HREF to an existing GeoParquet
             file or directory. New GeoParquet data will not be created from the
             `csv_hrefs` list if this HREF is supplied.
@@ -58,20 +57,12 @@ def create_item(
             geoparquet_dir,
             read_href_modifier=read_href_modifier,
         )
-    # parquet_asset_dict = parquet_metadata(
-    #     existing_geoparquet,
-    #     frequency,
-    #     period,
-    # )
-
-    geometry = parquet_asset_dict.pop("geometry")
-    bbox = parquet_asset_dict.pop("bbox")
 
     item = Item(
         id=id,
-        geometry=geometry,
-        bbox=bbox,
         datetime=None,
+        geometry=None,
+        bbox=None,
         properties={
             "noaa-climate-normals:frequency": frequency,
             "noaa-climate-normals:period": period,
@@ -82,11 +73,14 @@ def create_item(
         },
     )
 
-    item.add_asset("geoparquet", Asset.from_dict(parquet_asset_dict))
-    TableExtension.ext(item.assets["geoparquet"], add_if_missing=True)
-
-    projection = ProjectionExtension.ext(item, add_if_missing=True)
-    projection.epsg = int(constants.CRS[5:])
+    item = stac_table.generate(
+        uri=make_absolute_href(existing_geoparquet),
+        template=item,
+        infer_bbox="geometry",
+        infer_geometry=False,
+        asset_key="geoparquet"
+    )
+    item.properties.pop("proj:bbox")
 
     scientific = ScientificExtension.ext(item, add_if_missing=True)
     if period is constants.Period.PERIOD_1981_2010:
@@ -130,7 +124,7 @@ def create_collection() -> Collection:
     item_assets.item_assets = constants.ITEM_ASSETS
 
     TableExtension.ext(collection, add_if_missing=True)
-    collection.extra_fields["table:tables"] = get_tables()
+    collection.extra_fields["table:tables"] = get_collection_tables()
 
     collection.add_links([LANDING_PAGE_LINK, LICENSE_LINK])
 

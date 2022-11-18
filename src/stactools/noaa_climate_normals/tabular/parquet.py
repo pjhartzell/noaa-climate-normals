@@ -1,18 +1,16 @@
 import json
 import logging
-from pathlib import Path
 from typing import Any, Dict, List, Optional
+from warnings import simplefilter
+import os
 
 import dask
 import dask.dataframe
 import dask_geopandas
-import fsspec
+import pyarrow
 import geopandas
 import pandas
 import pkg_resources
-import pyarrow.parquet as pq
-from pystac.utils import make_absolute_href
-from shapely.geometry import mapping
 from stactools.core.io import ReadHrefModifier
 
 from ..utils import modify_href
@@ -57,7 +55,7 @@ def create_parquet(
     """Creates a GeoParquet file from a list of CSV files.
 
     Args:
-        csv_hrefs (List[Dict[str, Any]]): List of HREFs to CSV files that will be
+        csv_hrefs (List[str]): List of HREFs to CSV files that will be
             converted to a single parquet file.
         frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
             'hourly'.
@@ -70,6 +68,7 @@ def create_parquet(
     Returns:
         str: Path to directory containing one or more parquet partitions.
     """
+
     @dask.delayed
     def dataframe_from_csv(
         csv_href: str, pd_dtypes: Dict[str, Any], empty_df: pandas.DataFrame
@@ -91,21 +90,66 @@ def create_parquet(
 
     sorted_csv_hrefs = sorted(read_csv_hrefs)
     pd_dtypes = pandas_datatypes(frequency, period)
-    empty_df = pandas.DataFrame({c: pandas.Series(dtype=t) for c, t in pd_dtypes.items()})
+    empty_df = pandas.DataFrame(
+        {c: pandas.Series(dtype=t) for c, t in pd_dtypes.items()}
+    )
 
     pandas_dataframes = [
-        dataframe_from_csv(csv_href, pd_dtypes, empty_df) for csv_href in sorted_csv_hrefs
+        dataframe_from_csv(csv_href, pd_dtypes, empty_df)
+        for csv_href in sorted_csv_hrefs
     ]
     dask_dataframe = dask.dataframe.from_delayed(pandas_dataframes, meta=empty_df)
     dask_geodataframe = dask_geopandas.from_dask_dataframe(dask_dataframe)
 
-    num_partitions = 1
-    if frequency is constants.Frequency.DAILY or frequency is constants.Frequency.MONTHLY:
-        num_partitions = 5
-    parquet_path = Path(parquet_dir, id_string(frequency, period))
-    dask_geodataframe.repartition(num_partitions).to_parquet(parquet_path, write_index=False)
+    num_partitions = (
+        5
+        if frequency is constants.Frequency.DAILY
+        or frequency is constants.Frequency.MONTHLY
+        else 1
+    )
+
+    parquet_path = os.path.join(parquet_dir, f"{id_string(frequency, period)}.parquet")
+
+    parquet_schema = create_parquet_schema(empty_df, frequency, period)
+
+    simplefilter(action="ignore", category=pandas.errors.PerformanceWarning)
+    dask_geodataframe.repartition(num_partitions).to_parquet(
+        parquet_path, schema=parquet_schema, engine="pyarrow", write_index=False
+    )
 
     return parquet_path
+
+
+def create_parquet_schema(
+    empty_df: pandas.DataFrame,
+    frequency: constants.Frequency,
+    period: constants.Period,
+) -> pyarrow.Schema:
+
+    print(empty_df.dtypes)
+    schema = pyarrow.Schema.from_pandas(empty_df, preserve_index=False)
+    schema = schema.with_metadata(
+        {
+            "description": (
+                f"{formatted_frequency(frequency)} Climate Normals for "
+                f"Period {period}"
+            )
+        }
+    )
+
+    column_metadata = load_column_metadata(frequency, period)
+    for column in schema.names:
+        field_metadata = {}
+        field_metadata["description"] = column_metadata[column]["description"]
+        unit = column_metadata[column].get("unit", False)
+        if unit:
+            field_metadata["unit"] = unit
+
+        index = schema.get_field_index(column)
+        field = schema.field(index).with_metadata(field_metadata)
+        schema = schema.set(index, field)
+
+    return schema
 
 
 # def parquet_metadata(
@@ -209,9 +253,9 @@ def load_column_metadata(
         raise e
 
 
-def get_tables() -> Dict[int, Dict[str, str]]:
+def get_collection_tables() -> Dict[int, Dict[str, str]]:
     """Creates a dictionary of dictionaries containing table names and
-    descriptions for use in the 'table' extension on a Collection.
+    descriptions for use in the 'table' extension on the Tabular Collection.
 
     Returns:
         Dict[int, Dict[str, str]]: Dictionaries containing table names and
