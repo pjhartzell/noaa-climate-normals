@@ -1,4 +1,3 @@
-import os
 from datetime import datetime, timezone
 from typing import List, Optional
 
@@ -9,12 +8,12 @@ from pystac.extensions.scientific import ScientificExtension
 from pystac.extensions.table import TableExtension
 from pystac.utils import datetime_to_str
 from stactools.core.io import ReadHrefModifier
+import stac_table
 
 from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from . import constants
 from .parquet import create_parquet, get_tables, parquet_metadata
 from .utils import formatted_frequency, id_string
-from ..utils import modify_href
 
 
 def create_item(
@@ -23,11 +22,11 @@ def create_item(
     period: constants.Period,
     geoparquet_dir: str,
     *,
-    geoparquet_href: Optional[str] = None,
+    existing_geoparquet: Optional[str] = None,
     read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Item:
-    """Creates a STAC Item for a GeoParquet file that was created from NOAA
-    Climate Normal CSV files.
+    """Creates a STAC Item for GeoParquet data created from NOAA Climate
+    Normal CSV files.
 
     Args:
         csv_hrefs (List[str]): List of HREFs to CSV files that will be
@@ -36,10 +35,10 @@ def create_item(
             'hourly'.
         period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
-        geoparquet_dir (str): Directory to store created GeoParquet file.
-        geoparquet_href (Optional[str]): HREF to a an existing GeoParquet file.
-            A new GeoParquet file will not be created from the `csv_hrefs` list
-            if this HREF is supplied.
+        geoparquet_dir (str): Directory to store created GeoParquet file(s).
+        existing_geoparquet (Optional[str]): HREF to an existing GeoParquet
+            file or directory. New GeoParquet data will not be created from the
+            `csv_hrefs` list if this HREF is supplied.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
             to modify an HREF, e.g., to add a token to a URL.
 
@@ -51,21 +50,19 @@ def create_item(
     id = id_string(frequency, period)
     title = f"{formatted_frequency(frequency)} Climate Normals for Period {period}"
 
-    read_csv_hrefs = [
-        modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
-    ]
-
-    if geoparquet_href:
-        parquet_asset_dict = parquet_metadata(
-            geoparquet_href, frequency, period, read_href_modifier=read_href_modifier
-        )
-    else:
-        parquet_asset_dict = create_parquet(
-            read_csv_hrefs,
+    if not existing_geoparquet:
+        existing_geoparquet = create_parquet(
+            csv_hrefs,
             frequency,
             period,
-            os.path.join(geoparquet_dir, f"{id}.parquet"),
+            geoparquet_dir,
+            read_href_modifier=read_href_modifier,
         )
+    # parquet_asset_dict = parquet_metadata(
+    #     existing_geoparquet,
+    #     frequency,
+    #     period,
+    # )
 
     geometry = parquet_asset_dict.pop("geometry")
     bbox = parquet_asset_dict.pop("bbox")

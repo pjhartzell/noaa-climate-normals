@@ -1,146 +1,687 @@
 {
-    "station": {
+    "STATION": {
         "description": "Station identification code",
-        "unit": null
+        "pandas_dtype": "object"
     },
-    "date": {
-        "description": "Month, day, and hour in MM-DDTHH:00:00 format",
-        "unit": null
-    },
-    "latitude": {
-        "description": "Station latitude",
-        "unit": "degree"
-    },
-    "longitude": {
-        "description": "Station longitude",
-        "unit": "degree"
-    },
-    "elevation": {
-        "description": "Station elevation",
-        "unit": "meter"
-    },
-    "name": {
+    "NAME": {
         "description": "Station name",
-        "unit": null
+        "pandas_dtype": "object"
+    },
+    "DATE": {
+        "description": "Month, day, and hour in MM-DDTHH:00:00 format",
+        "pandas_dtype": "object"
     },
     "month": {
         "description": "Month of year",
-        "unit": null
+        "pandas_dtype": "int64"
     },
     "day": {
         "description": "Day of month",
-        "unit": null
+        "pandas_dtype": "int64"
     },
     "hour": {
         "description": "Hour of day",
-        "unit": null
+        "pandas_dtype": "int64"
+    },
+    "LATITUDE": {
+        "description": "Station latitude",
+        "unit": "degree",
+        "pandas_dtype": "float64"
+    },
+    "LONGITUDE": {
+        "description": "Station longitude",
+        "unit": "degree",
+        "pandas_dtype": "float64"
+    },
+    "ELEVATION": {
+        "description": "Station elevation",
+        "unit": "meter",
+        "pandas_dtype": "float64"
     },
     "geometry": {
         "description": "Station 3D point location",
-        "unit": null
+        "pandas_dtype": "geometry"
     },
-    "hly-cldh-normal": {
+    "HLY-CLDH-NORMAL": {
         "description": "Cooling degree hours",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctbkn": {
+    "comp_flag_HLY-CLDH-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-CLDH-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-CLDH-NORMAL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-CLOD-PCTBKN": {
         "description": "Clouds broken percentage",
-        "unit": "percent"
+        "unit": "percent",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctclr": {
+    "comp_flag_HLY-CLOD-PCTBKN": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-CLOD-PCTBKN": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-CLOD-PCTBKN": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-CLOD-PCTCLR": {
         "description": "Clouds clear percentage",
-        "unit": "percent"
+        "unit": "percent",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctfew": {
+    "comp_flag_HLY-CLOD-PCTCLR": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-CLOD-PCTCLR": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-CLOD-PCTCLR": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-CLOD-PCTFEW": {
         "description": "Clouds few percentage",
-        "unit": "percent"
+        "unit": "percent",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctovc": {
+    "comp_flag_HLY-CLOD-PCTFEW": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-CLOD-PCTFEW": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-CLOD-PCTFEW": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-CLOD-PCTOVC": {
         "description": "Clouds overcast percentage",
-        "unit": "percent"
+        "unit": "percent",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctsct": {
+    "comp_flag_HLY-CLOD-PCTOVC": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-CLOD-PCTOVC": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-CLOD-PCTOVC": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-CLOD-PCTSCT": {
         "description": "Clouds scattered percentage",
-        "unit": "percent"
+        "unit": "percent",
+        "pandas_dtype": "float64"
     },
-    "hly-dewp-10pctl": {
+    "comp_flag_HLY-CLOD-PCTSCT": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-CLOD-PCTSCT": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-CLOD-PCTSCT": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-DEWP-10PCTL": {
         "description": "Dew point 10th percentile",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-dewp-90pctl": {
+    "comp_flag_HLY-DEWP-10PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-DEWP-10PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-DEWP-10PCTL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-DEWP-90PCTL": {
         "description": "Dew point 90th percentile",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-dewp-normal": {
+    "comp_flag_HLY-DEWP-90PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-DEWP-90PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-DEWP-90PCTL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-DEWP-NORMAL": {
         "description": "Dew point mean",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-hidx-normal": {
+    "comp_flag_HLY-DEWP-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-DEWP-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-DEWP-NORMAL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-HIDX-NORMAL": {
         "description": "Heat index mean",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-htdh-normal": {
+    "comp_flag_HLY-HIDX-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-HIDX-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-HIDX-NORMAL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-HTDH-NORMAL": {
         "description": "Heating degree hours",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-pres-10pctl": {
+    "comp_flag_HLY-HTDH-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-HTDH-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-HTDH-NORMAL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-PRES-10PCTL": {
         "description": "Sea level pressure 10th percentile",
-        "unit": "hectoPascal"
+        "unit": "hectoPascal",
+        "pandas_dtype": "float64"
     },
-    "hly-pres-90pctl": {
+    "comp_flag_HLY-PRES-10PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-PRES-10PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-PRES-10PCTL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-PRES-90PCTL": {
         "description": "Sea level pressure 90th percentile",
-        "unit": "hectoPascal"
+        "unit": "hectoPascal",
+        "pandas_dtype": "float64"
     },
-    "hly-pres-normal": {
+    "comp_flag_HLY-PRES-90PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-PRES-90PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-PRES-90PCTL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-PRES-NORMAL": {
         "description": "Sea level pressure mean",
-        "unit": "hectoPascal"
+        "unit": "hectoPascal",
+        "pandas_dtype": "float64"
     },
-    "hly-temp-10pctl": {
+    "comp_flag_HLY-PRES-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-PRES-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-PRES-NORMAL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-TEMP-10PCTL": {
         "description": "Temperature 10th percentile",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-temp-90pctl": {
+    "comp_flag_HLY-TEMP-10PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-TEMP-10PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-TEMP-10PCTL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-TEMP-90PCTL": {
         "description": "Temperature 90th percentile",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-temp-normal": {
+    "comp_flag_HLY-TEMP-90PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-TEMP-90PCTL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-TEMP-90PCTL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-TEMP-NORMAL": {
         "description": "Temperature mean",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-wchl-normal": {
+    "comp_flag_HLY-TEMP-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-TEMP-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-TEMP-NORMAL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-WCHL-NORMAL": {
         "description": "Wind chill mean",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-1stdir": {
+    "comp_flag_HLY-WCHL-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-WCHL-NORMAL": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-WCHL-NORMAL": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-WIND-1STDIR": {
         "description": "Prevailing wind direction (1-8)",
-        "unit": null
+        "pandas_dtype": "category",
+        "categories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
     },
-    "hly-wind-1stpct": {
+    "comp_flag_HLY-WIND-1STDIR": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-WIND-1STDIR": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-WIND-1STDIR": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-WIND-1STPCT": {
         "description": "Prevailing wind percentage",
-        "unit": "percent"
+        "unit": "percent",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-2nddir": {
+    "comp_flag_HLY-WIND-1STPCT": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-WIND-1STPCT": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-WIND-1STPCT": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-WIND-2NDDIR": {
         "description": "Secondary wind direction (1-8)",
-        "unit": null
+        "pandas_dtype": "category",
+        "categories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
     },
-    "hly-wind-2ndpct": {
+    "comp_flag_HLY-WIND-2NDDIR": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-WIND-2NDDIR": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-WIND-2NDDIR": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-WIND-2NDPCT": {
         "description": "Secondary wind percentage",
-        "unit": "percent"
+        "unit": "percent",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-avgspd": {
+    "comp_flag_HLY-WIND-2NDPCT": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-WIND-2NDPCT": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-WIND-2NDPCT": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-WIND-AVGSPD": {
         "description": "Average wind speed",
-        "unit": "mile per hour"
+        "unit": "mile per hour",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-pctclm": {
+    "comp_flag_HLY-WIND-AVGSPD": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-WIND-AVGSPD": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-WIND-AVGSPD": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-WIND-PCTCLM": {
         "description": "Percentage calm",
-        "unit": "percent"
+        "unit": "percent",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-vctdir": {
+    "comp_flag_HLY-WIND-PCTCLM": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-WIND-PCTCLM": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-WIND-PCTCLM": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-WIND-VCTDIR": {
         "description": "Mean wind vector direction",
-        "unit": "degree"
+        "unit": "degree",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-vctspd": {
+    "comp_flag_HLY-WIND-VCTDIR": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-WIND-VCTDIR": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-WIND-VCTDIR": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
+    },
+    "HLY-WIND-VCTSPD": {
         "description": "Mean wind vector magnitude",
-        "unit": "mile per hour"
+        "unit": "mile per hour",
+        "pandas_dtype": "float64"
+    },
+    "comp_flag_HLY-WIND-VCTSPD": {
+        "pandas_dtype": "category",
+        "categories": [
+            "S"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "meas_flag_HLY-WIND-VCTSPD": {
+        "pandas_dtype": "category",
+        "categories": [
+            "M",
+            "X"
+        ],
+        "description": "Data record measurement flag"
+    },
+    "years_HLY-WIND-VCTSPD": {
+        "pandas_dtype": "int64",
+        "description": "Number of years used"
     }
 }

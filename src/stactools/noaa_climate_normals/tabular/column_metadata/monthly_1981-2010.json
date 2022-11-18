@@ -1,434 +1,1232 @@
 {
-    "station": {
+    "STATION": {
         "description": "Station identification code",
-        "unit": null
+        "pandas_dtype": "object"
     },
-    "date": {
-        "description": "Month of year",
-        "unit": null
-    },
-    "latitude": {
-        "description": "Station latitude",
-        "unit": "degree"
-    },
-    "longitude": {
-        "description": "Station longitude",
-        "unit": "degree"
-    },
-    "elevation": {
-        "description": "Station elevation",
-        "unit": "meter"
-    },
-    "name": {
+    "NAME": {
         "description": "Station name",
-        "unit": null
+        "pandas_dtype": "object"
+    },
+    "DATE": {
+        "description": "Month of year",
+        "pandas_dtype": "int64"
+    },
+    "LATITUDE": {
+        "description": "Station latitude",
+        "unit": "degree",
+        "pandas_dtype": "float64"
+    },
+    "LONGITUDE": {
+        "description": "Station longitude",
+        "unit": "degree",
+        "pandas_dtype": "float64"
+    },
+    "ELEVATION": {
+        "description": "Station elevation",
+        "unit": "meter",
+        "pandas_dtype": "float64"
     },
     "geometry": {
         "description": "Station 3D point location",
-        "unit": null
+        "pandas_dtype": "geometry"
     },
-    "mly-tavg-normal": {
-        "description": "Long-term averages of monthly average temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "mly-tavg-stddev": {
-        "description": "Long-term standard deviations of monthly average temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "mly-tmax-normal": {
-        "description": "Long-term averages of monthly maximum temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "mly-tmax-stddev": {
-        "description": "Long-term standard deviations of monthly maximum temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "mly-tmin-normal": {
-        "description": "Long-term averages of monthly minimum temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "mly-tmin-stddev": {
-        "description": "Long-term standard deviations of monthly minimum temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "mly-dutr-normal": {
-        "description": "Long-term monthly mean of daily temperature range",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "mly-dutr-stddev": {
-        "description": "Long-term monthly standard deviations of daily temperature range",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "mly-cldd-base40": {
-        "description": "Long-term averages of monthly cooling degree days with base 40F",
-        "unit": "degree Fahrenheit"
-    },
-    "mly-cldd-base45": {
+    "MLY-CLDD-BASE45": {
         "description": "Long-term averages of monthly cooling degree days with base 45F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-cldd-base50": {
+    "MLY-CLDD-BASE50": {
         "description": "Long-term averages of monthly cooling degree days with base 50F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-cldd-base55": {
+    "MLY-CLDD-BASE55": {
         "description": "Long-term averages of monthly cooling degree days with base 55F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-cldd-base57": {
+    "MLY-CLDD-BASE57": {
         "description": "Long-term averages of monthly cooling degree days with base 57F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-cldd-base60": {
+    "MLY-CLDD-BASE57_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-CLDD-BASE60": {
         "description": "Long-term averages of monthly cooling degree days with base 60F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-cldd-base70": {
+    "MLY-CLDD-BASE60_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-CLDD-BASE70": {
         "description": "Long-term averages of monthly cooling degree days with base 70F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-cldd-base72": {
+    "MLY-CLDD-BASE70_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-CLDD-BASE72": {
         "description": "Long-term averages of monthly cooling degree days with base 72F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-cldd-normal": {
+    "MLY-CLDD-BASE72_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-CLDD-NORMAL": {
         "description": "Long-term averages of monthly cooling degree days with base 65F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-base40": {
+    "MLY-CLDD-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-DUTR-NORMAL": {
+        "description": "Long-term monthly mean of daily temperature range",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "MLY-DUTR-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-DUTR-STDDEV": {
+        "description": "Long-term monthly standard deviations of daily temperature range",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "MLY-DUTR-STDDEV_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-BASE40": {
         "description": "Long-term averages of monthly growing degree days with base 40F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-base45": {
+    "MLY-GRDD-BASE40_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-BASE45": {
         "description": "Long-term averages of monthly growing degree days with base 45F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-base50": {
+    "MLY-GRDD-BASE45_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-BASE50": {
         "description": "Long-term averages of monthly growing degree days with base 50F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-base55": {
+    "MLY-GRDD-BASE50_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-BASE55": {
         "description": "Long-term averages of monthly growing degree days with base 55F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-base57": {
+    "MLY-GRDD-BASE55_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-BASE57": {
         "description": "Long-term averages of monthly growing degree days with base 57F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-base60": {
+    "MLY-GRDD-BASE57_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-BASE60": {
         "description": "Long-term averages of monthly growing degree days with base 60F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-base65": {
+    "MLY-GRDD-BASE60_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-BASE65": {
         "description": "Long-term averages of monthly growing degree days with base 65F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-base70": {
+    "MLY-GRDD-BASE65_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-BASE70": {
         "description": "Long-term averages of monthly growing degree days with base 70F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-base72": {
+    "MLY-GRDD-BASE70_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-BASE72": {
         "description": "Long-term averages of monthly growing degree days with base 72F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-tb4886": {
+    "MLY-GRDD-BASE72_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-TB4886": {
         "description": "Long-term avgs of monthly growing degree days with base 48F limit 86F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-grdd-tb5086": {
+    "MLY-GRDD-TB4886_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-GRDD-TB5086": {
         "description": "Long-term avgs of monthly growing degree days with base 50F limit 86F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-htdd-base40": {
+    "MLY-GRDD-TB5086_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-HTDD-BASE40": {
         "description": "Long-term averages of monthly heating degree days with base 40F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-htdd-base45": {
+    "MLY-HTDD-BASE40_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-HTDD-BASE45": {
         "description": "Long-term averages of monthly heating degree days with base 45F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-htdd-base50": {
+    "MLY-HTDD-BASE45_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-HTDD-BASE50": {
         "description": "Long-term averages of monthly heating degree days with base 50F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-htdd-base55": {
+    "MLY-HTDD-BASE50_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-HTDD-BASE55": {
         "description": "Long-term averages of monthly heating degree days with base 55F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-htdd-base57": {
+    "MLY-HTDD-BASE55_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-HTDD-BASE57": {
         "description": "Long-term averages of monthly heating degree days with base 57F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-htdd-base60": {
+    "MLY-HTDD-BASE57_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-HTDD-BASE60": {
         "description": "Long-term averages of monthly heating degree days with base 60F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-htdd-normal": {
+    "MLY-HTDD-BASE60_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-HTDD-NORMAL": {
         "description": "Long-term averages of monthly heating degree days with base 65F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-prcp-normal": {
-        "description": "Long-term averages of monthly precipitation total",
-        "unit": "hundredth of inch"
+    "MLY-HTDD-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-prcp-25pctl": {
+    "MLY-PRCP-25PCTL": {
         "description": "First quartile of monthly nonzero precipitation totals",
-        "unit": "hundredth of inch"
+        "unit": "hundredth of inch",
+        "pandas_dtype": "float64"
     },
-    "mly-prcp-50pctl": {
+    "MLY-PRCP-25PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-PRCP-50PCTL": {
         "description": "Second quartile of monthly nonzero precipitation totals",
-        "unit": "hundredth of inch"
+        "unit": "hundredth of inch",
+        "pandas_dtype": "float64"
     },
-    "mly-prcp-75pctl": {
+    "MLY-PRCP-50PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-PRCP-75PCTL": {
         "description": "Third quartile of monthly nonzero precipitation totals",
-        "unit": "hundredth of inch"
+        "unit": "hundredth of inch",
+        "pandas_dtype": "float64"
     },
-    "mly-prcp-20pctl": {
-        "description": "First quintile of monthly nonzero precipitation totals",
-        "unit": "hundredth of inch"
+    "MLY-PRCP-75PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-prcp-40pctl": {
-        "description": "Second quintile of monthly nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "mly-prcp-60pctl": {
-        "description": "Third quintile of monthly nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "mly-prcp-80pctl": {
-        "description": "Fourth quintile of monthly nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "mly-prcp-33pctl": {
-        "description": "First tercile of monthly nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "mly-prcp-67pctl": {
-        "description": "Second tercile of monthly nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "mly-prcp-avgnds-ge001hi": {
+    "MLY-PRCP-AVGNDS-GE001HI": {
         "description": "Monthly number of days with precipitation >= 0.01 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-prcp-avgnds-ge010hi": {
+    "MLY-PRCP-AVGNDS-GE001HI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-PRCP-AVGNDS-GE010HI": {
         "description": "Monthly number of days with precipitation >= 0.10 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-prcp-avgnds-ge025hi": {
-        "description": "Monthly number of days with precipitation >= 0.25 inches",
-        "unit": "tenth of day"
+    "MLY-PRCP-AVGNDS-GE010HI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-prcp-avgnds-ge050hi": {
+    "MLY-PRCP-AVGNDS-GE050HI": {
         "description": "Monthly number of days with precipitation >= 0.50 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-prcp-avgnds-ge100hi": {
+    "MLY-PRCP-AVGNDS-GE050HI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-PRCP-AVGNDS-GE100HI": {
         "description": "Monthly number of days with precipitation >= 1.00 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-prcp-avgnds-ge200hi": {
-        "description": "Monthly number of days with precipitation >= 2.00 inches",
-        "unit": "tenth of day"
+    "MLY-PRCP-AVGNDS-GE100HI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-prcp-avgnds-ge400hi": {
-        "description": "Monthly number of days with precipitation >= 4.00 inches",
-        "unit": "tenth of day"
+    "MLY-PRCP-NORMAL": {
+        "description": "Long-term averages of monthly precipitation total",
+        "unit": "hundredth of inch",
+        "pandas_dtype": "float64"
     },
-    "mly-prcp-avgnds-ge600hi": {
-        "description": "Monthly number of days with precipitation >= 6.00 inches",
-        "unit": "tenth of day"
+    "MLY-PRCP-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-snow-normal": {
-        "description": "Long-term averages of monthly snowfall total",
-        "unit": "tenth of inch"
-    },
-    "mly-snow-25pctl": {
+    "MLY-SNOW-25PCTL": {
         "description": "First quartile of monthly nonzero snowfall totals",
-        "unit": "tenth of inch"
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
     },
-    "mly-snow-50pctl": {
+    "MLY-SNOW-25PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-SNOW-50PCTL": {
         "description": "Second quartile of monthly nonzero snowfall totals",
-        "unit": "tenth of inch"
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
     },
-    "mly-snow-75pctl": {
+    "MLY-SNOW-50PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-SNOW-75PCTL": {
         "description": "Third quartile of monthly nonzero snowfall totals",
-        "unit": "tenth of inch"
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
     },
-    "mly-snow-20pctl": {
-        "description": "First quintile of monthly nonzero snowfall totals",
-        "unit": "tenth of inch"
+    "MLY-SNOW-75PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-snow-40pctl": {
-        "description": "Second quintile of monthly nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "mly-snow-60pctl": {
-        "description": "Third quintile of monthly nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "mly-snow-80pctl": {
-        "description": "Fourth quintile of monthly nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "mly-snow-33pctl": {
-        "description": "First tercile of monthly nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "mly-snow-67pctl": {
-        "description": "Second tercile of monthly nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "mly-snow-avgnds-ge001ti": {
+    "MLY-SNOW-AVGNDS-GE001TI": {
         "description": "Monthly number of days with snowfall >= 0.1 inch",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-snow-avgnds-ge010ti": {
+    "MLY-SNOW-AVGNDS-GE001TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-SNOW-AVGNDS-GE010TI": {
         "description": "Monthly number of days with snowfall >= 1.0 inch",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-snow-avgnds-ge020ti": {
-        "description": "Monthly number of days with snowfall >= 2.0 inches",
-        "unit": "tenth of day"
+    "MLY-SNOW-AVGNDS-GE010TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-snow-avgnds-ge030ti": {
+    "MLY-SNOW-AVGNDS-GE030TI": {
         "description": "Monthly number of days with snowfall >= 3.0 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-snow-avgnds-ge040ti": {
-        "description": "Monthly number of days with snowfall >= 4.0 inches",
-        "unit": "tenth of day"
+    "MLY-SNOW-AVGNDS-GE030TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-snow-avgnds-ge050ti": {
+    "MLY-SNOW-AVGNDS-GE050TI": {
         "description": "Monthly number of days with snowfall >= 5.0 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-snow-avgnds-ge100ti": {
+    "MLY-SNOW-AVGNDS-GE050TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-SNOW-AVGNDS-GE100TI": {
         "description": "Monthly number of days with snowfall >= 10 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-snow-avgnds-ge200ti": {
-        "description": "Monthly number of days with snowfall >= 20 inches",
-        "unit": "tenth of day"
+    "MLY-SNOW-AVGNDS-GE100TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-snwd-avgnds-ge001wi": {
+    "MLY-SNOW-NORMAL": {
+        "description": "Long-term averages of monthly snowfall total",
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
+    },
+    "MLY-SNOW-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-SNWD-AVGNDS-GE001WI": {
         "description": "Monthly number of days with snow depth >= 1 inch",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-snwd-avgndsge002wi": {
-        "description": "Monthly number of days with snow depth >= 2 inches",
-        "unit": "tenth of day"
+    "MLY-SNWD-AVGNDS-GE001WI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-snwd-avgnds-ge003wi": {
+    "MLY-SNWD-AVGNDS-GE003WI": {
         "description": "Monthly number of days with snow depth >= 3 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-snwd-avgnds-ge004wi": {
-        "description": "Monthly number of days with snow depth >= 4 inches",
-        "unit": "tenth of day"
+    "MLY-SNWD-AVGNDS-GE003WI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-snwd-avgnds-ge005wi": {
+    "MLY-SNWD-AVGNDS-GE005WI": {
         "description": "Monthly number of days with snow depth >= 5 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-snwd-avgnds-ge010wi": {
+    "MLY-SNWD-AVGNDS-GE005WI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-SNWD-AVGNDS-GE010WI": {
         "description": "Monthly number of days with snow depth >= 10 inches",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-snwd-avgnds-ge020wi": {
-        "description": "Monthly number of days with snow depth >= 20 inches",
-        "unit": "tenth of day"
+    "MLY-SNWD-AVGNDS-GE010WI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-tmin-avgnds-lsth000": {
-        "description": "Monthly number of days with minimum temperature <= 0F",
-        "unit": "tenth of day"
+    "MLY-TAVG-NORMAL": {
+        "description": "Long-term averages of monthly average temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-tmin-avgnds-lsth010": {
-        "description": "Monthly number of days with minimum temperature <= 10F",
-        "unit": "tenth of day"
+    "MLY-TAVG-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-tmin-avgnds-lsth020": {
-        "description": "Monthly number of days with minimum temperature <= 20F",
-        "unit": "tenth of day"
+    "MLY-TAVG-STDDEV": {
+        "description": "Long-term standard deviations of monthly average temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "mly-tmin-avgnds-lsth032": {
-        "description": "Monthly number of days with minimum temperature <= 32F",
-        "unit": "tenth of day"
+    "MLY-TAVG-STDDEV_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "mly-tmin-avgnds-lsth040": {
-        "description": "Monthly number of days with minimum temperature <= 40F",
-        "unit": "tenth of day"
-    },
-    "mly-tmin-avgnds-lsth050": {
-        "description": "Monthly number of days with minimum temperature <= 50F",
-        "unit": "tenth of day"
-    },
-    "mly-tmin-avgnds-lsth060": {
-        "description": "Monthly number of days with minimum temperature <= 60F",
-        "unit": "tenth of day"
-    },
-    "mly-tmin-avgnds-lsth070": {
-        "description": "Monthly number of days with minimum temperature <= 70F",
-        "unit": "tenth of day"
-    },
-    "mly-tmax-avgnds-grth032": {
-        "description": "Monthly number of days with maximum temperature >= 32F",
-        "unit": "tenth of day"
-    },
-    "mly-tmax-avgnds-grth040": {
+    "MLY-TMAX-AVGNDS-GRTH040": {
         "description": "Monthly number of days with maximum temperature >= 40F",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-tmax-avgnds-grth050": {
+    "MLY-TMAX-AVGNDS-GRTH040_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMAX-AVGNDS-GRTH050": {
         "description": "Monthly number of days with maximum temperature >= 50F",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-tmax-avgnds-grth060": {
+    "MLY-TMAX-AVGNDS-GRTH050_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMAX-AVGNDS-GRTH060": {
         "description": "Monthly number of days with maximum temperature >= 60F",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-tmax-avgnds-grth070": {
+    "MLY-TMAX-AVGNDS-GRTH060_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMAX-AVGNDS-GRTH070": {
         "description": "Monthly number of days with maximum temperature >= 70F",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-tmax-avgnds-grth080": {
+    "MLY-TMAX-AVGNDS-GRTH070_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMAX-AVGNDS-GRTH080": {
         "description": "Monthly number of days with maximum temperature >= 80F",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-tmax-avgnds-grth090": {
+    "MLY-TMAX-AVGNDS-GRTH080_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMAX-AVGNDS-GRTH090": {
         "description": "Monthly number of days with maximum temperature >= 90F",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-tmax-avgnds-grth100": {
+    "MLY-TMAX-AVGNDS-GRTH090_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMAX-AVGNDS-GRTH100": {
         "description": "Monthly number of days with maximum temperature >= 100F",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-tmax-avgnds-lsth032": {
+    "MLY-TMAX-AVGNDS-GRTH100_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMAX-AVGNDS-LSTH032": {
         "description": "Monthly number of days with maximum temperature <= 32F",
-        "unit": "tenth of day"
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
     },
-    "mly-tmin-prbocc-lsth016": {
+    "MLY-TMAX-AVGNDS-LSTH032_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMAX-NORMAL": {
+        "description": "Long-term averages of monthly maximum temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMAX-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMAX-STDDEV": {
+        "description": "Long-term standard deviations of monthly maximum temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMAX-STDDEV_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-AVGNDS-LSTH000": {
+        "description": "Monthly number of days with minimum temperature <= 0F",
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-AVGNDS-LSTH000_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-AVGNDS-LSTH010": {
+        "description": "Monthly number of days with minimum temperature <= 10F",
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-AVGNDS-LSTH010_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-AVGNDS-LSTH020": {
+        "description": "Monthly number of days with minimum temperature <= 20F",
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-AVGNDS-LSTH020_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-AVGNDS-LSTH032": {
+        "description": "Monthly number of days with minimum temperature <= 32F",
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-AVGNDS-LSTH032_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-AVGNDS-LSTH040": {
+        "description": "Monthly number of days with minimum temperature <= 40F",
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-AVGNDS-LSTH040_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-AVGNDS-LSTH050": {
+        "description": "Monthly number of days with minimum temperature <= 50F",
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-AVGNDS-LSTH050_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-AVGNDS-LSTH060": {
+        "description": "Monthly number of days with minimum temperature <= 60F",
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-AVGNDS-LSTH060_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-AVGNDS-LSTH070": {
+        "description": "Monthly number of days with minimum temperature <= 70F",
+        "unit": "tenth of day",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-AVGNDS-LSTH070_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-NORMAL": {
+        "description": "Long-term averages of monthly minimum temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-PRBOCC-LSTH016": {
         "description": "Probability of minimum temperature at least once monthly <= 16F",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "mly-tmin-prbocc-lsth020": {
+    "MLY-TMIN-PRBOCC-LSTH016_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-PRBOCC-LSTH020": {
         "description": "Probability of minimum temperature at least once monthly <= 20F",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "mly-tmin-prbocc-lsth024": {
+    "MLY-TMIN-PRBOCC-LSTH020_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-PRBOCC-LSTH024": {
         "description": "Probability of minimum temperature at least once monthly <= 24F",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "mly-tmin-prbocc-lsth028": {
+    "MLY-TMIN-PRBOCC-LSTH024_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-PRBOCC-LSTH028": {
         "description": "Probability of minimum temperature at least once monthly <= 28F",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "mly-tmin-prbocc-lsth032": {
+    "MLY-TMIN-PRBOCC-LSTH028_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-PRBOCC-LSTH032": {
         "description": "Probability of minimum temperature at least once monthly <= 32F",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "mly-tmin-prbocc-lsth036": {
+    "MLY-TMIN-PRBOCC-LSTH032_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-PRBOCC-LSTH036": {
         "description": "Probability of minimum temperature at least once monthly <= 36F",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-PRBOCC-LSTH036_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MLY-TMIN-STDDEV": {
+        "description": "Long-term standard deviations of monthly minimum temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "MLY-TMIN-STDDEV_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     }
 }

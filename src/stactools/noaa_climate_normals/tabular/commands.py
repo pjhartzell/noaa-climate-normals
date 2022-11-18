@@ -33,7 +33,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
         destination: str,
     ) -> None:
         """
-        Creates a GeoParquet file from CSV files listed in a text file.
+        Creates GeoParquet data from CSV files listed in a text file.
 
         \b
         Args:
@@ -43,22 +43,22 @@ def create_command(noaa_climate_normals: Group) -> Command:
                 'annualseasonal'.
             period (Period): Choice of '1981-2010', '1991-2020', or
                 '2006-2020'.
-            destination (str): Directory for the created GeoParquet file.
+            destination (str): Directory for the created GeoParquet data.
         """
         with open(file_list) as f:
             hrefs = [line.strip() for line in f.readlines()]
         if not os.path.exists(destination):
             os.mkdir(destination)
-        geoparquet_path = os.path.join(
-            destination, f"{id_string(Frequency(frequency), Period(period))}.parquet"
+        geoparquet_dir = os.path.join(
+            destination, f"{id_string(Frequency(frequency), Period(period))}"
         )
         create_parquet(
             csv_hrefs=hrefs,
             frequency=Frequency(frequency),
             period=Period(period),
-            parquet_path=geoparquet_path,
+            parquet_dir=geoparquet_dir,
         )
-        click.echo(f"GeoParquet file created at {geoparquet_path}")
+        click.echo(f"GeoParquet file created at {geoparquet_dir}")
 
         return None
 
@@ -77,7 +77,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
         and normal period.
 
         The Item will contain a single GeoParquet asset created from CSV files
-        listed in a text file. The Item and GeoParquet file are saved to the
+        listed in a text file. The Item and GeoParquet data are saved to the
         specified `destination`.
 
         \b
@@ -88,7 +88,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
                 'annualseasonal'.
             period (Period): Choice of '1981-2010', '1991-2020', or
                 '2006-2020'.
-            destination (str): Directory for GeoParquet file and STAC Item.
+            destination (str): Directory for GeoParquet data and STAC Item.
         """
         with open(file_list) as f:
             hrefs = [line.strip() for line in f.readlines()]
