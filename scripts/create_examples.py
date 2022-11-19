@@ -11,7 +11,6 @@ import shutil
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-import stactools.core.copy
 from pystac import Catalog, CatalogType
 
 from stactools.noaa_climate_normals.gridded import constants as gridded_constants
@@ -106,14 +105,24 @@ with TemporaryDirectory() as tmp_dir:
 
     print("Saving catalog")
     catalog.normalize_hrefs(str(examples))
-    shutil.rmtree(examples)
+    if examples.exists():
+        shutil.rmtree(examples)
     for item in catalog.get_all_items():
         for asset in item.assets.values():
             if asset.href.startswith(tmp_dir):
-                href = stactools.core.copy.move_asset_file_to_item(
-                    item, asset.href, copy=False
-                )
-                asset.href = href
+                item_href = item.get_self_href()
+                if item_href:
+                    item_dir = Path(item_href).parent
+                    fname = Path(asset.href).name
+                    new_asset_href = Path(item_dir, fname)
+                    new_asset_href.parent.mkdir(parents=True, exist_ok=True)
+                    if Path(asset.href).is_dir():
+                        _ = shutil.copytree(asset.href, new_asset_href)
+                    else:
+                        _ = shutil.copy(asset.href, new_asset_href)
+                    asset.href = str(new_asset_href)
+                else:
+                    print("Uh-oh")
         item.make_asset_hrefs_relative()
     catalog.save(catalog_type=CatalogType.SELF_CONTAINED)
 

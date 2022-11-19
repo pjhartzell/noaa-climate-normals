@@ -8,7 +8,6 @@ from pystac import CatalogType
 from .constants import Frequency, Period
 from .parquet import create_parquet
 from .stac import create_collection, create_item
-from .utils import id_string
 
 logger = logging.getLogger(__name__)
 
@@ -21,7 +20,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
     def tabular() -> None:
         pass
 
-    @tabular.command("create-geoparquet", short_help="Creates a GeoParquet file")
+    @tabular.command("create-geoparquet", short_help="Creates GeoParquet data")
     @click.argument("file-list")
     @click.argument("frequency", type=click.Choice([f.value for f in Frequency]))
     @click.argument("period", type=click.Choice([p.value for p in Period]))
@@ -47,18 +46,17 @@ def create_command(noaa_climate_normals: Group) -> Command:
         """
         with open(file_list) as f:
             hrefs = [line.strip() for line in f.readlines()]
+
         if not os.path.exists(destination):
             os.mkdir(destination)
-        geoparquet_dir = os.path.join(
-            destination, f"{id_string(Frequency(frequency), Period(period))}"
-        )
-        create_parquet(
+
+        parquet_path = create_parquet(
             csv_hrefs=hrefs,
             frequency=Frequency(frequency),
             period=Period(period),
-            parquet_dir=geoparquet_dir,
+            parquet_dir=destination,
         )
-        click.echo(f"GeoParquet file created at {geoparquet_dir}")
+        click.echo(f"GeoParquet file created at {parquet_path}")
 
         return None
 

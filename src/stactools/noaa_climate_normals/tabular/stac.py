@@ -1,17 +1,17 @@
 from datetime import datetime, timezone
 from typing import List, Optional
 
+import stac_table
 from pystac import Collection, Item, Summaries
 from pystac.extensions.item_assets import ItemAssetsExtension
 from pystac.extensions.scientific import ScientificExtension
 from pystac.extensions.table import TableExtension
 from pystac.utils import datetime_to_str, make_absolute_href
 from stactools.core.io import ReadHrefModifier
-import stac_table
 
 from ..constants import LANDING_PAGE_LINK, LICENSE_LINK, PROVIDERS
 from . import constants
-from .parquet import create_parquet, get_collection_tables
+from .parquet import create_parquet, get_collection_tables, update_table_columns
 from .utils import formatted_frequency, id_string
 
 
@@ -21,7 +21,7 @@ def create_item(
     period: constants.Period,
     geoparquet_dir: str,
     *,
-    existing_geoparquet: Optional[str] = None,
+    geoparquet_href: Optional[str] = None,
     read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Item:
     """Creates a STAC Item for GeoParquet data created from NOAA Climate
@@ -35,7 +35,7 @@ def create_item(
         period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
         geoparquet_dir (str): Directory to store created GeoParquet data.
-        existing_geoparquet (Optional[str]): HREF to an existing GeoParquet
+        geoparquet_href (Optional[str]): HREF to an existing GeoParquet
             file or directory. New GeoParquet data will not be created from the
             `csv_hrefs` list if this HREF is supplied.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
@@ -49,8 +49,8 @@ def create_item(
     id = id_string(frequency, period)
     title = f"{formatted_frequency(frequency)} Climate Normals for Period {period}"
 
-    if not existing_geoparquet:
-        existing_geoparquet = create_parquet(
+    if not geoparquet_href:
+        geoparquet_href = create_parquet(
             csv_hrefs,
             frequency,
             period,
@@ -74,13 +74,15 @@ def create_item(
     )
 
     item = stac_table.generate(
-        uri=make_absolute_href(existing_geoparquet),
+        uri=make_absolute_href(geoparquet_href),
         template=item,
         infer_bbox="geometry",
         infer_geometry=False,
-        asset_key="geoparquet"
+        asset_key="geoparquet",
     )
     item.properties.pop("proj:bbox")
+
+    item = update_table_columns(item, frequency, period)
 
     scientific = ScientificExtension.ext(item, add_if_missing=True)
     if period is constants.Period.PERIOD_1981_2010:

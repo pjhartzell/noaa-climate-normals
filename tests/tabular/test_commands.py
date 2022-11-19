@@ -34,7 +34,9 @@ class CommandsTest(CliTestCase):
                 f"monthly 1981-2010 {tmp_dir}"
             )
             assert result.exit_code == 0, "\n{}".format(result.output)
-            geoparquet_path = os.path.join(tmp_dir, "1981_2010-monthly.parquet")
+            geoparquet_path = os.path.join(
+                tmp_dir, "1981_2010-monthly.parquet", "part.0.parquet"
+            )
             assert os.path.isfile(geoparquet_path)
 
     def test_create_tabular_item(self) -> None:
@@ -57,7 +59,9 @@ class CommandsTest(CliTestCase):
                 f"monthly 1981-2010 {tmp_dir}"
             )
             assert result.exit_code == 0, "\n{}".format(result.output)
-            geoparquet_path = os.path.join(tmp_dir, "1981_2010-monthly.parquet")
+            geoparquet_path = os.path.join(
+                tmp_dir, "1981_2010-monthly.parquet", "part.0.parquet"
+            )
             assert os.path.isfile(geoparquet_path)
 
             jsons = [p for p in os.listdir(tmp_dir) if p.endswith(".json")]

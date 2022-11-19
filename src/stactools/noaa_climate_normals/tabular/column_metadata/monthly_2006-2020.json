@@ -2089,6 +2089,8 @@
         "description": "Number of years used"
     },
     "MLY-SNWD-AVGNDS-GE002WI": {
+        "description": "Monthly number of days with snow depth >= 2 inches",
+        "unit": "day",
         "pandas_dtype": "float64"
     },
     "comp_flag_MLY-SNWD-AVGNDS-GE002WI": {

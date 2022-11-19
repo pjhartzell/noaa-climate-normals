@@ -4,12 +4,10 @@
 
 """
 import logging
-import os
 from pathlib import Path
 
 from stactools.noaa_climate_normals.tabular.constants import Frequency, Period
 from stactools.noaa_climate_normals.tabular.parquet import create_parquet
-from stactools.noaa_climate_normals.tabular.utils import id_string
 
 logging.basicConfig(format="%(message)s")
 logger = logging.getLogger()
@@ -43,7 +41,5 @@ for prefix in prefixes:
         csv_hrefs=csv_hrefs,
         frequency=frequency,
         period=period,
-        parquet_path=os.path.join(
-            "geoparquet", f"{id_string(frequency, period)}.parquet"
-        ),
+        parquet_dir="geoparquet_new",
     )

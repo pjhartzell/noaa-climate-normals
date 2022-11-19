@@ -1,16 +1,18 @@
 import json
 import logging
+import os
+import warnings
 from typing import Any, Dict, List, Optional
 from warnings import simplefilter
-import os
 
 import dask
 import dask.dataframe
 import dask_geopandas
-import pyarrow
-import geopandas
-import pandas
+import geopandas as gpd
+import pandas as pd
 import pkg_resources
+import pyarrow
+import pystac
 from stactools.core.io import ReadHrefModifier
 
 from ..utils import modify_href
@@ -23,8 +25,7 @@ logger = logging.getLogger(__name__)
 def pandas_datatypes(
     frequency: constants.Frequency, period: constants.Period
 ) -> Dict[str, Any]:
-    """Generates a dictionary of pandas datatypes for the CSV file columns from
-    metadata stored in JSON files.
+    """Generates a dictionary of pandas datatypes keyed by column name.
 
     Args:
         frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
@@ -39,7 +40,7 @@ def pandas_datatypes(
     dtypes = {}
     for key, value in column_metadata.items():
         if value["pandas_dtype"] == "category":
-            dtypes[key] = pandas.CategoricalDtype(value["categories"], ordered=False)
+            dtypes[key] = pd.CategoricalDtype(value["categories"], ordered=False)
         else:
             dtypes[key] = value["pandas_dtype"]
     return dtypes
@@ -55,28 +56,29 @@ def create_parquet(
     """Creates a GeoParquet file from a list of CSV files.
 
     Args:
-        csv_hrefs (List[str]): List of HREFs to CSV files that will be
-            converted to a single parquet file.
+        csv_hrefs (List[str]): HREFs to CSV files that will be converted to
+            GeoParquet.
         frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
             'hourly'.
         period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
-        parquet_dir (str): Directory for created parquet files.
+        parquet_dir (str): Directory for created parquet data.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
             to modify an HREF, e.g., to add a token to a URL.
 
     Returns:
-        str: Path to directory containing one or more parquet partitions.
+        str: Path to directory containing one or more parquet files.
     """
 
-    @dask.delayed
+    @dask.delayed  # type:ignore
     def dataframe_from_csv(
-        csv_href: str, pd_dtypes: Dict[str, Any], empty_df: pandas.DataFrame
-    ) -> pandas.DataFrame:
-        """Returns a dataframe with an ordered, complete set of columns."""
-        df = pandas.read_csv(csv_href, dtype=pd_dtypes)
-        df = pandas.concat([df, empty_df])[empty_df.columns]
-        df["geometry"] = geopandas.points_from_xy(
+        csv_href: str, pd_dtypes: Dict[str, Any], empty_df: pd.DataFrame
+    ) -> pd.DataFrame:
+        """Ingests a CSV file to a dataframe having a complete, ordered set of
+        columns."""
+        df = pd.read_csv(csv_href, dtype=pd_dtypes)
+        df = pd.concat([df, empty_df])[empty_df.columns]
+        df["geometry"] = gpd.points_from_xy(
             x=df.LONGITUDE,
             y=df.LATITUDE,
             z=df.ELEVATION,
@@ -84,149 +86,95 @@ def create_parquet(
         )
         return df
 
-    read_csv_hrefs = [
-        modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
-    ]
-
-    sorted_csv_hrefs = sorted(read_csv_hrefs)
+    csv_hrefs = [modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs]
+    csv_hrefs = sorted(csv_hrefs)
     pd_dtypes = pandas_datatypes(frequency, period)
-    empty_df = pandas.DataFrame(
-        {c: pandas.Series(dtype=t) for c, t in pd_dtypes.items()}
-    )
+    empty_df = pd.DataFrame({c: pd.Series(dtype=t) for c, t in pd_dtypes.items()})
 
-    pandas_dataframes = [
-        dataframe_from_csv(csv_href, pd_dtypes, empty_df)
-        for csv_href in sorted_csv_hrefs
+    pd_df = [
+        dataframe_from_csv(csv_href, pd_dtypes, empty_df) for csv_href in csv_hrefs
     ]
-    dask_dataframe = dask.dataframe.from_delayed(pandas_dataframes, meta=empty_df)
-    dask_geodataframe = dask_geopandas.from_dask_dataframe(dask_dataframe)
+    dask_df = dask.dataframe.from_delayed(pd_df, meta=empty_df)
+    dask_gdf = dask_geopandas.from_dask_dataframe(dask_df)
 
-    num_partitions = (
-        5
-        if frequency is constants.Frequency.DAILY
-        or frequency is constants.Frequency.MONTHLY
-        else 1
-    )
+    num_partitions = 1
+    if frequency in [constants.Frequency.DAILY, constants.Frequency.HOURLY]:
+        num_partitions = 5
+    if len(csv_hrefs) < num_partitions:
+        num_partitions = 1
 
     parquet_path = os.path.join(parquet_dir, f"{id_string(frequency, period)}.parquet")
 
-    parquet_schema = create_parquet_schema(empty_df, frequency, period)
+    with warnings.catch_warnings():
+        simplefilter(action="ignore", category=pd.errors.PerformanceWarning)
+        dask_gdf.repartition(num_partitions).to_parquet(parquet_path, write_index=False)
 
-    simplefilter(action="ignore", category=pandas.errors.PerformanceWarning)
-    dask_geodataframe.repartition(num_partitions).to_parquet(
-        parquet_path, schema=parquet_schema, engine="pyarrow", write_index=False
-    )
+    # parquet_schema = create_parquet_schema(
+    #     csv_hrefs[0], empty_df.copy(), pd_dtypes, frequency, period
+    # )
+    # with simplefilter(action="ignore", category=pd.errors.PerformanceWarning):
+    #     dask_gdf.repartition(num_partitions).to_parquet(
+    #         parquet_path, schema=parquet_schema, engine="pyarrow", write_index=False
+    #     )
 
     return parquet_path
 
 
 def create_parquet_schema(
-    empty_df: pandas.DataFrame,
+    csv_href: str,
+    empty_df: pd.DataFrame,
+    pd_dtypes: Dict[str, Any],
     frequency: constants.Frequency,
     period: constants.Period,
 ) -> pyarrow.Schema:
 
-    print(empty_df.dtypes)
-    schema = pyarrow.Schema.from_pandas(empty_df, preserve_index=False)
-    schema = schema.with_metadata(
-        {
-            "description": (
-                f"{formatted_frequency(frequency)} Climate Normals for "
-                f"Period {period}"
-            )
-        }
-    )
+    # not a numpy compatible dtype
+    empty_df.pop("geometry")
+    # allow pyarrow to determine types from ambiguous pandas 'object' types
+    df = pd.read_csv(csv_href, nrows=1, dtype=pd_dtypes)
+    df = pd.concat([df, empty_df])[empty_df.columns]
 
-    column_metadata = load_column_metadata(frequency, period)
-    for column in schema.names:
-        field_metadata = {}
-        field_metadata["description"] = column_metadata[column]["description"]
-        unit = column_metadata[column].get("unit", False)
-        if unit:
-            field_metadata["unit"] = unit
+    schema = pyarrow.Schema.from_pandas(df, preserve_index=False)
 
-        index = schema.get_field_index(column)
-        field = schema.field(index).with_metadata(field_metadata)
-        schema = schema.set(index, field)
+    # add table metadata
+    table_metadata = schema.metadata
+    table_metadata[
+        "description"
+    ] = f"{formatted_frequency(frequency)} Climate Normals for Period {period}"
+    schema = schema.with_metadata(table_metadata)
+
+    # TODO: add column metadata
+
+    # add missing geometry column
+    # this doesn't work
+    index = schema.get_field_index("ELEVATION")
+    schema = schema.insert(index + 1, pyarrow.field("geometry", pyarrow.binary()))
 
     return schema
 
 
-# def parquet_metadata(
-#     parquet_path: str,
-#     frequency: constants.Frequency,
-#     period: constants.Period,
-# ) -> Dict[str, Any]:
-#     """Generate metadata from GeoParquet data for use in STAC Asset and Item
-#     creation.
+def update_table_columns(
+    item: pystac.Item,
+    frequency: constants.Frequency,
+    period: constants.Period,
+) -> pystac.Item:
+    """Update table:columns metadata"""
 
-#     Args:
-#         parquet_path (str): Path to GeoParquet data, either a GeoParquet file or
-#             a directory of partioned GeoParquet files.
-#         frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
-#             'hourly'.
-#         period (Period): Climate normal time period of CSV data, e.g.,
-#             '1991-2020'.
-#         read_href_modifier (Optional[ReadHrefModifier]): An optional function
-#             to modify an HREF, e.g., to add a token to a URL.
+    column_metadata = load_column_metadata(frequency, period)
 
-#     Returns:
-#         Dict[str, Any]: Dictionary of metadata for asset and Item creation.
-#     """
-#     metadata = pq.read_metadata(parquet_href)
-#     columns_types = {col.name: col.physical_type for col in metadata.schema}
-#     num_rows = metadata.num_rows
+    columns = item.properties["table:columns"]
+    new_columns = []
+    for column in columns:
+        name = column["name"]
+        column["description"] = column_metadata[name]["description"]
+        unit = column_metadata.get(name, {}).get("unit", False)
+        if unit:
+            column["unit"] = unit
+        new_columns.append(column)
 
-#     geodataframe = geopandas.read_parquet(parquet_href, columns=["geometry"])
-#     convex_hull = geodataframe.unary_union.convex_hull
-#     geometry = mapping(convex_hull)
-#     bbox = list(convex_hull.bounds)
+    item.properties["table:columns"] = new_columns
 
-#     return {
-#         "href": make_absolute_href(parquet_href),
-#         "geometry": geometry,
-#         "bbox": bbox,
-#         "type": constants.PARQUET_MEDIA_TYPE,
-#         "title": constants.PARQUET_ASSET_TITLE,
-#         "table:primary_geometry": constants.PARQUET_GEOMETRY_COL,
-#         "table:columns": parquet_columns(columns_types, frequency, period),
-#         "table:row_count": num_rows,
-#         "roles": ["data"],
-#     }
-
-
-# def parquet_columns(
-#     columns_types: Dict[str, str],
-#     frequency: constants.Frequency,
-#     period: constants.Period,
-# ) -> List[Dict[str, Any]]:
-#     """Creates metadata for each column for use in the table extension.
-
-#     Args:
-#         columns_types (Dict[str, str]): A dictionary mapping column names to
-#             parquet data types.
-#         frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly'
-#             'hourly'.
-#         period (Period): Climate normal time period of CSV data, e.g.,
-#             '1991-2020'.
-
-#     Returns:
-#         List[Dict[str, Any]]: A list of dictionaries, each specifying a column
-#             name, parquet data type, description, and unit.
-#     """
-#     column_metadata = load_column_metadata(frequency, period)
-#     columns = []
-#     for column, data_type in columns_types.items():
-#         temp = {}
-#         temp["name"] = column
-#         temp["type"] = data_type
-#         temp["description"] = column_metadata[column]["description"]
-#         unit = column_metadata.get(column, {}).get("unit")
-#         if unit:
-#             temp["unit"] = unit
-#         columns.append(temp)
-
-#     return columns
+    return item
 
 
 def load_column_metadata(
