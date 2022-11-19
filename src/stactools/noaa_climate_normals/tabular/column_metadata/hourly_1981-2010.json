@@ -1,134 +1,415 @@
 {
-    "station": {
+    "STATION": {
         "description": "Station identification code",
-        "unit": null
+        "pandas_dtype": "object"
     },
-    "date": {
-        "description": "Month, day, and hour in MM-DDTHH:00:00 format",
-        "unit": null
-    },
-    "latitude": {
-        "description": "Station latitude",
-        "unit": "degree"
-    },
-    "longitude": {
-        "description": "Station longitude",
-        "unit": "degree"
-    },
-    "elevation": {
-        "description": "Station elevation",
-        "unit": "meter"
-    },
-    "name": {
+    "NAME": {
         "description": "Station name",
-        "unit": null
+        "pandas_dtype": "object"
+    },
+    "DATE": {
+        "description": "Month, day, and hour in MM-DDTHH:00:00 format",
+        "pandas_dtype": "object"
+    },
+    "LATITUDE": {
+        "description": "Station latitude",
+        "unit": "degree",
+        "pandas_dtype": "float64"
+    },
+    "LONGITUDE": {
+        "description": "Station longitude",
+        "unit": "degree",
+        "pandas_dtype": "float64"
+    },
+    "ELEVATION": {
+        "description": "Station elevation",
+        "unit": "meter",
+        "pandas_dtype": "float64"
     },
     "geometry": {
         "description": "Station 3D point location",
-        "unit": null
+        "pandas_dtype": "geometry"
     },
-    "hly-cldh-normal": {
+    "HLY-CLDH-NORMAL": {
         "description": "Cooling degree hours",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctbkn": {
+    "HLY-CLDH-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-CLOD-PCTBKN": {
         "description": "Clouds broken percentage",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctclr": {
+    "HLY-CLOD-PCTBKN_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-CLOD-PCTCLR": {
         "description": "Clouds clear percentage",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctfew": {
+    "HLY-CLOD-PCTCLR_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-CLOD-PCTFEW": {
         "description": "Clouds few percentage",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctovc": {
+    "HLY-CLOD-PCTFEW_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-CLOD-PCTOVC": {
         "description": "Clouds overcast percentage",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "hly-clod-pctsct": {
+    "HLY-CLOD-PCTOVC_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-CLOD-PCTSCT": {
         "description": "Clouds scattered percentage",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "hly-dewp-10pctl": {
+    "HLY-CLOD-PCTSCT_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-DEWP-10PCTL": {
         "description": "Dew point 10th percentile",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-dewp-90pctl": {
+    "HLY-DEWP-10PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-DEWP-90PCTL": {
         "description": "Dew point 90th percentile",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-dewp-normal": {
+    "HLY-DEWP-90PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-DEWP-NORMAL": {
         "description": "Dew point mean",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-hidx-normal": {
+    "HLY-DEWP-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-HIDX-NORMAL": {
         "description": "Heat index mean",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-htdh-normal": {
+    "HLY-HIDX-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-HTDH-NORMAL": {
         "description": "Heating degree hours",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-pres-10pctl": {
+    "HLY-HTDH-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-PRES-10PCTL": {
         "description": "Sea level pressure 10th percentile",
-        "unit": "tenth of hectoPascal"
+        "unit": "tenth of hectoPascal",
+        "pandas_dtype": "float64"
     },
-    "hly-pres-90pctl": {
+    "HLY-PRES-10PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-PRES-90PCTL": {
         "description": "Sea level pressure 90th percentile",
-        "unit": "tenth of hectoPascal"
+        "unit": "tenth of hectoPascal",
+        "pandas_dtype": "float64"
     },
-    "hly-pres-normal": {
+    "HLY-PRES-90PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-PRES-NORMAL": {
         "description": "Sea level pressure mean",
-        "unit": "tenth of hectoPascal"
+        "unit": "tenth of hectoPascal",
+        "pandas_dtype": "float64"
     },
-    "hly-temp-10pctl": {
+    "HLY-PRES-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-TEMP-10PCTL": {
         "description": "Temperature 10th percentile",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-temp-90pctl": {
+    "HLY-TEMP-10PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-TEMP-90PCTL": {
         "description": "Temperature 90th percentile",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-temp-normal": {
+    "HLY-TEMP-90PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-TEMP-NORMAL": {
         "description": "Temperature mean",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-wchl-normal": {
+    "HLY-TEMP-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-WCHL-NORMAL": {
         "description": "Wind chill mean",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-1stdir": {
+    "HLY-WCHL-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-WIND-1STDIR": {
         "description": "Prevailing wind direction (1-8)",
-        "unit": null
+        "pandas_dtype": "category",
+        "categories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
     },
-    "hly-wind-1stpct": {
+    "HLY-WIND-1STDIR_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-WIND-1STPCT": {
         "description": "Prevailing wind percentage",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-2nddir": {
+    "HLY-WIND-1STPCT_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-WIND-2NDDIR": {
         "description": "Secondary wind direction (1-8)",
-        "unit": null
+        "pandas_dtype": "category",
+        "categories": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+        ]
     },
-    "hly-wind-2ndpct": {
+    "HLY-WIND-2NDDIR_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-WIND-2NDPCT": {
         "description": "Secondary wind percentage",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-avgspd": {
+    "HLY-WIND-2NDPCT_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-WIND-AVGSPD": {
         "description": "Average wind speed",
-        "unit": "tenth of mile per hour"
+        "unit": "tenth of mile per hour",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-pctclm": {
+    "HLY-WIND-AVGSPD_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-WIND-PCTCLM": {
         "description": "Percentage calm",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-vctdir": {
+    "HLY-WIND-PCTCLM_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-WIND-VCTDIR": {
         "description": "Mean wind vector direction",
-        "unit": "degree"
+        "unit": "degree",
+        "pandas_dtype": "float64"
     },
-    "hly-wind-vctspd": {
+    "HLY-WIND-VCTDIR_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "HLY-WIND-VCTSPD": {
         "description": "Mean wind vector magnitude",
-        "unit": "tenth of mile per hour"
+        "unit": "tenth of mile per hour",
+        "pandas_dtype": "float64"
+    },
+    "HLY-WIND-VCTSPD_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "P"
+        ],
+        "description": "Data record completeness flag"
     }
 }

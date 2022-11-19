@@ -1,14 +1,18 @@
 import json
 import logging
+import os
+import warnings
 from typing import Any, Dict, List, Optional
+from warnings import simplefilter
 
-import fsspec
+import dask
+import dask.dataframe
+import dask_geopandas
 import geopandas as gpd
 import pandas as pd
 import pkg_resources
-import pyarrow.parquet as pq
-from pystac.utils import make_absolute_href
-from shapely.geometry import mapping
+import pyarrow
+import pystac
 from stactools.core.io import ReadHrefModifier
 
 from ..utils import modify_href
@@ -18,218 +22,165 @@ from .utils import formatted_frequency, id_string
 logger = logging.getLogger(__name__)
 
 
+def pandas_datatypes(
+    frequency: constants.Frequency, period: constants.Period
+) -> Dict[str, Any]:
+    """Generates a dictionary of pandas datatypes keyed by column name.
+
+    Args:
+        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
+            'hourly'.
+        period (Period): Climate normal time period of CSV data, e.g.,
+            '1991-2020'.
+
+    Returns:
+        Dict[str, Any]: Dictionary mapping column names to pandas datatypes.
+    """
+    column_metadata = load_column_metadata(frequency, period)
+    dtypes = {}
+    for key, value in column_metadata.items():
+        if value["pandas_dtype"] == "category":
+            dtypes[key] = pd.CategoricalDtype(value["categories"], ordered=False)
+        else:
+            dtypes[key] = value["pandas_dtype"]
+    return dtypes
+
+
 def create_parquet(
     csv_hrefs: List[str],
     frequency: constants.Frequency,
     period: constants.Period,
-    parquet_path: str,
+    parquet_dir: str,
     read_href_modifier: Optional[ReadHrefModifier] = None,
-) -> Dict[str, Any]:
+) -> str:
     """Creates a GeoParquet file from a list of CSV files.
 
     Args:
-        csv_hrefs (List[Dict[str, Any]]): List of HREFs to CSV files that will be
-            converted to a single parquet file.
+        csv_hrefs (List[str]): HREFs to CSV files that will be converted to
+            GeoParquet.
         frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
             'hourly'.
         period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
-        parquet_path (str): Path for created parquet file.
+        parquet_dir (str): Directory for created parquet data.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
             to modify an HREF, e.g., to add a token to a URL.
 
     Returns:
-        str: Dictionary of metadata for asset and Item creation.
+        str: Path to directory containing one or more parquet files.
     """
-    read_csv_hrefs = [
-        modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs
-    ]
 
-    dataframes = []
-    for csv_href in read_csv_hrefs:
-        dataframes.append(pd.read_csv(csv_href))
-
-    dataframe = pd.concat(dataframes, ignore_index=True).copy()
-    del dataframes
-
-    # Parquet does not like columns containing data of multiple types. Some CSV
-    # columns contain string and integer types, where valid data is a string
-    # and integer flags are used to indicate why data is missing. Mixed column
-    # data types also occur when concatenating dataframes with different columns.
-    # In this case numpy.nan values are used as fill. These nan values are float
-    # types, which creates columns of mixed types when valid data is not float
-    # type. These issues only appear to occur for columns where valid data are
-    # string type, so we convert the column values to strings when mixed types
-    # are encountered. An error is raised if we encounter an unexpected mix of
-    # types in a column (a mix that does not contain a string type).
-    for column in dataframe.columns:
-        column_types = set(dataframe[column].apply(type).values)
-        if len(column_types) > 1 and type(str()) in column_types:
-            logger.info(
-                f"Column '{column}' has mixed data types: {column_types}. "
-                f"Converting the column to 'str' data type."
-            )
-            dataframe[column] = dataframe[column].astype(str)
-        elif len(column_types) != 1:
-            raise ValueError(
-                f"Unexpected data type mix in Column '{column}': {column_types}."
-            )
-
-    dataframe.columns = dataframe.columns.str.lower()
-
-    make_categorical(dataframe)
-
-    dataframe = dataframe.copy()  # de-fragment
-
-    geodataframe = gpd.GeoDataFrame(
-        data=dataframe,
-        geometry=gpd.points_from_xy(
-            x=dataframe.longitude,
-            y=dataframe.latitude,
-            z=dataframe.elevation,
+    @dask.delayed  # type:ignore
+    def dataframe_from_csv(
+        csv_href: str, pd_dtypes: Dict[str, Any], empty_df: pd.DataFrame
+    ) -> pd.DataFrame:
+        """Ingests a CSV file to a dataframe having a complete, ordered set of
+        columns."""
+        df = pd.read_csv(csv_href, dtype=pd_dtypes)
+        df = pd.concat([df, empty_df])[empty_df.columns]
+        df["geometry"] = gpd.points_from_xy(
+            x=df.LONGITUDE,
+            y=df.LATITUDE,
+            z=df.ELEVATION,
             crs=constants.CRS,
-        ),
-    )
-    del dataframe
+        )
+        return df
 
-    geodataframe.to_parquet(parquet_path)
+    csv_hrefs = [modify_href(csv_href, read_href_modifier) for csv_href in csv_hrefs]
+    csv_hrefs = sorted(csv_hrefs)
+    pd_dtypes = pandas_datatypes(frequency, period)
+    empty_df = pd.DataFrame({c: pd.Series(dtype=t) for c, t in pd_dtypes.items()})
 
-    geometry = mapping(geodataframe.unary_union.convex_hull)
-
-    return parquet_metadata(parquet_path, frequency, period, geometry=geometry)
-
-
-def make_categorical(df: pd.DataFrame) -> None:
-    """Convert pandas columns that contain categorical data to a categorical
-    data type.
-
-    Args:
-        df (pd.DataFrame): Pandas DataFrame containing the unconverted data
-            types.
-    """
-    categorical_substrings = [
-        "_attributes",
-        "comp_flag_",
-        "meas_flag",
-        "wind-1stdir",
-        "wind-2nddir",
+    pd_df = [
+        dataframe_from_csv(csv_href, pd_dtypes, empty_df) for csv_href in csv_hrefs
     ]
-    for column in df.columns:
-        if any([substring in column for substring in categorical_substrings]):
-            df[column] = df[column].astype("category")
+    dask_df = dask.dataframe.from_delayed(pd_df, meta=empty_df)
+    dask_gdf = dask_geopandas.from_dask_dataframe(dask_df)
+
+    num_partitions = 1
+    if frequency in [constants.Frequency.DAILY, constants.Frequency.HOURLY]:
+        num_partitions = 5
+    if len(csv_hrefs) < num_partitions:
+        num_partitions = 1
+
+    parquet_path = os.path.join(parquet_dir, f"{id_string(frequency, period)}.parquet")
+
+    with warnings.catch_warnings():
+        simplefilter(action="ignore", category=pd.errors.PerformanceWarning)
+        dask_gdf.repartition(num_partitions).to_parquet(parquet_path, write_index=False)
+
+    # parquet_schema = create_parquet_schema(
+    #     csv_hrefs[0], empty_df.copy(), pd_dtypes, frequency, period
+    # )
+    # with simplefilter(action="ignore", category=pd.errors.PerformanceWarning):
+    #     dask_gdf.repartition(num_partitions).to_parquet(
+    #         parquet_path, schema=parquet_schema, engine="pyarrow", write_index=False
+    #     )
+
+    return parquet_path
 
 
-def parquet_metadata(
-    parquet_href: str,
+def create_parquet_schema(
+    csv_href: str,
+    empty_df: pd.DataFrame,
+    pd_dtypes: Dict[str, Any],
     frequency: constants.Frequency,
     period: constants.Period,
-    geometry: Optional[Dict[str, Any]] = None,
-    read_href_modifier: Optional[ReadHrefModifier] = None,
-) -> Dict[str, Any]:
-    """Generate metadata from a GeoParquet file for use in STAC Asset and Item
-    creation.
+) -> pyarrow.Schema:
 
-    Args:
-        parquet_href (str): Path to GeoParquet file.
-        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
-            'hourly'.
-        period (Period): Climate normal time period of CSV data, e.g.,
-            '1991-2020'.
-        geometry (Optional[Dict[str, Any]]: Convex hull of GeoParquet points in
-            GeoJSON format. Only the GeoParquet file metadata needs to be
-            touched when this option is provided.
-        read_href_modifier (Optional[ReadHrefModifier]): An optional function
-            to modify an HREF, e.g., to add a token to a URL.
+    # not a numpy compatible dtype
+    empty_df.pop("geometry")
+    # allow pyarrow to determine types from ambiguous pandas 'object' types
+    df = pd.read_csv(csv_href, nrows=1, dtype=pd_dtypes)
+    df = pd.concat([df, empty_df])[empty_df.columns]
 
-    Returns:
-        Dict[str, Any]: Dictionary of metadata for asset and Item creation.
-    """
-    read_parquet_href = modify_href(parquet_href, read_href_modifier)
-    with fsspec.open(read_parquet_href) as fobj:
-        metadata = pq.read_metadata(fobj)
-        columns_types = {
-            col.name.lower(): col.physical_type.lower() for col in metadata.schema
-        }
-        num_rows = metadata.num_rows
+    schema = pyarrow.Schema.from_pandas(df, preserve_index=False)
 
-        schema = pq.read_schema(fobj)
-        bbox = json.loads(schema.metadata[b"geo"].decode())["columns"]["geometry"][
-            "bbox"
-        ]
+    # add table metadata
+    table_metadata = schema.metadata
+    table_metadata[
+        "description"
+    ] = f"{formatted_frequency(frequency)} Climate Normals for Period {period}"
+    schema = schema.with_metadata(table_metadata)
 
-        if not geometry:
-            geodataframe = gpd.read_parquet(fobj, columns=["geometry"])
-            geometry = mapping(geodataframe.unary_union.convex_hull)
+    # TODO: add column metadata
 
-    return {
-        "href": make_absolute_href(parquet_href),
-        "geometry": geometry,
-        "bbox": bbox,
-        "type": constants.PARQUET_MEDIA_TYPE,
-        "title": constants.PARQUET_ASSET_TITLE,
-        "table:primary_geometry": constants.PARQUET_GEOMETRY_COL,
-        "table:columns": geodataframe_columns(columns_types, frequency, period),
-        "table:row_count": num_rows,
-        "roles": ["data"],
-    }
+    # add missing geometry column
+    # this doesn't work
+    index = schema.get_field_index("ELEVATION")
+    schema = schema.insert(index + 1, pyarrow.field("geometry", pyarrow.binary()))
+
+    return schema
 
 
-def geodataframe_columns(
-    columns_types: Dict[str, str],
+def update_table_columns(
+    item: pystac.Item,
     frequency: constants.Frequency,
     period: constants.Period,
-) -> List[Dict[str, Any]]:
-    """Creates metadata for each column in a GeoPandas DataFrame for use in the
-    'table' extension.
+) -> pystac.Item:
+    """Update table:columns metadata"""
 
-    Args:
-        columns_types (Dict[str, str]): A dictionary mapping column names to
-            parquet data types.
-        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly'
-            'hourly'.
-        period (Period): Climate normal time period of CSV data, e.g.,
-            '1991-2020'.
-
-    Returns:
-        List[Dict[str, Any]]: A list of dictionaries, each specifying a column
-            name, data type, description, and unit.
-    """
     column_metadata = load_column_metadata(frequency, period)
-    columns = []
-    for column, data_type in columns_types.items():
-        temp = {}
 
-        temp["name"] = column
-        temp["type"] = data_type
-
-        description = column_metadata.get(column, {}).get("description")
-        if description:
-            temp["description"] = description
-        else:
-            if "_attributes" in column or "comp_flag_" in column:
-                temp["description"] = "Data record completeness flag"
-            elif "meas_flag" in column:
-                temp["description"] = "Data record measurement flag"
-            elif "years_" in column:
-                temp["description"] = "Number of years used"
-            else:
-                logger.warning(
-                    f"{frequency}_{period}: description for column '{column}' is missing"
-                )
-
-        unit = column_metadata.get(column, {}).get("unit")
+    columns = item.properties["table:columns"]
+    new_columns = []
+    for column in columns:
+        name = column["name"]
+        column["description"] = column_metadata[name]["description"]
+        unit = column_metadata.get(name, {}).get("unit", False)
         if unit:
-            temp["unit"] = unit
+            column["unit"] = unit
+        new_columns.append(column)
 
-        columns.append(temp)
+    item.properties["table:columns"] = new_columns
 
-    return columns
+    return item
 
 
 def load_column_metadata(
     frequency: constants.Frequency, period: constants.Period
 ) -> Any:
-    """Loads a dictionary mapping column names to descriptions.
+    """Loads a JSON file containing column metadata.
 
     Args:
         frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly'
@@ -238,7 +189,7 @@ def load_column_metadata(
             '1991-2020'.
 
     Returns:
-        Any: A dictionary mapping column names to descriptions and units.
+        Any: A dictionary mapping column names to metadata.
     """
     try:
         with pkg_resources.resource_stream(
@@ -250,9 +201,9 @@ def load_column_metadata(
         raise e
 
 
-def get_tables() -> Dict[int, Dict[str, str]]:
+def get_collection_tables() -> Dict[int, Dict[str, str]]:
     """Creates a dictionary of dictionaries containing table names and
-    descriptions for use in the 'table' extension on a Collection.
+    descriptions for use in the 'table' extension on the Tabular Collection.
 
     Returns:
         Dict[int, Dict[str, str]]: Dictionaries containing table names and

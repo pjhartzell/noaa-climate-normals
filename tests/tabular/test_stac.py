@@ -44,7 +44,9 @@ def test_create_tabular_item(file_list: List[str]) -> None:
             geoparquet_dir=tmp_dir,
         )
         assert item.id == f"{period.replace('-', '_')}-{frequency}"
-        assert os.path.isfile(os.path.join(tmp_dir, f"{item.id}.parquet"))
+        assert os.path.isfile(
+            os.path.join(tmp_dir, f"{item.id}.parquet", "part.0.parquet")
+        )
 
     item.validate()
 

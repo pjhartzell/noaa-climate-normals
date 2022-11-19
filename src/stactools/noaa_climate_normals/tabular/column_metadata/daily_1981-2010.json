@@ -1,386 +1,993 @@
 {
-    "station": {
+    "STATION": {
         "description": "Station identification code",
-        "unit": null
+        "pandas_dtype": "object"
     },
-    "date": {
-        "description": "Month and day in MM-DD format",
-        "unit": null
-    },
-    "latitude": {
-        "description": "Station latitude",
-        "unit": "degree"
-    },
-    "longitude": {
-        "description": "Station longitude",
-        "unit": "degree"
-    },
-    "elevation": {
-        "description": "Station elevation",
-        "unit": "meter"
-    },
-    "name": {
+    "NAME": {
         "description": "Station name",
-        "unit": null
+        "pandas_dtype": "object"
+    },
+    "DATE": {
+        "description": "Month and day in MM-DD format",
+        "pandas_dtype": "object"
+    },
+    "LATITUDE": {
+        "description": "Station latitude",
+        "unit": "degree",
+        "pandas_dtype": "float64"
+    },
+    "LONGITUDE": {
+        "description": "Station longitude",
+        "unit": "degree",
+        "pandas_dtype": "float64"
+    },
+    "ELEVATION": {
+        "description": "Station elevation",
+        "unit": "meter",
+        "pandas_dtype": "float64"
     },
     "geometry": {
         "description": "Station 3D point location",
-        "unit": null
+        "pandas_dtype": "geometry"
     },
-    "dly-tavg-normal": {
-        "description": "Long-term averages of daily average temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "dly-tavg-stddev": {
-        "description": "Long-term standard deviations of daily average temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "dly-tmax-normal": {
-        "description": "Long-term averages of daily maximum temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "dly-tmax-stddev": {
-        "description": "Long-term standard deviations of daily maximum temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "dly-tmin-normal": {
-        "description": "Long-term averages of daily minimum temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "dly-tmin-stddev": {
-        "description": "Long-term standard deviations of daily minimum temperature",
-        "unit": "tenth of degree Fahrenheit"
-    },
-    "mtd-prcp-normal": {
-        "description": "Long-term average month-to-date liquid precipitation amount",
-        "unit": "hundredth of inch"
-    },
-    "mtd-snow-normal": {
-        "description": "Long-term average month-to-date snowfall amount",
-        "unit": "tenth of inch"
-    },
-    "ytd-prcp-normal": {
-        "description": "Long-term average year-to-date liquid precipitation amount",
-        "unit": "hundredth of inch"
-    },
-    "ytd-snow-normal": {
-        "description": "Long-term average year-to-date snowfall amount",
-        "unit": "tenth of inch"
-    },
-    "dly-cldd-base40": {
-        "description": "Long-term averages of daily cooling degree days with base 40F",
-        "unit": "degree Fahrenheit"
-    },
-    "dly-cldd-base45": {
+    "DLY-CLDD-BASE45": {
         "description": "Long-term averages of daily cooling degree days with base 45F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-cldd-base50": {
+    "DLY-CLDD-BASE45_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-CLDD-BASE50": {
         "description": "Long-term averages of daily cooling degree days with base 50F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-cldd-base55": {
+    "DLY-CLDD-BASE50_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-CLDD-BASE55": {
         "description": "Long-term averages of daily cooling degree days with base 55F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-cldd-base57": {
+    "DLY-CLDD-BASE55_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-CLDD-BASE57": {
         "description": "Long-term averages of daily cooling degree days with base 57F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-cldd-base60": {
+    "DLY-CLDD-BASE57_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-CLDD-BASE60": {
         "description": "Long-term averages of daily cooling degree days with base 60F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-cldd-base70": {
+    "DLY-CLDD-BASE60_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-CLDD-BASE70": {
         "description": "Long-term averages of daily cooling degree days with base 70F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-cldd-base72": {
+    "DLY-CLDD-BASE70_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-CLDD-BASE72": {
         "description": "Long-term averages of daily cooling degree days with base 72F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-cldd-normal": {
+    "DLY-CLDD-BASE72_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-CLDD-NORMAL": {
         "description": "Long-term averages of daily cooling degree days with base 65F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-dutr-normal": {
+    "DLY-CLDD-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-DUTR-NORMAL": {
         "description": "Long-term averages of daily diurnal temperature range",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-dutr-stddev": {
+    "DLY-DUTR-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-DUTR-STDDEV": {
         "description": "Long-term standard deviations of daily diurnal temperature range",
-        "unit": "tenth of degree Fahrenheit"
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-base40": {
+    "DLY-DUTR-STDDEV_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-BASE40": {
         "description": "Long-term averages of daily growing degree days with base 40F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-base45": {
+    "DLY-GRDD-BASE40_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-BASE45": {
         "description": "Long-term averages of daily growing degree days with base 45F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-base50": {
+    "DLY-GRDD-BASE45_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-BASE50": {
         "description": "Long-term averages of daily growing degree days with base 50F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-base55": {
+    "DLY-GRDD-BASE50_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-BASE55": {
         "description": "Long-term averages of daily growing degree days with base 55F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-base57": {
+    "DLY-GRDD-BASE55_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-BASE57": {
         "description": "Long-term averages of daily growing degree days with base 57F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-base60": {
+    "DLY-GRDD-BASE57_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-BASE60": {
         "description": "Long-term averages of daily growing degree days with base 60F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-base65": {
+    "DLY-GRDD-BASE60_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-BASE65": {
         "description": "Long-term averages of daily growing degree days with base 65F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-base70": {
+    "DLY-GRDD-BASE65_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-BASE70": {
         "description": "Long-term averages of daily growing degree days with base 70F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-base72": {
+    "DLY-GRDD-BASE70_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-BASE72": {
         "description": "Long-term averages of daily growing degree days with base 72F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-tb4886": {
+    "DLY-GRDD-BASE72_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-TB4886": {
         "description": "Long-term averages of daily growing degree days with base 48F limit 86F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-grdd-tb5086": {
+    "DLY-GRDD-TB4886_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-GRDD-TB5086": {
         "description": "Long-term averages of daily growing degree days with base 50F limit 86F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-htdd-base40": {
+    "DLY-GRDD-TB5086_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-HTDD-BASE40": {
         "description": "Long-term averages of daily heating degree days with base 40F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-htdd-base45": {
+    "DLY-HTDD-BASE40_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-HTDD-BASE45": {
         "description": "Long-term averages of daily heating degree days with base 45F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-htdd-base50": {
+    "DLY-HTDD-BASE45_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-HTDD-BASE50": {
         "description": "Long-term averages of daily heating degree days with base 50F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-htdd-base55": {
+    "DLY-HTDD-BASE50_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-HTDD-BASE55": {
         "description": "Long-term averages of daily heating degree days with base 55F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-htdd-base57": {
+    "DLY-HTDD-BASE55_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-HTDD-BASE57": {
         "description": "Long-term averages of daily heating degree days with base 57F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-htdd-base60": {
+    "DLY-HTDD-BASE57_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-HTDD-BASE60": {
         "description": "Long-term averages of daily heating degree days with base 60F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-htdd-normal": {
+    "DLY-HTDD-BASE60_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-HTDD-NORMAL": {
         "description": "Long-term averages of daily heating degree days with base 65F",
-        "unit": "degree Fahrenheit"
+        "unit": "degree Fahrenheit",
+        "pandas_dtype": "float64"
     },
-    "dly-prcp-25pctl": {
+    "DLY-HTDD-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-PRCP-25PCTL": {
         "description": "First quartile of daily nonzero precipitation totals",
-        "unit": "hundredth of inch"
+        "unit": "hundredth of inch",
+        "pandas_dtype": "float64"
     },
-    "dly-prcp-50pctl": {
+    "DLY-PRCP-25PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-PRCP-50PCTL": {
         "description": "Second quartile of daily nonzero precipitation totals",
-        "unit": "hundredth of inch"
+        "unit": "hundredth of inch",
+        "pandas_dtype": "float64"
     },
-    "dly-prcp-75pctl": {
+    "DLY-PRCP-50PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-PRCP-75PCTL": {
         "description": "Third quartile of daily nonzero precipitation totals",
-        "unit": "hundredth of inch"
+        "unit": "hundredth of inch",
+        "pandas_dtype": "float64"
     },
-    "dly-prcp-20pctl": {
-        "description": "First quintile of daily nonzero precipitation totals",
-        "unit": "hundredth of inch"
+    "DLY-PRCP-75PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-prcp-40pctl": {
-        "description": "Second quintile of daily nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "dly-prcp-60pctl": {
-        "description": "Third quintile of daily nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "dly-prcp-80pctl": {
-        "description": "Fourth quintile of daily nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "dly-prcp-33pctl": {
-        "description": "First tercile of daily nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "dly-prcp-67pctl": {
-        "description": "Second tercile of daily nonzero precipitation totals",
-        "unit": "hundredth of inch"
-    },
-    "dly-prcp-pctall-ge001hi": {
+    "DLY-PRCP-PCTALL-GE001HI": {
         "description": "Probability of daily precipitation >= 0.01 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-prcp-pctall-ge010hi": {
+    "DLY-PRCP-PCTALL-GE001HI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-PRCP-PCTALL-GE010HI": {
         "description": "Probability of daily precipitation >= 0.10 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-prcp-pctall-ge025hi": {
-        "description": "Probability of daily precipitation >= 0.25 inches",
-        "unit": "tenth of percent"
+    "DLY-PRCP-PCTALL-GE010HI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-prcp-pctall-ge050hi": {
+    "DLY-PRCP-PCTALL-GE050HI": {
         "description": "Probability of daily precipitation >= 0.50 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-prcp-pctall-ge100hi": {
+    "DLY-PRCP-PCTALL-GE050HI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-PRCP-PCTALL-GE100HI": {
         "description": "Probability of daily precipitation >= 1.00 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-prcp-pctall-ge200hi": {
-        "description": "Probability of daily precipitation >= 2.00 inches",
-        "unit": "tenth of percent"
+    "DLY-PRCP-PCTALL-GE100HI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-prcp-pctall-ge400hi": {
-        "description": "Probability of daily precipitation >= 4.00 inches",
-        "unit": "tenth of percent"
-    },
-    "dly-prcp-pctall-ge600hi": {
-        "description": "Probability of daily precipitation >= 6.00 inches",
-        "unit": "tenth of percent"
-    },
-    "dly-snow-25pctl": {
+    "DLY-SNOW-25PCTL": {
         "description": "First quartile of daily nonzero snowfall totals",
-        "unit": "tenth of inch"
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
     },
-    "dly-snow-50pctl": {
+    "DLY-SNOW-25PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-SNOW-50PCTL": {
         "description": "Second quartile of daily nonzero snowfall totals",
-        "unit": "tenth of inch"
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
     },
-    "dly-snow-75pctl": {
+    "DLY-SNOW-50PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-SNOW-75PCTL": {
         "description": "Third quartile of daily nonzero snowfall totals",
-        "unit": "tenth of inch"
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
     },
-    "dly-snow-20pctl": {
-        "description": "First quintile of daily nonzero snowfall totals",
-        "unit": "tenth of inch"
+    "DLY-SNOW-75PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-snow-40pctl": {
-        "description": "Second quintile of daily nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snow-60pctl": {
-        "description": "Third quintile of daily nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snow-80pctl": {
-        "description": "Fourth quintile of daily nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snow-33pctl": {
-        "description": "First tercile of daily nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snow-67pctl": {
-        "description": "Second tercile of daily nonzero snowfall totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snow-pctall-ge001ti": {
+    "DLY-SNOW-PCTALL-GE001TI": {
         "description": "Probability of daily snowfall >= 0.1 inch",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-snow-pctall-ge010ti": {
+    "DLY-SNOW-PCTALL-GE001TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-SNOW-PCTALL-GE010TI": {
         "description": "Probability of daily snowfall >= 1.0 inch",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-snow-pctall-ge020ti": {
-        "description": "Probability of daily snowfall >= 2.0 inches",
-        "unit": "tenth of percent"
+    "DLY-SNOW-PCTALL-GE010TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-snow-pctall-ge030ti": {
+    "DLY-SNOW-PCTALL-GE030TI": {
         "description": "Probability of daily snowfall >= 3.0 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-snow-pctall-ge040ti": {
-        "description": "Probability of daily snowfall >= 4.0 inches",
-        "unit": "tenth of percent"
+    "DLY-SNOW-PCTALL-GE030TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-snow-pctall-ge050ti": {
+    "DLY-SNOW-PCTALL-GE050TI": {
         "description": "Probability of daily snowfall >= 5.0 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-snow-pctall-ge100ti": {
+    "DLY-SNOW-PCTALL-GE050TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-SNOW-PCTALL-GE100TI": {
         "description": "Probability of daily snowfall >= 10 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-snow-pctall-ge200ti": {
-        "description": "Probability of daily snowfall >= 20 inches",
-        "unit": "tenth of percent"
+    "DLY-SNOW-PCTALL-GE100TI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-snwd-25pctl": {
+    "DLY-SNWD-25PCTL": {
         "description": "First quartile of daily nonzero snow depth totals",
-        "unit": "tenth of inch"
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
     },
-    "dly-snwd-50pctl": {
+    "DLY-SNWD-25PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-SNWD-50PCTL": {
         "description": "Second quartile of daily nonzero snow depth totals",
-        "unit": "tenth of inch"
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
     },
-    "dly-snwd-75pctl": {
+    "DLY-SNWD-50PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-SNWD-75PCTL": {
         "description": "Third quartile of daily nonzero snow depth totals",
-        "unit": "tenth of inch"
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
     },
-    "dly-snwd-20pctl": {
-        "description": "First quintile of daily nonzero snow depth totals",
-        "unit": "tenth of inch"
+    "DLY-SNWD-75PCTL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-snwd-40pctl": {
-        "description": "Second quintile of daily nonzero snow depth totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snwd-60pctl": {
-        "description": "Third quintile of daily nonzero snow depth totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snwd-80pctl": {
-        "description": "Fourth quintile of daily nonzero snow depth totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snwd-33pctl": {
-        "description": "First tercile of daily nonzero snow depth totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snwd-67pctl": {
-        "description": "Second tercile of daily nonzero snow depth totals",
-        "unit": "tenth of inch"
-    },
-    "dly-snwd-pctall-ge001wi": {
+    "DLY-SNWD-PCTALL-GE001WI": {
         "description": "Probability of daily snow depth >= 1 inch",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-snwd-pctall-ge002wi": {
-        "description": "Probability of daily snow depth >= 2 inches",
-        "unit": "tenth of percent"
+    "DLY-SNWD-PCTALL-GE001WI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-snwd-pctall-ge003wi": {
+    "DLY-SNWD-PCTALL-GE003WI": {
         "description": "Probability of daily snow depth >= 3 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-snwd-pctall-ge004wi": {
-        "description": "Probability of daily snow depth >= 4 inches",
-        "unit": "tenth of percent"
+    "DLY-SNWD-PCTALL-GE003WI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     },
-    "dly-snwd-pctall-ge005wi": {
+    "DLY-SNWD-PCTALL-GE005WI": {
         "description": "Probability of daily snow depth >= 5 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-snwd-pctall-ge010wi": {
+    "DLY-SNWD-PCTALL-GE005WI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-SNWD-PCTALL-GE010WI": {
         "description": "Probability of daily snow depth >= 10 inches",
-        "unit": "tenth of percent"
+        "unit": "tenth of percent",
+        "pandas_dtype": "float64"
     },
-    "dly-snwd-pctall-ge020wi": {
-        "description": "Probability of daily snow depth >= 20 inches",
-        "unit": "tenth of percent"
+    "DLY-SNWD-PCTALL-GE010WI_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-TAVG-NORMAL": {
+        "description": "Long-term averages of daily average temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "DLY-TAVG-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-TAVG-STDDEV": {
+        "description": "Long-term standard deviations of daily average temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "DLY-TAVG-STDDEV_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-TMAX-NORMAL": {
+        "description": "Long-term averages of daily maximum temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "DLY-TMAX-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-TMAX-STDDEV": {
+        "description": "Long-term standard deviations of daily maximum temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "DLY-TMAX-STDDEV_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-TMIN-NORMAL": {
+        "description": "Long-term averages of daily minimum temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "DLY-TMIN-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "DLY-TMIN-STDDEV": {
+        "description": "Long-term standard deviations of daily minimum temperature",
+        "unit": "tenth of degree Fahrenheit",
+        "pandas_dtype": "float64"
+    },
+    "DLY-TMIN-STDDEV_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MTD-PRCP-NORMAL": {
+        "description": "Long-term average month-to-date liquid precipitation amount",
+        "unit": "hundredth of inch",
+        "pandas_dtype": "float64"
+    },
+    "MTD-PRCP-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "MTD-SNOW-NORMAL": {
+        "description": "Long-term average month-to-date snowfall amount",
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
+    },
+    "MTD-SNOW-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "YTD-PRCP-NORMAL": {
+        "description": "Long-term average year-to-date liquid precipitation amount",
+        "unit": "hundredth of inch",
+        "pandas_dtype": "float64"
+    },
+    "YTD-PRCP-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
+    },
+    "YTD-SNOW-NORMAL": {
+        "description": "Long-term average year-to-date snowfall amount",
+        "unit": "tenth of inch",
+        "pandas_dtype": "float64"
+    },
+    "YTD-SNOW-NORMAL_ATTRIBUTES": {
+        "pandas_dtype": "category",
+        "categories": [
+            "C",
+            "S",
+            "R",
+            "P",
+            "Q"
+        ],
+        "description": "Data record completeness flag"
     }
 }

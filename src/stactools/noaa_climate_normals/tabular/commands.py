@@ -8,7 +8,6 @@ from pystac import CatalogType
 from .constants import Frequency, Period
 from .parquet import create_parquet
 from .stac import create_collection, create_item
-from .utils import id_string
 
 logger = logging.getLogger(__name__)
 
@@ -21,7 +20,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
     def tabular() -> None:
         pass
 
-    @tabular.command("create-geoparquet", short_help="Creates a GeoParquet file")
+    @tabular.command("create-geoparquet", short_help="Creates GeoParquet data")
     @click.argument("file-list")
     @click.argument("frequency", type=click.Choice([f.value for f in Frequency]))
     @click.argument("period", type=click.Choice([p.value for p in Period]))
@@ -33,7 +32,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
         destination: str,
     ) -> None:
         """
-        Creates a GeoParquet file from CSV files listed in a text file.
+        Creates GeoParquet data from CSV files listed in a text file.
 
         \b
         Args:
@@ -43,22 +42,21 @@ def create_command(noaa_climate_normals: Group) -> Command:
                 'annualseasonal'.
             period (Period): Choice of '1981-2010', '1991-2020', or
                 '2006-2020'.
-            destination (str): Directory for the created GeoParquet file.
+            destination (str): Directory for the created GeoParquet data.
         """
         with open(file_list) as f:
             hrefs = [line.strip() for line in f.readlines()]
+
         if not os.path.exists(destination):
             os.mkdir(destination)
-        geoparquet_path = os.path.join(
-            destination, f"{id_string(Frequency(frequency), Period(period))}.parquet"
-        )
-        create_parquet(
+
+        parquet_path = create_parquet(
             csv_hrefs=hrefs,
             frequency=Frequency(frequency),
             period=Period(period),
-            parquet_path=geoparquet_path,
+            parquet_dir=destination,
         )
-        click.echo(f"GeoParquet file created at {geoparquet_path}")
+        click.echo(f"GeoParquet file created at {parquet_path}")
 
         return None
 
@@ -77,7 +75,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
         and normal period.
 
         The Item will contain a single GeoParquet asset created from CSV files
-        listed in a text file. The Item and GeoParquet file are saved to the
+        listed in a text file. The Item and GeoParquet data are saved to the
         specified `destination`.
 
         \b
@@ -88,7 +86,7 @@ def create_command(noaa_climate_normals: Group) -> Command:
                 'annualseasonal'.
             period (Period): Choice of '1981-2010', '1991-2020', or
                 '2006-2020'.
-            destination (str): Directory for GeoParquet file and STAC Item.
+            destination (str): Directory for GeoParquet data and STAC Item.
         """
         with open(file_list) as f:
             hrefs = [line.strip() for line in f.readlines()]

@@ -18,7 +18,7 @@
     ],
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-11-10T22:12:51.931399Z",
+    "created": "2022-11-19T19:24:14.608461Z",
     "noaa-climate-normals:frequency": "monthly",
     "noaa-climate-normals:period": "1991-2020",
     "noaa-climate-normals:time_index": 1,
