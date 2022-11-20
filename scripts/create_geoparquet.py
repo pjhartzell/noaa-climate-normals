@@ -41,5 +41,5 @@ for prefix in prefixes:
         csv_hrefs=csv_hrefs,
         frequency=frequency,
         period=period,
-        parquet_dir="geoparquet_new",
+        parquet_dir="geoparquet",
     )

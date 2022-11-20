@@ -105,16 +105,19 @@ def create_parquet(
 
     parquet_path = os.path.join(parquet_dir, f"{id_string(frequency, period)}.parquet")
 
+    # TODO: Fix highly fragmented dataframes. Silence for now.
     with warnings.catch_warnings():
         simplefilter(action="ignore", category=pd.errors.PerformanceWarning)
         dask_gdf.repartition(num_partitions).to_parquet(parquet_path, write_index=False)
 
+    # # DOES NOT WORK: schema is not retained in output parquet files
     # parquet_schema = create_parquet_schema(
-    #     csv_hrefs[0], empty_df.copy(), pd_dtypes, frequency, period
+    #     csv_hrefs[0], empty_df, pd_dtypes, frequency, period
     # )
-    # with simplefilter(action="ignore", category=pd.errors.PerformanceWarning):
+    # with warnings.catch_warnings():
+    #     simplefilter(action="ignore", category=pd.errors.PerformanceWarning)
     #     dask_gdf.repartition(num_partitions).to_parquet(
-    #         parquet_path, schema=parquet_schema, engine="pyarrow", write_index=False
+    #         parquet_path, schema=parquet_schema, write_index=False
     #     )
 
     return parquet_path
@@ -127,28 +130,40 @@ def create_parquet_schema(
     frequency: constants.Frequency,
     period: constants.Period,
 ) -> pyarrow.Schema:
-
-    # not a numpy compatible dtype
-    empty_df.pop("geometry")
-    # allow pyarrow to determine types from ambiguous pandas 'object' types
+    """Attempt at injecting metadata into output parquet file schema."""
+    # ingesting one row enables pyarrow to determine arrow types from ambiguous
+    # pandas 'object' types
     df = pd.read_csv(csv_href, nrows=1, dtype=pd_dtypes)
     df = pd.concat([df, empty_df])[empty_df.columns]
+    gdf = gpd.GeoDataFrame(data=df)
+    gdf["geometry"] = gpd.points_from_xy(
+        x=df.LONGITUDE,
+        y=df.LATITUDE,
+        z=df.ELEVATION,
+        crs=constants.CRS,
+    )
+    df2 = pd.DataFrame(gdf.copy())
+    df2["geometry"] = gdf["geometry"].to_wkb()
+    schema = pyarrow.Schema.from_pandas(df2, preserve_index=False)
 
-    schema = pyarrow.Schema.from_pandas(df, preserve_index=False)
-
-    # add table metadata
+    # table metadata
     table_metadata = schema.metadata
     table_metadata[
         "description"
     ] = f"{formatted_frequency(frequency)} Climate Normals for Period {period}"
     schema = schema.with_metadata(table_metadata)
 
-    # TODO: add column metadata
-
-    # add missing geometry column
-    # this doesn't work
-    index = schema.get_field_index("ELEVATION")
-    schema = schema.insert(index + 1, pyarrow.field("geometry", pyarrow.binary()))
+    # column metadata
+    column_metadata = load_column_metadata(frequency, period)
+    for name in schema.names:
+        metadata = {}
+        metadata["description"] = column_metadata[name]["description"]
+        unit = column_metadata.get(name, {}).get("unit", False)
+        if unit:
+            metadata["unit"] = unit
+        index = schema.get_field_index(name)
+        field = schema.field(index).with_metadata(metadata)
+        schema = schema.set(index, field)
 
     return schema
 
@@ -158,7 +173,18 @@ def update_table_columns(
     frequency: constants.Frequency,
     period: constants.Period,
 ) -> pystac.Item:
-    """Update table:columns metadata"""
+    """Update `table:columns` list with column descriptions and units.
+
+    Args:
+        item (pystac.Item): Item containing a `table:columns` property.
+        frequency (Frequency): Temporal interval of CSV data, e.g., 'monthly' or
+            'hourly'.
+        period (Period): Climate normal time period of CSV data, e.g.,
+            '1991-2020'.
+
+    Returns:
+        pystac.Item: Item with updated `table:columns` property.
+    """
 
     column_metadata = load_column_metadata(frequency, period)
 
