@@ -74,7 +74,7 @@ stac noaa-climate-normals <gridded|netcdf|tabular> create-collection
 To create an Item, e.g., for the `monthly` tabular data from the `1991-2020` time period:
 
 ```shell
-stac noaa-climate-normals tabular create-item <filepath to text file of csv hrefs> <daily|monthly|seasonal|annual> <1901-2020|1991-2020|2006-2020> <directory for created item and geoparquet files>
+stac noaa-climate-normals tabular create-item <filepath to text file of csv hrefs> monthly 1991-2020 <item and geoparquet destination directory>
 ```
 
 Each Collection has unique subcommands and options. Use `stac noaa-climate-normals --help` to explore subcommands and options.
