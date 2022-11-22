@@ -21,6 +21,7 @@ def create_item(
     period: constants.Period,
     geoparquet_dir: str,
     *,
+    num_partitions: int = 5,
     geoparquet_href: Optional[str] = None,
     read_href_modifier: Optional[ReadHrefModifier] = None,
 ) -> Item:
@@ -40,6 +41,7 @@ def create_item(
             `csv_hrefs` list if this HREF is supplied.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
             to modify an HREF, e.g., to add a token to a URL.
+        num_partitions (int): Number of parquet files to create.
 
     Returns:
         Item: A STAC Item for a GeoParquet file containing weather stataion data.
@@ -55,6 +57,7 @@ def create_item(
             frequency,
             period,
             geoparquet_dir,
+            num_partitions=num_partitions,
             read_href_modifier=read_href_modifier,
         )
 

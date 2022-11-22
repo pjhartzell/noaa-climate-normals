@@ -52,6 +52,7 @@ def create_parquet(
     period: constants.Period,
     parquet_dir: str,
     read_href_modifier: Optional[ReadHrefModifier] = None,
+    num_partitions: int = 5,
 ) -> str:
     """Creates a GeoParquet file from a list of CSV files.
 
@@ -65,6 +66,7 @@ def create_parquet(
         parquet_dir (str): Directory for created parquet data.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
             to modify an HREF, e.g., to add a token to a URL.
+        num_partitions (int): Number of parquet files to create.
 
     Returns:
         str: Path to directory containing one or more parquet files.
@@ -97,13 +99,14 @@ def create_parquet(
     dask_df = dask.dataframe.from_delayed(pd_df, meta=empty_df)
     dask_gdf = dask_geopandas.from_dask_dataframe(dask_df)
 
-    num_partitions = 1
-    if frequency in [constants.Frequency.DAILY, constants.Frequency.HOURLY]:
-        num_partitions = 5
-    if len(csv_hrefs) < num_partitions:
-        num_partitions = 1
-
     parquet_path = os.path.join(parquet_dir, f"{id_string(frequency, period)}.parquet")
+
+    if len(csv_hrefs) < num_partitions:
+        logger.warning(
+            f"Requested number of partitions ({num_partitions}) is greater than the "
+            f"number of CSV files ({len(csv_hrefs)}). Number of partitions is set to 1."
+        )
+        num_partitions = 1
 
     # TODO: Fix highly fragmented dataframes. Silence for now.
     with warnings.catch_warnings():

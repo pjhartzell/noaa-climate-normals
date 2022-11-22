@@ -57,6 +57,7 @@ with TemporaryDirectory() as tmp_dir:
             frequency=tabular_constants.Frequency(key),
             period=tabular_constants.Period("1981-2010"),
             geoparquet_dir=tmp_dir,
+            num_partitions=1,
         )
         tabular.add_item(tabular_item)
     tabular.update_extent_from_items()
