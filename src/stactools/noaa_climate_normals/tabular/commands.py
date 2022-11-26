@@ -116,10 +116,10 @@ def create_command(noaa_climate_normals: Group) -> Command:
             os.mkdir(destination)
 
         item = create_item(
-            hrefs,
-            Frequency(frequency),
-            Period(period),
-            destination,
+            csv_hrefs=hrefs,
+            frequency=Frequency(frequency),
+            period=Period(period),
+            geoparquet_dir=destination,
             num_partitions=num_partitions,
         )
         item.set_self_href(os.path.join(destination, item.id + ".json"))
