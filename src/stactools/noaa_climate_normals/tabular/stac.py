@@ -36,12 +36,12 @@ def create_item(
         period (Period): Climate normal time period of CSV data, e.g.,
             '1991-2020'.
         geoparquet_dir (str): Directory to store created GeoParquet data.
+        num_partitions (int): Number of parquet files to create.
         geoparquet_href (Optional[str]): HREF to an existing GeoParquet
             file or directory. New GeoParquet data will not be created from the
             `csv_hrefs` list if this HREF is supplied.
         read_href_modifier (Optional[ReadHrefModifier]): An optional function
             to modify an HREF, e.g., to add a token to a URL.
-        num_partitions (int): Number of parquet files to create.
 
     Returns:
         Item: A STAC Item for a GeoParquet file containing weather stataion data.
