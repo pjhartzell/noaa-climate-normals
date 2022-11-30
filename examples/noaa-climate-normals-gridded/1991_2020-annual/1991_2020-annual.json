@@ -18,7 +18,7 @@
     ],
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-11-22T13:29:28.818463Z",
+    "created": "2022-11-30T14:06:35.089154Z",
     "noaa-climate-normals:frequency": "annual",
     "noaa-climate-normals:period": "1991-2020",
     "title": "1991-2020 Annual Climate Normals",
@@ -96,8 +96,8 @@
     }
   ],
   "assets": {
-    "annprcp_norm": {
-      "href": "./1991_2020-annual-annprcp_norm.tif",
+    "prcp_norm": {
+      "href": "./1991_2020-annual-prcp_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Annual precipitation normals from monthly precipitation normal values",
       "raster:bands": [
@@ -112,8 +112,8 @@
         "data"
       ]
     },
-    "annprcp_std": {
-      "href": "./1991_2020-annual-annprcp_std.tif",
+    "prcp_std": {
+      "href": "./1991_2020-annual-prcp_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of monthly precipitation normal values",
       "raster:bands": [
@@ -128,8 +128,8 @@
         "data"
       ]
     },
-    "annprcp_min": {
-      "href": "./1991_2020-annual-annprcp_min.tif",
+    "prcp_min": {
+      "href": "./1991_2020-annual-prcp_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum precipitation of monthly precipitation normal values",
       "raster:bands": [
@@ -144,8 +144,8 @@
         "data"
       ]
     },
-    "annprcp_max": {
-      "href": "./1991_2020-annual-annprcp_max.tif",
+    "prcp_max": {
+      "href": "./1991_2020-annual-prcp_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum precipitation of monthly precipitation normal values",
       "raster:bands": [
@@ -160,8 +160,8 @@
         "data"
       ]
     },
-    "annprcp_flag": {
-      "href": "./1991_2020-annual-annprcp_flag.tif",
+    "prcp_flag": {
+      "href": "./1991_2020-annual-prcp_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of months used to calculate annual precipitation normals",
       "raster:bands": [
@@ -176,8 +176,8 @@
         "data"
       ]
     },
-    "anntavg_norm": {
-      "href": "./1991_2020-annual-anntavg_norm.tif",
+    "tavg_norm": {
+      "href": "./1991_2020-annual-tavg_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Annual mean temperature normals from monthly normals",
       "raster:bands": [
@@ -192,8 +192,8 @@
         "data"
       ]
     },
-    "anntavg_std": {
-      "href": "./1991_2020-annual-anntavg_std.tif",
+    "tavg_std": {
+      "href": "./1991_2020-annual-tavg_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of monthly mean temperature normals",
       "raster:bands": [
@@ -208,8 +208,8 @@
         "data"
       ]
     },
-    "anntavg_min": {
-      "href": "./1991_2020-annual-anntavg_min.tif",
+    "tavg_min": {
+      "href": "./1991_2020-annual-tavg_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum values of monthly mean temperature normals",
       "raster:bands": [
@@ -224,8 +224,8 @@
         "data"
       ]
     },
-    "anntavg_max": {
-      "href": "./1991_2020-annual-anntavg_max.tif",
+    "tavg_max": {
+      "href": "./1991_2020-annual-tavg_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum values of monthly mean temperature normals",
       "raster:bands": [
@@ -240,8 +240,8 @@
         "data"
       ]
     },
-    "anntavg_flag": {
-      "href": "./1991_2020-annual-anntavg_flag.tif",
+    "tavg_flag": {
+      "href": "./1991_2020-annual-tavg_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of months used to calculate annual mean temperature normals",
       "raster:bands": [
@@ -256,8 +256,8 @@
         "data"
       ]
     },
-    "anntmax_norm": {
-      "href": "./1991_2020-annual-anntmax_norm.tif",
+    "tmax_norm": {
+      "href": "./1991_2020-annual-tmax_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Annual maximum temperature normals from monthly normals",
       "raster:bands": [
@@ -272,8 +272,8 @@
         "data"
       ]
     },
-    "anntmax_std": {
-      "href": "./1991_2020-annual-anntmax_std.tif",
+    "tmax_std": {
+      "href": "./1991_2020-annual-tmax_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of monthly maximum temperature normals",
       "raster:bands": [
@@ -288,8 +288,8 @@
         "data"
       ]
     },
-    "anntmax_min": {
-      "href": "./1991_2020-annual-anntmax_min.tif",
+    "tmax_min": {
+      "href": "./1991_2020-annual-tmax_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum values of monthly maximum temperature normals",
       "raster:bands": [
@@ -304,8 +304,8 @@
         "data"
       ]
     },
-    "anntmax_max": {
-      "href": "./1991_2020-annual-anntmax_max.tif",
+    "tmax_max": {
+      "href": "./1991_2020-annual-tmax_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum values of monthly maximum temperature normals",
       "raster:bands": [
@@ -320,8 +320,8 @@
         "data"
       ]
     },
-    "anntmax_flag": {
-      "href": "./1991_2020-annual-anntmax_flag.tif",
+    "tmax_flag": {
+      "href": "./1991_2020-annual-tmax_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of months used to calculate annual maximum temperature normals",
       "raster:bands": [
@@ -336,8 +336,8 @@
         "data"
       ]
     },
-    "anntmin_norm": {
-      "href": "./1991_2020-annual-anntmin_norm.tif",
+    "tmin_norm": {
+      "href": "./1991_2020-annual-tmin_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Annual minimum temperature normals from monthly normals",
       "raster:bands": [
@@ -352,8 +352,8 @@
         "data"
       ]
     },
-    "anntmin_std": {
-      "href": "./1991_2020-annual-anntmin_std.tif",
+    "tmin_std": {
+      "href": "./1991_2020-annual-tmin_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of monthly minimum temperature normals",
       "raster:bands": [
@@ -368,8 +368,8 @@
         "data"
       ]
     },
-    "anntmin_min": {
-      "href": "./1991_2020-annual-anntmin_min.tif",
+    "tmin_min": {
+      "href": "./1991_2020-annual-tmin_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum values of monthly minimum temperature normals",
       "raster:bands": [
@@ -384,8 +384,8 @@
         "data"
       ]
     },
-    "anntmin_max": {
-      "href": "./1991_2020-annual-anntmin_max.tif",
+    "tmin_max": {
+      "href": "./1991_2020-annual-tmin_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum values of monthly minimum temperature normals",
       "raster:bands": [
@@ -400,8 +400,8 @@
         "data"
       ]
     },
-    "anntmin_flag": {
-      "href": "./1991_2020-annual-anntmin_flag.tif",
+    "tmin_flag": {
+      "href": "./1991_2020-annual-tmin_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of months used to calculate annual minimum temperature normals",
       "raster:bands": [

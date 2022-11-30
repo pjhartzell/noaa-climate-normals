@@ -116,10 +116,10 @@ def test_existing_cogs() -> None:
     )
     cog_hrefs = [
         test_data.get_path(
-            "data-files/gridded/daily/2006_2020-daily-001-dlyprcp_norm.tif"
+            "data-files/gridded/daily/2006_2020-daily-001-prcp_norm.tif"
         ),
         test_data.get_path(
-            "data-files/gridded/daily/2006_2020-daily-001-dlytavg_norm.tif"
+            "data-files/gridded/daily/2006_2020-daily-001-tavg_norm.tif"
         ),
     ]
 

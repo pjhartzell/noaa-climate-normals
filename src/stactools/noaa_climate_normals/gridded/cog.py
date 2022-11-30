@@ -73,16 +73,29 @@ def create_cogs(
                 id = item_id(frequency, period, 1)
 
             for data_var in data_vars:
-                cog_filename = f"{id}-{data_var}.tif"
+                if "dly" in data_var:
+                    generic_data_var = data_var.replace("dly", "")
+                elif "mly" in data_var:
+                    generic_data_var = data_var.replace("mly", "")
+                elif "seas" in data_var:
+                    generic_data_var = data_var.replace("seas", "")
+                elif "ann" in data_var:
+                    generic_data_var = data_var.replace("ann", "")
+                else:
+                    generic_data_var = data_var
 
-                cogs[data_var] = {}
-                cogs[data_var]["description"] = dataset[data_var].long_name
-                cogs[data_var]["unit"] = dataset[data_var].units
+                cog_filename = f"{id}-{generic_data_var}.tif"
+
+                cogs[generic_data_var] = {}
+                cogs[generic_data_var]["description"] = dataset[data_var].long_name
+                cogs[generic_data_var]["unit"] = dataset[data_var].units
 
                 if cog_hrefs and cog_filename in existing_cog_filenames:
-                    cogs[data_var]["href"] = existing_cog_filenames[cog_filename]
+                    cogs[generic_data_var]["href"] = existing_cog_filenames[
+                        cog_filename
+                    ]
                 else:
-                    cogs[data_var]["href"] = os.path.join(cog_dir, cog_filename)
+                    cogs[generic_data_var]["href"] = os.path.join(cog_dir, cog_filename)
 
                     nodata = 0 if "flag" in data_var else np.nan
 
@@ -104,7 +117,7 @@ def create_cogs(
                         with mem.open(**GTIFF_PROFILE, nodata=nodata) as temp:
                             temp.write(values, 1)
                             rasterio.shutil.copy(
-                                temp, cogs[data_var]["href"], **COG_PROFILE
+                                temp, cogs[generic_data_var]["href"], **COG_PROFILE
                             )
 
 

@@ -69,7 +69,7 @@ with TemporaryDirectory() as tmp_dir:
         nc_href=str(
             data_files / "gridded" / "daily" / "prcp-2006_2020-daily-normals-v1.0.nc"
         ),
-        frequency=gridded_constants.Frequency("daily"),
+        frequency=gridded_constants.Frequency.DAILY,
         time_index=1,
         cog_dir=tmp_dir,
         api_url_netcdf=(

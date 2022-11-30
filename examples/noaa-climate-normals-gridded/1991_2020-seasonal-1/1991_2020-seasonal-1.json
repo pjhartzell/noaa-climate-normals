@@ -18,7 +18,7 @@
     ],
     "start_datetime": "1991-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-11-22T13:29:25.938996Z",
+    "created": "2022-11-30T14:06:32.222604Z",
     "noaa-climate-normals:frequency": "seasonal",
     "noaa-climate-normals:period": "1991-2020",
     "noaa-climate-normals:time_index": 1,
@@ -97,8 +97,8 @@
     }
   ],
   "assets": {
-    "seasprcp_norm": {
-      "href": "./1991_2020-seasonal-1-seasprcp_norm.tif",
+    "prcp_norm": {
+      "href": "./1991_2020-seasonal-1-prcp_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Seasonal precipitation normals (WSSF) from monthly normals",
       "raster:bands": [
@@ -113,8 +113,8 @@
         "data"
       ]
     },
-    "seasprcp_std": {
-      "href": "./1991_2020-seasonal-1-seasprcp_std.tif",
+    "prcp_std": {
+      "href": "./1991_2020-seasonal-1-prcp_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of all input monthly precipitation normal values",
       "raster:bands": [
@@ -129,8 +129,8 @@
         "data"
       ]
     },
-    "seasprcp_min": {
-      "href": "./1991_2020-seasonal-1-seasprcp_min.tif",
+    "prcp_min": {
+      "href": "./1991_2020-seasonal-1-prcp_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum values of all input monthly precipitation normal values",
       "raster:bands": [
@@ -145,8 +145,8 @@
         "data"
       ]
     },
-    "seasprcp_max": {
-      "href": "./1991_2020-seasonal-1-seasprcp_max.tif",
+    "prcp_max": {
+      "href": "./1991_2020-seasonal-1-prcp_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum values of all input monthly precipitation normal values",
       "raster:bands": [
@@ -161,8 +161,8 @@
         "data"
       ]
     },
-    "seasprcp_flag": {
-      "href": "./1991_2020-seasonal-1-seasprcp_flag.tif",
+    "prcp_flag": {
+      "href": "./1991_2020-seasonal-1-prcp_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of months used to calculate seasonal precipitation normals",
       "raster:bands": [
@@ -177,8 +177,8 @@
         "data"
       ]
     },
-    "seastavg_norm": {
-      "href": "./1991_2020-seasonal-1-seastavg_norm.tif",
+    "tavg_norm": {
+      "href": "./1991_2020-seasonal-1-tavg_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Seasonal mean temperature normals (WSSF) from monthly normals",
       "raster:bands": [
@@ -193,8 +193,8 @@
         "data"
       ]
     },
-    "seastavg_std": {
-      "href": "./1991_2020-seasonal-1-seastavg_std.tif",
+    "tavg_std": {
+      "href": "./1991_2020-seasonal-1-tavg_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of all input monthly mean temperature normal values",
       "raster:bands": [
@@ -209,8 +209,8 @@
         "data"
       ]
     },
-    "seastavg_min": {
-      "href": "./1991_2020-seasonal-1-seastavg_min.tif",
+    "tavg_min": {
+      "href": "./1991_2020-seasonal-1-tavg_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum values of all input monthly mean temperature normal values",
       "raster:bands": [
@@ -225,8 +225,8 @@
         "data"
       ]
     },
-    "seastavg_max": {
-      "href": "./1991_2020-seasonal-1-seastavg_max.tif",
+    "tavg_max": {
+      "href": "./1991_2020-seasonal-1-tavg_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum values of all input monthly mean temperature normal values",
       "raster:bands": [
@@ -241,8 +241,8 @@
         "data"
       ]
     },
-    "seastavg_flag": {
-      "href": "./1991_2020-seasonal-1-seastavg_flag.tif",
+    "tavg_flag": {
+      "href": "./1991_2020-seasonal-1-tavg_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of months used to calculate seasonal mean temperature normals",
       "raster:bands": [
@@ -257,8 +257,8 @@
         "data"
       ]
     },
-    "seastmax_norm": {
-      "href": "./1991_2020-seasonal-1-seastmax_norm.tif",
+    "tmax_norm": {
+      "href": "./1991_2020-seasonal-1-tmax_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Seasonal maximum temperature normals (WSSF) from monthly normals",
       "raster:bands": [
@@ -273,8 +273,8 @@
         "data"
       ]
     },
-    "seastmax_std": {
-      "href": "./1991_2020-seasonal-1-seastmax_std.tif",
+    "tmax_std": {
+      "href": "./1991_2020-seasonal-1-tmax_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of all input monthly maximum temperature normal values",
       "raster:bands": [
@@ -289,8 +289,8 @@
         "data"
       ]
     },
-    "seastmax_min": {
-      "href": "./1991_2020-seasonal-1-seastmax_min.tif",
+    "tmax_min": {
+      "href": "./1991_2020-seasonal-1-tmax_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum values of all input monthly maximum temperature normal values",
       "raster:bands": [
@@ -305,8 +305,8 @@
         "data"
       ]
     },
-    "seastmax_max": {
-      "href": "./1991_2020-seasonal-1-seastmax_max.tif",
+    "tmax_max": {
+      "href": "./1991_2020-seasonal-1-tmax_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum values of all input monthly maximum temperature normal values",
       "raster:bands": [
@@ -321,8 +321,8 @@
         "data"
       ]
     },
-    "seastmax_flag": {
-      "href": "./1991_2020-seasonal-1-seastmax_flag.tif",
+    "tmax_flag": {
+      "href": "./1991_2020-seasonal-1-tmax_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of months used to calculate seasonal maximum temperature normals",
       "raster:bands": [
@@ -337,8 +337,8 @@
         "data"
       ]
     },
-    "seastmin_norm": {
-      "href": "./1991_2020-seasonal-1-seastmin_norm.tif",
+    "tmin_norm": {
+      "href": "./1991_2020-seasonal-1-tmin_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Seasonal minimum temperature normals (WSSF) from monthly normals",
       "raster:bands": [
@@ -353,8 +353,8 @@
         "data"
       ]
     },
-    "seastmin_std": {
-      "href": "./1991_2020-seasonal-1-seastmin_std.tif",
+    "tmin_std": {
+      "href": "./1991_2020-seasonal-1-tmin_std.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Standard deviation of all input monthly minimum temperature normal values",
       "raster:bands": [
@@ -369,8 +369,8 @@
         "data"
       ]
     },
-    "seastmin_min": {
-      "href": "./1991_2020-seasonal-1-seastmin_min.tif",
+    "tmin_min": {
+      "href": "./1991_2020-seasonal-1-tmin_min.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum values of all input monthly minimum temperature normal values",
       "raster:bands": [
@@ -385,8 +385,8 @@
         "data"
       ]
     },
-    "seastmin_max": {
-      "href": "./1991_2020-seasonal-1-seastmin_max.tif",
+    "tmin_max": {
+      "href": "./1991_2020-seasonal-1-tmin_max.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum values of all input monthly minimum temperature normal values",
       "raster:bands": [
@@ -401,8 +401,8 @@
         "data"
       ]
     },
-    "seastmin_flag": {
-      "href": "./1991_2020-seasonal-1-seastmin_flag.tif",
+    "tmin_flag": {
+      "href": "./1991_2020-seasonal-1-tmin_flag.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Number of months used to calculate seasonal minimum temperature normals",
       "raster:bands": [

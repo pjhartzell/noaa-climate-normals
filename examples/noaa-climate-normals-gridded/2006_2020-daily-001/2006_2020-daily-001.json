@@ -18,7 +18,7 @@
     ],
     "start_datetime": "2006-01-01T00:00:00Z",
     "end_datetime": "2020-12-31T23:59:59Z",
-    "created": "2022-11-22T13:29:20.481002Z",
+    "created": "2022-11-30T14:06:26.555238Z",
     "noaa-climate-normals:frequency": "daily",
     "noaa-climate-normals:period": "2006-2020",
     "noaa-climate-normals:time_index": 1,
@@ -109,8 +109,8 @@
     }
   ],
   "assets": {
-    "dlyprcp_norm": {
-      "href": "./2006_2020-daily-001-dlyprcp_norm.tif",
+    "prcp_norm": {
+      "href": "./2006_2020-daily-001-prcp_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Precipitation normals from daily averages",
       "raster:bands": [
@@ -125,8 +125,8 @@
         "data"
       ]
     },
-    "dlytavg_norm": {
-      "href": "./2006_2020-daily-001-dlytavg_norm.tif",
+    "tavg_norm": {
+      "href": "./2006_2020-daily-001-tavg_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Average Temperature normals from daily averages",
       "raster:bands": [
@@ -141,8 +141,8 @@
         "data"
       ]
     },
-    "dlytmax_norm": {
-      "href": "./2006_2020-daily-001-dlytmax_norm.tif",
+    "tmax_norm": {
+      "href": "./2006_2020-daily-001-tmax_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Maximum Temperature normals from daily averages",
       "raster:bands": [
@@ -157,8 +157,8 @@
         "data"
       ]
     },
-    "dlytmin_norm": {
-      "href": "./2006_2020-daily-001-dlytmin_norm.tif",
+    "tmin_norm": {
+      "href": "./2006_2020-daily-001-tmin_norm.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Minimum Temperature normals from daily averages",
       "raster:bands": [
