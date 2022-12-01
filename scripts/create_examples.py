@@ -40,6 +40,9 @@ with TemporaryDirectory() as tmp_dir:
 
     print("Creating tabular collection...")
     tabular = tabular_stac.create_collection()
+    all_tables = tabular.extra_fields["table:tables"]
+    used_tables = [table for table in all_tables if "1981_2010" in table["name"]]
+    tabular.extra_fields["table:tables"] = used_tables
     csv_file_lists = {
         "annualseasonal": [
             str(data_files / "tabular/annualseasonal/1981-2010/USW00094765.csv")

@@ -230,21 +230,23 @@ def load_column_metadata(
         raise e
 
 
-def get_collection_tables() -> Dict[int, Dict[str, str]]:
-    """Creates a dictionary of dictionaries containing table names and
+def get_collection_tables() -> List[Dict[str, str]]:
+    """Creates a list of dictionaries containing table names and
     descriptions for use in the 'table' extension on the Tabular Collection.
 
     Returns:
-        Dict[int, Dict[str, str]]: Dictionaries containing table names and
-            descriptions.
+        List[Dict[str, str]]: List of dictionaires containing table names and
+            descriptions. The table names are the same as the Item IDs that
+            contain the table information.
     """
-    tables: Dict[int, Dict[str, str]] = {}
-    for idx, period in enumerate(constants.Period):
+    tables: List[Dict[str, str]] = []
+    for period in constants.Period:
         for frequency in constants.Frequency:
-            tables[idx] = {}
-            tables[idx]["name"] = id_string(frequency, period)
-            tables[idx][
+            table = {}
+            table["name"] = id_string(frequency, period)
+            table[
                 "description"
             ] = f"{formatted_frequency(frequency)} Climate Normals for Period {period}"
+            tables.append(table)
 
     return tables

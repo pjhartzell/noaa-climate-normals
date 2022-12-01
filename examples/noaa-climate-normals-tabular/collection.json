@@ -82,20 +82,24 @@
       ]
     }
   },
-  "table:tables": {
-    "0": {
+  "table:tables": [
+    {
+      "name": "1981_2010-hourly",
+      "description": "Hourly Climate Normals for Period 1981-2010"
+    },
+    {
+      "name": "1981_2010-daily",
+      "description": "Daily Climate Normals for Period 1981-2010"
+    },
+    {
+      "name": "1981_2010-monthly",
+      "description": "Monthly Climate Normals for Period 1981-2010"
+    },
+    {
       "name": "1981_2010-annualseasonal",
       "description": "Annual/Seasonal Climate Normals for Period 1981-2010"
-    },
-    "1": {
-      "name": "1991_2020-annualseasonal",
-      "description": "Annual/Seasonal Climate Normals for Period 1991-2020"
-    },
-    "2": {
-      "name": "2006_2020-annualseasonal",
-      "description": "Annual/Seasonal Climate Normals for Period 2006-2020"
     }
-  },
+  ],
   "title": "Tabular U.S. Climate Normals",
   "extent": {
     "spatial": {
