@@ -80,48 +80,6 @@
         "data"
       ]
     },
-    "tavg_norm": {
-      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-      "raster:bands": [
-        {
-          "data_type": "float32",
-          "nodata": "nan",
-          "unit": "degree Celsius",
-          "spatial_resolution": 5000
-        }
-      ],
-      "roles": [
-        "data"
-      ]
-    },
-    "tmax_norm": {
-      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-      "raster:bands": [
-        {
-          "data_type": "float32",
-          "nodata": "nan",
-          "unit": "degree Celsius",
-          "spatial_resolution": 5000
-        }
-      ],
-      "roles": [
-        "data"
-      ]
-    },
-    "tmin_norm": {
-      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-      "raster:bands": [
-        {
-          "data_type": "float32",
-          "nodata": "nan",
-          "unit": "degree Celsius",
-          "spatial_resolution": 5000
-        }
-      ],
-      "roles": [
-        "data"
-      ]
-    },
     "m2dprcp_norm": {
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "description": "Month-To-Day Precipitation normals",
@@ -208,6 +166,20 @@
         "data"
       ]
     },
+    "tavg_norm": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
     "tavg_std": {
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "raster:bands": [
@@ -264,6 +236,20 @@
         "data"
       ]
     },
+    "tmax_norm": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
     "tmax_std": {
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "raster:bands": [
@@ -313,6 +299,20 @@
           "data_type": "float32",
           "nodata": 0,
           "unit": "months",
+          "spatial_resolution": 5000
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "tmin_norm": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "nodata": "nan",
+          "unit": "degree Celsius",
           "spatial_resolution": 5000
         }
       ],
