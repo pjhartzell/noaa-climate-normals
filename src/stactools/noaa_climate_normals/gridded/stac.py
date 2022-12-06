@@ -1,7 +1,8 @@
 import logging
 import os
 from datetime import datetime, timezone
-from typing import Any, Dict, List, Optional
+from glob import glob
+from typing import Any, Dict, List, Optional, cast
 
 import stactools.core.create
 from pystac import Collection, Item, Link, MediaType, Summaries
@@ -108,6 +109,85 @@ def create_item(
     item.stac_extensions.append(constants.RASTER_EXTENSION_V11)
 
     return item
+
+
+def create_items(
+    nc_href: str,
+    cog_dir: str,
+    *,
+    api_url_netcdf: Optional[str] = None,
+    read_href_modifier: Optional[ReadHrefModifier] = None,
+) -> List[Item]:
+    """Creates all possible STAC Items and COGs from source NetCDF files.
+
+    Args:
+        nc_href (str): HREF to one of the NetCDF files containing data required
+            for Item creation. Any additional required NetCDF files are assumed
+            to exist in the same location.
+        cog_dir (str): Directory to store created COGs.
+        api_url_netcdf (str): Base STAC API URL for NetCDF Items from which the
+            COGs are derived, .e.g., "https://planetarycomputer.microsoft.com/
+            "api/stac/v1/collections/noaa-climate-normals-netcdf/items/". The
+            Item IDs of the NetCDF files used to create the COGs for this Item
+            will be appended to the base STAC API URL and used to create a
+            "derived_from" Link for each source NetCDF file.
+        read_href_modifier (Optional[ReadHrefModifier]): An optional function
+            to modify an HREF, e.g., to add a token to a URL.
+
+    Returns:
+        List[Item]: List of generated STAC Items.
+    """
+    path_parts = os.path.basename(nc_href).split("-")
+    frequency = constants.Frequency(path_parts[-3])
+
+    if frequency is constants.Frequency.DAILY:
+        num_cogs = 6 * 366
+        data = {
+            "daily": {
+                "frequency": constants.Frequency.DAILY,
+                "indices": range(1, 367),
+            }
+        }
+    elif frequency is constants.Frequency.MLY:
+        num_cogs = 4 * 20 + 12 * 20 + 1 * 20
+        data = {
+            "monthly": {
+                "frequency": constants.Frequency.MLY,
+                "indices": range(1, 13),
+            },
+            "seasonal": {
+                "frequency": constants.Frequency.SEAS,
+                "indices": range(1, 5),
+            },
+            "annual": {"frequency": constants.Frequency.ANN, "indices": [1]},
+        }
+    else:
+        raise ValueError(f"Unexpected frequency: {frequency.name}")
+
+    all_items: List[Item] = []
+    for value in data.values():
+        items = []
+        for index in value["indices"]:
+            items.append(
+                create_item(
+                    nc_href=nc_href,
+                    frequency=cast(constants.Frequency, value["frequency"]),
+                    time_index=cast(int, index),
+                    cog_dir=cog_dir,
+                    api_url_netcdf=api_url_netcdf,
+                    read_href_modifier=read_href_modifier,
+                )
+            )
+        all_items.extend(items)
+
+    generated_cogs = glob(f"{cog_dir}/*.tif")
+    if len(generated_cogs) != num_cogs:
+        raise ValueError(
+            f"Incorrect number of COGs produced: "
+            f"{num_cogs} expected, but {len(generated_cogs)} produced."
+        )
+
+    return all_items
 
 
 def create_collection() -> Collection:

@@ -5,7 +5,7 @@ from click import Command, Group
 from pystac import CatalogType
 
 from .constants import Frequency
-from .stac import create_collection, create_item
+from .stac import create_collection, create_item, create_items
 
 
 def create_command(noaa_climate_normals: Group) -> Command:
@@ -49,7 +49,33 @@ def create_command(noaa_climate_normals: Group) -> Command:
         item.make_asset_hrefs_relative()
         item.validate()
         item.save_object(include_self_link=False)
+        return None
 
+    @gridded.command("create-items", short_help="Creates all possible STAC Items")
+    @click.argument("infile")
+    @click.argument("destination")
+    def create_items_command(infile: str, destination: str) -> None:
+        """Creates a STAC Item for a single timestep of gridded data.
+
+        Items will be created for all possible time steps, e.g., 12 Items will
+        be created for monthly data, 4 for seasonal data, etc. COG assets will
+        be created and saved alongside the Items in the specified `destination`
+        directory.
+
+        \b
+        Args:
+            infile (str): HREF to one of the source NetCDF files.
+            destination (str): Directory to store the created Items and COGs.
+        """
+        items = create_items(
+            nc_href=infile,
+            cog_dir=destination,
+        )
+        for item in items:
+            item.set_self_href(os.path.join(destination, f"{item.id}.json"))
+            item.make_asset_hrefs_relative()
+            item.validate()
+            item.save_object(include_self_link=False)
         return None
 
     @gridded.command("create-collection", short_help="Creates a STAC Collection")
@@ -68,5 +94,6 @@ def create_command(noaa_climate_normals: Group) -> Command:
         collection.catalog_type = CatalogType.SELF_CONTAINED
         collection.validate()
         collection.save()
+        return None
 
     return gridded
