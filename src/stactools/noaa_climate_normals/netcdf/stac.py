@@ -46,8 +46,8 @@ def create_item(nc_href: str) -> Item:
         bbox=BBOX,
         datetime=None,
         properties={
-            "noaa-climate-normals:frequency": frequency,
-            "noaa-climate-normals:period": period,
+            "noaa_climate_normals:frequency": frequency,
+            "noaa_climate_normals:period": period,
             "start_datetime": datetime_to_str(
                 datetime(int(period[0:4]), 1, 1, 0, 0, 0)
             ),
@@ -88,8 +88,8 @@ def create_collection() -> Collection:
 
     collection.summaries = Summaries(
         {
-            "frequency": FREQUENCIES,
-            "period": PERIODS,
+            "noaa_climate_normals:frequency": FREQUENCIES,
+            "noaa_climate_normals:period": PERIODS,
         }
     )
 

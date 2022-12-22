@@ -84,10 +84,10 @@ def create_item(
         int(period.value[5:]), 12, 31, 23, 59, 59
     )
     item.common_metadata.created = datetime.now(tz=timezone.utc)
-    item.properties["noaa-climate-normals:frequency"] = frequency
-    item.properties["noaa-climate-normals:period"] = period
+    item.properties["noaa_climate_normals:frequency"] = frequency
+    item.properties["noaa_climate_normals:period"] = period
     if time_index_:
-        item.properties["noaa-climate-normals:time_index"] = time_index_
+        item.properties["noaa_climate_normals:time_index"] = time_index_
     item.properties["title"] = title
 
     item.assets.pop("data")
@@ -206,8 +206,8 @@ def create_collection() -> Collection:
 
     collection.summaries = Summaries(
         {
-            "frequency": [f.value for f in constants.Frequency],
-            "period": [p.value for p in constants.Period],
+            "noaa_climate_normals:frequency": [f.value for f in constants.Frequency],
+            "noaa_climate_normals:period": [p.value for p in constants.Period],
         }
     )
 

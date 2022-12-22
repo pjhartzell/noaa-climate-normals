@@ -67,8 +67,8 @@ def create_item(
         geometry=None,
         bbox=None,
         properties={
-            "noaa-climate-normals:frequency": frequency,
-            "noaa-climate-normals:period": period,
+            "noaa_climate_normals:frequency": frequency,
+            "noaa_climate_normals:period": period,
             "start_datetime": datetime_to_str(datetime(start_year, 1, 1, 0, 0, 0)),
             "end_datetime": datetime_to_str(datetime(end_year, 12, 31, 23, 59, 59)),
             "created": datetime_to_str(datetime.now(tz=timezone.utc)),
@@ -135,8 +135,8 @@ def create_collection() -> Collection:
 
     collection.summaries = Summaries(
         {
-            "frequency": [f.value for f in constants.Frequency],
-            "period": [p.value for p in constants.Period],
+            "noaa_climate_normals:frequency": [f.value for f in constants.Frequency],
+            "noaa_climate_normals:period": [p.value for p in constants.Period],
         }
     )
 
