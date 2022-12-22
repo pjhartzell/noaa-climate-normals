@@ -52,7 +52,7 @@ Three Collections, and corresponding Items, can be generated with this package:
 - Items
 
     - [tabular](examples/noaa-climate-normals-tabular/1981_2010-daily/1981_2010-daily.json)
-    - [gridded](examples/noaa-climate-normals-gridded/1991_2020-monthly-1/1991_2020-monthly-01.json)
+    - [gridded](examples/noaa-climate-normals-gridded/1991_2020-monthly-01/1991_2020-monthly-01.json)
     - [netcdf](examples/noaa-climate-normals-netcdf/prcp-1991_2020-monthly-normals-v1.0/prcp-1991_2020-monthly-normals-v1.0.json)
 
 The example Collections and Items in the `examples` directory can be created by running `./scripts/create_examples.py`.
